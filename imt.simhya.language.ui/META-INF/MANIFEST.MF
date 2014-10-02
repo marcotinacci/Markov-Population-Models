@@ -23,4 +23,4 @@ Export-Package: imt.simhya.language.ui.quickfix,
  imt.simhya.language.ui.contentassist,
  imt.simhya.language.ui.contentassist.antlr,
  imt.simhya.language.ui.internal
-Bundle-Activator: imt.simhya.language.ui.internal.MpmActivator
+Bundle-Activator: imt.simhya.language.ui.internal.MarkovPopulationModelsActivator

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <feature id="imt.simhya.language.sdk"
-	label="Mpm SDK Feature "
+	label="MarkovPopulationModels SDK Feature "
 	version="1.0.0.qualifier">
 	<plugin
 			id="imt.simhya.language"

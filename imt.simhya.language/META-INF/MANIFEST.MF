@@ -23,9 +23,9 @@ Import-Package: org.apache.log4j
 Bundle-RequiredExecutionEnvironment: JavaSE-1.6
 Export-Package: imt.simhya.language,
  imt.simhya.language.services,
- imt.simhya.language.mpm,
- imt.simhya.language.mpm.impl,
- imt.simhya.language.mpm.util,
+ imt.simhya.language.markovPopulationModels,
+ imt.simhya.language.markovPopulationModels.impl,
+ imt.simhya.language.markovPopulationModels.util,
  imt.simhya.language.serializer,
  imt.simhya.language.parser.antlr,
  imt.simhya.language.parser.antlr.internal,

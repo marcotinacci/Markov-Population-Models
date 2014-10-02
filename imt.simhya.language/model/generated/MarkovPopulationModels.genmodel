@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/imt.simhya.language/src-gen" editDirectory="/imt.simhya.language.edit/src"
+    editorDirectory="/imt.simhya.language.editor/src" modelPluginID="imt.simhya.language"
+    forceOverwrite="true" modelName="MarkovPopulationModels" updateClasspath="false"
+    rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container" complianceLevel="5.0"
+    copyrightFields="false" editPluginID="imt.simhya.language.edit" editorPluginID="imt.simhya.language.editor"
+    runtimeVersion="2.10">
+  <genPackages prefix="MarkovPopulationModels" basePackage="imt.simhya.language" disposableProviderFactory="true"
+      fileExtensions="mpm" ecorePackage="MarkovPopulationModels.ecore#/">
+    <genClasses ecoreClass="MarkovPopulationModels.ecore#//agent">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MarkovPopulationModels.ecore#//agent/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MarkovPopulationModels.ecore#//agent/act"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MarkovPopulationModels.ecore#//agent/s"/>
+    </genClasses>
+    <genClasses ecoreClass="MarkovPopulationModels.ecore#//label">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MarkovPopulationModels.ecore#//label/name"/>
+    </genClasses>
+    <genClasses ecoreClass="MarkovPopulationModels.ecore#//state">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MarkovPopulationModels.ecore#//state/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MarkovPopulationModels.ecore#//state/spontaneous_act"/>
+    </genClasses>
+    <genClasses ecoreClass="MarkovPopulationModels.ecore#//action">
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference MarkovPopulationModels.ecore#//action/actRef"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference MarkovPopulationModels.ecore#//action/stateRef"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MarkovPopulationModels.ecore#//action/localRate"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>
