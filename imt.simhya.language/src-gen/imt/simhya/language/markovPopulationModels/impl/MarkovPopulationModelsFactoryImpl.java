@@ -64,13 +64,122 @@ public class MarkovPopulationModelsFactoryImpl extends EFactoryImpl implements M
   {
     switch (eClass.getClassifierID())
     {
+      case MarkovPopulationModelsPackage.MAIN: return createmain();
+      case MarkovPopulationModelsPackage.POPULATION: return createpopulation();
+      case MarkovPopulationModelsPackage.INIT: return createinit();
+      case MarkovPopulationModelsPackage.STATE_INIT: return createstateInit();
+      case MarkovPopulationModelsPackage.GL_TRAN: return creategl_tran();
+      case MarkovPopulationModelsPackage.LOC_TRAN: return createloc_tran();
+      case MarkovPopulationModelsPackage.STATE_COND: return createstate_cond();
+      case MarkovPopulationModelsPackage.STATE_REF: return createstate_ref();
+      case MarkovPopulationModelsPackage.ACTION_COND: return createaction_cond();
       case MarkovPopulationModelsPackage.AGENT: return createagent();
       case MarkovPopulationModelsPackage.LABEL: return createlabel();
       case MarkovPopulationModelsPackage.STATE: return createstate();
       case MarkovPopulationModelsPackage.ACTION: return createaction();
+      case MarkovPopulationModelsPackage.ANYSTATE: return createanystate();
       default:
         throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
     }
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public main createmain()
+  {
+    mainImpl main = new mainImpl();
+    return main;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public population createpopulation()
+  {
+    populationImpl population = new populationImpl();
+    return population;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public init createinit()
+  {
+    initImpl init = new initImpl();
+    return init;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public stateInit createstateInit()
+  {
+    stateInitImpl stateInit = new stateInitImpl();
+    return stateInit;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public gl_tran creategl_tran()
+  {
+    gl_tranImpl gl_tran = new gl_tranImpl();
+    return gl_tran;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public loc_tran createloc_tran()
+  {
+    loc_tranImpl loc_tran = new loc_tranImpl();
+    return loc_tran;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public state_cond createstate_cond()
+  {
+    state_condImpl state_cond = new state_condImpl();
+    return state_cond;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public state_ref createstate_ref()
+  {
+    state_refImpl state_ref = new state_refImpl();
+    return state_ref;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public action_cond createaction_cond()
+  {
+    action_condImpl action_cond = new action_condImpl();
+    return action_cond;
   }
 
   /**
@@ -115,6 +224,17 @@ public class MarkovPopulationModelsFactoryImpl extends EFactoryImpl implements M
   {
     actionImpl action = new actionImpl();
     return action;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public anystate createanystate()
+  {
+    anystateImpl anystate = new anystateImpl();
+    return anystate;
   }
 
   /**

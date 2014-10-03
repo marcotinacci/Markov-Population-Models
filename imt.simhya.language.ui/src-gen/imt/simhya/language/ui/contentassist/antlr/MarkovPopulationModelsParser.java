@@ -37,9 +37,46 @@ public class MarkovPopulationModelsParser extends AbstractContentAssistParser {
 			nameMappings = new HashMap<AbstractElement, String>() {
 				private static final long serialVersionUID = 1L;
 				{
+					put(grammarAccess.getLoc_tranAccess().getAlternatives(), "rule__Loc_tran__Alternatives");
+					put(grammarAccess.getState_condAccess().getAlternatives(), "rule__State_cond__Alternatives");
+					put(grammarAccess.getAction_condAccess().getAlternatives(), "rule__Action_cond__Alternatives");
+					put(grammarAccess.getPopulationAccess().getGroup(), "rule__Population__Group__0");
+					put(grammarAccess.getPopulationAccess().getGroup_5(), "rule__Population__Group_5__0");
+					put(grammarAccess.getInitAccess().getGroup(), "rule__Init__Group__0");
+					put(grammarAccess.getInitAccess().getGroup_3(), "rule__Init__Group_3__0");
+					put(grammarAccess.getStateInitAccess().getGroup(), "rule__StateInit__Group__0");
+					put(grammarAccess.getGl_tranAccess().getGroup(), "rule__Gl_tran__Group__0");
+					put(grammarAccess.getGl_tranAccess().getGroup_4(), "rule__Gl_tran__Group_4__0");
+					put(grammarAccess.getLoc_tranAccess().getGroup_0(), "rule__Loc_tran__Group_0__0");
+					put(grammarAccess.getLoc_tranAccess().getGroup_1(), "rule__Loc_tran__Group_1__0");
+					put(grammarAccess.getLoc_tranAccess().getGroup_2(), "rule__Loc_tran__Group_2__0");
+					put(grammarAccess.getState_condAccess().getGroup_0(), "rule__State_cond__Group_0__0");
+					put(grammarAccess.getAction_condAccess().getGroup_0(), "rule__Action_cond__Group_0__0");
 					put(grammarAccess.getAgentAccess().getGroup(), "rule__Agent__Group__0");
 					put(grammarAccess.getStateAccess().getGroup(), "rule__State__Group__0");
 					put(grammarAccess.getActionAccess().getGroup(), "rule__Action__Group__0");
+					put(grammarAccess.getMainAccess().getPopulationDefAssignment_0(), "rule__Main__PopulationDefAssignment_0");
+					put(grammarAccess.getMainAccess().getAgentDefAssignment_1(), "rule__Main__AgentDefAssignment_1");
+					put(grammarAccess.getPopulationAccess().getNameAssignment_1(), "rule__Population__NameAssignment_1");
+					put(grammarAccess.getPopulationAccess().getAgentsAssignment_4(), "rule__Population__AgentsAssignment_4");
+					put(grammarAccess.getPopulationAccess().getAgentsAssignment_5_1(), "rule__Population__AgentsAssignment_5_1");
+					put(grammarAccess.getPopulationAccess().getTranAssignment_6(), "rule__Population__TranAssignment_6");
+					put(grammarAccess.getInitAccess().getAgentRefAssignment_0(), "rule__Init__AgentRefAssignment_0");
+					put(grammarAccess.getInitAccess().getStatesAssignment_2(), "rule__Init__StatesAssignment_2");
+					put(grammarAccess.getInitAccess().getStatesAssignment_3_1(), "rule__Init__StatesAssignment_3_1");
+					put(grammarAccess.getStateInitAccess().getStateRefAssignment_0(), "rule__StateInit__StateRefAssignment_0");
+					put(grammarAccess.getStateInitAccess().getCardAssignment_2(), "rule__StateInit__CardAssignment_2");
+					put(grammarAccess.getGl_tranAccess().getNameAssignment_1(), "rule__Gl_tran__NameAssignment_1");
+					put(grammarAccess.getGl_tranAccess().getL_tranAssignment_3(), "rule__Gl_tran__L_tranAssignment_3");
+					put(grammarAccess.getGl_tranAccess().getL_tranAssignment_4_1(), "rule__Gl_tran__L_tranAssignment_4_1");
+					put(grammarAccess.getGl_tranAccess().getRateAssignment_6(), "rule__Gl_tran__RateAssignment_6");
+					put(grammarAccess.getLoc_tranAccess().getStateRefAssignment_0_1(), "rule__Loc_tran__StateRefAssignment_0_1");
+					put(grammarAccess.getLoc_tranAccess().getStateRefAssignment_1_1(), "rule__Loc_tran__StateRefAssignment_1_1");
+					put(grammarAccess.getLoc_tranAccess().getS_condAssignment_2_0(), "rule__Loc_tran__S_condAssignment_2_0");
+					put(grammarAccess.getLoc_tranAccess().getA_condAssignment_2_2(), "rule__Loc_tran__A_condAssignment_2_2");
+					put(grammarAccess.getState_condAccess().getS_refAssignment_1(), "rule__State_cond__S_refAssignment_1");
+					put(grammarAccess.getState_refAccess().getNameAssignment(), "rule__State_ref__NameAssignment");
+					put(grammarAccess.getAction_condAccess().getNameAssignment_1(), "rule__Action_cond__NameAssignment_1");
 					put(grammarAccess.getAgentAccess().getNameAssignment_1(), "rule__Agent__NameAssignment_1");
 					put(grammarAccess.getAgentAccess().getActAssignment_4(), "rule__Agent__ActAssignment_4");
 					put(grammarAccess.getAgentAccess().getSAssignment_5(), "rule__Agent__SAssignment_5");
@@ -49,6 +86,7 @@ public class MarkovPopulationModelsParser extends AbstractContentAssistParser {
 					put(grammarAccess.getActionAccess().getActRefAssignment_0(), "rule__Action__ActRefAssignment_0");
 					put(grammarAccess.getActionAccess().getStateRefAssignment_2(), "rule__Action__StateRefAssignment_2");
 					put(grammarAccess.getActionAccess().getLocalRateAssignment_4(), "rule__Action__LocalRateAssignment_4");
+					put(grammarAccess.getMainAccess().getUnorderedGroup(), "rule__Main__UnorderedGroup");
 				}
 			};
 		}
@@ -59,7 +97,7 @@ public class MarkovPopulationModelsParser extends AbstractContentAssistParser {
 	protected Collection<FollowElement> getFollowElements(AbstractInternalContentAssistParser parser) {
 		try {
 			imt.simhya.language.ui.contentassist.antlr.internal.InternalMarkovPopulationModelsParser typedParser = (imt.simhya.language.ui.contentassist.antlr.internal.InternalMarkovPopulationModelsParser) parser;
-			typedParser.entryRuleagent();
+			typedParser.entryRulemain();
 			return typedParser.getFollowElements();
 		} catch(RecognitionException ex) {
 			throw new RuntimeException(ex);

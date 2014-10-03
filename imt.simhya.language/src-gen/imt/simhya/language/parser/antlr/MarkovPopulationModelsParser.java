@@ -25,7 +25,7 @@ public class MarkovPopulationModelsParser extends org.eclipse.xtext.parser.antlr
 	
 	@Override 
 	protected String getDefaultRuleName() {
-		return "agent";
+		return "main";
 	}
 	
 	public MarkovPopulationModelsGrammarAccess getGrammarAccess() {

@@ -5,9 +5,19 @@ package imt.simhya.language.markovPopulationModels.impl;
 import imt.simhya.language.markovPopulationModels.MarkovPopulationModelsFactory;
 import imt.simhya.language.markovPopulationModels.MarkovPopulationModelsPackage;
 import imt.simhya.language.markovPopulationModels.action;
+import imt.simhya.language.markovPopulationModels.action_cond;
 import imt.simhya.language.markovPopulationModels.agent;
+import imt.simhya.language.markovPopulationModels.anystate;
+import imt.simhya.language.markovPopulationModels.gl_tran;
+import imt.simhya.language.markovPopulationModels.init;
 import imt.simhya.language.markovPopulationModels.label;
+import imt.simhya.language.markovPopulationModels.loc_tran;
+import imt.simhya.language.markovPopulationModels.main;
+import imt.simhya.language.markovPopulationModels.population;
 import imt.simhya.language.markovPopulationModels.state;
+import imt.simhya.language.markovPopulationModels.stateInit;
+import imt.simhya.language.markovPopulationModels.state_cond;
+import imt.simhya.language.markovPopulationModels.state_ref;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
@@ -24,6 +34,69 @@ import org.eclipse.emf.ecore.impl.EPackageImpl;
  */
 public class MarkovPopulationModelsPackageImpl extends EPackageImpl implements MarkovPopulationModelsPackage
 {
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass mainEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass populationEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass initEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass stateInitEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass gl_tranEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass loc_tranEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass state_condEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass state_refEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass action_condEClass = null;
+
   /**
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -51,6 +124,13 @@ public class MarkovPopulationModelsPackageImpl extends EPackageImpl implements M
    * @generated
    */
   private EClass actionEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass anystateEClass = null;
 
   /**
    * Creates an instance of the model <b>Package</b>, registered with
@@ -113,6 +193,276 @@ public class MarkovPopulationModelsPackageImpl extends EPackageImpl implements M
     // Update the registry and return the package
     EPackage.Registry.INSTANCE.put(MarkovPopulationModelsPackage.eNS_URI, theMarkovPopulationModelsPackage);
     return theMarkovPopulationModelsPackage;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getmain()
+  {
+    return mainEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getmain_PopulationDef()
+  {
+    return (EReference)mainEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getmain_AgentDef()
+  {
+    return (EReference)mainEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getpopulation()
+  {
+    return populationEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getpopulation_Name()
+  {
+    return (EAttribute)populationEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getpopulation_Agents()
+  {
+    return (EReference)populationEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getpopulation_Tran()
+  {
+    return (EReference)populationEClass.getEStructuralFeatures().get(2);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getinit()
+  {
+    return initEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getinit_AgentRef()
+  {
+    return (EReference)initEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getinit_States()
+  {
+    return (EReference)initEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getstateInit()
+  {
+    return stateInitEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getstateInit_StateRef()
+  {
+    return (EReference)stateInitEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getstateInit_Card()
+  {
+    return (EAttribute)stateInitEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getgl_tran()
+  {
+    return gl_tranEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getgl_tran_Name()
+  {
+    return (EAttribute)gl_tranEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getgl_tran_L_tran()
+  {
+    return (EReference)gl_tranEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getgl_tran_Rate()
+  {
+    return (EAttribute)gl_tranEClass.getEStructuralFeatures().get(2);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getloc_tran()
+  {
+    return loc_tranEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getloc_tran_StateRef()
+  {
+    return (EReference)loc_tranEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getloc_tran_S_cond()
+  {
+    return (EReference)loc_tranEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getloc_tran_A_cond()
+  {
+    return (EReference)loc_tranEClass.getEStructuralFeatures().get(2);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getstate_cond()
+  {
+    return state_condEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getstate_cond_S_ref()
+  {
+    return (EReference)state_condEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getstate_ref()
+  {
+    return state_refEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getstate_ref_Name()
+  {
+    return (EAttribute)state_refEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getaction_cond()
+  {
+    return action_condEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getaction_cond_Name()
+  {
+    return (EAttribute)action_condEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -250,6 +600,16 @@ public class MarkovPopulationModelsPackageImpl extends EPackageImpl implements M
    * <!-- end-user-doc -->
    * @generated
    */
+  public EClass getanystate()
+  {
+    return anystateEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public MarkovPopulationModelsFactory getMarkovPopulationModelsFactory()
   {
     return (MarkovPopulationModelsFactory)getEFactoryInstance();
@@ -275,6 +635,42 @@ public class MarkovPopulationModelsPackageImpl extends EPackageImpl implements M
     isCreated = true;
 
     // Create classes and their features
+    mainEClass = createEClass(MAIN);
+    createEReference(mainEClass, MAIN__POPULATION_DEF);
+    createEReference(mainEClass, MAIN__AGENT_DEF);
+
+    populationEClass = createEClass(POPULATION);
+    createEAttribute(populationEClass, POPULATION__NAME);
+    createEReference(populationEClass, POPULATION__AGENTS);
+    createEReference(populationEClass, POPULATION__TRAN);
+
+    initEClass = createEClass(INIT);
+    createEReference(initEClass, INIT__AGENT_REF);
+    createEReference(initEClass, INIT__STATES);
+
+    stateInitEClass = createEClass(STATE_INIT);
+    createEReference(stateInitEClass, STATE_INIT__STATE_REF);
+    createEAttribute(stateInitEClass, STATE_INIT__CARD);
+
+    gl_tranEClass = createEClass(GL_TRAN);
+    createEAttribute(gl_tranEClass, GL_TRAN__NAME);
+    createEReference(gl_tranEClass, GL_TRAN__LTRAN);
+    createEAttribute(gl_tranEClass, GL_TRAN__RATE);
+
+    loc_tranEClass = createEClass(LOC_TRAN);
+    createEReference(loc_tranEClass, LOC_TRAN__STATE_REF);
+    createEReference(loc_tranEClass, LOC_TRAN__SCOND);
+    createEReference(loc_tranEClass, LOC_TRAN__ACOND);
+
+    state_condEClass = createEClass(STATE_COND);
+    createEReference(state_condEClass, STATE_COND__SREF);
+
+    state_refEClass = createEClass(STATE_REF);
+    createEAttribute(state_refEClass, STATE_REF__NAME);
+
+    action_condEClass = createEClass(ACTION_COND);
+    createEAttribute(action_condEClass, ACTION_COND__NAME);
+
     agentEClass = createEClass(AGENT);
     createEAttribute(agentEClass, AGENT__NAME);
     createEReference(agentEClass, AGENT__ACT);
@@ -291,6 +687,8 @@ public class MarkovPopulationModelsPackageImpl extends EPackageImpl implements M
     createEReference(actionEClass, ACTION__ACT_REF);
     createEReference(actionEClass, ACTION__STATE_REF);
     createEAttribute(actionEClass, ACTION__LOCAL_RATE);
+
+    anystateEClass = createEClass(ANYSTATE);
   }
 
   /**
@@ -322,8 +720,46 @@ public class MarkovPopulationModelsPackageImpl extends EPackageImpl implements M
     // Set bounds for type parameters
 
     // Add supertypes to classes
+    anystateEClass.getESuperTypes().add(this.getstate_cond());
+    anystateEClass.getESuperTypes().add(this.getaction_cond());
 
     // Initialize classes and features; add operations and parameters
+    initEClass(mainEClass, main.class, "main", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getmain_PopulationDef(), this.getpopulation(), null, "populationDef", null, 0, 1, main.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getmain_AgentDef(), this.getagent(), null, "agentDef", null, 0, 1, main.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(populationEClass, population.class, "population", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getpopulation_Name(), ecorePackage.getEString(), "name", null, 0, 1, population.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getpopulation_Agents(), this.getinit(), null, "agents", null, 0, -1, population.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getpopulation_Tran(), this.getgl_tran(), null, "tran", null, 0, -1, population.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(initEClass, init.class, "init", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getinit_AgentRef(), this.getagent(), null, "agentRef", null, 0, 1, init.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getinit_States(), this.getstateInit(), null, "states", null, 0, -1, init.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(stateInitEClass, stateInit.class, "stateInit", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getstateInit_StateRef(), this.getstate(), null, "stateRef", null, 0, 1, stateInit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getstateInit_Card(), ecorePackage.getEInt(), "card", null, 0, 1, stateInit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(gl_tranEClass, gl_tran.class, "gl_tran", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getgl_tran_Name(), ecorePackage.getEString(), "name", null, 0, 1, gl_tran.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getgl_tran_L_tran(), this.getloc_tran(), null, "l_tran", null, 0, -1, gl_tran.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getgl_tran_Rate(), ecorePackage.getEDouble(), "rate", null, 0, 1, gl_tran.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(loc_tranEClass, loc_tran.class, "loc_tran", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getloc_tran_StateRef(), this.getstate(), null, "stateRef", null, 0, 1, loc_tran.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getloc_tran_S_cond(), this.getstate_cond(), null, "s_cond", null, 0, 1, loc_tran.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getloc_tran_A_cond(), this.getaction_cond(), null, "a_cond", null, 0, 1, loc_tran.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(state_condEClass, state_cond.class, "state_cond", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getstate_cond_S_ref(), this.getstate_ref(), null, "s_ref", null, 0, 1, state_cond.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(state_refEClass, state_ref.class, "state_ref", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getstate_ref_Name(), ecorePackage.getEString(), "name", null, 0, 1, state_ref.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(action_condEClass, action_cond.class, "action_cond", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getaction_cond_Name(), ecorePackage.getEString(), "name", null, 0, 1, action_cond.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
     initEClass(agentEClass, agent.class, "agent", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getagent_Name(), ecorePackage.getEString(), "name", null, 0, 1, agent.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getagent_Act(), this.getlabel(), null, "act", null, 0, -1, agent.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -340,6 +776,8 @@ public class MarkovPopulationModelsPackageImpl extends EPackageImpl implements M
     initEReference(getaction_ActRef(), this.getlabel(), null, "actRef", null, 0, 1, action.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getaction_StateRef(), this.getstate(), null, "stateRef", null, 0, 1, action.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEAttribute(getaction_LocalRate(), ecorePackage.getEDouble(), "localRate", null, 0, 1, action.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(anystateEClass, anystate.class, "anystate", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
     // Create resource
     createResource(eNS_URI);

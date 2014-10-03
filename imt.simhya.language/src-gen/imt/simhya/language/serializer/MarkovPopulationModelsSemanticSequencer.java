@@ -4,9 +4,19 @@ import com.google.inject.Inject;
 import com.google.inject.Provider;
 import imt.simhya.language.markovPopulationModels.MarkovPopulationModelsPackage;
 import imt.simhya.language.markovPopulationModels.action;
+import imt.simhya.language.markovPopulationModels.action_cond;
 import imt.simhya.language.markovPopulationModels.agent;
+import imt.simhya.language.markovPopulationModels.anystate;
+import imt.simhya.language.markovPopulationModels.gl_tran;
+import imt.simhya.language.markovPopulationModels.init;
 import imt.simhya.language.markovPopulationModels.label;
+import imt.simhya.language.markovPopulationModels.loc_tran;
+import imt.simhya.language.markovPopulationModels.main;
+import imt.simhya.language.markovPopulationModels.population;
 import imt.simhya.language.markovPopulationModels.state;
+import imt.simhya.language.markovPopulationModels.stateInit;
+import imt.simhya.language.markovPopulationModels.state_cond;
+import imt.simhya.language.markovPopulationModels.state_ref;
 import imt.simhya.language.services.MarkovPopulationModelsGrammarAccess;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.xtext.serializer.acceptor.ISemanticSequenceAcceptor;
@@ -34,9 +44,34 @@ public class MarkovPopulationModelsSemanticSequencer extends AbstractDelegatingS
 					return; 
 				}
 				else break;
+			case MarkovPopulationModelsPackage.ACTION_COND:
+				if(context == grammarAccess.getAction_condRule()) {
+					sequence_action_cond(context, (action_cond) semanticObject); 
+					return; 
+				}
+				else break;
 			case MarkovPopulationModelsPackage.AGENT:
 				if(context == grammarAccess.getAgentRule()) {
 					sequence_agent(context, (agent) semanticObject); 
+					return; 
+				}
+				else break;
+			case MarkovPopulationModelsPackage.ANYSTATE:
+				if(context == grammarAccess.getAction_condRule() ||
+				   context == grammarAccess.getState_condRule()) {
+					sequence_action_cond_state_cond(context, (anystate) semanticObject); 
+					return; 
+				}
+				else break;
+			case MarkovPopulationModelsPackage.GL_TRAN:
+				if(context == grammarAccess.getGl_tranRule()) {
+					sequence_gl_tran(context, (gl_tran) semanticObject); 
+					return; 
+				}
+				else break;
+			case MarkovPopulationModelsPackage.INIT:
+				if(context == grammarAccess.getInitRule()) {
+					sequence_init(context, (init) semanticObject); 
 					return; 
 				}
 				else break;
@@ -46,9 +81,45 @@ public class MarkovPopulationModelsSemanticSequencer extends AbstractDelegatingS
 					return; 
 				}
 				else break;
+			case MarkovPopulationModelsPackage.LOC_TRAN:
+				if(context == grammarAccess.getLoc_tranRule()) {
+					sequence_loc_tran(context, (loc_tran) semanticObject); 
+					return; 
+				}
+				else break;
+			case MarkovPopulationModelsPackage.MAIN:
+				if(context == grammarAccess.getMainRule()) {
+					sequence_main(context, (main) semanticObject); 
+					return; 
+				}
+				else break;
+			case MarkovPopulationModelsPackage.POPULATION:
+				if(context == grammarAccess.getPopulationRule()) {
+					sequence_population(context, (population) semanticObject); 
+					return; 
+				}
+				else break;
 			case MarkovPopulationModelsPackage.STATE:
 				if(context == grammarAccess.getStateRule()) {
 					sequence_state(context, (state) semanticObject); 
+					return; 
+				}
+				else break;
+			case MarkovPopulationModelsPackage.STATE_INIT:
+				if(context == grammarAccess.getStateInitRule()) {
+					sequence_stateInit(context, (stateInit) semanticObject); 
+					return; 
+				}
+				else break;
+			case MarkovPopulationModelsPackage.STATE_COND:
+				if(context == grammarAccess.getState_condRule()) {
+					sequence_state_cond(context, (state_cond) semanticObject); 
+					return; 
+				}
+				else break;
+			case MarkovPopulationModelsPackage.STATE_REF:
+				if(context == grammarAccess.getState_refRule()) {
+					sequence_state_ref(context, (state_ref) semanticObject); 
 					return; 
 				}
 				else break;
@@ -80,9 +151,52 @@ public class MarkovPopulationModelsSemanticSequencer extends AbstractDelegatingS
 	
 	/**
 	 * Constraint:
+	 *     name=ID
+	 */
+	protected void sequence_action_cond(EObject context, action_cond semanticObject) {
+		if(errorAcceptor != null) {
+			if(transientValues.isValueTransient(semanticObject, MarkovPopulationModelsPackage.Literals.ACTION_COND__NAME) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, MarkovPopulationModelsPackage.Literals.ACTION_COND__NAME));
+		}
+		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
+		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
+		feeder.accept(grammarAccess.getAction_condAccess().getNameIDTerminalRuleCall_1_0(), semanticObject.getName());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     {anystate}
+	 */
+	protected void sequence_action_cond_state_cond(EObject context, anystate semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
 	 *     (name=ID act+=label+ s+=state+)
 	 */
 	protected void sequence_agent(EObject context, agent semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     (name=ID l_tran+=loc_tran l_tran+=loc_tran* rate=FLOAT)
+	 */
+	protected void sequence_gl_tran(EObject context, gl_tran semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     (agentRef=[agent|ID] states+=stateInit states+=stateInit*)
+	 */
+	protected void sequence_init(EObject context, init semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
 	}
 	
@@ -99,6 +213,84 @@ public class MarkovPopulationModelsSemanticSequencer extends AbstractDelegatingS
 		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
 		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
 		feeder.accept(grammarAccess.getLabelAccess().getNameIDTerminalRuleCall_0(), semanticObject.getName());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     (stateRef=[state|ID] | stateRef=[state|ID] | (s_cond=state_cond a_cond=action_cond))
+	 */
+	protected void sequence_loc_tran(EObject context, loc_tran semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     (populationDef=population agentDef=agent)
+	 */
+	protected void sequence_main(EObject context, main semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     (name=ID agents+=init agents+=init* tran+=gl_tran+)
+	 */
+	protected void sequence_population(EObject context, population semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     (stateRef=[state|ID] card=INT)
+	 */
+	protected void sequence_stateInit(EObject context, stateInit semanticObject) {
+		if(errorAcceptor != null) {
+			if(transientValues.isValueTransient(semanticObject, MarkovPopulationModelsPackage.Literals.STATE_INIT__STATE_REF) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, MarkovPopulationModelsPackage.Literals.STATE_INIT__STATE_REF));
+			if(transientValues.isValueTransient(semanticObject, MarkovPopulationModelsPackage.Literals.STATE_INIT__CARD) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, MarkovPopulationModelsPackage.Literals.STATE_INIT__CARD));
+		}
+		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
+		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
+		feeder.accept(grammarAccess.getStateInitAccess().getStateRefStateIDTerminalRuleCall_0_0_1(), semanticObject.getStateRef());
+		feeder.accept(grammarAccess.getStateInitAccess().getCardINTTerminalRuleCall_2_0(), semanticObject.getCard());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     s_ref=state_ref
+	 */
+	protected void sequence_state_cond(EObject context, state_cond semanticObject) {
+		if(errorAcceptor != null) {
+			if(transientValues.isValueTransient(semanticObject, MarkovPopulationModelsPackage.Literals.STATE_COND__SREF) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, MarkovPopulationModelsPackage.Literals.STATE_COND__SREF));
+		}
+		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
+		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
+		feeder.accept(grammarAccess.getState_condAccess().getS_refState_refParserRuleCall_1_0(), semanticObject.getS_ref());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     name=ID
+	 */
+	protected void sequence_state_ref(EObject context, state_ref semanticObject) {
+		if(errorAcceptor != null) {
+			if(transientValues.isValueTransient(semanticObject, MarkovPopulationModelsPackage.Literals.STATE_REF__NAME) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, MarkovPopulationModelsPackage.Literals.STATE_REF__NAME));
+		}
+		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
+		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
+		feeder.accept(grammarAccess.getState_refAccess().getNameIDTerminalRuleCall_0(), semanticObject.getName());
 		feeder.finish();
 	}
 	

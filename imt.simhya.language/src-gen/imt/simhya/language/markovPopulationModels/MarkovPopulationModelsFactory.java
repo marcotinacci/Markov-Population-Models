@@ -23,6 +23,87 @@ public interface MarkovPopulationModelsFactory extends EFactory
   MarkovPopulationModelsFactory eINSTANCE = imt.simhya.language.markovPopulationModels.impl.MarkovPopulationModelsFactoryImpl.init();
 
   /**
+   * Returns a new object of class '<em>main</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>main</em>'.
+   * @generated
+   */
+  main createmain();
+
+  /**
+   * Returns a new object of class '<em>population</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>population</em>'.
+   * @generated
+   */
+  population createpopulation();
+
+  /**
+   * Returns a new object of class '<em>init</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>init</em>'.
+   * @generated
+   */
+  init createinit();
+
+  /**
+   * Returns a new object of class '<em>state Init</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>state Init</em>'.
+   * @generated
+   */
+  stateInit createstateInit();
+
+  /**
+   * Returns a new object of class '<em>gl tran</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>gl tran</em>'.
+   * @generated
+   */
+  gl_tran creategl_tran();
+
+  /**
+   * Returns a new object of class '<em>loc tran</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>loc tran</em>'.
+   * @generated
+   */
+  loc_tran createloc_tran();
+
+  /**
+   * Returns a new object of class '<em>state cond</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>state cond</em>'.
+   * @generated
+   */
+  state_cond createstate_cond();
+
+  /**
+   * Returns a new object of class '<em>state ref</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>state ref</em>'.
+   * @generated
+   */
+  state_ref createstate_ref();
+
+  /**
+   * Returns a new object of class '<em>action cond</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>action cond</em>'.
+   * @generated
+   */
+  action_cond createaction_cond();
+
+  /**
    * Returns a new object of class '<em>agent</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -57,6 +138,15 @@ public interface MarkovPopulationModelsFactory extends EFactory
    * @generated
    */
   action createaction();
+
+  /**
+   * Returns a new object of class '<em>anystate</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>anystate</em>'.
+   * @generated
+   */
+  anystate createanystate();
 
   /**
    * Returns the package supported by this factory.
