@@ -1,0 +1,83 @@
+grammar imt.simhya.language.MarkovPopulationModels with org.eclipse.xtext.common.Terminals
+
+import "http://www.eclipse.org/emf/2002/Ecore" as ecore
+generate markovPopulationModels "http://www.simhya.imt/language/MarkovPopulationModels"
+
+main:
+	populationDef=population & agentDef=agent
+;
+
+population:
+	'population' name=ID '{'
+		'init' agents+=init ('||' agents+=init)*
+		tran+= gl_tran+
+	'}'
+;
+
+init:
+	agentRef=[agent] '{'
+		states+=stateInit (',' states+=stateInit)*
+	'}'
+;
+
+stateInit:
+	stateRef=[state] '=' card=INT	
+;
+
+gl_tran:
+	'transition'
+	name=ID '{'
+	l_tran+=loc_tran ('&' l_tran+=loc_tran)* '=>' rate=FLOAT
+	'}'
+;
+
+loc_tran:
+	'new' stateRef=[state]|
+	'kill' stateRef=[state]|
+	 s_cond= state_cond ':' a_cond=action_cond	
+;
+
+state_cond:
+	{anystate} 'any' |
+	s_ref=state_ref
+;
+
+state_ref:
+	name=ID
+;
+
+action_cond:
+	{anystate} 'any' |
+	name= ID	
+;
+
+agent:
+	'agent' name=ID '{'
+		'actions' act+=label+
+		s+=state+
+	'}'
+;
+
+label:
+	name=ID
+;
+
+state:
+	'state' name=ID '{'
+		spontaneous_act+=action+
+	'}'
+;
+
+// TODO guards
+action:
+	actRef=[label] '-->' stateRef=[state] ':' localRate=FLOAT
+;
+
+terminal INT returns ecore::EInt: ('0'..'9')+;
+
+terminal FLOAT returns ecore::EDouble:
+	'-'? INT '.' INT
+;
+//  ('-')? (INT)* ('.' (INT)+)? |
+//  ('-')? (INT)+ ('.') | 
+//  ('-')? (INT)+ ('.' (INT)*)? (('e'|'E')('-'|'+')? (INT)+);
