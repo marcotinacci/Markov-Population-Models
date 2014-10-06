@@ -21,30 +21,299 @@ public class MarkovPopulationModelsGrammarAccess extends AbstractGrammarElementF
 	public class MainElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "main");
 		private final UnorderedGroup cUnorderedGroup = (UnorderedGroup)rule.eContents().get(1);
-		private final Assignment cPopulationDefAssignment_0 = (Assignment)cUnorderedGroup.eContents().get(0);
-		private final RuleCall cPopulationDefPopulationParserRuleCall_0_0 = (RuleCall)cPopulationDefAssignment_0.eContents().get(0);
-		private final Assignment cAgentDefAssignment_1 = (Assignment)cUnorderedGroup.eContents().get(1);
-		private final RuleCall cAgentDefAgentParserRuleCall_1_0 = (RuleCall)cAgentDefAssignment_1.eContents().get(0);
+		private final Assignment cConstDefAssignment_0 = (Assignment)cUnorderedGroup.eContents().get(0);
+		private final RuleCall cConstDefConstantParserRuleCall_0_0 = (RuleCall)cConstDefAssignment_0.eContents().get(0);
+		private final Assignment cPopulationDefAssignment_1 = (Assignment)cUnorderedGroup.eContents().get(1);
+		private final RuleCall cPopulationDefPopulationParserRuleCall_1_0 = (RuleCall)cPopulationDefAssignment_1.eContents().get(0);
+		private final Assignment cAgentDefAssignment_2 = (Assignment)cUnorderedGroup.eContents().get(2);
+		private final RuleCall cAgentDefAgentParserRuleCall_2_0 = (RuleCall)cAgentDefAssignment_2.eContents().get(0);
 		
 		////extension
 		//main:
-		//	populationDef=population & agentDef=agent;
+		//	constDef+=constant* & populationDef=population & agentDef=agent;
 		public ParserRule getRule() { return rule; }
 
-		//populationDef=population & agentDef=agent
+		//constDef+=constant* & populationDef=population & agentDef=agent
 		public UnorderedGroup getUnorderedGroup() { return cUnorderedGroup; }
 
+		//constDef+=constant*
+		public Assignment getConstDefAssignment_0() { return cConstDefAssignment_0; }
+
+		//constant
+		public RuleCall getConstDefConstantParserRuleCall_0_0() { return cConstDefConstantParserRuleCall_0_0; }
+
 		//populationDef=population
-		public Assignment getPopulationDefAssignment_0() { return cPopulationDefAssignment_0; }
+		public Assignment getPopulationDefAssignment_1() { return cPopulationDefAssignment_1; }
 
 		//population
-		public RuleCall getPopulationDefPopulationParserRuleCall_0_0() { return cPopulationDefPopulationParserRuleCall_0_0; }
+		public RuleCall getPopulationDefPopulationParserRuleCall_1_0() { return cPopulationDefPopulationParserRuleCall_1_0; }
 
 		//agentDef=agent
-		public Assignment getAgentDefAssignment_1() { return cAgentDefAssignment_1; }
+		public Assignment getAgentDefAssignment_2() { return cAgentDefAssignment_2; }
 
 		//agent
-		public RuleCall getAgentDefAgentParserRuleCall_1_0() { return cAgentDefAgentParserRuleCall_1_0; }
+		public RuleCall getAgentDefAgentParserRuleCall_2_0() { return cAgentDefAgentParserRuleCall_2_0; }
+	}
+
+	public class ConstantElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "constant");
+		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
+		private final Group cGroup_0 = (Group)cAlternatives.eContents().get(0);
+		private final Keyword cConstIntegerKeyword_0_0 = (Keyword)cGroup_0.eContents().get(0);
+		private final Assignment cNameAssignment_0_1 = (Assignment)cGroup_0.eContents().get(1);
+		private final RuleCall cNameIDTerminalRuleCall_0_1_0 = (RuleCall)cNameAssignment_0_1.eContents().get(0);
+		private final Keyword cEqualsSignKeyword_0_2 = (Keyword)cGroup_0.eContents().get(2);
+		private final Assignment cConstINTAssignment_0_3 = (Assignment)cGroup_0.eContents().get(3);
+		private final RuleCall cConstINTINTTerminalRuleCall_0_3_0 = (RuleCall)cConstINTAssignment_0_3.eContents().get(0);
+		private final Group cGroup_1 = (Group)cAlternatives.eContents().get(1);
+		private final Keyword cConstRealKeyword_1_0 = (Keyword)cGroup_1.eContents().get(0);
+		private final Assignment cNameAssignment_1_1 = (Assignment)cGroup_1.eContents().get(1);
+		private final RuleCall cNameIDTerminalRuleCall_1_1_0 = (RuleCall)cNameAssignment_1_1.eContents().get(0);
+		private final Keyword cEqualsSignKeyword_1_2 = (Keyword)cGroup_1.eContents().get(2);
+		private final Assignment cConstFLOATAssignment_1_3 = (Assignment)cGroup_1.eContents().get(3);
+		private final RuleCall cConstFLOATFLOATTerminalRuleCall_1_3_0 = (RuleCall)cConstFLOATAssignment_1_3.eContents().get(0);
+		
+		//constant:
+		//	"const integer" name=ID "=" constINT=INT | "const real" name=ID "=" constFLOAT=FLOAT;
+		public ParserRule getRule() { return rule; }
+
+		//"const integer" name=ID "=" constINT=INT | "const real" name=ID "=" constFLOAT=FLOAT
+		public Alternatives getAlternatives() { return cAlternatives; }
+
+		//"const integer" name=ID "=" constINT=INT
+		public Group getGroup_0() { return cGroup_0; }
+
+		//"const integer"
+		public Keyword getConstIntegerKeyword_0_0() { return cConstIntegerKeyword_0_0; }
+
+		//name=ID
+		public Assignment getNameAssignment_0_1() { return cNameAssignment_0_1; }
+
+		//ID
+		public RuleCall getNameIDTerminalRuleCall_0_1_0() { return cNameIDTerminalRuleCall_0_1_0; }
+
+		//"="
+		public Keyword getEqualsSignKeyword_0_2() { return cEqualsSignKeyword_0_2; }
+
+		//constINT=INT
+		public Assignment getConstINTAssignment_0_3() { return cConstINTAssignment_0_3; }
+
+		//INT
+		public RuleCall getConstINTINTTerminalRuleCall_0_3_0() { return cConstINTINTTerminalRuleCall_0_3_0; }
+
+		//"const real" name=ID "=" constFLOAT=FLOAT
+		public Group getGroup_1() { return cGroup_1; }
+
+		//"const real"
+		public Keyword getConstRealKeyword_1_0() { return cConstRealKeyword_1_0; }
+
+		//name=ID
+		public Assignment getNameAssignment_1_1() { return cNameAssignment_1_1; }
+
+		//ID
+		public RuleCall getNameIDTerminalRuleCall_1_1_0() { return cNameIDTerminalRuleCall_1_1_0; }
+
+		//"="
+		public Keyword getEqualsSignKeyword_1_2() { return cEqualsSignKeyword_1_2; }
+
+		//constFLOAT=FLOAT
+		public Assignment getConstFLOATAssignment_1_3() { return cConstFLOATAssignment_1_3; }
+
+		//FLOAT
+		public RuleCall getConstFLOATFLOATTerminalRuleCall_1_3_0() { return cConstFLOATFLOATTerminalRuleCall_1_3_0; }
+	}
+
+	public class AgentElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "agent");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Keyword cAgentKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final RuleCall cNameIDTerminalRuleCall_1_0 = (RuleCall)cNameAssignment_1.eContents().get(0);
+		private final Keyword cLeftCurlyBracketKeyword_2 = (Keyword)cGroup.eContents().get(2);
+		private final Keyword cActionsKeyword_3 = (Keyword)cGroup.eContents().get(3);
+		private final Assignment cActAssignment_4 = (Assignment)cGroup.eContents().get(4);
+		private final RuleCall cActLabelParserRuleCall_4_0 = (RuleCall)cActAssignment_4.eContents().get(0);
+		private final Assignment cSAssignment_5 = (Assignment)cGroup.eContents().get(5);
+		private final RuleCall cSStateParserRuleCall_5_0 = (RuleCall)cSAssignment_5.eContents().get(0);
+		private final Keyword cRightCurlyBracketKeyword_6 = (Keyword)cGroup.eContents().get(6);
+		
+		//agent:
+		//	"agent" name=ID "{" "actions" act+=label+ s+=state+ "}";
+		public ParserRule getRule() { return rule; }
+
+		//"agent" name=ID "{" "actions" act+=label+ s+=state+ "}"
+		public Group getGroup() { return cGroup; }
+
+		//"agent"
+		public Keyword getAgentKeyword_0() { return cAgentKeyword_0; }
+
+		//name=ID
+		public Assignment getNameAssignment_1() { return cNameAssignment_1; }
+
+		//ID
+		public RuleCall getNameIDTerminalRuleCall_1_0() { return cNameIDTerminalRuleCall_1_0; }
+
+		//"{"
+		public Keyword getLeftCurlyBracketKeyword_2() { return cLeftCurlyBracketKeyword_2; }
+
+		//"actions"
+		public Keyword getActionsKeyword_3() { return cActionsKeyword_3; }
+
+		//act+=label+
+		public Assignment getActAssignment_4() { return cActAssignment_4; }
+
+		//label
+		public RuleCall getActLabelParserRuleCall_4_0() { return cActLabelParserRuleCall_4_0; }
+
+		//s+=state+
+		public Assignment getSAssignment_5() { return cSAssignment_5; }
+
+		//state
+		public RuleCall getSStateParserRuleCall_5_0() { return cSStateParserRuleCall_5_0; }
+
+		//"}"
+		public Keyword getRightCurlyBracketKeyword_6() { return cRightCurlyBracketKeyword_6; }
+	}
+
+	public class LabelElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "label");
+		private final Assignment cNameAssignment = (Assignment)rule.eContents().get(1);
+		private final RuleCall cNameIDTerminalRuleCall_0 = (RuleCall)cNameAssignment.eContents().get(0);
+		
+		//label:
+		//	name=ID;
+		public ParserRule getRule() { return rule; }
+
+		//name=ID
+		public Assignment getNameAssignment() { return cNameAssignment; }
+
+		//ID
+		public RuleCall getNameIDTerminalRuleCall_0() { return cNameIDTerminalRuleCall_0; }
+	}
+
+	public class StateElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "state");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Keyword cStateKeyword_0 = (Keyword)cGroup.eContents().get(0);
+		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
+		private final RuleCall cNameIDTerminalRuleCall_1_0 = (RuleCall)cNameAssignment_1.eContents().get(0);
+		private final Keyword cLeftCurlyBracketKeyword_2 = (Keyword)cGroup.eContents().get(2);
+		private final Assignment cSpontaneousActAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cSpontaneousActActionParserRuleCall_3_0 = (RuleCall)cSpontaneousActAssignment_3.eContents().get(0);
+		private final Keyword cRightCurlyBracketKeyword_4 = (Keyword)cGroup.eContents().get(4);
+		
+		//state:
+		//	"state" name=ID "{" spontaneousAct+=action+ "}";
+		public ParserRule getRule() { return rule; }
+
+		//"state" name=ID "{" spontaneousAct+=action+ "}"
+		public Group getGroup() { return cGroup; }
+
+		//"state"
+		public Keyword getStateKeyword_0() { return cStateKeyword_0; }
+
+		//name=ID
+		public Assignment getNameAssignment_1() { return cNameAssignment_1; }
+
+		//ID
+		public RuleCall getNameIDTerminalRuleCall_1_0() { return cNameIDTerminalRuleCall_1_0; }
+
+		//"{"
+		public Keyword getLeftCurlyBracketKeyword_2() { return cLeftCurlyBracketKeyword_2; }
+
+		//spontaneousAct+=action+
+		public Assignment getSpontaneousActAssignment_3() { return cSpontaneousActAssignment_3; }
+
+		//action
+		public RuleCall getSpontaneousActActionParserRuleCall_3_0() { return cSpontaneousActActionParserRuleCall_3_0; }
+
+		//"}"
+		public Keyword getRightCurlyBracketKeyword_4() { return cRightCurlyBracketKeyword_4; }
+	}
+
+	public class ActionElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "action");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final Assignment cActRefAssignment_0 = (Assignment)cGroup.eContents().get(0);
+		private final CrossReference cActRefLabelCrossReference_0_0 = (CrossReference)cActRefAssignment_0.eContents().get(0);
+		private final RuleCall cActRefLabelIDTerminalRuleCall_0_0_1 = (RuleCall)cActRefLabelCrossReference_0_0.eContents().get(1);
+		private final Keyword cHyphenMinusHyphenMinusGreaterThanSignKeyword_1 = (Keyword)cGroup.eContents().get(1);
+		private final Assignment cStateRefAssignment_2 = (Assignment)cGroup.eContents().get(2);
+		private final CrossReference cStateRefStateCrossReference_2_0 = (CrossReference)cStateRefAssignment_2.eContents().get(0);
+		private final RuleCall cStateRefStateIDTerminalRuleCall_2_0_1 = (RuleCall)cStateRefStateCrossReference_2_0.eContents().get(1);
+		private final Keyword cColonKeyword_3 = (Keyword)cGroup.eContents().get(3);
+		private final Assignment cLocalRateAssignment_4 = (Assignment)cGroup.eContents().get(4);
+		private final RuleCall cLocalRateLocal_rateParserRuleCall_4_0 = (RuleCall)cLocalRateAssignment_4.eContents().get(0);
+		
+		//// TODO guards
+		//action:
+		//	actRef=[label] "-->" stateRef=[state] ":" localRate=local_rate;
+		public ParserRule getRule() { return rule; }
+
+		//actRef=[label] "-->" stateRef=[state] ":" localRate=local_rate
+		public Group getGroup() { return cGroup; }
+
+		//actRef=[label]
+		public Assignment getActRefAssignment_0() { return cActRefAssignment_0; }
+
+		//[label]
+		public CrossReference getActRefLabelCrossReference_0_0() { return cActRefLabelCrossReference_0_0; }
+
+		//ID
+		public RuleCall getActRefLabelIDTerminalRuleCall_0_0_1() { return cActRefLabelIDTerminalRuleCall_0_0_1; }
+
+		//"-->"
+		public Keyword getHyphenMinusHyphenMinusGreaterThanSignKeyword_1() { return cHyphenMinusHyphenMinusGreaterThanSignKeyword_1; }
+
+		//stateRef=[state]
+		public Assignment getStateRefAssignment_2() { return cStateRefAssignment_2; }
+
+		//[state]
+		public CrossReference getStateRefStateCrossReference_2_0() { return cStateRefStateCrossReference_2_0; }
+
+		//ID
+		public RuleCall getStateRefStateIDTerminalRuleCall_2_0_1() { return cStateRefStateIDTerminalRuleCall_2_0_1; }
+
+		//":"
+		public Keyword getColonKeyword_3() { return cColonKeyword_3; }
+
+		//localRate=local_rate
+		public Assignment getLocalRateAssignment_4() { return cLocalRateAssignment_4; }
+
+		//local_rate
+		public RuleCall getLocalRateLocal_rateParserRuleCall_4_0() { return cLocalRateLocal_rateParserRuleCall_4_0; }
+	}
+
+	public class Local_rateElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "local_rate");
+		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
+		private final Assignment cConstRefAssignment_0 = (Assignment)cAlternatives.eContents().get(0);
+		private final CrossReference cConstRefConstantCrossReference_0_0 = (CrossReference)cConstRefAssignment_0.eContents().get(0);
+		private final RuleCall cConstRefConstantIDTerminalRuleCall_0_0_1 = (RuleCall)cConstRefConstantCrossReference_0_0.eContents().get(1);
+		private final Assignment cLocalRateAssignment_1 = (Assignment)cAlternatives.eContents().get(1);
+		private final RuleCall cLocalRateFLOATTerminalRuleCall_1_0 = (RuleCall)cLocalRateAssignment_1.eContents().get(0);
+		
+		//local_rate:
+		//	constRef=[constant] | localRate=FLOAT;
+		public ParserRule getRule() { return rule; }
+
+		//constRef=[constant] | localRate=FLOAT
+		public Alternatives getAlternatives() { return cAlternatives; }
+
+		//constRef=[constant]
+		public Assignment getConstRefAssignment_0() { return cConstRefAssignment_0; }
+
+		//[constant]
+		public CrossReference getConstRefConstantCrossReference_0_0() { return cConstRefConstantCrossReference_0_0; }
+
+		//ID
+		public RuleCall getConstRefConstantIDTerminalRuleCall_0_0_1() { return cConstRefConstantIDTerminalRuleCall_0_0_1; }
+
+		//localRate=FLOAT
+		public Assignment getLocalRateAssignment_1() { return cLocalRateAssignment_1; }
+
+		//FLOAT
+		public RuleCall getLocalRateFLOATTerminalRuleCall_1_0() { return cLocalRateFLOATTerminalRuleCall_1_0; }
 	}
 
 	public class PopulationElements extends AbstractParserRuleElementFinder {
@@ -222,14 +491,14 @@ public class MarkovPopulationModelsGrammarAccess extends AbstractGrammarElementF
 		private final RuleCall cLTranLoc_tranParserRuleCall_4_1_0 = (RuleCall)cLTranAssignment_4_1.eContents().get(0);
 		private final Keyword cEqualsSignGreaterThanSignKeyword_5 = (Keyword)cGroup.eContents().get(5);
 		private final Assignment cRateAssignment_6 = (Assignment)cGroup.eContents().get(6);
-		private final RuleCall cRateFLOATTerminalRuleCall_6_0 = (RuleCall)cRateAssignment_6.eContents().get(0);
+		private final RuleCall cRateExprParserRuleCall_6_0 = (RuleCall)cRateAssignment_6.eContents().get(0);
 		private final Keyword cRightCurlyBracketKeyword_7 = (Keyword)cGroup.eContents().get(7);
 		
 		//gl_tran:
-		//	"transition" name=ID "{" lTran+=loc_tran ("&" lTran+=loc_tran)* "=>" rate=FLOAT "}";
+		//	"transition" name=ID "{" lTran+=loc_tran ("&" lTran+=loc_tran)* "=>" rate=expr "}";
 		public ParserRule getRule() { return rule; }
 
-		//"transition" name=ID "{" lTran+=loc_tran ("&" lTran+=loc_tran)* "=>" rate=FLOAT "}"
+		//"transition" name=ID "{" lTran+=loc_tran ("&" lTran+=loc_tran)* "=>" rate=expr "}"
 		public Group getGroup() { return cGroup; }
 
 		//"transition"
@@ -265,11 +534,11 @@ public class MarkovPopulationModelsGrammarAccess extends AbstractGrammarElementF
 		//"=>"
 		public Keyword getEqualsSignGreaterThanSignKeyword_5() { return cEqualsSignGreaterThanSignKeyword_5; }
 
-		//rate=FLOAT
+		//rate=expr
 		public Assignment getRateAssignment_6() { return cRateAssignment_6; }
 
-		//FLOAT
-		public RuleCall getRateFLOATTerminalRuleCall_6_0() { return cRateFLOATTerminalRuleCall_6_0; }
+		//expr
+		public RuleCall getRateExprParserRuleCall_6_0() { return cRateExprParserRuleCall_6_0; }
 
 		//"}"
 		public Keyword getRightCurlyBracketKeyword_7() { return cRightCurlyBracketKeyword_7; }
@@ -357,14 +626,21 @@ public class MarkovPopulationModelsGrammarAccess extends AbstractGrammarElementF
 		private final Group cGroup_0 = (Group)cAlternatives.eContents().get(0);
 		private final Action cAnystateAction_0_0 = (Action)cGroup_0.eContents().get(0);
 		private final Keyword cAnyKeyword_0_1 = (Keyword)cGroup_0.eContents().get(1);
-		private final Assignment cStateRefAssignment_1 = (Assignment)cAlternatives.eContents().get(1);
-		private final RuleCall cStateRefState_refParserRuleCall_1_0 = (RuleCall)cStateRefAssignment_1.eContents().get(0);
+		private final Group cGroup_1 = (Group)cAlternatives.eContents().get(1);
+		private final Assignment cStateRefAssignment_1_0 = (Assignment)cGroup_1.eContents().get(0);
+		private final RuleCall cStateRefState_refParserRuleCall_1_0_0 = (RuleCall)cStateRefAssignment_1_0.eContents().get(0);
+		private final Group cGroup_1_1 = (Group)cGroup_1.eContents().get(1);
+		private final Keyword cOrKeyword_1_1_0 = (Keyword)cGroup_1_1.eContents().get(0);
+		private final Assignment cStateRefAssignment_1_1_1 = (Assignment)cGroup_1_1.eContents().get(1);
+		private final RuleCall cStateRefState_refParserRuleCall_1_1_1_0 = (RuleCall)cStateRefAssignment_1_1_1.eContents().get(0);
 		
 		//state_cond:
-		//	{anystate} "any" | stateRef=state_ref;
+		//	{anystate} "any" | // stateRef= state_ref
+		//	stateRef+=state_ref ("or" stateRef+=state_ref)*;
 		public ParserRule getRule() { return rule; }
 
-		//{anystate} "any" | stateRef=state_ref
+		//{anystate} "any" | // stateRef= state_ref
+		//stateRef+=state_ref ("or" stateRef+=state_ref)*
 		public Alternatives getAlternatives() { return cAlternatives; }
 
 		//{anystate} "any"
@@ -376,11 +652,28 @@ public class MarkovPopulationModelsGrammarAccess extends AbstractGrammarElementF
 		//"any"
 		public Keyword getAnyKeyword_0_1() { return cAnyKeyword_0_1; }
 
-		//stateRef=state_ref
-		public Assignment getStateRefAssignment_1() { return cStateRefAssignment_1; }
+		//// stateRef= state_ref
+		//stateRef+=state_ref ("or" stateRef+=state_ref)*
+		public Group getGroup_1() { return cGroup_1; }
+
+		//// stateRef= state_ref
+		//stateRef+=state_ref
+		public Assignment getStateRefAssignment_1_0() { return cStateRefAssignment_1_0; }
 
 		//state_ref
-		public RuleCall getStateRefState_refParserRuleCall_1_0() { return cStateRefState_refParserRuleCall_1_0; }
+		public RuleCall getStateRefState_refParserRuleCall_1_0_0() { return cStateRefState_refParserRuleCall_1_0_0; }
+
+		//("or" stateRef+=state_ref)*
+		public Group getGroup_1_1() { return cGroup_1_1; }
+
+		//"or"
+		public Keyword getOrKeyword_1_1_0() { return cOrKeyword_1_1_0; }
+
+		//stateRef+=state_ref
+		public Assignment getStateRefAssignment_1_1_1() { return cStateRefAssignment_1_1_1; }
+
+		//state_ref
+		public RuleCall getStateRefState_refParserRuleCall_1_1_1_0() { return cStateRefState_refParserRuleCall_1_1_1_0; }
 	}
 
 	public class State_refElements extends AbstractParserRuleElementFinder {
@@ -439,169 +732,55 @@ public class MarkovPopulationModelsGrammarAccess extends AbstractGrammarElementF
 		public RuleCall getActionRefLabelIDTerminalRuleCall_1_0_1() { return cActionRefLabelIDTerminalRuleCall_1_0_1; }
 	}
 
-	public class AgentElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "agent");
-		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Keyword cAgentKeyword_0 = (Keyword)cGroup.eContents().get(0);
-		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
-		private final RuleCall cNameIDTerminalRuleCall_1_0 = (RuleCall)cNameAssignment_1.eContents().get(0);
-		private final Keyword cLeftCurlyBracketKeyword_2 = (Keyword)cGroup.eContents().get(2);
-		private final Keyword cActionsKeyword_3 = (Keyword)cGroup.eContents().get(3);
-		private final Assignment cActAssignment_4 = (Assignment)cGroup.eContents().get(4);
-		private final RuleCall cActLabelParserRuleCall_4_0 = (RuleCall)cActAssignment_4.eContents().get(0);
-		private final Assignment cSAssignment_5 = (Assignment)cGroup.eContents().get(5);
-		private final RuleCall cSStateParserRuleCall_5_0 = (RuleCall)cSAssignment_5.eContents().get(0);
-		private final Keyword cRightCurlyBracketKeyword_6 = (Keyword)cGroup.eContents().get(6);
+	public class ExprElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "expr");
+		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
+		private final Assignment cConstRefAssignment_0 = (Assignment)cAlternatives.eContents().get(0);
+		private final CrossReference cConstRefConstantCrossReference_0_0 = (CrossReference)cConstRefAssignment_0.eContents().get(0);
+		private final RuleCall cConstRefConstantIDTerminalRuleCall_0_0_1 = (RuleCall)cConstRefConstantCrossReference_0_0.eContents().get(1);
+		private final Assignment cConstFLOATAssignment_1 = (Assignment)cAlternatives.eContents().get(1);
+		private final RuleCall cConstFLOATFLOATTerminalRuleCall_1_0 = (RuleCall)cConstFLOATAssignment_1.eContents().get(0);
+		private final Assignment cConstINTAssignment_2 = (Assignment)cAlternatives.eContents().get(2);
+		private final RuleCall cConstINTINTTerminalRuleCall_2_0 = (RuleCall)cConstINTAssignment_2.eContents().get(0);
 		
-		//agent:
-		//	"agent" name=ID "{" "actions" act+=label+ s+=state+ "}";
+		////{stateExpr} stateRef=[state]	
+		//expr:
+		//	constRef=[constant] | constFLOAT=FLOAT | constINT=INT;
 		public ParserRule getRule() { return rule; }
 
-		//"agent" name=ID "{" "actions" act+=label+ s+=state+ "}"
-		public Group getGroup() { return cGroup; }
+		//constRef=[constant] | constFLOAT=FLOAT | constINT=INT
+		public Alternatives getAlternatives() { return cAlternatives; }
 
-		//"agent"
-		public Keyword getAgentKeyword_0() { return cAgentKeyword_0; }
+		//constRef=[constant]
+		public Assignment getConstRefAssignment_0() { return cConstRefAssignment_0; }
 
-		//name=ID
-		public Assignment getNameAssignment_1() { return cNameAssignment_1; }
-
-		//ID
-		public RuleCall getNameIDTerminalRuleCall_1_0() { return cNameIDTerminalRuleCall_1_0; }
-
-		//"{"
-		public Keyword getLeftCurlyBracketKeyword_2() { return cLeftCurlyBracketKeyword_2; }
-
-		//"actions"
-		public Keyword getActionsKeyword_3() { return cActionsKeyword_3; }
-
-		//act+=label+
-		public Assignment getActAssignment_4() { return cActAssignment_4; }
-
-		//label
-		public RuleCall getActLabelParserRuleCall_4_0() { return cActLabelParserRuleCall_4_0; }
-
-		//s+=state+
-		public Assignment getSAssignment_5() { return cSAssignment_5; }
-
-		//state
-		public RuleCall getSStateParserRuleCall_5_0() { return cSStateParserRuleCall_5_0; }
-
-		//"}"
-		public Keyword getRightCurlyBracketKeyword_6() { return cRightCurlyBracketKeyword_6; }
-	}
-
-	public class LabelElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "label");
-		private final Assignment cNameAssignment = (Assignment)rule.eContents().get(1);
-		private final RuleCall cNameIDTerminalRuleCall_0 = (RuleCall)cNameAssignment.eContents().get(0);
-		
-		//label:
-		//	name=ID;
-		public ParserRule getRule() { return rule; }
-
-		//name=ID
-		public Assignment getNameAssignment() { return cNameAssignment; }
+		//[constant]
+		public CrossReference getConstRefConstantCrossReference_0_0() { return cConstRefConstantCrossReference_0_0; }
 
 		//ID
-		public RuleCall getNameIDTerminalRuleCall_0() { return cNameIDTerminalRuleCall_0; }
-	}
+		public RuleCall getConstRefConstantIDTerminalRuleCall_0_0_1() { return cConstRefConstantIDTerminalRuleCall_0_0_1; }
 
-	public class StateElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "state");
-		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Keyword cStateKeyword_0 = (Keyword)cGroup.eContents().get(0);
-		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
-		private final RuleCall cNameIDTerminalRuleCall_1_0 = (RuleCall)cNameAssignment_1.eContents().get(0);
-		private final Keyword cLeftCurlyBracketKeyword_2 = (Keyword)cGroup.eContents().get(2);
-		private final Assignment cSpontaneousActAssignment_3 = (Assignment)cGroup.eContents().get(3);
-		private final RuleCall cSpontaneousActActionParserRuleCall_3_0 = (RuleCall)cSpontaneousActAssignment_3.eContents().get(0);
-		private final Keyword cRightCurlyBracketKeyword_4 = (Keyword)cGroup.eContents().get(4);
-		
-		//state:
-		//	"state" name=ID "{" spontaneousAct+=action+ "}";
-		public ParserRule getRule() { return rule; }
-
-		//"state" name=ID "{" spontaneousAct+=action+ "}"
-		public Group getGroup() { return cGroup; }
-
-		//"state"
-		public Keyword getStateKeyword_0() { return cStateKeyword_0; }
-
-		//name=ID
-		public Assignment getNameAssignment_1() { return cNameAssignment_1; }
-
-		//ID
-		public RuleCall getNameIDTerminalRuleCall_1_0() { return cNameIDTerminalRuleCall_1_0; }
-
-		//"{"
-		public Keyword getLeftCurlyBracketKeyword_2() { return cLeftCurlyBracketKeyword_2; }
-
-		//spontaneousAct+=action+
-		public Assignment getSpontaneousActAssignment_3() { return cSpontaneousActAssignment_3; }
-
-		//action
-		public RuleCall getSpontaneousActActionParserRuleCall_3_0() { return cSpontaneousActActionParserRuleCall_3_0; }
-
-		//"}"
-		public Keyword getRightCurlyBracketKeyword_4() { return cRightCurlyBracketKeyword_4; }
-	}
-
-	public class ActionElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "action");
-		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Assignment cActRefAssignment_0 = (Assignment)cGroup.eContents().get(0);
-		private final CrossReference cActRefLabelCrossReference_0_0 = (CrossReference)cActRefAssignment_0.eContents().get(0);
-		private final RuleCall cActRefLabelIDTerminalRuleCall_0_0_1 = (RuleCall)cActRefLabelCrossReference_0_0.eContents().get(1);
-		private final Keyword cHyphenMinusHyphenMinusGreaterThanSignKeyword_1 = (Keyword)cGroup.eContents().get(1);
-		private final Assignment cStateRefAssignment_2 = (Assignment)cGroup.eContents().get(2);
-		private final CrossReference cStateRefStateCrossReference_2_0 = (CrossReference)cStateRefAssignment_2.eContents().get(0);
-		private final RuleCall cStateRefStateIDTerminalRuleCall_2_0_1 = (RuleCall)cStateRefStateCrossReference_2_0.eContents().get(1);
-		private final Keyword cColonKeyword_3 = (Keyword)cGroup.eContents().get(3);
-		private final Assignment cLocalRateAssignment_4 = (Assignment)cGroup.eContents().get(4);
-		private final RuleCall cLocalRateFLOATTerminalRuleCall_4_0 = (RuleCall)cLocalRateAssignment_4.eContents().get(0);
-		
-		//// TODO guards
-		//action:
-		//	actRef=[label] "-->" stateRef=[state] ":" localRate=FLOAT;
-		public ParserRule getRule() { return rule; }
-
-		//actRef=[label] "-->" stateRef=[state] ":" localRate=FLOAT
-		public Group getGroup() { return cGroup; }
-
-		//actRef=[label]
-		public Assignment getActRefAssignment_0() { return cActRefAssignment_0; }
-
-		//[label]
-		public CrossReference getActRefLabelCrossReference_0_0() { return cActRefLabelCrossReference_0_0; }
-
-		//ID
-		public RuleCall getActRefLabelIDTerminalRuleCall_0_0_1() { return cActRefLabelIDTerminalRuleCall_0_0_1; }
-
-		//"-->"
-		public Keyword getHyphenMinusHyphenMinusGreaterThanSignKeyword_1() { return cHyphenMinusHyphenMinusGreaterThanSignKeyword_1; }
-
-		//stateRef=[state]
-		public Assignment getStateRefAssignment_2() { return cStateRefAssignment_2; }
-
-		//[state]
-		public CrossReference getStateRefStateCrossReference_2_0() { return cStateRefStateCrossReference_2_0; }
-
-		//ID
-		public RuleCall getStateRefStateIDTerminalRuleCall_2_0_1() { return cStateRefStateIDTerminalRuleCall_2_0_1; }
-
-		//":"
-		public Keyword getColonKeyword_3() { return cColonKeyword_3; }
-
-		//localRate=FLOAT
-		public Assignment getLocalRateAssignment_4() { return cLocalRateAssignment_4; }
+		//constFLOAT=FLOAT
+		public Assignment getConstFLOATAssignment_1() { return cConstFLOATAssignment_1; }
 
 		//FLOAT
-		public RuleCall getLocalRateFLOATTerminalRuleCall_4_0() { return cLocalRateFLOATTerminalRuleCall_4_0; }
+		public RuleCall getConstFLOATFLOATTerminalRuleCall_1_0() { return cConstFLOATFLOATTerminalRuleCall_1_0; }
+
+		//constINT=INT
+		public Assignment getConstINTAssignment_2() { return cConstINTAssignment_2; }
+
+		//INT
+		public RuleCall getConstINTINTTerminalRuleCall_2_0() { return cConstINTINTTerminalRuleCall_2_0; }
 	}
 	
 	
 	private final MainElements pMain;
+	private final ConstantElements pConstant;
+	private final AgentElements pAgent;
+	private final LabelElements pLabel;
+	private final StateElements pState;
+	private final ActionElements pAction;
+	private final Local_rateElements pLocal_rate;
 	private final PopulationElements pPopulation;
 	private final InitElements pInit;
 	private final StateInitElements pStateInit;
@@ -610,10 +789,7 @@ public class MarkovPopulationModelsGrammarAccess extends AbstractGrammarElementF
 	private final State_condElements pState_cond;
 	private final State_refElements pState_ref;
 	private final Action_condElements pAction_cond;
-	private final AgentElements pAgent;
-	private final LabelElements pLabel;
-	private final StateElements pState;
-	private final ActionElements pAction;
+	private final ExprElements pExpr;
 	private final TerminalRule tINT;
 	private final TerminalRule tFLOAT;
 	
@@ -627,6 +803,12 @@ public class MarkovPopulationModelsGrammarAccess extends AbstractGrammarElementF
 		this.grammar = internalFindGrammar(grammarProvider);
 		this.gaTerminals = gaTerminals;
 		this.pMain = new MainElements();
+		this.pConstant = new ConstantElements();
+		this.pAgent = new AgentElements();
+		this.pLabel = new LabelElements();
+		this.pState = new StateElements();
+		this.pAction = new ActionElements();
+		this.pLocal_rate = new Local_rateElements();
 		this.pPopulation = new PopulationElements();
 		this.pInit = new InitElements();
 		this.pStateInit = new StateInitElements();
@@ -635,10 +817,7 @@ public class MarkovPopulationModelsGrammarAccess extends AbstractGrammarElementF
 		this.pState_cond = new State_condElements();
 		this.pState_ref = new State_refElements();
 		this.pAction_cond = new Action_condElements();
-		this.pAgent = new AgentElements();
-		this.pLabel = new LabelElements();
-		this.pState = new StateElements();
-		this.pAction = new ActionElements();
+		this.pExpr = new ExprElements();
 		this.tINT = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "INT");
 		this.tFLOAT = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "FLOAT");
 	}
@@ -672,7 +851,7 @@ public class MarkovPopulationModelsGrammarAccess extends AbstractGrammarElementF
 	
 	////extension
 	//main:
-	//	populationDef=population & agentDef=agent;
+	//	constDef+=constant* & populationDef=population & agentDef=agent;
 	public MainElements getMainAccess() {
 		return pMain;
 	}
@@ -681,84 +860,14 @@ public class MarkovPopulationModelsGrammarAccess extends AbstractGrammarElementF
 		return getMainAccess().getRule();
 	}
 
-	//population:
-	//	"population" name=ID "{" "init" agents+=init ("||" agents+=init)* tran+=gl_tran+ "}";
-	public PopulationElements getPopulationAccess() {
-		return pPopulation;
+	//constant:
+	//	"const integer" name=ID "=" constINT=INT | "const real" name=ID "=" constFLOAT=FLOAT;
+	public ConstantElements getConstantAccess() {
+		return pConstant;
 	}
 	
-	public ParserRule getPopulationRule() {
-		return getPopulationAccess().getRule();
-	}
-
-	//init:
-	//	agentRef=[agent] "{" states+=stateInit ("," states+=stateInit)* "}";
-	public InitElements getInitAccess() {
-		return pInit;
-	}
-	
-	public ParserRule getInitRule() {
-		return getInitAccess().getRule();
-	}
-
-	//stateInit:
-	//	stateRef=[state] "=" card=INT;
-	public StateInitElements getStateInitAccess() {
-		return pStateInit;
-	}
-	
-	public ParserRule getStateInitRule() {
-		return getStateInitAccess().getRule();
-	}
-
-	//gl_tran:
-	//	"transition" name=ID "{" lTran+=loc_tran ("&" lTran+=loc_tran)* "=>" rate=FLOAT "}";
-	public Gl_tranElements getGl_tranAccess() {
-		return pGl_tran;
-	}
-	
-	public ParserRule getGl_tranRule() {
-		return getGl_tranAccess().getRule();
-	}
-
-	//loc_tran:
-	//	"new" stateRef=[state] | "kill" stateRef=[state] | sCond=state_cond ":" aCond=action_cond;
-	public Loc_tranElements getLoc_tranAccess() {
-		return pLoc_tran;
-	}
-	
-	public ParserRule getLoc_tranRule() {
-		return getLoc_tranAccess().getRule();
-	}
-
-	//state_cond:
-	//	{anystate} "any" | stateRef=state_ref;
-	public State_condElements getState_condAccess() {
-		return pState_cond;
-	}
-	
-	public ParserRule getState_condRule() {
-		return getState_condAccess().getRule();
-	}
-
-	//state_ref:
-	//	stateRef=[state];
-	public State_refElements getState_refAccess() {
-		return pState_ref;
-	}
-	
-	public ParserRule getState_refRule() {
-		return getState_refAccess().getRule();
-	}
-
-	//action_cond:
-	//	{anystate} "any" | actionRef=[label];
-	public Action_condElements getAction_condAccess() {
-		return pAction_cond;
-	}
-	
-	public ParserRule getAction_condRule() {
-		return getAction_condAccess().getRule();
+	public ParserRule getConstantRule() {
+		return getConstantAccess().getRule();
 	}
 
 	//agent:
@@ -793,13 +902,115 @@ public class MarkovPopulationModelsGrammarAccess extends AbstractGrammarElementF
 
 	//// TODO guards
 	//action:
-	//	actRef=[label] "-->" stateRef=[state] ":" localRate=FLOAT;
+	//	actRef=[label] "-->" stateRef=[state] ":" localRate=local_rate;
 	public ActionElements getActionAccess() {
 		return pAction;
 	}
 	
 	public ParserRule getActionRule() {
 		return getActionAccess().getRule();
+	}
+
+	//local_rate:
+	//	constRef=[constant] | localRate=FLOAT;
+	public Local_rateElements getLocal_rateAccess() {
+		return pLocal_rate;
+	}
+	
+	public ParserRule getLocal_rateRule() {
+		return getLocal_rateAccess().getRule();
+	}
+
+	//population:
+	//	"population" name=ID "{" "init" agents+=init ("||" agents+=init)* tran+=gl_tran+ "}";
+	public PopulationElements getPopulationAccess() {
+		return pPopulation;
+	}
+	
+	public ParserRule getPopulationRule() {
+		return getPopulationAccess().getRule();
+	}
+
+	//init:
+	//	agentRef=[agent] "{" states+=stateInit ("," states+=stateInit)* "}";
+	public InitElements getInitAccess() {
+		return pInit;
+	}
+	
+	public ParserRule getInitRule() {
+		return getInitAccess().getRule();
+	}
+
+	//stateInit:
+	//	stateRef=[state] "=" card=INT;
+	public StateInitElements getStateInitAccess() {
+		return pStateInit;
+	}
+	
+	public ParserRule getStateInitRule() {
+		return getStateInitAccess().getRule();
+	}
+
+	//gl_tran:
+	//	"transition" name=ID "{" lTran+=loc_tran ("&" lTran+=loc_tran)* "=>" rate=expr "}";
+	public Gl_tranElements getGl_tranAccess() {
+		return pGl_tran;
+	}
+	
+	public ParserRule getGl_tranRule() {
+		return getGl_tranAccess().getRule();
+	}
+
+	//loc_tran:
+	//	"new" stateRef=[state] | "kill" stateRef=[state] | sCond=state_cond ":" aCond=action_cond;
+	public Loc_tranElements getLoc_tranAccess() {
+		return pLoc_tran;
+	}
+	
+	public ParserRule getLoc_tranRule() {
+		return getLoc_tranAccess().getRule();
+	}
+
+	//state_cond:
+	//	{anystate} "any" | // stateRef= state_ref
+	//	stateRef+=state_ref ("or" stateRef+=state_ref)*;
+	public State_condElements getState_condAccess() {
+		return pState_cond;
+	}
+	
+	public ParserRule getState_condRule() {
+		return getState_condAccess().getRule();
+	}
+
+	//state_ref:
+	//	stateRef=[state];
+	public State_refElements getState_refAccess() {
+		return pState_ref;
+	}
+	
+	public ParserRule getState_refRule() {
+		return getState_refAccess().getRule();
+	}
+
+	//action_cond:
+	//	{anystate} "any" | actionRef=[label];
+	public Action_condElements getAction_condAccess() {
+		return pAction_cond;
+	}
+	
+	public ParserRule getAction_condRule() {
+		return getAction_condAccess().getRule();
+	}
+
+	////{stateExpr} stateRef=[state]	
+	//expr:
+	//	constRef=[constant] | constFLOAT=FLOAT | constINT=INT;
+	public ExprElements getExprAccess() {
+		return pExpr;
+	}
+	
+	public ParserRule getExprRule() {
+		return getExprAccess().getRule();
 	}
 
 	//terminal INT returns ecore::EInt:

@@ -80,6 +80,36 @@ public class MarkovPopulationModelsAdapterFactory extends AdapterFactoryImpl
         return createmainAdapter();
       }
       @Override
+      public Adapter caseconstant(constant object)
+      {
+        return createconstantAdapter();
+      }
+      @Override
+      public Adapter caseagent(agent object)
+      {
+        return createagentAdapter();
+      }
+      @Override
+      public Adapter caselabel(label object)
+      {
+        return createlabelAdapter();
+      }
+      @Override
+      public Adapter casestate(state object)
+      {
+        return createstateAdapter();
+      }
+      @Override
+      public Adapter caseaction(action object)
+      {
+        return createactionAdapter();
+      }
+      @Override
+      public Adapter caselocal_rate(local_rate object)
+      {
+        return createlocal_rateAdapter();
+      }
+      @Override
       public Adapter casepopulation(population object)
       {
         return createpopulationAdapter();
@@ -120,24 +150,9 @@ public class MarkovPopulationModelsAdapterFactory extends AdapterFactoryImpl
         return createaction_condAdapter();
       }
       @Override
-      public Adapter caseagent(agent object)
+      public Adapter caseexpr(expr object)
       {
-        return createagentAdapter();
-      }
-      @Override
-      public Adapter caselabel(label object)
-      {
-        return createlabelAdapter();
-      }
-      @Override
-      public Adapter casestate(state object)
-      {
-        return createstateAdapter();
-      }
-      @Override
-      public Adapter caseaction(action object)
-      {
-        return createactionAdapter();
+        return createexprAdapter();
       }
       @Override
       public Adapter caseanystate(anystate object)
@@ -177,6 +192,96 @@ public class MarkovPopulationModelsAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createmainAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link imt.simhya.language.markovPopulationModels.constant <em>constant</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see imt.simhya.language.markovPopulationModels.constant
+   * @generated
+   */
+  public Adapter createconstantAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link imt.simhya.language.markovPopulationModels.agent <em>agent</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see imt.simhya.language.markovPopulationModels.agent
+   * @generated
+   */
+  public Adapter createagentAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link imt.simhya.language.markovPopulationModels.label <em>label</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see imt.simhya.language.markovPopulationModels.label
+   * @generated
+   */
+  public Adapter createlabelAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link imt.simhya.language.markovPopulationModels.state <em>state</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see imt.simhya.language.markovPopulationModels.state
+   * @generated
+   */
+  public Adapter createstateAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link imt.simhya.language.markovPopulationModels.action <em>action</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see imt.simhya.language.markovPopulationModels.action
+   * @generated
+   */
+  public Adapter createactionAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link imt.simhya.language.markovPopulationModels.local_rate <em>local rate</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see imt.simhya.language.markovPopulationModels.local_rate
+   * @generated
+   */
+  public Adapter createlocal_rateAdapter()
   {
     return null;
   }
@@ -302,61 +407,16 @@ public class MarkovPopulationModelsAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
-   * Creates a new adapter for an object of class '{@link imt.simhya.language.markovPopulationModels.agent <em>agent</em>}'.
+   * Creates a new adapter for an object of class '{@link imt.simhya.language.markovPopulationModels.expr <em>expr</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
    * it's useful to ignore a case when inheritance will catch all the cases anyway.
    * <!-- end-user-doc -->
    * @return the new adapter.
-   * @see imt.simhya.language.markovPopulationModels.agent
+   * @see imt.simhya.language.markovPopulationModels.expr
    * @generated
    */
-  public Adapter createagentAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link imt.simhya.language.markovPopulationModels.label <em>label</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see imt.simhya.language.markovPopulationModels.label
-   * @generated
-   */
-  public Adapter createlabelAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link imt.simhya.language.markovPopulationModels.state <em>state</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see imt.simhya.language.markovPopulationModels.state
-   * @generated
-   */
-  public Adapter createstateAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link imt.simhya.language.markovPopulationModels.action <em>action</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see imt.simhya.language.markovPopulationModels.action
-   * @generated
-   */
-  public Adapter createactionAdapter()
+  public Adapter createexprAdapter()
   {
     return null;
   }

@@ -69,29 +69,29 @@ public interface gl_tran extends EObject
   EList<loc_tran> getLTran();
 
   /**
-   * Returns the value of the '<em><b>Rate</b></em>' attribute.
+   * Returns the value of the '<em><b>Rate</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Rate</em>' attribute isn't clear,
+   * If the meaning of the '<em>Rate</em>' containment reference isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Rate</em>' attribute.
-   * @see #setRate(double)
+   * @return the value of the '<em>Rate</em>' containment reference.
+   * @see #setRate(expr)
    * @see imt.simhya.language.markovPopulationModels.MarkovPopulationModelsPackage#getgl_tran_Rate()
-   * @model
+   * @model containment="true"
    * @generated
    */
-  double getRate();
+  expr getRate();
 
   /**
-   * Sets the value of the '{@link imt.simhya.language.markovPopulationModels.gl_tran#getRate <em>Rate</em>}' attribute.
+   * Sets the value of the '{@link imt.simhya.language.markovPopulationModels.gl_tran#getRate <em>Rate</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Rate</em>' attribute.
+   * @param value the new value of the '<em>Rate</em>' containment reference.
    * @see #getRate()
    * @generated
    */
-  void setRate(double value);
+  void setRate(expr value);
 
 } // gl_tran

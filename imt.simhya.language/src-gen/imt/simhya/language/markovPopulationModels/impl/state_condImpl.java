@@ -6,14 +6,19 @@ import imt.simhya.language.markovPopulationModels.MarkovPopulationModelsPackage;
 import imt.simhya.language.markovPopulationModels.state_cond;
 import imt.simhya.language.markovPopulationModels.state_ref;
 
-import org.eclipse.emf.common.notify.Notification;
+import java.util.Collection;
+
 import org.eclipse.emf.common.notify.NotificationChain;
+
+import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
-import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+
+import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
  * <!-- begin-user-doc -->
@@ -31,14 +36,14 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 public class state_condImpl extends MinimalEObjectImpl.Container implements state_cond
 {
   /**
-   * The cached value of the '{@link #getStateRef() <em>State Ref</em>}' containment reference.
+   * The cached value of the '{@link #getStateRef() <em>State Ref</em>}' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @see #getStateRef()
    * @generated
    * @ordered
    */
-  protected state_ref stateRef;
+  protected EList<state_ref> stateRef;
 
   /**
    * <!-- begin-user-doc -->
@@ -66,47 +71,13 @@ public class state_condImpl extends MinimalEObjectImpl.Container implements stat
    * <!-- end-user-doc -->
    * @generated
    */
-  public state_ref getStateRef()
+  public EList<state_ref> getStateRef()
   {
+    if (stateRef == null)
+    {
+      stateRef = new EObjectContainmentEList<state_ref>(state_ref.class, this, MarkovPopulationModelsPackage.STATE_COND__STATE_REF);
+    }
     return stateRef;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public NotificationChain basicSetStateRef(state_ref newStateRef, NotificationChain msgs)
-  {
-    state_ref oldStateRef = stateRef;
-    stateRef = newStateRef;
-    if (eNotificationRequired())
-    {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, MarkovPopulationModelsPackage.STATE_COND__STATE_REF, oldStateRef, newStateRef);
-      if (msgs == null) msgs = notification; else msgs.add(notification);
-    }
-    return msgs;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setStateRef(state_ref newStateRef)
-  {
-    if (newStateRef != stateRef)
-    {
-      NotificationChain msgs = null;
-      if (stateRef != null)
-        msgs = ((InternalEObject)stateRef).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - MarkovPopulationModelsPackage.STATE_COND__STATE_REF, null, msgs);
-      if (newStateRef != null)
-        msgs = ((InternalEObject)newStateRef).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - MarkovPopulationModelsPackage.STATE_COND__STATE_REF, null, msgs);
-      msgs = basicSetStateRef(newStateRef, msgs);
-      if (msgs != null) msgs.dispatch();
-    }
-    else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, MarkovPopulationModelsPackage.STATE_COND__STATE_REF, newStateRef, newStateRef));
   }
 
   /**
@@ -120,7 +91,7 @@ public class state_condImpl extends MinimalEObjectImpl.Container implements stat
     switch (featureID)
     {
       case MarkovPopulationModelsPackage.STATE_COND__STATE_REF:
-        return basicSetStateRef(null, msgs);
+        return ((InternalEList<?>)getStateRef()).basicRemove(otherEnd, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
   }
@@ -146,13 +117,15 @@ public class state_condImpl extends MinimalEObjectImpl.Container implements stat
    * <!-- end-user-doc -->
    * @generated
    */
+  @SuppressWarnings("unchecked")
   @Override
   public void eSet(int featureID, Object newValue)
   {
     switch (featureID)
     {
       case MarkovPopulationModelsPackage.STATE_COND__STATE_REF:
-        setStateRef((state_ref)newValue);
+        getStateRef().clear();
+        getStateRef().addAll((Collection<? extends state_ref>)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -169,7 +142,7 @@ public class state_condImpl extends MinimalEObjectImpl.Container implements stat
     switch (featureID)
     {
       case MarkovPopulationModelsPackage.STATE_COND__STATE_REF:
-        setStateRef((state_ref)null);
+        getStateRef().clear();
         return;
     }
     super.eUnset(featureID);
@@ -186,7 +159,7 @@ public class state_condImpl extends MinimalEObjectImpl.Container implements stat
     switch (featureID)
     {
       case MarkovPopulationModelsPackage.STATE_COND__STATE_REF:
-        return stateRef != null;
+        return stateRef != null && !stateRef.isEmpty();
     }
     return super.eIsSet(featureID);
   }

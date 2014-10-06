@@ -4,17 +4,25 @@ package imt.simhya.language.markovPopulationModels.impl;
 
 import imt.simhya.language.markovPopulationModels.MarkovPopulationModelsPackage;
 import imt.simhya.language.markovPopulationModels.agent;
+import imt.simhya.language.markovPopulationModels.constant;
 import imt.simhya.language.markovPopulationModels.main;
 import imt.simhya.language.markovPopulationModels.population;
 
+import java.util.Collection;
+
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
+import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+
+import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
  * <!-- begin-user-doc -->
@@ -23,6 +31,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * <p>
  * The following features are implemented:
  * <ul>
+ *   <li>{@link imt.simhya.language.markovPopulationModels.impl.mainImpl#getConstDef <em>Const Def</em>}</li>
  *   <li>{@link imt.simhya.language.markovPopulationModels.impl.mainImpl#getPopulationDef <em>Population Def</em>}</li>
  *   <li>{@link imt.simhya.language.markovPopulationModels.impl.mainImpl#getAgentDef <em>Agent Def</em>}</li>
  * </ul>
@@ -32,6 +41,16 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  */
 public class mainImpl extends MinimalEObjectImpl.Container implements main
 {
+  /**
+   * The cached value of the '{@link #getConstDef() <em>Const Def</em>}' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getConstDef()
+   * @generated
+   * @ordered
+   */
+  protected EList<constant> constDef;
+
   /**
    * The cached value of the '{@link #getPopulationDef() <em>Population Def</em>}' containment reference.
    * <!-- begin-user-doc -->
@@ -71,6 +90,20 @@ public class mainImpl extends MinimalEObjectImpl.Container implements main
   protected EClass eStaticClass()
   {
     return MarkovPopulationModelsPackage.Literals.MAIN;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EList<constant> getConstDef()
+  {
+    if (constDef == null)
+    {
+      constDef = new EObjectContainmentEList<constant>(constant.class, this, MarkovPopulationModelsPackage.MAIN__CONST_DEF);
+    }
+    return constDef;
   }
 
   /**
@@ -179,6 +212,8 @@ public class mainImpl extends MinimalEObjectImpl.Container implements main
   {
     switch (featureID)
     {
+      case MarkovPopulationModelsPackage.MAIN__CONST_DEF:
+        return ((InternalEList<?>)getConstDef()).basicRemove(otherEnd, msgs);
       case MarkovPopulationModelsPackage.MAIN__POPULATION_DEF:
         return basicSetPopulationDef(null, msgs);
       case MarkovPopulationModelsPackage.MAIN__AGENT_DEF:
@@ -197,6 +232,8 @@ public class mainImpl extends MinimalEObjectImpl.Container implements main
   {
     switch (featureID)
     {
+      case MarkovPopulationModelsPackage.MAIN__CONST_DEF:
+        return getConstDef();
       case MarkovPopulationModelsPackage.MAIN__POPULATION_DEF:
         return getPopulationDef();
       case MarkovPopulationModelsPackage.MAIN__AGENT_DEF:
@@ -210,11 +247,16 @@ public class mainImpl extends MinimalEObjectImpl.Container implements main
    * <!-- end-user-doc -->
    * @generated
    */
+  @SuppressWarnings("unchecked")
   @Override
   public void eSet(int featureID, Object newValue)
   {
     switch (featureID)
     {
+      case MarkovPopulationModelsPackage.MAIN__CONST_DEF:
+        getConstDef().clear();
+        getConstDef().addAll((Collection<? extends constant>)newValue);
+        return;
       case MarkovPopulationModelsPackage.MAIN__POPULATION_DEF:
         setPopulationDef((population)newValue);
         return;
@@ -235,6 +277,9 @@ public class mainImpl extends MinimalEObjectImpl.Container implements main
   {
     switch (featureID)
     {
+      case MarkovPopulationModelsPackage.MAIN__CONST_DEF:
+        getConstDef().clear();
+        return;
       case MarkovPopulationModelsPackage.MAIN__POPULATION_DEF:
         setPopulationDef((population)null);
         return;
@@ -255,6 +300,8 @@ public class mainImpl extends MinimalEObjectImpl.Container implements main
   {
     switch (featureID)
     {
+      case MarkovPopulationModelsPackage.MAIN__CONST_DEF:
+        return constDef != null && !constDef.isEmpty();
       case MarkovPopulationModelsPackage.MAIN__POPULATION_DEF:
         return populationDef != null;
       case MarkovPopulationModelsPackage.MAIN__AGENT_DEF:

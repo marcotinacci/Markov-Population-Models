@@ -29,6 +29,9 @@ public class InternalMarkovPopulationModelsLexer extends Lexer {
     public static final int RULE_SL_COMMENT=9;
     public static final int RULE_ML_COMMENT=8;
     public static final int T__19=19;
+    public static final int T__30=30;
+    public static final int T__31=31;
+    public static final int T__32=32;
     public static final int RULE_STRING=7;
     public static final int T__16=16;
     public static final int T__15=15;
@@ -58,10 +61,10 @@ public class InternalMarkovPopulationModelsLexer extends Lexer {
         try {
             int _type = T__12;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:11:7: ( 'population' )
-            // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:11:9: 'population'
+            // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:11:7: ( 'const integer' )
+            // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:11:9: 'const integer'
             {
-            match("population"); 
+            match("const integer"); 
 
 
             }
@@ -79,10 +82,10 @@ public class InternalMarkovPopulationModelsLexer extends Lexer {
         try {
             int _type = T__13;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:12:7: ( '{' )
-            // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:12:9: '{'
+            // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:12:7: ( '=' )
+            // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:12:9: '='
             {
-            match('{'); 
+            match('='); 
 
             }
 
@@ -99,10 +102,10 @@ public class InternalMarkovPopulationModelsLexer extends Lexer {
         try {
             int _type = T__14;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:13:7: ( 'init' )
-            // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:13:9: 'init'
+            // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:13:7: ( 'const real' )
+            // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:13:9: 'const real'
             {
-            match("init"); 
+            match("const real"); 
 
 
             }
@@ -120,10 +123,10 @@ public class InternalMarkovPopulationModelsLexer extends Lexer {
         try {
             int _type = T__15;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:14:7: ( '||' )
-            // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:14:9: '||'
+            // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:14:7: ( 'agent' )
+            // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:14:9: 'agent'
             {
-            match("||"); 
+            match("agent"); 
 
 
             }
@@ -141,10 +144,10 @@ public class InternalMarkovPopulationModelsLexer extends Lexer {
         try {
             int _type = T__16;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:15:7: ( '}' )
-            // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:15:9: '}'
+            // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:15:7: ( '{' )
+            // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:15:9: '{'
             {
-            match('}'); 
+            match('{'); 
 
             }
 
@@ -161,10 +164,11 @@ public class InternalMarkovPopulationModelsLexer extends Lexer {
         try {
             int _type = T__17;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:16:7: ( ',' )
-            // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:16:9: ','
+            // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:16:7: ( 'actions' )
+            // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:16:9: 'actions'
             {
-            match(','); 
+            match("actions"); 
+
 
             }
 
@@ -181,10 +185,10 @@ public class InternalMarkovPopulationModelsLexer extends Lexer {
         try {
             int _type = T__18;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:17:7: ( '=' )
-            // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:17:9: '='
+            // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:17:7: ( '}' )
+            // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:17:9: '}'
             {
-            match('='); 
+            match('}'); 
 
             }
 
@@ -201,10 +205,10 @@ public class InternalMarkovPopulationModelsLexer extends Lexer {
         try {
             int _type = T__19;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:18:7: ( 'transition' )
-            // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:18:9: 'transition'
+            // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:18:7: ( 'state' )
+            // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:18:9: 'state'
             {
-            match("transition"); 
+            match("state"); 
 
 
             }
@@ -222,10 +226,11 @@ public class InternalMarkovPopulationModelsLexer extends Lexer {
         try {
             int _type = T__20;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:19:7: ( '&' )
-            // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:19:9: '&'
+            // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:19:7: ( '-->' )
+            // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:19:9: '-->'
             {
-            match('&'); 
+            match("-->"); 
+
 
             }
 
@@ -242,11 +247,10 @@ public class InternalMarkovPopulationModelsLexer extends Lexer {
         try {
             int _type = T__21;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:20:7: ( '=>' )
-            // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:20:9: '=>'
+            // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:20:7: ( ':' )
+            // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:20:9: ':'
             {
-            match("=>"); 
-
+            match(':'); 
 
             }
 
@@ -263,10 +267,10 @@ public class InternalMarkovPopulationModelsLexer extends Lexer {
         try {
             int _type = T__22;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:21:7: ( 'new' )
-            // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:21:9: 'new'
+            // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:21:7: ( 'population' )
+            // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:21:9: 'population'
             {
-            match("new"); 
+            match("population"); 
 
 
             }
@@ -284,10 +288,10 @@ public class InternalMarkovPopulationModelsLexer extends Lexer {
         try {
             int _type = T__23;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:22:7: ( 'kill' )
-            // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:22:9: 'kill'
+            // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:22:7: ( 'init' )
+            // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:22:9: 'init'
             {
-            match("kill"); 
+            match("init"); 
 
 
             }
@@ -305,10 +309,11 @@ public class InternalMarkovPopulationModelsLexer extends Lexer {
         try {
             int _type = T__24;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:23:7: ( ':' )
-            // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:23:9: ':'
+            // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:23:7: ( '||' )
+            // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:23:9: '||'
             {
-            match(':'); 
+            match("||"); 
+
 
             }
 
@@ -325,11 +330,10 @@ public class InternalMarkovPopulationModelsLexer extends Lexer {
         try {
             int _type = T__25;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:24:7: ( 'any' )
-            // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:24:9: 'any'
+            // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:24:7: ( ',' )
+            // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:24:9: ','
             {
-            match("any"); 
-
+            match(','); 
 
             }
 
@@ -346,10 +350,10 @@ public class InternalMarkovPopulationModelsLexer extends Lexer {
         try {
             int _type = T__26;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:25:7: ( 'agent' )
-            // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:25:9: 'agent'
+            // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:25:7: ( 'transition' )
+            // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:25:9: 'transition'
             {
-            match("agent"); 
+            match("transition"); 
 
 
             }
@@ -367,11 +371,10 @@ public class InternalMarkovPopulationModelsLexer extends Lexer {
         try {
             int _type = T__27;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:26:7: ( 'actions' )
-            // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:26:9: 'actions'
+            // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:26:7: ( '&' )
+            // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:26:9: '&'
             {
-            match("actions"); 
-
+            match('&'); 
 
             }
 
@@ -388,10 +391,10 @@ public class InternalMarkovPopulationModelsLexer extends Lexer {
         try {
             int _type = T__28;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:27:7: ( 'state' )
-            // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:27:9: 'state'
+            // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:27:7: ( '=>' )
+            // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:27:9: '=>'
             {
-            match("state"); 
+            match("=>"); 
 
 
             }
@@ -409,10 +412,10 @@ public class InternalMarkovPopulationModelsLexer extends Lexer {
         try {
             int _type = T__29;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:28:7: ( '-->' )
-            // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:28:9: '-->'
+            // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:28:7: ( 'new' )
+            // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:28:9: 'new'
             {
-            match("-->"); 
+            match("new"); 
 
 
             }
@@ -425,15 +428,78 @@ public class InternalMarkovPopulationModelsLexer extends Lexer {
     }
     // $ANTLR end "T__29"
 
+    // $ANTLR start "T__30"
+    public final void mT__30() throws RecognitionException {
+        try {
+            int _type = T__30;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:29:7: ( 'kill' )
+            // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:29:9: 'kill'
+            {
+            match("kill"); 
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "T__30"
+
+    // $ANTLR start "T__31"
+    public final void mT__31() throws RecognitionException {
+        try {
+            int _type = T__31;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:30:7: ( 'any' )
+            // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:30:9: 'any'
+            {
+            match("any"); 
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "T__31"
+
+    // $ANTLR start "T__32"
+    public final void mT__32() throws RecognitionException {
+        try {
+            int _type = T__32;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:31:7: ( 'or' )
+            // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:31:9: 'or'
+            {
+            match("or"); 
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "T__32"
+
     // $ANTLR start "RULE_INT"
     public final void mRULE_INT() throws RecognitionException {
         try {
             int _type = RULE_INT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:1026:10: ( ( '0' .. '9' )+ )
-            // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:1026:12: ( '0' .. '9' )+
+            // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:1313:10: ( ( '0' .. '9' )+ )
+            // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:1313:12: ( '0' .. '9' )+
             {
-            // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:1026:12: ( '0' .. '9' )+
+            // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:1313:12: ( '0' .. '9' )+
             int cnt1=0;
             loop1:
             do {
@@ -447,7 +513,7 @@ public class InternalMarkovPopulationModelsLexer extends Lexer {
 
                 switch (alt1) {
             	case 1 :
-            	    // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:1026:13: '0' .. '9'
+            	    // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:1313:13: '0' .. '9'
             	    {
             	    matchRange('0','9'); 
 
@@ -479,10 +545,10 @@ public class InternalMarkovPopulationModelsLexer extends Lexer {
         try {
             int _type = RULE_FLOAT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:1028:12: ( ( '-' )? RULE_INT '.' RULE_INT )
-            // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:1028:14: ( '-' )? RULE_INT '.' RULE_INT
+            // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:1315:12: ( ( '-' )? RULE_INT '.' RULE_INT )
+            // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:1315:14: ( '-' )? RULE_INT '.' RULE_INT
             {
-            // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:1028:14: ( '-' )?
+            // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:1315:14: ( '-' )?
             int alt2=2;
             int LA2_0 = input.LA(1);
 
@@ -491,7 +557,7 @@ public class InternalMarkovPopulationModelsLexer extends Lexer {
             }
             switch (alt2) {
                 case 1 :
-                    // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:1028:14: '-'
+                    // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:1315:14: '-'
                     {
                     match('-'); 
 
@@ -519,10 +585,10 @@ public class InternalMarkovPopulationModelsLexer extends Lexer {
         try {
             int _type = RULE_ID;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:1030:9: ( ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )* )
-            // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:1030:11: ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
+            // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:1317:9: ( ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )* )
+            // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:1317:11: ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
             {
-            // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:1030:11: ( '^' )?
+            // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:1317:11: ( '^' )?
             int alt3=2;
             int LA3_0 = input.LA(1);
 
@@ -531,7 +597,7 @@ public class InternalMarkovPopulationModelsLexer extends Lexer {
             }
             switch (alt3) {
                 case 1 :
-                    // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:1030:11: '^'
+                    // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:1317:11: '^'
                     {
                     match('^'); 
 
@@ -549,7 +615,7 @@ public class InternalMarkovPopulationModelsLexer extends Lexer {
                 recover(mse);
                 throw mse;}
 
-            // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:1030:40: ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
+            // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:1317:40: ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
             loop4:
             do {
                 int alt4=2;
@@ -598,10 +664,10 @@ public class InternalMarkovPopulationModelsLexer extends Lexer {
         try {
             int _type = RULE_STRING;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:1032:13: ( ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' ) )
-            // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:1032:15: ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
+            // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:1319:13: ( ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' ) )
+            // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:1319:15: ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
             {
-            // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:1032:15: ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
+            // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:1319:15: ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
             int alt7=2;
             int LA7_0 = input.LA(1);
 
@@ -619,10 +685,10 @@ public class InternalMarkovPopulationModelsLexer extends Lexer {
             }
             switch (alt7) {
                 case 1 :
-                    // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:1032:16: '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"'
+                    // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:1319:16: '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"'
                     {
                     match('\"'); 
-                    // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:1032:20: ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )*
+                    // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:1319:20: ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )*
                     loop5:
                     do {
                         int alt5=3;
@@ -638,7 +704,7 @@ public class InternalMarkovPopulationModelsLexer extends Lexer {
 
                         switch (alt5) {
                     	case 1 :
-                    	    // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:1032:21: '\\\\' .
+                    	    // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:1319:21: '\\\\' .
                     	    {
                     	    match('\\'); 
                     	    matchAny(); 
@@ -646,7 +712,7 @@ public class InternalMarkovPopulationModelsLexer extends Lexer {
                     	    }
                     	    break;
                     	case 2 :
-                    	    // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:1032:28: ~ ( ( '\\\\' | '\"' ) )
+                    	    // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:1319:28: ~ ( ( '\\\\' | '\"' ) )
                     	    {
                     	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='!')||(input.LA(1)>='#' && input.LA(1)<='[')||(input.LA(1)>=']' && input.LA(1)<='\uFFFF') ) {
                     	        input.consume();
@@ -671,10 +737,10 @@ public class InternalMarkovPopulationModelsLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:1032:48: '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\''
+                    // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:1319:48: '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\''
                     {
                     match('\''); 
-                    // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:1032:53: ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )*
+                    // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:1319:53: ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )*
                     loop6:
                     do {
                         int alt6=3;
@@ -690,7 +756,7 @@ public class InternalMarkovPopulationModelsLexer extends Lexer {
 
                         switch (alt6) {
                     	case 1 :
-                    	    // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:1032:54: '\\\\' .
+                    	    // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:1319:54: '\\\\' .
                     	    {
                     	    match('\\'); 
                     	    matchAny(); 
@@ -698,7 +764,7 @@ public class InternalMarkovPopulationModelsLexer extends Lexer {
                     	    }
                     	    break;
                     	case 2 :
-                    	    // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:1032:61: ~ ( ( '\\\\' | '\\'' ) )
+                    	    // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:1319:61: ~ ( ( '\\\\' | '\\'' ) )
                     	    {
                     	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='&')||(input.LA(1)>='(' && input.LA(1)<='[')||(input.LA(1)>=']' && input.LA(1)<='\uFFFF') ) {
                     	        input.consume();
@@ -741,12 +807,12 @@ public class InternalMarkovPopulationModelsLexer extends Lexer {
         try {
             int _type = RULE_ML_COMMENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:1034:17: ( '/*' ( options {greedy=false; } : . )* '*/' )
-            // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:1034:19: '/*' ( options {greedy=false; } : . )* '*/'
+            // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:1321:17: ( '/*' ( options {greedy=false; } : . )* '*/' )
+            // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:1321:19: '/*' ( options {greedy=false; } : . )* '*/'
             {
             match("/*"); 
 
-            // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:1034:24: ( options {greedy=false; } : . )*
+            // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:1321:24: ( options {greedy=false; } : . )*
             loop8:
             do {
                 int alt8=2;
@@ -771,7 +837,7 @@ public class InternalMarkovPopulationModelsLexer extends Lexer {
 
                 switch (alt8) {
             	case 1 :
-            	    // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:1034:52: .
+            	    // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:1321:52: .
             	    {
             	    matchAny(); 
 
@@ -801,12 +867,12 @@ public class InternalMarkovPopulationModelsLexer extends Lexer {
         try {
             int _type = RULE_SL_COMMENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:1036:17: ( '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )? )
-            // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:1036:19: '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )?
+            // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:1323:17: ( '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )? )
+            // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:1323:19: '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )?
             {
             match("//"); 
 
-            // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:1036:24: (~ ( ( '\\n' | '\\r' ) ) )*
+            // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:1323:24: (~ ( ( '\\n' | '\\r' ) ) )*
             loop9:
             do {
                 int alt9=2;
@@ -819,7 +885,7 @@ public class InternalMarkovPopulationModelsLexer extends Lexer {
 
                 switch (alt9) {
             	case 1 :
-            	    // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:1036:24: ~ ( ( '\\n' | '\\r' ) )
+            	    // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:1323:24: ~ ( ( '\\n' | '\\r' ) )
             	    {
             	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='\t')||(input.LA(1)>='\u000B' && input.LA(1)<='\f')||(input.LA(1)>='\u000E' && input.LA(1)<='\uFFFF') ) {
             	        input.consume();
@@ -839,7 +905,7 @@ public class InternalMarkovPopulationModelsLexer extends Lexer {
                 }
             } while (true);
 
-            // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:1036:40: ( ( '\\r' )? '\\n' )?
+            // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:1323:40: ( ( '\\r' )? '\\n' )?
             int alt11=2;
             int LA11_0 = input.LA(1);
 
@@ -848,9 +914,9 @@ public class InternalMarkovPopulationModelsLexer extends Lexer {
             }
             switch (alt11) {
                 case 1 :
-                    // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:1036:41: ( '\\r' )? '\\n'
+                    // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:1323:41: ( '\\r' )? '\\n'
                     {
-                    // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:1036:41: ( '\\r' )?
+                    // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:1323:41: ( '\\r' )?
                     int alt10=2;
                     int LA10_0 = input.LA(1);
 
@@ -859,7 +925,7 @@ public class InternalMarkovPopulationModelsLexer extends Lexer {
                     }
                     switch (alt10) {
                         case 1 :
-                            // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:1036:41: '\\r'
+                            // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:1323:41: '\\r'
                             {
                             match('\r'); 
 
@@ -891,10 +957,10 @@ public class InternalMarkovPopulationModelsLexer extends Lexer {
         try {
             int _type = RULE_WS;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:1038:9: ( ( ' ' | '\\t' | '\\r' | '\\n' )+ )
-            // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:1038:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
+            // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:1325:9: ( ( ' ' | '\\t' | '\\r' | '\\n' )+ )
+            // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:1325:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
             {
-            // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:1038:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
+            // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:1325:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
             int cnt12=0;
             loop12:
             do {
@@ -948,8 +1014,8 @@ public class InternalMarkovPopulationModelsLexer extends Lexer {
         try {
             int _type = RULE_ANY_OTHER;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:1040:16: ( . )
-            // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:1040:18: .
+            // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:1327:16: ( . )
+            // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:1327:18: .
             {
             matchAny(); 
 
@@ -964,8 +1030,8 @@ public class InternalMarkovPopulationModelsLexer extends Lexer {
     // $ANTLR end "RULE_ANY_OTHER"
 
     public void mTokens() throws RecognitionException {
-        // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:1:8: ( T__12 | T__13 | T__14 | T__15 | T__16 | T__17 | T__18 | T__19 | T__20 | T__21 | T__22 | T__23 | T__24 | T__25 | T__26 | T__27 | T__28 | T__29 | RULE_INT | RULE_FLOAT | RULE_ID | RULE_STRING | RULE_ML_COMMENT | RULE_SL_COMMENT | RULE_WS | RULE_ANY_OTHER )
-        int alt13=26;
+        // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:1:8: ( T__12 | T__13 | T__14 | T__15 | T__16 | T__17 | T__18 | T__19 | T__20 | T__21 | T__22 | T__23 | T__24 | T__25 | T__26 | T__27 | T__28 | T__29 | T__30 | T__31 | T__32 | RULE_INT | RULE_FLOAT | RULE_ID | RULE_STRING | RULE_ML_COMMENT | RULE_SL_COMMENT | RULE_WS | RULE_ANY_OTHER )
+        int alt13=29;
         alt13 = dfa13.predict(input);
         switch (alt13) {
             case 1 :
@@ -1095,56 +1161,77 @@ public class InternalMarkovPopulationModelsLexer extends Lexer {
                 }
                 break;
             case 19 :
-                // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:1:118: RULE_INT
+                // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:1:118: T__30
+                {
+                mT__30(); 
+
+                }
+                break;
+            case 20 :
+                // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:1:124: T__31
+                {
+                mT__31(); 
+
+                }
+                break;
+            case 21 :
+                // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:1:130: T__32
+                {
+                mT__32(); 
+
+                }
+                break;
+            case 22 :
+                // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:1:136: RULE_INT
                 {
                 mRULE_INT(); 
 
                 }
                 break;
-            case 20 :
-                // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:1:127: RULE_FLOAT
+            case 23 :
+                // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:1:145: RULE_FLOAT
                 {
                 mRULE_FLOAT(); 
 
                 }
                 break;
-            case 21 :
-                // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:1:138: RULE_ID
+            case 24 :
+                // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:1:156: RULE_ID
                 {
                 mRULE_ID(); 
 
                 }
                 break;
-            case 22 :
-                // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:1:146: RULE_STRING
+            case 25 :
+                // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:1:164: RULE_STRING
                 {
                 mRULE_STRING(); 
 
                 }
                 break;
-            case 23 :
-                // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:1:158: RULE_ML_COMMENT
+            case 26 :
+                // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:1:176: RULE_ML_COMMENT
                 {
                 mRULE_ML_COMMENT(); 
 
                 }
                 break;
-            case 24 :
-                // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:1:174: RULE_SL_COMMENT
+            case 27 :
+                // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:1:192: RULE_SL_COMMENT
                 {
                 mRULE_SL_COMMENT(); 
 
                 }
                 break;
-            case 25 :
-                // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:1:190: RULE_WS
+            case 28 :
+                // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:1:208: RULE_WS
                 {
                 mRULE_WS(); 
 
                 }
                 break;
-            case 26 :
-                // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:1:198: RULE_ANY_OTHER
+            case 29 :
+                // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:1:216: RULE_ANY_OTHER
                 {
                 mRULE_ANY_OTHER(); 
 
@@ -1158,108 +1245,119 @@ public class InternalMarkovPopulationModelsLexer extends Lexer {
 
     protected DFA13 dfa13 = new DFA13(this);
     static final String DFA13_eotS =
-        "\1\uffff\1\31\1\uffff\1\31\1\27\2\uffff\1\40\1\31\1\uffff\2\31\1\uffff\2\31\1\27\1\54\1\27\1\uffff\3\27\2\uffff\1\31\2\uffff\1\31\5\uffff\1\31\1\uffff\2\31\1\uffff\4\31\3\uffff\1\54\4\uffff\3\31\1\76\1\31\1\100\4\31\1\105\1\31\1\uffff\1\107\1\uffff\4\31\1\uffff\1\31\1\uffff\1\115\1\31\1\117\2\31\1\uffff\1\31\1\uffff\2\31\1\125\2\31\1\uffff\2\31\1\132\1\133\2\uffff";
+        "\1\uffff\1\33\1\35\1\33\2\uffff\1\33\1\31\1\uffff\2\33\1\31\1\uffff\1\33\1\uffff\3\33\1\60\1\31\1\uffff\3\31\2\uffff\1\33\3\uffff\3\33\2\uffff\1\33\3\uffff\2\33\2\uffff\1\33\1\uffff\2\33\1\100\1\uffff\1\60\4\uffff\3\33\1\104\4\33\1\111\1\33\1\uffff\3\33\1\uffff\2\33\1\120\1\33\1\uffff\1\122\1\33\1\124\1\33\1\126\1\33\1\uffff\1\33\3\uffff\1\33\1\uffff\2\33\2\uffff\1\136\2\33\1\uffff\4\33\1\145\1\146\2\uffff";
     static final String DFA13_eofS =
-        "\134\uffff";
+        "\147\uffff";
     static final String DFA13_minS =
-        "\1\0\1\157\1\uffff\1\156\1\174\2\uffff\1\76\1\162\1\uffff\1\145\1\151\1\uffff\1\143\1\164\1\55\1\56\1\101\1\uffff\2\0\1\52\2\uffff\1\160\2\uffff\1\151\5\uffff\1\141\1\uffff\1\167\1\154\1\uffff\1\171\1\145\1\164\1\141\3\uffff\1\56\4\uffff\1\165\1\164\1\156\1\60\1\154\1\60\1\156\1\151\1\164\1\154\1\60\1\163\1\uffff\1\60\1\uffff\1\164\1\157\1\145\1\141\1\uffff\1\151\1\uffff\1\60\1\156\1\60\2\164\1\uffff\1\163\1\uffff\2\151\1\60\2\157\1\uffff\2\156\2\60\2\uffff";
+        "\1\0\1\157\1\76\1\143\2\uffff\1\164\1\55\1\uffff\1\157\1\156\1\174\1\uffff\1\162\1\uffff\1\145\1\151\1\162\1\56\1\101\1\uffff\2\0\1\52\2\uffff\1\156\3\uffff\1\145\1\164\1\171\2\uffff\1\141\3\uffff\1\160\1\151\2\uffff\1\141\1\uffff\1\167\1\154\1\60\1\uffff\1\56\4\uffff\1\163\1\156\1\151\1\60\1\164\1\165\1\164\1\156\1\60\1\154\1\uffff\2\164\1\157\1\uffff\1\145\1\154\1\60\1\163\1\uffff\1\60\1\40\1\60\1\156\1\60\1\141\1\uffff\1\151\1\uffff\1\151\1\uffff\1\163\1\uffff\2\164\2\uffff\1\60\2\151\1\uffff\2\157\2\156\2\60\2\uffff";
     static final String DFA13_maxS =
-        "\1\uffff\1\157\1\uffff\1\156\1\174\2\uffff\1\76\1\162\1\uffff\1\145\1\151\1\uffff\1\156\1\164\2\71\1\172\1\uffff\2\uffff\1\57\2\uffff\1\160\2\uffff\1\151\5\uffff\1\141\1\uffff\1\167\1\154\1\uffff\1\171\1\145\1\164\1\141\3\uffff\1\71\4\uffff\1\165\1\164\1\156\1\172\1\154\1\172\1\156\1\151\1\164\1\154\1\172\1\163\1\uffff\1\172\1\uffff\1\164\1\157\1\145\1\141\1\uffff\1\151\1\uffff\1\172\1\156\1\172\2\164\1\uffff\1\163\1\uffff\2\151\1\172\2\157\1\uffff\2\156\2\172\2\uffff";
+        "\1\uffff\1\157\1\76\1\156\2\uffff\1\164\1\71\1\uffff\1\157\1\156\1\174\1\uffff\1\162\1\uffff\1\145\1\151\1\162\1\71\1\172\1\uffff\2\uffff\1\57\2\uffff\1\156\3\uffff\1\145\1\164\1\171\2\uffff\1\141\3\uffff\1\160\1\151\2\uffff\1\141\1\uffff\1\167\1\154\1\172\1\uffff\1\71\4\uffff\1\163\1\156\1\151\1\172\1\164\1\165\1\164\1\156\1\172\1\154\1\uffff\2\164\1\157\1\uffff\1\145\1\154\1\172\1\163\1\uffff\1\172\1\40\1\172\1\156\1\172\1\141\1\uffff\1\151\1\uffff\1\162\1\uffff\1\163\1\uffff\2\164\2\uffff\1\172\2\151\1\uffff\2\157\2\156\2\172\2\uffff";
     static final String DFA13_acceptS =
-        "\2\uffff\1\2\2\uffff\1\5\1\6\2\uffff\1\11\2\uffff\1\15\5\uffff\1\25\3\uffff\1\31\1\32\1\uffff\1\25\1\2\1\uffff\1\4\1\5\1\6\1\12\1\7\1\uffff\1\11\2\uffff\1\15\4\uffff\1\22\1\24\1\23\1\uffff\1\26\1\27\1\30\1\31\14\uffff\1\13\1\uffff\1\16\4\uffff\1\3\1\uffff\1\14\5\uffff\1\17\1\uffff\1\21\5\uffff\1\20\4\uffff\1\1\1\10";
+        "\4\uffff\1\5\1\7\2\uffff\1\12\3\uffff\1\16\1\uffff\1\20\5\uffff\1\30\3\uffff\1\34\1\35\1\uffff\1\30\1\21\1\2\3\uffff\1\5\1\7\1\uffff\1\11\1\27\1\12\2\uffff\1\15\1\16\1\uffff\1\20\3\uffff\1\26\1\uffff\1\31\1\32\1\33\1\34\12\uffff\1\25\3\uffff\1\24\4\uffff\1\22\6\uffff\1\14\1\uffff\1\23\1\uffff\1\4\1\uffff\1\10\2\uffff\1\1\1\3\3\uffff\1\6\6\uffff\1\13\1\17";
     static final String DFA13_specialS =
-        "\1\0\22\uffff\1\1\1\2\107\uffff}>";
+        "\1\1\24\uffff\1\2\1\0\120\uffff}>";
     static final String[] DFA13_transitionS = {
-            "\11\27\2\26\2\27\1\26\22\27\1\26\1\27\1\23\3\27\1\11\1\24\4\27\1\6\1\17\1\27\1\25\12\20\1\14\2\27\1\7\3\27\32\22\3\27\1\21\1\22\1\27\1\15\7\22\1\3\1\22\1\13\2\22\1\12\1\22\1\1\2\22\1\16\1\10\6\22\1\2\1\4\1\5\uff82\27",
-            "\1\30",
-            "",
-            "\1\33",
+            "\11\31\2\30\2\31\1\30\22\31\1\30\1\31\1\25\3\31\1\16\1\26\4\31\1\14\1\7\1\31\1\27\12\22\1\10\2\31\1\2\3\31\32\24\3\31\1\23\1\24\1\31\1\3\1\24\1\1\5\24\1\12\1\24\1\20\2\24\1\17\1\21\1\11\2\24\1\6\1\15\6\24\1\4\1\13\1\5\uff82\31",
+            "\1\32",
             "\1\34",
+            "\1\37\3\uffff\1\36\6\uffff\1\40",
             "",
-            "",
-            "\1\37",
-            "\1\41",
             "",
             "\1\43",
-            "\1\44",
+            "\1\44\2\uffff\12\45",
             "",
-            "\1\50\3\uffff\1\47\6\uffff\1\46",
+            "\1\47",
+            "\1\50",
             "\1\51",
-            "\1\52\2\uffff\12\53",
-            "\1\53\1\uffff\12\55",
-            "\32\31\4\uffff\1\31\1\uffff\32\31",
             "",
-            "\0\56",
-            "\0\56",
-            "\1\57\4\uffff\1\60",
+            "\1\53",
             "",
+            "\1\55",
+            "\1\56",
+            "\1\57",
+            "\1\45\1\uffff\12\61",
+            "\32\33\4\uffff\1\33\1\uffff\32\33",
             "",
-            "\1\62",
-            "",
-            "",
-            "\1\63",
-            "",
+            "\0\62",
+            "\0\62",
+            "\1\63\4\uffff\1\64",
             "",
             "",
-            "",
-            "",
-            "\1\64",
-            "",
-            "\1\65",
             "\1\66",
+            "",
+            "",
             "",
             "\1\67",
             "\1\70",
             "\1\71",
+            "",
+            "",
             "\1\72",
-            "",
-            "",
-            "",
-            "\1\53\1\uffff\12\55",
-            "",
             "",
             "",
             "",
             "\1\73",
             "\1\74",
+            "",
+            "",
             "\1\75",
-            "\12\31\7\uffff\32\31\4\uffff\1\31\1\uffff\32\31",
+            "",
+            "\1\76",
             "\1\77",
-            "\12\31\7\uffff\32\31\4\uffff\1\31\1\uffff\32\31",
+            "\12\33\7\uffff\32\33\4\uffff\1\33\1\uffff\32\33",
+            "",
+            "\1\45\1\uffff\12\61",
+            "",
+            "",
+            "",
+            "",
             "\1\101",
             "\1\102",
             "\1\103",
-            "\1\104",
-            "\12\31\7\uffff\32\31\4\uffff\1\31\1\uffff\32\31",
+            "\12\33\7\uffff\32\33\4\uffff\1\33\1\uffff\32\33",
+            "\1\105",
             "\1\106",
-            "",
-            "\12\31\7\uffff\32\31\4\uffff\1\31\1\uffff\32\31",
-            "",
+            "\1\107",
             "\1\110",
-            "\1\111",
+            "\12\33\7\uffff\32\33\4\uffff\1\33\1\uffff\32\33",
             "\1\112",
+            "",
             "\1\113",
-            "",
             "\1\114",
+            "\1\115",
             "",
-            "\12\31\7\uffff\32\31\4\uffff\1\31\1\uffff\32\31",
             "\1\116",
-            "\12\31\7\uffff\32\31\4\uffff\1\31\1\uffff\32\31",
-            "\1\120",
+            "\1\117",
+            "\12\33\7\uffff\32\33\4\uffff\1\33\1\uffff\32\33",
             "\1\121",
             "",
-            "\1\122",
-            "",
+            "\12\33\7\uffff\32\33\4\uffff\1\33\1\uffff\32\33",
             "\1\123",
-            "\1\124",
-            "\12\31\7\uffff\32\31\4\uffff\1\31\1\uffff\32\31",
-            "\1\126",
+            "\12\33\7\uffff\32\33\4\uffff\1\33\1\uffff\32\33",
+            "\1\125",
+            "\12\33\7\uffff\32\33\4\uffff\1\33\1\uffff\32\33",
             "\1\127",
             "",
             "\1\130",
-            "\1\131",
-            "\12\31\7\uffff\32\31\4\uffff\1\31\1\uffff\32\31",
-            "\12\31\7\uffff\32\31\4\uffff\1\31\1\uffff\32\31",
+            "",
+            "\1\131\10\uffff\1\132",
+            "",
+            "\1\133",
+            "",
+            "\1\134",
+            "\1\135",
+            "",
+            "",
+            "\12\33\7\uffff\32\33\4\uffff\1\33\1\uffff\32\33",
+            "\1\137",
+            "\1\140",
+            "",
+            "\1\141",
+            "\1\142",
+            "\1\143",
+            "\1\144",
+            "\12\33\7\uffff\32\33\4\uffff\1\33\1\uffff\32\33",
+            "\12\33\7\uffff\32\33\4\uffff\1\33\1\uffff\32\33",
             "",
             ""
     };
@@ -1294,81 +1392,85 @@ public class InternalMarkovPopulationModelsLexer extends Lexer {
             this.transition = DFA13_transition;
         }
         public String getDescription() {
-            return "1:1: Tokens : ( T__12 | T__13 | T__14 | T__15 | T__16 | T__17 | T__18 | T__19 | T__20 | T__21 | T__22 | T__23 | T__24 | T__25 | T__26 | T__27 | T__28 | T__29 | RULE_INT | RULE_FLOAT | RULE_ID | RULE_STRING | RULE_ML_COMMENT | RULE_SL_COMMENT | RULE_WS | RULE_ANY_OTHER );";
+            return "1:1: Tokens : ( T__12 | T__13 | T__14 | T__15 | T__16 | T__17 | T__18 | T__19 | T__20 | T__21 | T__22 | T__23 | T__24 | T__25 | T__26 | T__27 | T__28 | T__29 | T__30 | T__31 | T__32 | RULE_INT | RULE_FLOAT | RULE_ID | RULE_STRING | RULE_ML_COMMENT | RULE_SL_COMMENT | RULE_WS | RULE_ANY_OTHER );";
         }
         public int specialStateTransition(int s, IntStream _input) throws NoViableAltException {
             IntStream input = _input;
         	int _s = s;
             switch ( s ) {
                     case 0 : 
-                        int LA13_0 = input.LA(1);
+                        int LA13_22 = input.LA(1);
 
                         s = -1;
-                        if ( (LA13_0=='p') ) {s = 1;}
+                        if ( ((LA13_22>='\u0000' && LA13_22<='\uFFFF')) ) {s = 50;}
 
-                        else if ( (LA13_0=='{') ) {s = 2;}
-
-                        else if ( (LA13_0=='i') ) {s = 3;}
-
-                        else if ( (LA13_0=='|') ) {s = 4;}
-
-                        else if ( (LA13_0=='}') ) {s = 5;}
-
-                        else if ( (LA13_0==',') ) {s = 6;}
-
-                        else if ( (LA13_0=='=') ) {s = 7;}
-
-                        else if ( (LA13_0=='t') ) {s = 8;}
-
-                        else if ( (LA13_0=='&') ) {s = 9;}
-
-                        else if ( (LA13_0=='n') ) {s = 10;}
-
-                        else if ( (LA13_0=='k') ) {s = 11;}
-
-                        else if ( (LA13_0==':') ) {s = 12;}
-
-                        else if ( (LA13_0=='a') ) {s = 13;}
-
-                        else if ( (LA13_0=='s') ) {s = 14;}
-
-                        else if ( (LA13_0=='-') ) {s = 15;}
-
-                        else if ( ((LA13_0>='0' && LA13_0<='9')) ) {s = 16;}
-
-                        else if ( (LA13_0=='^') ) {s = 17;}
-
-                        else if ( ((LA13_0>='A' && LA13_0<='Z')||LA13_0=='_'||(LA13_0>='b' && LA13_0<='h')||LA13_0=='j'||(LA13_0>='l' && LA13_0<='m')||LA13_0=='o'||(LA13_0>='q' && LA13_0<='r')||(LA13_0>='u' && LA13_0<='z')) ) {s = 18;}
-
-                        else if ( (LA13_0=='\"') ) {s = 19;}
-
-                        else if ( (LA13_0=='\'') ) {s = 20;}
-
-                        else if ( (LA13_0=='/') ) {s = 21;}
-
-                        else if ( ((LA13_0>='\t' && LA13_0<='\n')||LA13_0=='\r'||LA13_0==' ') ) {s = 22;}
-
-                        else if ( ((LA13_0>='\u0000' && LA13_0<='\b')||(LA13_0>='\u000B' && LA13_0<='\f')||(LA13_0>='\u000E' && LA13_0<='\u001F')||LA13_0=='!'||(LA13_0>='#' && LA13_0<='%')||(LA13_0>='(' && LA13_0<='+')||LA13_0=='.'||(LA13_0>=';' && LA13_0<='<')||(LA13_0>='>' && LA13_0<='@')||(LA13_0>='[' && LA13_0<=']')||LA13_0=='`'||(LA13_0>='~' && LA13_0<='\uFFFF')) ) {s = 23;}
+                        else s = 25;
 
                         if ( s>=0 ) return s;
                         break;
                     case 1 : 
-                        int LA13_19 = input.LA(1);
+                        int LA13_0 = input.LA(1);
 
                         s = -1;
-                        if ( ((LA13_19>='\u0000' && LA13_19<='\uFFFF')) ) {s = 46;}
+                        if ( (LA13_0=='c') ) {s = 1;}
 
-                        else s = 23;
+                        else if ( (LA13_0=='=') ) {s = 2;}
+
+                        else if ( (LA13_0=='a') ) {s = 3;}
+
+                        else if ( (LA13_0=='{') ) {s = 4;}
+
+                        else if ( (LA13_0=='}') ) {s = 5;}
+
+                        else if ( (LA13_0=='s') ) {s = 6;}
+
+                        else if ( (LA13_0=='-') ) {s = 7;}
+
+                        else if ( (LA13_0==':') ) {s = 8;}
+
+                        else if ( (LA13_0=='p') ) {s = 9;}
+
+                        else if ( (LA13_0=='i') ) {s = 10;}
+
+                        else if ( (LA13_0=='|') ) {s = 11;}
+
+                        else if ( (LA13_0==',') ) {s = 12;}
+
+                        else if ( (LA13_0=='t') ) {s = 13;}
+
+                        else if ( (LA13_0=='&') ) {s = 14;}
+
+                        else if ( (LA13_0=='n') ) {s = 15;}
+
+                        else if ( (LA13_0=='k') ) {s = 16;}
+
+                        else if ( (LA13_0=='o') ) {s = 17;}
+
+                        else if ( ((LA13_0>='0' && LA13_0<='9')) ) {s = 18;}
+
+                        else if ( (LA13_0=='^') ) {s = 19;}
+
+                        else if ( ((LA13_0>='A' && LA13_0<='Z')||LA13_0=='_'||LA13_0=='b'||(LA13_0>='d' && LA13_0<='h')||LA13_0=='j'||(LA13_0>='l' && LA13_0<='m')||(LA13_0>='q' && LA13_0<='r')||(LA13_0>='u' && LA13_0<='z')) ) {s = 20;}
+
+                        else if ( (LA13_0=='\"') ) {s = 21;}
+
+                        else if ( (LA13_0=='\'') ) {s = 22;}
+
+                        else if ( (LA13_0=='/') ) {s = 23;}
+
+                        else if ( ((LA13_0>='\t' && LA13_0<='\n')||LA13_0=='\r'||LA13_0==' ') ) {s = 24;}
+
+                        else if ( ((LA13_0>='\u0000' && LA13_0<='\b')||(LA13_0>='\u000B' && LA13_0<='\f')||(LA13_0>='\u000E' && LA13_0<='\u001F')||LA13_0=='!'||(LA13_0>='#' && LA13_0<='%')||(LA13_0>='(' && LA13_0<='+')||LA13_0=='.'||(LA13_0>=';' && LA13_0<='<')||(LA13_0>='>' && LA13_0<='@')||(LA13_0>='[' && LA13_0<=']')||LA13_0=='`'||(LA13_0>='~' && LA13_0<='\uFFFF')) ) {s = 25;}
 
                         if ( s>=0 ) return s;
                         break;
                     case 2 : 
-                        int LA13_20 = input.LA(1);
+                        int LA13_21 = input.LA(1);
 
                         s = -1;
-                        if ( ((LA13_20>='\u0000' && LA13_20<='\uFFFF')) ) {s = 46;}
+                        if ( ((LA13_21>='\u0000' && LA13_21<='\uFFFF')) ) {s = 50;}
 
-                        else s = 23;
+                        else s = 25;
 
                         if ( s>=0 ) return s;
                         break;

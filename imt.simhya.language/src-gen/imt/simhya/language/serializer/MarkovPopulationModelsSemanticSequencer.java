@@ -7,10 +7,13 @@ import imt.simhya.language.markovPopulationModels.action;
 import imt.simhya.language.markovPopulationModels.action_cond;
 import imt.simhya.language.markovPopulationModels.agent;
 import imt.simhya.language.markovPopulationModels.anystate;
+import imt.simhya.language.markovPopulationModels.constant;
+import imt.simhya.language.markovPopulationModels.expr;
 import imt.simhya.language.markovPopulationModels.gl_tran;
 import imt.simhya.language.markovPopulationModels.init;
 import imt.simhya.language.markovPopulationModels.label;
 import imt.simhya.language.markovPopulationModels.loc_tran;
+import imt.simhya.language.markovPopulationModels.local_rate;
 import imt.simhya.language.markovPopulationModels.main;
 import imt.simhya.language.markovPopulationModels.population;
 import imt.simhya.language.markovPopulationModels.state;
@@ -63,6 +66,18 @@ public class MarkovPopulationModelsSemanticSequencer extends AbstractDelegatingS
 					return; 
 				}
 				else break;
+			case MarkovPopulationModelsPackage.CONSTANT:
+				if(context == grammarAccess.getConstantRule()) {
+					sequence_constant(context, (constant) semanticObject); 
+					return; 
+				}
+				else break;
+			case MarkovPopulationModelsPackage.EXPR:
+				if(context == grammarAccess.getExprRule()) {
+					sequence_expr(context, (expr) semanticObject); 
+					return; 
+				}
+				else break;
 			case MarkovPopulationModelsPackage.GL_TRAN:
 				if(context == grammarAccess.getGl_tranRule()) {
 					sequence_gl_tran(context, (gl_tran) semanticObject); 
@@ -84,6 +99,12 @@ public class MarkovPopulationModelsSemanticSequencer extends AbstractDelegatingS
 			case MarkovPopulationModelsPackage.LOC_TRAN:
 				if(context == grammarAccess.getLoc_tranRule()) {
 					sequence_loc_tran(context, (loc_tran) semanticObject); 
+					return; 
+				}
+				else break;
+			case MarkovPopulationModelsPackage.LOCAL_RATE:
+				if(context == grammarAccess.getLocal_rateRule()) {
+					sequence_local_rate(context, (local_rate) semanticObject); 
 					return; 
 				}
 				else break;
@@ -129,7 +150,7 @@ public class MarkovPopulationModelsSemanticSequencer extends AbstractDelegatingS
 	
 	/**
 	 * Constraint:
-	 *     (actRef=[label|ID] stateRef=[state|ID] localRate=FLOAT)
+	 *     (actRef=[label|ID] stateRef=[state|ID] localRate=local_rate)
 	 */
 	protected void sequence_action(EObject context, action semanticObject) {
 		if(errorAcceptor != null) {
@@ -144,7 +165,7 @@ public class MarkovPopulationModelsSemanticSequencer extends AbstractDelegatingS
 		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
 		feeder.accept(grammarAccess.getActionAccess().getActRefLabelIDTerminalRuleCall_0_0_1(), semanticObject.getActRef());
 		feeder.accept(grammarAccess.getActionAccess().getStateRefStateIDTerminalRuleCall_2_0_1(), semanticObject.getStateRef());
-		feeder.accept(grammarAccess.getActionAccess().getLocalRateFLOATTerminalRuleCall_4_0(), semanticObject.getLocalRate());
+		feeder.accept(grammarAccess.getActionAccess().getLocalRateLocal_rateParserRuleCall_4_0(), semanticObject.getLocalRate());
 		feeder.finish();
 	}
 	
@@ -185,7 +206,25 @@ public class MarkovPopulationModelsSemanticSequencer extends AbstractDelegatingS
 	
 	/**
 	 * Constraint:
-	 *     (name=ID lTran+=loc_tran lTran+=loc_tran* rate=FLOAT)
+	 *     ((name=ID constINT=INT) | (name=ID constFLOAT=FLOAT))
+	 */
+	protected void sequence_constant(EObject context, constant semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     (constRef=[constant|ID] | constFLOAT=FLOAT | constINT=INT)
+	 */
+	protected void sequence_expr(EObject context, expr semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     (name=ID lTran+=loc_tran lTran+=loc_tran* rate=expr)
 	 */
 	protected void sequence_gl_tran(EObject context, gl_tran semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -228,7 +267,16 @@ public class MarkovPopulationModelsSemanticSequencer extends AbstractDelegatingS
 	
 	/**
 	 * Constraint:
-	 *     (populationDef=population agentDef=agent)
+	 *     (constRef=[constant|ID] | localRate=FLOAT)
+	 */
+	protected void sequence_local_rate(EObject context, local_rate semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     (constDef+=constant* populationDef=population agentDef=agent)
 	 */
 	protected void sequence_main(EObject context, main semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -265,17 +313,10 @@ public class MarkovPopulationModelsSemanticSequencer extends AbstractDelegatingS
 	
 	/**
 	 * Constraint:
-	 *     stateRef=state_ref
+	 *     (stateRef+=state_ref stateRef+=state_ref*)
 	 */
 	protected void sequence_state_cond(EObject context, state_cond semanticObject) {
-		if(errorAcceptor != null) {
-			if(transientValues.isValueTransient(semanticObject, MarkovPopulationModelsPackage.Literals.STATE_COND__STATE_REF) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, MarkovPopulationModelsPackage.Literals.STATE_COND__STATE_REF));
-		}
-		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
-		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
-		feeder.accept(grammarAccess.getState_condAccess().getStateRefState_refParserRuleCall_1_0(), semanticObject.getStateRef());
-		feeder.finish();
+		genericSequencer.createSequence(context, semanticObject);
 	}
 	
 	

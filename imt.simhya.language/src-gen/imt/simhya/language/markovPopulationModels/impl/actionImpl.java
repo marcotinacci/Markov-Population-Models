@@ -5,9 +5,11 @@ package imt.simhya.language.markovPopulationModels.impl;
 import imt.simhya.language.markovPopulationModels.MarkovPopulationModelsPackage;
 import imt.simhya.language.markovPopulationModels.action;
 import imt.simhya.language.markovPopulationModels.label;
+import imt.simhya.language.markovPopulationModels.local_rate;
 import imt.simhya.language.markovPopulationModels.state;
 
 import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
@@ -53,24 +55,14 @@ public class actionImpl extends MinimalEObjectImpl.Container implements action
   protected state stateRef;
 
   /**
-   * The default value of the '{@link #getLocalRate() <em>Local Rate</em>}' attribute.
+   * The cached value of the '{@link #getLocalRate() <em>Local Rate</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @see #getLocalRate()
    * @generated
    * @ordered
    */
-  protected static final double LOCAL_RATE_EDEFAULT = 0.0;
-
-  /**
-   * The cached value of the '{@link #getLocalRate() <em>Local Rate</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getLocalRate()
-   * @generated
-   * @ordered
-   */
-  protected double localRate = LOCAL_RATE_EDEFAULT;
+  protected local_rate localRate;
 
   /**
    * <!-- begin-user-doc -->
@@ -184,7 +176,7 @@ public class actionImpl extends MinimalEObjectImpl.Container implements action
    * <!-- end-user-doc -->
    * @generated
    */
-  public double getLocalRate()
+  public local_rate getLocalRate()
   {
     return localRate;
   }
@@ -194,12 +186,53 @@ public class actionImpl extends MinimalEObjectImpl.Container implements action
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setLocalRate(double newLocalRate)
+  public NotificationChain basicSetLocalRate(local_rate newLocalRate, NotificationChain msgs)
   {
-    double oldLocalRate = localRate;
+    local_rate oldLocalRate = localRate;
     localRate = newLocalRate;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, MarkovPopulationModelsPackage.ACTION__LOCAL_RATE, oldLocalRate, localRate));
+    {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, MarkovPopulationModelsPackage.ACTION__LOCAL_RATE, oldLocalRate, newLocalRate);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
+    }
+    return msgs;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setLocalRate(local_rate newLocalRate)
+  {
+    if (newLocalRate != localRate)
+    {
+      NotificationChain msgs = null;
+      if (localRate != null)
+        msgs = ((InternalEObject)localRate).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - MarkovPopulationModelsPackage.ACTION__LOCAL_RATE, null, msgs);
+      if (newLocalRate != null)
+        msgs = ((InternalEObject)newLocalRate).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - MarkovPopulationModelsPackage.ACTION__LOCAL_RATE, null, msgs);
+      msgs = basicSetLocalRate(newLocalRate, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, MarkovPopulationModelsPackage.ACTION__LOCAL_RATE, newLocalRate, newLocalRate));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
+  {
+    switch (featureID)
+    {
+      case MarkovPopulationModelsPackage.ACTION__LOCAL_RATE:
+        return basicSetLocalRate(null, msgs);
+    }
+    return super.eInverseRemove(otherEnd, featureID, msgs);
   }
 
   /**
@@ -241,7 +274,7 @@ public class actionImpl extends MinimalEObjectImpl.Container implements action
         setStateRef((state)newValue);
         return;
       case MarkovPopulationModelsPackage.ACTION__LOCAL_RATE:
-        setLocalRate((Double)newValue);
+        setLocalRate((local_rate)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -264,7 +297,7 @@ public class actionImpl extends MinimalEObjectImpl.Container implements action
         setStateRef((state)null);
         return;
       case MarkovPopulationModelsPackage.ACTION__LOCAL_RATE:
-        setLocalRate(LOCAL_RATE_EDEFAULT);
+        setLocalRate((local_rate)null);
         return;
     }
     super.eUnset(featureID);
@@ -285,26 +318,9 @@ public class actionImpl extends MinimalEObjectImpl.Container implements action
       case MarkovPopulationModelsPackage.ACTION__STATE_REF:
         return stateRef != null;
       case MarkovPopulationModelsPackage.ACTION__LOCAL_RATE:
-        return localRate != LOCAL_RATE_EDEFAULT;
+        return localRate != null;
     }
     return super.eIsSet(featureID);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public String toString()
-  {
-    if (eIsProxy()) return super.toString();
-
-    StringBuffer result = new StringBuffer(super.toString());
-    result.append(" (localRate: ");
-    result.append(localRate);
-    result.append(')');
-    return result.toString();
   }
 
 } //actionImpl

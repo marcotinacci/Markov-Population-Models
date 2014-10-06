@@ -3,6 +3,7 @@
 package imt.simhya.language.markovPopulationModels.impl;
 
 import imt.simhya.language.markovPopulationModels.MarkovPopulationModelsPackage;
+import imt.simhya.language.markovPopulationModels.expr;
 import imt.simhya.language.markovPopulationModels.gl_tran;
 import imt.simhya.language.markovPopulationModels.loc_tran;
 
@@ -70,24 +71,14 @@ public class gl_tranImpl extends MinimalEObjectImpl.Container implements gl_tran
   protected EList<loc_tran> lTran;
 
   /**
-   * The default value of the '{@link #getRate() <em>Rate</em>}' attribute.
+   * The cached value of the '{@link #getRate() <em>Rate</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @see #getRate()
    * @generated
    * @ordered
    */
-  protected static final double RATE_EDEFAULT = 0.0;
-
-  /**
-   * The cached value of the '{@link #getRate() <em>Rate</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getRate()
-   * @generated
-   * @ordered
-   */
-  protected double rate = RATE_EDEFAULT;
+  protected expr rate;
 
   /**
    * <!-- begin-user-doc -->
@@ -152,7 +143,7 @@ public class gl_tranImpl extends MinimalEObjectImpl.Container implements gl_tran
    * <!-- end-user-doc -->
    * @generated
    */
-  public double getRate()
+  public expr getRate()
   {
     return rate;
   }
@@ -162,12 +153,37 @@ public class gl_tranImpl extends MinimalEObjectImpl.Container implements gl_tran
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setRate(double newRate)
+  public NotificationChain basicSetRate(expr newRate, NotificationChain msgs)
   {
-    double oldRate = rate;
+    expr oldRate = rate;
     rate = newRate;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, MarkovPopulationModelsPackage.GL_TRAN__RATE, oldRate, rate));
+    {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, MarkovPopulationModelsPackage.GL_TRAN__RATE, oldRate, newRate);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
+    }
+    return msgs;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setRate(expr newRate)
+  {
+    if (newRate != rate)
+    {
+      NotificationChain msgs = null;
+      if (rate != null)
+        msgs = ((InternalEObject)rate).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - MarkovPopulationModelsPackage.GL_TRAN__RATE, null, msgs);
+      if (newRate != null)
+        msgs = ((InternalEObject)newRate).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - MarkovPopulationModelsPackage.GL_TRAN__RATE, null, msgs);
+      msgs = basicSetRate(newRate, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, MarkovPopulationModelsPackage.GL_TRAN__RATE, newRate, newRate));
   }
 
   /**
@@ -182,6 +198,8 @@ public class gl_tranImpl extends MinimalEObjectImpl.Container implements gl_tran
     {
       case MarkovPopulationModelsPackage.GL_TRAN__LTRAN:
         return ((InternalEList<?>)getLTran()).basicRemove(otherEnd, msgs);
+      case MarkovPopulationModelsPackage.GL_TRAN__RATE:
+        return basicSetRate(null, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
   }
@@ -225,7 +243,7 @@ public class gl_tranImpl extends MinimalEObjectImpl.Container implements gl_tran
         getLTran().addAll((Collection<? extends loc_tran>)newValue);
         return;
       case MarkovPopulationModelsPackage.GL_TRAN__RATE:
-        setRate((Double)newValue);
+        setRate((expr)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -248,7 +266,7 @@ public class gl_tranImpl extends MinimalEObjectImpl.Container implements gl_tran
         getLTran().clear();
         return;
       case MarkovPopulationModelsPackage.GL_TRAN__RATE:
-        setRate(RATE_EDEFAULT);
+        setRate((expr)null);
         return;
     }
     super.eUnset(featureID);
@@ -269,7 +287,7 @@ public class gl_tranImpl extends MinimalEObjectImpl.Container implements gl_tran
       case MarkovPopulationModelsPackage.GL_TRAN__LTRAN:
         return lTran != null && !lTran.isEmpty();
       case MarkovPopulationModelsPackage.GL_TRAN__RATE:
-        return rate != RATE_EDEFAULT;
+        return rate != null;
     }
     return super.eIsSet(featureID);
   }
@@ -287,8 +305,6 @@ public class gl_tranImpl extends MinimalEObjectImpl.Container implements gl_tran
     StringBuffer result = new StringBuffer(super.toString());
     result.append(" (name: ");
     result.append(name);
-    result.append(", rate: ");
-    result.append(rate);
     result.append(')');
     return result.toString();
   }

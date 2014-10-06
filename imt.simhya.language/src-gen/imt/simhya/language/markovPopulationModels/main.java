@@ -2,6 +2,8 @@
  */
 package imt.simhya.language.markovPopulationModels;
 
+import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -12,6 +14,7 @@ import org.eclipse.emf.ecore.EObject;
  * <p>
  * The following features are supported:
  * <ul>
+ *   <li>{@link imt.simhya.language.markovPopulationModels.main#getConstDef <em>Const Def</em>}</li>
  *   <li>{@link imt.simhya.language.markovPopulationModels.main#getPopulationDef <em>Population Def</em>}</li>
  *   <li>{@link imt.simhya.language.markovPopulationModels.main#getAgentDef <em>Agent Def</em>}</li>
  * </ul>
@@ -23,6 +26,22 @@ import org.eclipse.emf.ecore.EObject;
  */
 public interface main extends EObject
 {
+  /**
+   * Returns the value of the '<em><b>Const Def</b></em>' containment reference list.
+   * The list contents are of type {@link imt.simhya.language.markovPopulationModels.constant}.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Const Def</em>' containment reference list isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Const Def</em>' containment reference list.
+   * @see imt.simhya.language.markovPopulationModels.MarkovPopulationModelsPackage#getmain_ConstDef()
+   * @model containment="true"
+   * @generated
+   */
+  EList<constant> getConstDef();
+
   /**
    * Returns the value of the '<em><b>Population Def</b></em>' containment reference.
    * <!-- begin-user-doc -->

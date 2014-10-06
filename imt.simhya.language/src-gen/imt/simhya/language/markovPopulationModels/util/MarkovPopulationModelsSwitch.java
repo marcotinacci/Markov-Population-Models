@@ -79,6 +79,48 @@ public class MarkovPopulationModelsSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
+      case MarkovPopulationModelsPackage.CONSTANT:
+      {
+        constant constant = (constant)theEObject;
+        T result = caseconstant(constant);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case MarkovPopulationModelsPackage.AGENT:
+      {
+        agent agent = (agent)theEObject;
+        T result = caseagent(agent);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case MarkovPopulationModelsPackage.LABEL:
+      {
+        label label = (label)theEObject;
+        T result = caselabel(label);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case MarkovPopulationModelsPackage.STATE:
+      {
+        state state = (state)theEObject;
+        T result = casestate(state);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case MarkovPopulationModelsPackage.ACTION:
+      {
+        action action = (action)theEObject;
+        T result = caseaction(action);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case MarkovPopulationModelsPackage.LOCAL_RATE:
+      {
+        local_rate local_rate = (local_rate)theEObject;
+        T result = caselocal_rate(local_rate);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
       case MarkovPopulationModelsPackage.POPULATION:
       {
         population population = (population)theEObject;
@@ -135,31 +177,10 @@ public class MarkovPopulationModelsSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case MarkovPopulationModelsPackage.AGENT:
+      case MarkovPopulationModelsPackage.EXPR:
       {
-        agent agent = (agent)theEObject;
-        T result = caseagent(agent);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
-      case MarkovPopulationModelsPackage.LABEL:
-      {
-        label label = (label)theEObject;
-        T result = caselabel(label);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
-      case MarkovPopulationModelsPackage.STATE:
-      {
-        state state = (state)theEObject;
-        T result = casestate(state);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
-      case MarkovPopulationModelsPackage.ACTION:
-      {
-        action action = (action)theEObject;
-        T result = caseaction(action);
+        expr expr = (expr)theEObject;
+        T result = caseexpr(expr);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -188,6 +209,102 @@ public class MarkovPopulationModelsSwitch<T> extends Switch<T>
    * @generated
    */
   public T casemain(main object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>constant</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>constant</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseconstant(constant object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>agent</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>agent</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseagent(agent object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>label</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>label</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caselabel(label object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>state</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>state</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T casestate(state object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>action</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>action</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseaction(action object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>local rate</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>local rate</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caselocal_rate(local_rate object)
   {
     return null;
   }
@@ -321,65 +438,17 @@ public class MarkovPopulationModelsSwitch<T> extends Switch<T>
   }
 
   /**
-   * Returns the result of interpreting the object as an instance of '<em>agent</em>'.
+   * Returns the result of interpreting the object as an instance of '<em>expr</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
    * returning a non-null result will terminate the switch.
    * <!-- end-user-doc -->
    * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>agent</em>'.
+   * @return the result of interpreting the object as an instance of '<em>expr</em>'.
    * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
    * @generated
    */
-  public T caseagent(agent object)
-  {
-    return null;
-  }
-
-  /**
-   * Returns the result of interpreting the object as an instance of '<em>label</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>label</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caselabel(label object)
-  {
-    return null;
-  }
-
-  /**
-   * Returns the result of interpreting the object as an instance of '<em>state</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>state</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T casestate(state object)
-  {
-    return null;
-  }
-
-  /**
-   * Returns the result of interpreting the object as an instance of '<em>action</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>action</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseaction(action object)
+  public T caseexpr(expr object)
   {
     return null;
   }

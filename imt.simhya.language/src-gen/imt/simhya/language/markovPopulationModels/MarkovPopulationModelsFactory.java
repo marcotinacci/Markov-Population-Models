@@ -32,6 +32,60 @@ public interface MarkovPopulationModelsFactory extends EFactory
   main createmain();
 
   /**
+   * Returns a new object of class '<em>constant</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>constant</em>'.
+   * @generated
+   */
+  constant createconstant();
+
+  /**
+   * Returns a new object of class '<em>agent</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>agent</em>'.
+   * @generated
+   */
+  agent createagent();
+
+  /**
+   * Returns a new object of class '<em>label</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>label</em>'.
+   * @generated
+   */
+  label createlabel();
+
+  /**
+   * Returns a new object of class '<em>state</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>state</em>'.
+   * @generated
+   */
+  state createstate();
+
+  /**
+   * Returns a new object of class '<em>action</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>action</em>'.
+   * @generated
+   */
+  action createaction();
+
+  /**
+   * Returns a new object of class '<em>local rate</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>local rate</em>'.
+   * @generated
+   */
+  local_rate createlocal_rate();
+
+  /**
    * Returns a new object of class '<em>population</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -104,40 +158,13 @@ public interface MarkovPopulationModelsFactory extends EFactory
   action_cond createaction_cond();
 
   /**
-   * Returns a new object of class '<em>agent</em>'.
+   * Returns a new object of class '<em>expr</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>agent</em>'.
+   * @return a new object of class '<em>expr</em>'.
    * @generated
    */
-  agent createagent();
-
-  /**
-   * Returns a new object of class '<em>label</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>label</em>'.
-   * @generated
-   */
-  label createlabel();
-
-  /**
-   * Returns a new object of class '<em>state</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>state</em>'.
-   * @generated
-   */
-  state createstate();
-
-  /**
-   * Returns a new object of class '<em>action</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>action</em>'.
-   * @generated
-   */
-  action createaction();
+  expr createexpr();
 
   /**
    * Returns a new object of class '<em>anystate</em>'.

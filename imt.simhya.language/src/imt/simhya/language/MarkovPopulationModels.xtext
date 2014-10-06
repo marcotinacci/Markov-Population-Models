@@ -6,7 +6,39 @@ generate markovPopulationModels "http://www.simhya.imt/language/MarkovPopulation
 //extension
 
 main:
-	populationDef=population & agentDef=agent
+	(constDef+= constant)* & populationDef=population & agentDef=agent
+;
+
+constant:
+	'const integer' name=ID '=' constINT=INT |
+	'const real' name=ID '=' constFLOAT=FLOAT
+;
+
+agent:
+	'agent' name=ID '{'
+		'actions' act+=label+
+		s+=state+
+	'}'
+;
+
+label:
+	name=ID
+;
+
+state:
+	'state' name=ID '{'
+		spontaneousAct+=action+
+	'}'
+;
+
+// TODO guards
+action:
+	actRef=[label] '-->' stateRef=[state] ':' localRate=local_rate
+;
+
+local_rate:
+	constRef=[constant]|
+	localRate= FLOAT
 ;
 
 population:
@@ -29,7 +61,7 @@ stateInit:
 gl_tran:
 	'transition'
 	name=ID '{'
-		lTran+=loc_tran ('&' lTran+=loc_tran)* '=>' rate=FLOAT
+		lTran+=loc_tran ('&' lTran+=loc_tran)* '=>' rate=expr
 	'}'
 ;
 
@@ -41,7 +73,8 @@ loc_tran:
 
 state_cond:
 	{anystate} 'any' |
-	stateRef=state_ref
+	// stateRef= state_ref
+	stateRef+=state_ref ('or' stateRef+= state_ref)* 
 ;
 
 state_ref:
@@ -53,26 +86,11 @@ action_cond:
 	actionRef= [label]	
 ;
 
-agent:
-	'agent' name=ID '{'
-		'actions' act+=label+
-		s+=state+
-	'}'
-;
-
-label:
-	name=ID
-;
-
-state:
-	'state' name=ID '{'
-		spontaneousAct+=action+
-	'}'
-;
-
-// TODO guards
-action:
-	actRef=[label] '-->' stateRef=[state] ':' localRate=FLOAT
+expr:
+	constRef= [constant]|
+	constFLOAT= FLOAT|
+	constINT= INT
+	//{stateExpr} stateRef=[state]	
 ;
 
 terminal INT returns ecore::EInt: ('0'..'9')+;
