@@ -26,6 +26,7 @@ public class MarkovPopulationModelsGrammarAccess extends AbstractGrammarElementF
 		private final Assignment cAgentDefAssignment_1 = (Assignment)cUnorderedGroup.eContents().get(1);
 		private final RuleCall cAgentDefAgentParserRuleCall_1_0 = (RuleCall)cAgentDefAssignment_1.eContents().get(0);
 		
+		//// new notation
 		//main:
 		//	populationDef=population & agentDef=agent;
 		public ParserRule getRule() { return rule; }
@@ -661,6 +662,7 @@ public class MarkovPopulationModelsGrammarAccess extends AbstractGrammarElementF
 	}
 
 	
+	//// new notation
 	//main:
 	//	populationDef=population & agentDef=agent;
 	public MainElements getMainAccess() {
