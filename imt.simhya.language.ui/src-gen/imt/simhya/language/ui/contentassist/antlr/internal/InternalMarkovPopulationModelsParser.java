@@ -659,31 +659,31 @@ public class InternalMarkovPopulationModelsParser extends AbstractInternalConten
 
 
     // $ANTLR start "rulestate_ref"
-    // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:265:1: rulestate_ref : ( ( rule__State_ref__NameAssignment ) ) ;
+    // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:265:1: rulestate_ref : ( ( rule__State_ref__StateRefAssignment ) ) ;
     public final void rulestate_ref() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:269:2: ( ( ( rule__State_ref__NameAssignment ) ) )
-            // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:270:1: ( ( rule__State_ref__NameAssignment ) )
+            // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:269:2: ( ( ( rule__State_ref__StateRefAssignment ) ) )
+            // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:270:1: ( ( rule__State_ref__StateRefAssignment ) )
             {
-            // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:270:1: ( ( rule__State_ref__NameAssignment ) )
-            // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:271:1: ( rule__State_ref__NameAssignment )
+            // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:270:1: ( ( rule__State_ref__StateRefAssignment ) )
+            // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:271:1: ( rule__State_ref__StateRefAssignment )
             {
-             before(grammarAccess.getState_refAccess().getNameAssignment()); 
-            // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:272:1: ( rule__State_ref__NameAssignment )
-            // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:272:2: rule__State_ref__NameAssignment
+             before(grammarAccess.getState_refAccess().getStateRefAssignment()); 
+            // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:272:1: ( rule__State_ref__StateRefAssignment )
+            // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:272:2: rule__State_ref__StateRefAssignment
             {
-            pushFollow(FOLLOW_rule__State_ref__NameAssignment_in_rulestate_ref514);
-            rule__State_ref__NameAssignment();
+            pushFollow(FOLLOW_rule__State_ref__StateRefAssignment_in_rulestate_ref514);
+            rule__State_ref__StateRefAssignment();
 
             state._fsp--;
 
 
             }
 
-             after(grammarAccess.getState_refAccess().getNameAssignment()); 
+             after(grammarAccess.getState_refAccess().getStateRefAssignment()); 
 
             }
 
@@ -1217,13 +1217,13 @@ public class InternalMarkovPopulationModelsParser extends AbstractInternalConten
 
 
     // $ANTLR start "rule__State_cond__Alternatives"
-    // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:452:1: rule__State_cond__Alternatives : ( ( ( rule__State_cond__Group_0__0 ) ) | ( ( rule__State_cond__S_refAssignment_1 ) ) );
+    // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:452:1: rule__State_cond__Alternatives : ( ( ( rule__State_cond__Group_0__0 ) ) | ( ( rule__State_cond__StateRefAssignment_1 ) ) );
     public final void rule__State_cond__Alternatives() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:456:1: ( ( ( rule__State_cond__Group_0__0 ) ) | ( ( rule__State_cond__S_refAssignment_1 ) ) )
+            // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:456:1: ( ( ( rule__State_cond__Group_0__0 ) ) | ( ( rule__State_cond__StateRefAssignment_1 ) ) )
             int alt2=2;
             int LA2_0 = input.LA(1);
 
@@ -1266,24 +1266,24 @@ public class InternalMarkovPopulationModelsParser extends AbstractInternalConten
                     }
                     break;
                 case 2 :
-                    // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:463:6: ( ( rule__State_cond__S_refAssignment_1 ) )
+                    // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:463:6: ( ( rule__State_cond__StateRefAssignment_1 ) )
                     {
-                    // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:463:6: ( ( rule__State_cond__S_refAssignment_1 ) )
-                    // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:464:1: ( rule__State_cond__S_refAssignment_1 )
+                    // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:463:6: ( ( rule__State_cond__StateRefAssignment_1 ) )
+                    // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:464:1: ( rule__State_cond__StateRefAssignment_1 )
                     {
-                     before(grammarAccess.getState_condAccess().getS_refAssignment_1()); 
-                    // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:465:1: ( rule__State_cond__S_refAssignment_1 )
-                    // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:465:2: rule__State_cond__S_refAssignment_1
+                     before(grammarAccess.getState_condAccess().getStateRefAssignment_1()); 
+                    // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:465:1: ( rule__State_cond__StateRefAssignment_1 )
+                    // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:465:2: rule__State_cond__StateRefAssignment_1
                     {
-                    pushFollow(FOLLOW_rule__State_cond__S_refAssignment_1_in_rule__State_cond__Alternatives937);
-                    rule__State_cond__S_refAssignment_1();
+                    pushFollow(FOLLOW_rule__State_cond__StateRefAssignment_1_in_rule__State_cond__Alternatives937);
+                    rule__State_cond__StateRefAssignment_1();
 
                     state._fsp--;
 
 
                     }
 
-                     after(grammarAccess.getState_condAccess().getS_refAssignment_1()); 
+                     after(grammarAccess.getState_condAccess().getStateRefAssignment_1()); 
 
                     }
 
@@ -1308,13 +1308,13 @@ public class InternalMarkovPopulationModelsParser extends AbstractInternalConten
 
 
     // $ANTLR start "rule__Action_cond__Alternatives"
-    // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:474:1: rule__Action_cond__Alternatives : ( ( ( rule__Action_cond__Group_0__0 ) ) | ( ( rule__Action_cond__NameAssignment_1 ) ) );
+    // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:474:1: rule__Action_cond__Alternatives : ( ( ( rule__Action_cond__Group_0__0 ) ) | ( ( rule__Action_cond__ActionRefAssignment_1 ) ) );
     public final void rule__Action_cond__Alternatives() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:478:1: ( ( ( rule__Action_cond__Group_0__0 ) ) | ( ( rule__Action_cond__NameAssignment_1 ) ) )
+            // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:478:1: ( ( ( rule__Action_cond__Group_0__0 ) ) | ( ( rule__Action_cond__ActionRefAssignment_1 ) ) )
             int alt3=2;
             int LA3_0 = input.LA(1);
 
@@ -1357,24 +1357,24 @@ public class InternalMarkovPopulationModelsParser extends AbstractInternalConten
                     }
                     break;
                 case 2 :
-                    // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:485:6: ( ( rule__Action_cond__NameAssignment_1 ) )
+                    // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:485:6: ( ( rule__Action_cond__ActionRefAssignment_1 ) )
                     {
-                    // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:485:6: ( ( rule__Action_cond__NameAssignment_1 ) )
-                    // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:486:1: ( rule__Action_cond__NameAssignment_1 )
+                    // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:485:6: ( ( rule__Action_cond__ActionRefAssignment_1 ) )
+                    // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:486:1: ( rule__Action_cond__ActionRefAssignment_1 )
                     {
-                     before(grammarAccess.getAction_condAccess().getNameAssignment_1()); 
-                    // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:487:1: ( rule__Action_cond__NameAssignment_1 )
-                    // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:487:2: rule__Action_cond__NameAssignment_1
+                     before(grammarAccess.getAction_condAccess().getActionRefAssignment_1()); 
+                    // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:487:1: ( rule__Action_cond__ActionRefAssignment_1 )
+                    // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:487:2: rule__Action_cond__ActionRefAssignment_1
                     {
-                    pushFollow(FOLLOW_rule__Action_cond__NameAssignment_1_in_rule__Action_cond__Alternatives988);
-                    rule__Action_cond__NameAssignment_1();
+                    pushFollow(FOLLOW_rule__Action_cond__ActionRefAssignment_1_in_rule__Action_cond__Alternatives988);
+                    rule__Action_cond__ActionRefAssignment_1();
 
                     state._fsp--;
 
 
                     }
 
-                     after(grammarAccess.getAction_condAccess().getNameAssignment_1()); 
+                     after(grammarAccess.getAction_condAccess().getActionRefAssignment_1()); 
 
                     }
 
@@ -3336,31 +3336,31 @@ public class InternalMarkovPopulationModelsParser extends AbstractInternalConten
 
 
     // $ANTLR start "rule__Gl_tran__Group__3__Impl"
-    // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:1241:1: rule__Gl_tran__Group__3__Impl : ( ( rule__Gl_tran__L_tranAssignment_3 ) ) ;
+    // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:1241:1: rule__Gl_tran__Group__3__Impl : ( ( rule__Gl_tran__LTranAssignment_3 ) ) ;
     public final void rule__Gl_tran__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:1245:1: ( ( ( rule__Gl_tran__L_tranAssignment_3 ) ) )
-            // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:1246:1: ( ( rule__Gl_tran__L_tranAssignment_3 ) )
+            // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:1245:1: ( ( ( rule__Gl_tran__LTranAssignment_3 ) ) )
+            // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:1246:1: ( ( rule__Gl_tran__LTranAssignment_3 ) )
             {
-            // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:1246:1: ( ( rule__Gl_tran__L_tranAssignment_3 ) )
-            // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:1247:1: ( rule__Gl_tran__L_tranAssignment_3 )
+            // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:1246:1: ( ( rule__Gl_tran__LTranAssignment_3 ) )
+            // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:1247:1: ( rule__Gl_tran__LTranAssignment_3 )
             {
-             before(grammarAccess.getGl_tranAccess().getL_tranAssignment_3()); 
-            // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:1248:1: ( rule__Gl_tran__L_tranAssignment_3 )
-            // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:1248:2: rule__Gl_tran__L_tranAssignment_3
+             before(grammarAccess.getGl_tranAccess().getLTranAssignment_3()); 
+            // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:1248:1: ( rule__Gl_tran__LTranAssignment_3 )
+            // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:1248:2: rule__Gl_tran__LTranAssignment_3
             {
-            pushFollow(FOLLOW_rule__Gl_tran__L_tranAssignment_3_in_rule__Gl_tran__Group__3__Impl2495);
-            rule__Gl_tran__L_tranAssignment_3();
+            pushFollow(FOLLOW_rule__Gl_tran__LTranAssignment_3_in_rule__Gl_tran__Group__3__Impl2495);
+            rule__Gl_tran__LTranAssignment_3();
 
             state._fsp--;
 
 
             }
 
-             after(grammarAccess.getGl_tranAccess().getL_tranAssignment_3()); 
+             after(grammarAccess.getGl_tranAccess().getLTranAssignment_3()); 
 
             }
 
@@ -3824,31 +3824,31 @@ public class InternalMarkovPopulationModelsParser extends AbstractInternalConten
 
 
     // $ANTLR start "rule__Gl_tran__Group_4__1__Impl"
-    // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:1435:1: rule__Gl_tran__Group_4__1__Impl : ( ( rule__Gl_tran__L_tranAssignment_4_1 ) ) ;
+    // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:1435:1: rule__Gl_tran__Group_4__1__Impl : ( ( rule__Gl_tran__LTranAssignment_4_1 ) ) ;
     public final void rule__Gl_tran__Group_4__1__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:1439:1: ( ( ( rule__Gl_tran__L_tranAssignment_4_1 ) ) )
-            // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:1440:1: ( ( rule__Gl_tran__L_tranAssignment_4_1 ) )
+            // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:1439:1: ( ( ( rule__Gl_tran__LTranAssignment_4_1 ) ) )
+            // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:1440:1: ( ( rule__Gl_tran__LTranAssignment_4_1 ) )
             {
-            // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:1440:1: ( ( rule__Gl_tran__L_tranAssignment_4_1 ) )
-            // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:1441:1: ( rule__Gl_tran__L_tranAssignment_4_1 )
+            // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:1440:1: ( ( rule__Gl_tran__LTranAssignment_4_1 ) )
+            // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:1441:1: ( rule__Gl_tran__LTranAssignment_4_1 )
             {
-             before(grammarAccess.getGl_tranAccess().getL_tranAssignment_4_1()); 
-            // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:1442:1: ( rule__Gl_tran__L_tranAssignment_4_1 )
-            // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:1442:2: rule__Gl_tran__L_tranAssignment_4_1
+             before(grammarAccess.getGl_tranAccess().getLTranAssignment_4_1()); 
+            // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:1442:1: ( rule__Gl_tran__LTranAssignment_4_1 )
+            // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:1442:2: rule__Gl_tran__LTranAssignment_4_1
             {
-            pushFollow(FOLLOW_rule__Gl_tran__L_tranAssignment_4_1_in_rule__Gl_tran__Group_4__1__Impl2872);
-            rule__Gl_tran__L_tranAssignment_4_1();
+            pushFollow(FOLLOW_rule__Gl_tran__LTranAssignment_4_1_in_rule__Gl_tran__Group_4__1__Impl2872);
+            rule__Gl_tran__LTranAssignment_4_1();
 
             state._fsp--;
 
 
             }
 
-             after(grammarAccess.getGl_tranAccess().getL_tranAssignment_4_1()); 
+             after(grammarAccess.getGl_tranAccess().getLTranAssignment_4_1()); 
 
             }
 
@@ -4219,31 +4219,31 @@ public class InternalMarkovPopulationModelsParser extends AbstractInternalConten
 
 
     // $ANTLR start "rule__Loc_tran__Group_2__0__Impl"
-    // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:1594:1: rule__Loc_tran__Group_2__0__Impl : ( ( rule__Loc_tran__S_condAssignment_2_0 ) ) ;
+    // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:1594:1: rule__Loc_tran__Group_2__0__Impl : ( ( rule__Loc_tran__SCondAssignment_2_0 ) ) ;
     public final void rule__Loc_tran__Group_2__0__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:1598:1: ( ( ( rule__Loc_tran__S_condAssignment_2_0 ) ) )
-            // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:1599:1: ( ( rule__Loc_tran__S_condAssignment_2_0 ) )
+            // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:1598:1: ( ( ( rule__Loc_tran__SCondAssignment_2_0 ) ) )
+            // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:1599:1: ( ( rule__Loc_tran__SCondAssignment_2_0 ) )
             {
-            // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:1599:1: ( ( rule__Loc_tran__S_condAssignment_2_0 ) )
-            // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:1600:1: ( rule__Loc_tran__S_condAssignment_2_0 )
+            // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:1599:1: ( ( rule__Loc_tran__SCondAssignment_2_0 ) )
+            // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:1600:1: ( rule__Loc_tran__SCondAssignment_2_0 )
             {
-             before(grammarAccess.getLoc_tranAccess().getS_condAssignment_2_0()); 
-            // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:1601:1: ( rule__Loc_tran__S_condAssignment_2_0 )
-            // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:1601:2: rule__Loc_tran__S_condAssignment_2_0
+             before(grammarAccess.getLoc_tranAccess().getSCondAssignment_2_0()); 
+            // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:1601:1: ( rule__Loc_tran__SCondAssignment_2_0 )
+            // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:1601:2: rule__Loc_tran__SCondAssignment_2_0
             {
-            pushFollow(FOLLOW_rule__Loc_tran__S_condAssignment_2_0_in_rule__Loc_tran__Group_2__0__Impl3182);
-            rule__Loc_tran__S_condAssignment_2_0();
+            pushFollow(FOLLOW_rule__Loc_tran__SCondAssignment_2_0_in_rule__Loc_tran__Group_2__0__Impl3182);
+            rule__Loc_tran__SCondAssignment_2_0();
 
             state._fsp--;
 
 
             }
 
-             after(grammarAccess.getLoc_tranAccess().getS_condAssignment_2_0()); 
+             after(grammarAccess.getLoc_tranAccess().getSCondAssignment_2_0()); 
 
             }
 
@@ -4374,31 +4374,31 @@ public class InternalMarkovPopulationModelsParser extends AbstractInternalConten
 
 
     // $ANTLR start "rule__Loc_tran__Group_2__2__Impl"
-    // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:1653:1: rule__Loc_tran__Group_2__2__Impl : ( ( rule__Loc_tran__A_condAssignment_2_2 ) ) ;
+    // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:1653:1: rule__Loc_tran__Group_2__2__Impl : ( ( rule__Loc_tran__ACondAssignment_2_2 ) ) ;
     public final void rule__Loc_tran__Group_2__2__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:1657:1: ( ( ( rule__Loc_tran__A_condAssignment_2_2 ) ) )
-            // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:1658:1: ( ( rule__Loc_tran__A_condAssignment_2_2 ) )
+            // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:1657:1: ( ( ( rule__Loc_tran__ACondAssignment_2_2 ) ) )
+            // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:1658:1: ( ( rule__Loc_tran__ACondAssignment_2_2 ) )
             {
-            // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:1658:1: ( ( rule__Loc_tran__A_condAssignment_2_2 ) )
-            // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:1659:1: ( rule__Loc_tran__A_condAssignment_2_2 )
+            // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:1658:1: ( ( rule__Loc_tran__ACondAssignment_2_2 ) )
+            // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:1659:1: ( rule__Loc_tran__ACondAssignment_2_2 )
             {
-             before(grammarAccess.getLoc_tranAccess().getA_condAssignment_2_2()); 
-            // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:1660:1: ( rule__Loc_tran__A_condAssignment_2_2 )
-            // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:1660:2: rule__Loc_tran__A_condAssignment_2_2
+             before(grammarAccess.getLoc_tranAccess().getACondAssignment_2_2()); 
+            // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:1660:1: ( rule__Loc_tran__ACondAssignment_2_2 )
+            // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:1660:2: rule__Loc_tran__ACondAssignment_2_2
             {
-            pushFollow(FOLLOW_rule__Loc_tran__A_condAssignment_2_2_in_rule__Loc_tran__Group_2__2__Impl3301);
-            rule__Loc_tran__A_condAssignment_2_2();
+            pushFollow(FOLLOW_rule__Loc_tran__ACondAssignment_2_2_in_rule__Loc_tran__Group_2__2__Impl3301);
+            rule__Loc_tran__ACondAssignment_2_2();
 
             state._fsp--;
 
 
             }
 
-             after(grammarAccess.getLoc_tranAccess().getA_condAssignment_2_2()); 
+             after(grammarAccess.getLoc_tranAccess().getACondAssignment_2_2()); 
 
             }
 
@@ -5620,42 +5620,42 @@ public class InternalMarkovPopulationModelsParser extends AbstractInternalConten
 
 
     // $ANTLR start "rule__State__Group__3__Impl"
-    // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:2147:1: rule__State__Group__3__Impl : ( ( ( rule__State__Spontaneous_actAssignment_3 ) ) ( ( rule__State__Spontaneous_actAssignment_3 )* ) ) ;
+    // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:2147:1: rule__State__Group__3__Impl : ( ( ( rule__State__SpontaneousActAssignment_3 ) ) ( ( rule__State__SpontaneousActAssignment_3 )* ) ) ;
     public final void rule__State__Group__3__Impl() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:2151:1: ( ( ( ( rule__State__Spontaneous_actAssignment_3 ) ) ( ( rule__State__Spontaneous_actAssignment_3 )* ) ) )
-            // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:2152:1: ( ( ( rule__State__Spontaneous_actAssignment_3 ) ) ( ( rule__State__Spontaneous_actAssignment_3 )* ) )
+            // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:2151:1: ( ( ( ( rule__State__SpontaneousActAssignment_3 ) ) ( ( rule__State__SpontaneousActAssignment_3 )* ) ) )
+            // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:2152:1: ( ( ( rule__State__SpontaneousActAssignment_3 ) ) ( ( rule__State__SpontaneousActAssignment_3 )* ) )
             {
-            // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:2152:1: ( ( ( rule__State__Spontaneous_actAssignment_3 ) ) ( ( rule__State__Spontaneous_actAssignment_3 )* ) )
-            // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:2153:1: ( ( rule__State__Spontaneous_actAssignment_3 ) ) ( ( rule__State__Spontaneous_actAssignment_3 )* )
+            // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:2152:1: ( ( ( rule__State__SpontaneousActAssignment_3 ) ) ( ( rule__State__SpontaneousActAssignment_3 )* ) )
+            // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:2153:1: ( ( rule__State__SpontaneousActAssignment_3 ) ) ( ( rule__State__SpontaneousActAssignment_3 )* )
             {
-            // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:2153:1: ( ( rule__State__Spontaneous_actAssignment_3 ) )
-            // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:2154:1: ( rule__State__Spontaneous_actAssignment_3 )
+            // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:2153:1: ( ( rule__State__SpontaneousActAssignment_3 ) )
+            // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:2154:1: ( rule__State__SpontaneousActAssignment_3 )
             {
-             before(grammarAccess.getStateAccess().getSpontaneous_actAssignment_3()); 
-            // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:2155:1: ( rule__State__Spontaneous_actAssignment_3 )
-            // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:2155:2: rule__State__Spontaneous_actAssignment_3
+             before(grammarAccess.getStateAccess().getSpontaneousActAssignment_3()); 
+            // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:2155:1: ( rule__State__SpontaneousActAssignment_3 )
+            // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:2155:2: rule__State__SpontaneousActAssignment_3
             {
-            pushFollow(FOLLOW_rule__State__Spontaneous_actAssignment_3_in_rule__State__Group__3__Impl4274);
-            rule__State__Spontaneous_actAssignment_3();
+            pushFollow(FOLLOW_rule__State__SpontaneousActAssignment_3_in_rule__State__Group__3__Impl4274);
+            rule__State__SpontaneousActAssignment_3();
 
             state._fsp--;
 
 
             }
 
-             after(grammarAccess.getStateAccess().getSpontaneous_actAssignment_3()); 
+             after(grammarAccess.getStateAccess().getSpontaneousActAssignment_3()); 
 
             }
 
-            // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:2158:1: ( ( rule__State__Spontaneous_actAssignment_3 )* )
-            // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:2159:1: ( rule__State__Spontaneous_actAssignment_3 )*
+            // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:2158:1: ( ( rule__State__SpontaneousActAssignment_3 )* )
+            // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:2159:1: ( rule__State__SpontaneousActAssignment_3 )*
             {
-             before(grammarAccess.getStateAccess().getSpontaneous_actAssignment_3()); 
-            // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:2160:1: ( rule__State__Spontaneous_actAssignment_3 )*
+             before(grammarAccess.getStateAccess().getSpontaneousActAssignment_3()); 
+            // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:2160:1: ( rule__State__SpontaneousActAssignment_3 )*
             loop10:
             do {
                 int alt10=2;
@@ -5668,10 +5668,10 @@ public class InternalMarkovPopulationModelsParser extends AbstractInternalConten
 
                 switch (alt10) {
             	case 1 :
-            	    // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:2160:2: rule__State__Spontaneous_actAssignment_3
+            	    // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:2160:2: rule__State__SpontaneousActAssignment_3
             	    {
-            	    pushFollow(FOLLOW_rule__State__Spontaneous_actAssignment_3_in_rule__State__Group__3__Impl4286);
-            	    rule__State__Spontaneous_actAssignment_3();
+            	    pushFollow(FOLLOW_rule__State__SpontaneousActAssignment_3_in_rule__State__Group__3__Impl4286);
+            	    rule__State__SpontaneousActAssignment_3();
 
             	    state._fsp--;
 
@@ -5684,7 +5684,7 @@ public class InternalMarkovPopulationModelsParser extends AbstractInternalConten
                 }
             } while (true);
 
-             after(grammarAccess.getStateAccess().getSpontaneous_actAssignment_3()); 
+             after(grammarAccess.getStateAccess().getSpontaneousActAssignment_3()); 
 
             }
 
@@ -6939,9 +6939,9 @@ public class InternalMarkovPopulationModelsParser extends AbstractInternalConten
     // $ANTLR end "rule__Gl_tran__NameAssignment_1"
 
 
-    // $ANTLR start "rule__Gl_tran__L_tranAssignment_3"
-    // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:2655:1: rule__Gl_tran__L_tranAssignment_3 : ( ruleloc_tran ) ;
-    public final void rule__Gl_tran__L_tranAssignment_3() throws RecognitionException {
+    // $ANTLR start "rule__Gl_tran__LTranAssignment_3"
+    // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:2655:1: rule__Gl_tran__LTranAssignment_3 : ( ruleloc_tran ) ;
+    public final void rule__Gl_tran__LTranAssignment_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
@@ -6952,13 +6952,13 @@ public class InternalMarkovPopulationModelsParser extends AbstractInternalConten
             // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:2660:1: ( ruleloc_tran )
             // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:2661:1: ruleloc_tran
             {
-             before(grammarAccess.getGl_tranAccess().getL_tranLoc_tranParserRuleCall_3_0()); 
-            pushFollow(FOLLOW_ruleloc_tran_in_rule__Gl_tran__L_tranAssignment_35387);
+             before(grammarAccess.getGl_tranAccess().getLTranLoc_tranParserRuleCall_3_0()); 
+            pushFollow(FOLLOW_ruleloc_tran_in_rule__Gl_tran__LTranAssignment_35387);
             ruleloc_tran();
 
             state._fsp--;
 
-             after(grammarAccess.getGl_tranAccess().getL_tranLoc_tranParserRuleCall_3_0()); 
+             after(grammarAccess.getGl_tranAccess().getLTranLoc_tranParserRuleCall_3_0()); 
 
             }
 
@@ -6977,12 +6977,12 @@ public class InternalMarkovPopulationModelsParser extends AbstractInternalConten
         }
         return ;
     }
-    // $ANTLR end "rule__Gl_tran__L_tranAssignment_3"
+    // $ANTLR end "rule__Gl_tran__LTranAssignment_3"
 
 
-    // $ANTLR start "rule__Gl_tran__L_tranAssignment_4_1"
-    // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:2670:1: rule__Gl_tran__L_tranAssignment_4_1 : ( ruleloc_tran ) ;
-    public final void rule__Gl_tran__L_tranAssignment_4_1() throws RecognitionException {
+    // $ANTLR start "rule__Gl_tran__LTranAssignment_4_1"
+    // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:2670:1: rule__Gl_tran__LTranAssignment_4_1 : ( ruleloc_tran ) ;
+    public final void rule__Gl_tran__LTranAssignment_4_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
@@ -6993,13 +6993,13 @@ public class InternalMarkovPopulationModelsParser extends AbstractInternalConten
             // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:2675:1: ( ruleloc_tran )
             // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:2676:1: ruleloc_tran
             {
-             before(grammarAccess.getGl_tranAccess().getL_tranLoc_tranParserRuleCall_4_1_0()); 
-            pushFollow(FOLLOW_ruleloc_tran_in_rule__Gl_tran__L_tranAssignment_4_15418);
+             before(grammarAccess.getGl_tranAccess().getLTranLoc_tranParserRuleCall_4_1_0()); 
+            pushFollow(FOLLOW_ruleloc_tran_in_rule__Gl_tran__LTranAssignment_4_15418);
             ruleloc_tran();
 
             state._fsp--;
 
-             after(grammarAccess.getGl_tranAccess().getL_tranLoc_tranParserRuleCall_4_1_0()); 
+             after(grammarAccess.getGl_tranAccess().getLTranLoc_tranParserRuleCall_4_1_0()); 
 
             }
 
@@ -7018,7 +7018,7 @@ public class InternalMarkovPopulationModelsParser extends AbstractInternalConten
         }
         return ;
     }
-    // $ANTLR end "rule__Gl_tran__L_tranAssignment_4_1"
+    // $ANTLR end "rule__Gl_tran__LTranAssignment_4_1"
 
 
     // $ANTLR start "rule__Gl_tran__RateAssignment_6"
@@ -7148,9 +7148,9 @@ public class InternalMarkovPopulationModelsParser extends AbstractInternalConten
     // $ANTLR end "rule__Loc_tran__StateRefAssignment_1_1"
 
 
-    // $ANTLR start "rule__Loc_tran__S_condAssignment_2_0"
-    // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:2738:1: rule__Loc_tran__S_condAssignment_2_0 : ( rulestate_cond ) ;
-    public final void rule__Loc_tran__S_condAssignment_2_0() throws RecognitionException {
+    // $ANTLR start "rule__Loc_tran__SCondAssignment_2_0"
+    // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:2738:1: rule__Loc_tran__SCondAssignment_2_0 : ( rulestate_cond ) ;
+    public final void rule__Loc_tran__SCondAssignment_2_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
@@ -7161,13 +7161,13 @@ public class InternalMarkovPopulationModelsParser extends AbstractInternalConten
             // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:2743:1: ( rulestate_cond )
             // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:2744:1: rulestate_cond
             {
-             before(grammarAccess.getLoc_tranAccess().getS_condState_condParserRuleCall_2_0_0()); 
-            pushFollow(FOLLOW_rulestate_cond_in_rule__Loc_tran__S_condAssignment_2_05558);
+             before(grammarAccess.getLoc_tranAccess().getSCondState_condParserRuleCall_2_0_0()); 
+            pushFollow(FOLLOW_rulestate_cond_in_rule__Loc_tran__SCondAssignment_2_05558);
             rulestate_cond();
 
             state._fsp--;
 
-             after(grammarAccess.getLoc_tranAccess().getS_condState_condParserRuleCall_2_0_0()); 
+             after(grammarAccess.getLoc_tranAccess().getSCondState_condParserRuleCall_2_0_0()); 
 
             }
 
@@ -7186,12 +7186,12 @@ public class InternalMarkovPopulationModelsParser extends AbstractInternalConten
         }
         return ;
     }
-    // $ANTLR end "rule__Loc_tran__S_condAssignment_2_0"
+    // $ANTLR end "rule__Loc_tran__SCondAssignment_2_0"
 
 
-    // $ANTLR start "rule__Loc_tran__A_condAssignment_2_2"
-    // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:2753:1: rule__Loc_tran__A_condAssignment_2_2 : ( ruleaction_cond ) ;
-    public final void rule__Loc_tran__A_condAssignment_2_2() throws RecognitionException {
+    // $ANTLR start "rule__Loc_tran__ACondAssignment_2_2"
+    // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:2753:1: rule__Loc_tran__ACondAssignment_2_2 : ( ruleaction_cond ) ;
+    public final void rule__Loc_tran__ACondAssignment_2_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
@@ -7202,13 +7202,13 @@ public class InternalMarkovPopulationModelsParser extends AbstractInternalConten
             // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:2758:1: ( ruleaction_cond )
             // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:2759:1: ruleaction_cond
             {
-             before(grammarAccess.getLoc_tranAccess().getA_condAction_condParserRuleCall_2_2_0()); 
-            pushFollow(FOLLOW_ruleaction_cond_in_rule__Loc_tran__A_condAssignment_2_25589);
+             before(grammarAccess.getLoc_tranAccess().getACondAction_condParserRuleCall_2_2_0()); 
+            pushFollow(FOLLOW_ruleaction_cond_in_rule__Loc_tran__ACondAssignment_2_25589);
             ruleaction_cond();
 
             state._fsp--;
 
-             after(grammarAccess.getLoc_tranAccess().getA_condAction_condParserRuleCall_2_2_0()); 
+             after(grammarAccess.getLoc_tranAccess().getACondAction_condParserRuleCall_2_2_0()); 
 
             }
 
@@ -7227,12 +7227,12 @@ public class InternalMarkovPopulationModelsParser extends AbstractInternalConten
         }
         return ;
     }
-    // $ANTLR end "rule__Loc_tran__A_condAssignment_2_2"
+    // $ANTLR end "rule__Loc_tran__ACondAssignment_2_2"
 
 
-    // $ANTLR start "rule__State_cond__S_refAssignment_1"
-    // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:2768:1: rule__State_cond__S_refAssignment_1 : ( rulestate_ref ) ;
-    public final void rule__State_cond__S_refAssignment_1() throws RecognitionException {
+    // $ANTLR start "rule__State_cond__StateRefAssignment_1"
+    // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:2768:1: rule__State_cond__StateRefAssignment_1 : ( rulestate_ref ) ;
+    public final void rule__State_cond__StateRefAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
@@ -7243,13 +7243,13 @@ public class InternalMarkovPopulationModelsParser extends AbstractInternalConten
             // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:2773:1: ( rulestate_ref )
             // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:2774:1: rulestate_ref
             {
-             before(grammarAccess.getState_condAccess().getS_refState_refParserRuleCall_1_0()); 
-            pushFollow(FOLLOW_rulestate_ref_in_rule__State_cond__S_refAssignment_15620);
+             before(grammarAccess.getState_condAccess().getStateRefState_refParserRuleCall_1_0()); 
+            pushFollow(FOLLOW_rulestate_ref_in_rule__State_cond__StateRefAssignment_15620);
             rulestate_ref();
 
             state._fsp--;
 
-             after(grammarAccess.getState_condAccess().getS_refState_refParserRuleCall_1_0()); 
+             after(grammarAccess.getState_condAccess().getStateRefState_refParserRuleCall_1_0()); 
 
             }
 
@@ -7268,25 +7268,33 @@ public class InternalMarkovPopulationModelsParser extends AbstractInternalConten
         }
         return ;
     }
-    // $ANTLR end "rule__State_cond__S_refAssignment_1"
+    // $ANTLR end "rule__State_cond__StateRefAssignment_1"
 
 
-    // $ANTLR start "rule__State_ref__NameAssignment"
-    // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:2783:1: rule__State_ref__NameAssignment : ( RULE_ID ) ;
-    public final void rule__State_ref__NameAssignment() throws RecognitionException {
+    // $ANTLR start "rule__State_ref__StateRefAssignment"
+    // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:2783:1: rule__State_ref__StateRefAssignment : ( ( RULE_ID ) ) ;
+    public final void rule__State_ref__StateRefAssignment() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:2787:1: ( ( RULE_ID ) )
-            // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:2788:1: ( RULE_ID )
+            // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:2787:1: ( ( ( RULE_ID ) ) )
+            // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:2788:1: ( ( RULE_ID ) )
             {
-            // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:2788:1: ( RULE_ID )
-            // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:2789:1: RULE_ID
+            // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:2788:1: ( ( RULE_ID ) )
+            // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:2789:1: ( RULE_ID )
             {
-             before(grammarAccess.getState_refAccess().getNameIDTerminalRuleCall_0()); 
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__State_ref__NameAssignment5651); 
-             after(grammarAccess.getState_refAccess().getNameIDTerminalRuleCall_0()); 
+             before(grammarAccess.getState_refAccess().getStateRefStateCrossReference_0()); 
+            // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:2790:1: ( RULE_ID )
+            // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:2791:1: RULE_ID
+            {
+             before(grammarAccess.getState_refAccess().getStateRefStateIDTerminalRuleCall_0_1()); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__State_ref__StateRefAssignment5655); 
+             after(grammarAccess.getState_refAccess().getStateRefStateIDTerminalRuleCall_0_1()); 
+
+            }
+
+             after(grammarAccess.getState_refAccess().getStateRefStateCrossReference_0()); 
 
             }
 
@@ -7305,25 +7313,33 @@ public class InternalMarkovPopulationModelsParser extends AbstractInternalConten
         }
         return ;
     }
-    // $ANTLR end "rule__State_ref__NameAssignment"
+    // $ANTLR end "rule__State_ref__StateRefAssignment"
 
 
-    // $ANTLR start "rule__Action_cond__NameAssignment_1"
-    // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:2798:1: rule__Action_cond__NameAssignment_1 : ( RULE_ID ) ;
-    public final void rule__Action_cond__NameAssignment_1() throws RecognitionException {
+    // $ANTLR start "rule__Action_cond__ActionRefAssignment_1"
+    // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:2802:1: rule__Action_cond__ActionRefAssignment_1 : ( ( RULE_ID ) ) ;
+    public final void rule__Action_cond__ActionRefAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:2802:1: ( ( RULE_ID ) )
-            // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:2803:1: ( RULE_ID )
+            // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:2806:1: ( ( ( RULE_ID ) ) )
+            // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:2807:1: ( ( RULE_ID ) )
             {
-            // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:2803:1: ( RULE_ID )
-            // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:2804:1: RULE_ID
+            // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:2807:1: ( ( RULE_ID ) )
+            // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:2808:1: ( RULE_ID )
             {
-             before(grammarAccess.getAction_condAccess().getNameIDTerminalRuleCall_1_0()); 
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Action_cond__NameAssignment_15682); 
-             after(grammarAccess.getAction_condAccess().getNameIDTerminalRuleCall_1_0()); 
+             before(grammarAccess.getAction_condAccess().getActionRefLabelCrossReference_1_0()); 
+            // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:2809:1: ( RULE_ID )
+            // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:2810:1: RULE_ID
+            {
+             before(grammarAccess.getAction_condAccess().getActionRefLabelIDTerminalRuleCall_1_0_1()); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Action_cond__ActionRefAssignment_15694); 
+             after(grammarAccess.getAction_condAccess().getActionRefLabelIDTerminalRuleCall_1_0_1()); 
+
+            }
+
+             after(grammarAccess.getAction_condAccess().getActionRefLabelCrossReference_1_0()); 
 
             }
 
@@ -7342,24 +7358,24 @@ public class InternalMarkovPopulationModelsParser extends AbstractInternalConten
         }
         return ;
     }
-    // $ANTLR end "rule__Action_cond__NameAssignment_1"
+    // $ANTLR end "rule__Action_cond__ActionRefAssignment_1"
 
 
     // $ANTLR start "rule__Agent__NameAssignment_1"
-    // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:2813:1: rule__Agent__NameAssignment_1 : ( RULE_ID ) ;
+    // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:2821:1: rule__Agent__NameAssignment_1 : ( RULE_ID ) ;
     public final void rule__Agent__NameAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:2817:1: ( ( RULE_ID ) )
-            // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:2818:1: ( RULE_ID )
+            // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:2825:1: ( ( RULE_ID ) )
+            // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:2826:1: ( RULE_ID )
             {
-            // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:2818:1: ( RULE_ID )
-            // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:2819:1: RULE_ID
+            // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:2826:1: ( RULE_ID )
+            // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:2827:1: RULE_ID
             {
              before(grammarAccess.getAgentAccess().getNameIDTerminalRuleCall_1_0()); 
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Agent__NameAssignment_15713); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Agent__NameAssignment_15729); 
              after(grammarAccess.getAgentAccess().getNameIDTerminalRuleCall_1_0()); 
 
             }
@@ -7383,20 +7399,20 @@ public class InternalMarkovPopulationModelsParser extends AbstractInternalConten
 
 
     // $ANTLR start "rule__Agent__ActAssignment_4"
-    // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:2828:1: rule__Agent__ActAssignment_4 : ( rulelabel ) ;
+    // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:2836:1: rule__Agent__ActAssignment_4 : ( rulelabel ) ;
     public final void rule__Agent__ActAssignment_4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:2832:1: ( ( rulelabel ) )
-            // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:2833:1: ( rulelabel )
+            // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:2840:1: ( ( rulelabel ) )
+            // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:2841:1: ( rulelabel )
             {
-            // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:2833:1: ( rulelabel )
-            // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:2834:1: rulelabel
+            // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:2841:1: ( rulelabel )
+            // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:2842:1: rulelabel
             {
              before(grammarAccess.getAgentAccess().getActLabelParserRuleCall_4_0()); 
-            pushFollow(FOLLOW_rulelabel_in_rule__Agent__ActAssignment_45744);
+            pushFollow(FOLLOW_rulelabel_in_rule__Agent__ActAssignment_45760);
             rulelabel();
 
             state._fsp--;
@@ -7424,20 +7440,20 @@ public class InternalMarkovPopulationModelsParser extends AbstractInternalConten
 
 
     // $ANTLR start "rule__Agent__SAssignment_5"
-    // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:2843:1: rule__Agent__SAssignment_5 : ( rulestate ) ;
+    // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:2851:1: rule__Agent__SAssignment_5 : ( rulestate ) ;
     public final void rule__Agent__SAssignment_5() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:2847:1: ( ( rulestate ) )
-            // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:2848:1: ( rulestate )
+            // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:2855:1: ( ( rulestate ) )
+            // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:2856:1: ( rulestate )
             {
-            // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:2848:1: ( rulestate )
-            // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:2849:1: rulestate
+            // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:2856:1: ( rulestate )
+            // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:2857:1: rulestate
             {
              before(grammarAccess.getAgentAccess().getSStateParserRuleCall_5_0()); 
-            pushFollow(FOLLOW_rulestate_in_rule__Agent__SAssignment_55775);
+            pushFollow(FOLLOW_rulestate_in_rule__Agent__SAssignment_55791);
             rulestate();
 
             state._fsp--;
@@ -7465,20 +7481,20 @@ public class InternalMarkovPopulationModelsParser extends AbstractInternalConten
 
 
     // $ANTLR start "rule__Label__NameAssignment"
-    // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:2858:1: rule__Label__NameAssignment : ( RULE_ID ) ;
+    // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:2866:1: rule__Label__NameAssignment : ( RULE_ID ) ;
     public final void rule__Label__NameAssignment() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:2862:1: ( ( RULE_ID ) )
-            // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:2863:1: ( RULE_ID )
+            // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:2870:1: ( ( RULE_ID ) )
+            // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:2871:1: ( RULE_ID )
             {
-            // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:2863:1: ( RULE_ID )
-            // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:2864:1: RULE_ID
+            // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:2871:1: ( RULE_ID )
+            // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:2872:1: RULE_ID
             {
              before(grammarAccess.getLabelAccess().getNameIDTerminalRuleCall_0()); 
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Label__NameAssignment5806); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Label__NameAssignment5822); 
              after(grammarAccess.getLabelAccess().getNameIDTerminalRuleCall_0()); 
 
             }
@@ -7502,20 +7518,20 @@ public class InternalMarkovPopulationModelsParser extends AbstractInternalConten
 
 
     // $ANTLR start "rule__State__NameAssignment_1"
-    // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:2873:1: rule__State__NameAssignment_1 : ( RULE_ID ) ;
+    // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:2881:1: rule__State__NameAssignment_1 : ( RULE_ID ) ;
     public final void rule__State__NameAssignment_1() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:2877:1: ( ( RULE_ID ) )
-            // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:2878:1: ( RULE_ID )
+            // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:2885:1: ( ( RULE_ID ) )
+            // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:2886:1: ( RULE_ID )
             {
-            // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:2878:1: ( RULE_ID )
-            // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:2879:1: RULE_ID
+            // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:2886:1: ( RULE_ID )
+            // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:2887:1: RULE_ID
             {
              before(grammarAccess.getStateAccess().getNameIDTerminalRuleCall_1_0()); 
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__State__NameAssignment_15837); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__State__NameAssignment_15853); 
              after(grammarAccess.getStateAccess().getNameIDTerminalRuleCall_1_0()); 
 
             }
@@ -7538,26 +7554,26 @@ public class InternalMarkovPopulationModelsParser extends AbstractInternalConten
     // $ANTLR end "rule__State__NameAssignment_1"
 
 
-    // $ANTLR start "rule__State__Spontaneous_actAssignment_3"
-    // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:2888:1: rule__State__Spontaneous_actAssignment_3 : ( ruleaction ) ;
-    public final void rule__State__Spontaneous_actAssignment_3() throws RecognitionException {
+    // $ANTLR start "rule__State__SpontaneousActAssignment_3"
+    // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:2896:1: rule__State__SpontaneousActAssignment_3 : ( ruleaction ) ;
+    public final void rule__State__SpontaneousActAssignment_3() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:2892:1: ( ( ruleaction ) )
-            // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:2893:1: ( ruleaction )
+            // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:2900:1: ( ( ruleaction ) )
+            // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:2901:1: ( ruleaction )
             {
-            // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:2893:1: ( ruleaction )
-            // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:2894:1: ruleaction
+            // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:2901:1: ( ruleaction )
+            // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:2902:1: ruleaction
             {
-             before(grammarAccess.getStateAccess().getSpontaneous_actActionParserRuleCall_3_0()); 
-            pushFollow(FOLLOW_ruleaction_in_rule__State__Spontaneous_actAssignment_35868);
+             before(grammarAccess.getStateAccess().getSpontaneousActActionParserRuleCall_3_0()); 
+            pushFollow(FOLLOW_ruleaction_in_rule__State__SpontaneousActAssignment_35884);
             ruleaction();
 
             state._fsp--;
 
-             after(grammarAccess.getStateAccess().getSpontaneous_actActionParserRuleCall_3_0()); 
+             after(grammarAccess.getStateAccess().getSpontaneousActActionParserRuleCall_3_0()); 
 
             }
 
@@ -7576,28 +7592,28 @@ public class InternalMarkovPopulationModelsParser extends AbstractInternalConten
         }
         return ;
     }
-    // $ANTLR end "rule__State__Spontaneous_actAssignment_3"
+    // $ANTLR end "rule__State__SpontaneousActAssignment_3"
 
 
     // $ANTLR start "rule__Action__ActRefAssignment_0"
-    // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:2903:1: rule__Action__ActRefAssignment_0 : ( ( RULE_ID ) ) ;
+    // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:2911:1: rule__Action__ActRefAssignment_0 : ( ( RULE_ID ) ) ;
     public final void rule__Action__ActRefAssignment_0() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:2907:1: ( ( ( RULE_ID ) ) )
-            // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:2908:1: ( ( RULE_ID ) )
+            // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:2915:1: ( ( ( RULE_ID ) ) )
+            // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:2916:1: ( ( RULE_ID ) )
             {
-            // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:2908:1: ( ( RULE_ID ) )
-            // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:2909:1: ( RULE_ID )
+            // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:2916:1: ( ( RULE_ID ) )
+            // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:2917:1: ( RULE_ID )
             {
              before(grammarAccess.getActionAccess().getActRefLabelCrossReference_0_0()); 
-            // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:2910:1: ( RULE_ID )
-            // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:2911:1: RULE_ID
+            // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:2918:1: ( RULE_ID )
+            // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:2919:1: RULE_ID
             {
              before(grammarAccess.getActionAccess().getActRefLabelIDTerminalRuleCall_0_0_1()); 
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Action__ActRefAssignment_05903); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Action__ActRefAssignment_05919); 
              after(grammarAccess.getActionAccess().getActRefLabelIDTerminalRuleCall_0_0_1()); 
 
             }
@@ -7625,24 +7641,24 @@ public class InternalMarkovPopulationModelsParser extends AbstractInternalConten
 
 
     // $ANTLR start "rule__Action__StateRefAssignment_2"
-    // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:2922:1: rule__Action__StateRefAssignment_2 : ( ( RULE_ID ) ) ;
+    // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:2930:1: rule__Action__StateRefAssignment_2 : ( ( RULE_ID ) ) ;
     public final void rule__Action__StateRefAssignment_2() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:2926:1: ( ( ( RULE_ID ) ) )
-            // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:2927:1: ( ( RULE_ID ) )
+            // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:2934:1: ( ( ( RULE_ID ) ) )
+            // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:2935:1: ( ( RULE_ID ) )
             {
-            // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:2927:1: ( ( RULE_ID ) )
-            // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:2928:1: ( RULE_ID )
+            // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:2935:1: ( ( RULE_ID ) )
+            // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:2936:1: ( RULE_ID )
             {
              before(grammarAccess.getActionAccess().getStateRefStateCrossReference_2_0()); 
-            // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:2929:1: ( RULE_ID )
-            // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:2930:1: RULE_ID
+            // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:2937:1: ( RULE_ID )
+            // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:2938:1: RULE_ID
             {
              before(grammarAccess.getActionAccess().getStateRefStateIDTerminalRuleCall_2_0_1()); 
-            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Action__StateRefAssignment_25942); 
+            match(input,RULE_ID,FOLLOW_RULE_ID_in_rule__Action__StateRefAssignment_25958); 
              after(grammarAccess.getActionAccess().getStateRefStateIDTerminalRuleCall_2_0_1()); 
 
             }
@@ -7670,20 +7686,20 @@ public class InternalMarkovPopulationModelsParser extends AbstractInternalConten
 
 
     // $ANTLR start "rule__Action__LocalRateAssignment_4"
-    // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:2941:1: rule__Action__LocalRateAssignment_4 : ( RULE_FLOAT ) ;
+    // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:2949:1: rule__Action__LocalRateAssignment_4 : ( RULE_FLOAT ) ;
     public final void rule__Action__LocalRateAssignment_4() throws RecognitionException {
 
         		int stackSize = keepStackSize();
             
         try {
-            // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:2945:1: ( ( RULE_FLOAT ) )
-            // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:2946:1: ( RULE_FLOAT )
+            // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:2953:1: ( ( RULE_FLOAT ) )
+            // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:2954:1: ( RULE_FLOAT )
             {
-            // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:2946:1: ( RULE_FLOAT )
-            // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:2947:1: RULE_FLOAT
+            // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:2954:1: ( RULE_FLOAT )
+            // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:2955:1: RULE_FLOAT
             {
              before(grammarAccess.getActionAccess().getLocalRateFLOATTerminalRuleCall_4_0()); 
-            match(input,RULE_FLOAT,FOLLOW_RULE_FLOAT_in_rule__Action__LocalRateAssignment_45977); 
+            match(input,RULE_FLOAT,FOLLOW_RULE_FLOAT_in_rule__Action__LocalRateAssignment_45993); 
              after(grammarAccess.getActionAccess().getLocalRateFLOATTerminalRuleCall_4_0()); 
 
             }
@@ -7733,7 +7749,7 @@ public class InternalMarkovPopulationModelsParser extends AbstractInternalConten
     public static final BitSet FOLLOW_rule__State_cond__Alternatives_in_rulestate_cond454 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rulestate_ref_in_entryRulestate_ref481 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRulestate_ref488 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__State_ref__NameAssignment_in_rulestate_ref514 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__State_ref__StateRefAssignment_in_rulestate_ref514 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_ruleaction_cond_in_entryRuleaction_cond541 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRuleaction_cond548 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__Action_cond__Alternatives_in_ruleaction_cond574 = new BitSet(new long[]{0x0000000000000002L});
@@ -7753,9 +7769,9 @@ public class InternalMarkovPopulationModelsParser extends AbstractInternalConten
     public static final BitSet FOLLOW_rule__Loc_tran__Group_1__0_in_rule__Loc_tran__Alternatives868 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__Loc_tran__Group_2__0_in_rule__Loc_tran__Alternatives886 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__State_cond__Group_0__0_in_rule__State_cond__Alternatives919 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__State_cond__S_refAssignment_1_in_rule__State_cond__Alternatives937 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__State_cond__StateRefAssignment_1_in_rule__State_cond__Alternatives937 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__Action_cond__Group_0__0_in_rule__Action_cond__Alternatives970 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Action_cond__NameAssignment_1_in_rule__Action_cond__Alternatives988 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Action_cond__ActionRefAssignment_1_in_rule__Action_cond__Alternatives988 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__Population__Group__0__Impl_in_rule__Population__Group__01019 = new BitSet(new long[]{0x0000000000000010L});
     public static final BitSet FOLLOW_rule__Population__Group__1_in_rule__Population__Group__01022 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_12_in_rule__Population__Group__0__Impl1050 = new BitSet(new long[]{0x0000000000000002L});
@@ -7823,7 +7839,7 @@ public class InternalMarkovPopulationModelsParser extends AbstractInternalConten
     public static final BitSet FOLLOW_13_in_rule__Gl_tran__Group__2__Impl2434 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__Gl_tran__Group__3__Impl_in_rule__Gl_tran__Group__32465 = new BitSet(new long[]{0x0000000000300000L});
     public static final BitSet FOLLOW_rule__Gl_tran__Group__4_in_rule__Gl_tran__Group__32468 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Gl_tran__L_tranAssignment_3_in_rule__Gl_tran__Group__3__Impl2495 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Gl_tran__LTranAssignment_3_in_rule__Gl_tran__Group__3__Impl2495 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__Gl_tran__Group__4__Impl_in_rule__Gl_tran__Group__42525 = new BitSet(new long[]{0x0000000000300000L});
     public static final BitSet FOLLOW_rule__Gl_tran__Group__5_in_rule__Gl_tran__Group__42528 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__Gl_tran__Group_4__0_in_rule__Gl_tran__Group__4__Impl2555 = new BitSet(new long[]{0x0000000000200002L});
@@ -7839,7 +7855,7 @@ public class InternalMarkovPopulationModelsParser extends AbstractInternalConten
     public static final BitSet FOLLOW_rule__Gl_tran__Group_4__1_in_rule__Gl_tran__Group_4__02786 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_21_in_rule__Gl_tran__Group_4__0__Impl2814 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__Gl_tran__Group_4__1__Impl_in_rule__Gl_tran__Group_4__12845 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Gl_tran__L_tranAssignment_4_1_in_rule__Gl_tran__Group_4__1__Impl2872 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Gl_tran__LTranAssignment_4_1_in_rule__Gl_tran__Group_4__1__Impl2872 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__Loc_tran__Group_0__0__Impl_in_rule__Loc_tran__Group_0__02906 = new BitSet(new long[]{0x0000000000000010L});
     public static final BitSet FOLLOW_rule__Loc_tran__Group_0__1_in_rule__Loc_tran__Group_0__02909 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_22_in_rule__Loc_tran__Group_0__0__Impl2937 = new BitSet(new long[]{0x0000000000000002L});
@@ -7852,12 +7868,12 @@ public class InternalMarkovPopulationModelsParser extends AbstractInternalConten
     public static final BitSet FOLLOW_rule__Loc_tran__StateRefAssignment_1_1_in_rule__Loc_tran__Group_1__1__Impl3118 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__Loc_tran__Group_2__0__Impl_in_rule__Loc_tran__Group_2__03152 = new BitSet(new long[]{0x0000000001000000L});
     public static final BitSet FOLLOW_rule__Loc_tran__Group_2__1_in_rule__Loc_tran__Group_2__03155 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Loc_tran__S_condAssignment_2_0_in_rule__Loc_tran__Group_2__0__Impl3182 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Loc_tran__SCondAssignment_2_0_in_rule__Loc_tran__Group_2__0__Impl3182 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__Loc_tran__Group_2__1__Impl_in_rule__Loc_tran__Group_2__13212 = new BitSet(new long[]{0x0000000002000010L});
     public static final BitSet FOLLOW_rule__Loc_tran__Group_2__2_in_rule__Loc_tran__Group_2__13215 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_24_in_rule__Loc_tran__Group_2__1__Impl3243 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__Loc_tran__Group_2__2__Impl_in_rule__Loc_tran__Group_2__23274 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__Loc_tran__A_condAssignment_2_2_in_rule__Loc_tran__Group_2__2__Impl3301 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rule__Loc_tran__ACondAssignment_2_2_in_rule__Loc_tran__Group_2__2__Impl3301 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__State_cond__Group_0__0__Impl_in_rule__State_cond__Group_0__03337 = new BitSet(new long[]{0x0000000002000000L});
     public static final BitSet FOLLOW_rule__State_cond__Group_0__1_in_rule__State_cond__Group_0__03340 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__State_cond__Group_0__1__Impl_in_rule__State_cond__Group_0__13398 = new BitSet(new long[]{0x0000000000000002L});
@@ -7899,8 +7915,8 @@ public class InternalMarkovPopulationModelsParser extends AbstractInternalConten
     public static final BitSet FOLLOW_13_in_rule__State__Group__2__Impl4211 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__State__Group__3__Impl_in_rule__State__Group__34242 = new BitSet(new long[]{0x0000000000008000L});
     public static final BitSet FOLLOW_rule__State__Group__4_in_rule__State__Group__34245 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rule__State__Spontaneous_actAssignment_3_in_rule__State__Group__3__Impl4274 = new BitSet(new long[]{0x0000000000000012L});
-    public static final BitSet FOLLOW_rule__State__Spontaneous_actAssignment_3_in_rule__State__Group__3__Impl4286 = new BitSet(new long[]{0x0000000000000012L});
+    public static final BitSet FOLLOW_rule__State__SpontaneousActAssignment_3_in_rule__State__Group__3__Impl4274 = new BitSet(new long[]{0x0000000000000012L});
+    public static final BitSet FOLLOW_rule__State__SpontaneousActAssignment_3_in_rule__State__Group__3__Impl4286 = new BitSet(new long[]{0x0000000000000012L});
     public static final BitSet FOLLOW_rule__State__Group__4__Impl_in_rule__State__Group__44319 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_15_in_rule__State__Group__4__Impl4347 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rule__Action__Group__0__Impl_in_rule__Action__Group__04388 = new BitSet(new long[]{0x0000000020000000L});
@@ -7935,24 +7951,24 @@ public class InternalMarkovPopulationModelsParser extends AbstractInternalConten
     public static final BitSet FOLLOW_RULE_ID_in_rule__StateInit__StateRefAssignment_05290 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_RULE_INT_in_rule__StateInit__CardAssignment_25325 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_RULE_ID_in_rule__Gl_tran__NameAssignment_15356 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleloc_tran_in_rule__Gl_tran__L_tranAssignment_35387 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleloc_tran_in_rule__Gl_tran__L_tranAssignment_4_15418 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleloc_tran_in_rule__Gl_tran__LTranAssignment_35387 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleloc_tran_in_rule__Gl_tran__LTranAssignment_4_15418 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_RULE_FLOAT_in_rule__Gl_tran__RateAssignment_65449 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_RULE_ID_in_rule__Loc_tran__StateRefAssignment_0_15484 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_RULE_ID_in_rule__Loc_tran__StateRefAssignment_1_15523 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rulestate_cond_in_rule__Loc_tran__S_condAssignment_2_05558 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleaction_cond_in_rule__Loc_tran__A_condAssignment_2_25589 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rulestate_ref_in_rule__State_cond__S_refAssignment_15620 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__State_ref__NameAssignment5651 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__Action_cond__NameAssignment_15682 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__Agent__NameAssignment_15713 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rulelabel_in_rule__Agent__ActAssignment_45744 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rulestate_in_rule__Agent__SAssignment_55775 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__Label__NameAssignment5806 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__State__NameAssignment_15837 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleaction_in_rule__State__Spontaneous_actAssignment_35868 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__Action__ActRefAssignment_05903 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rule__Action__StateRefAssignment_25942 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_FLOAT_in_rule__Action__LocalRateAssignment_45977 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rulestate_cond_in_rule__Loc_tran__SCondAssignment_2_05558 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleaction_cond_in_rule__Loc_tran__ACondAssignment_2_25589 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rulestate_ref_in_rule__State_cond__StateRefAssignment_15620 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__State_ref__StateRefAssignment5655 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__Action_cond__ActionRefAssignment_15694 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__Agent__NameAssignment_15729 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rulelabel_in_rule__Agent__ActAssignment_45760 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rulestate_in_rule__Agent__SAssignment_55791 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__Label__NameAssignment5822 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__State__NameAssignment_15853 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleaction_in_rule__State__SpontaneousActAssignment_35884 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__Action__ActRefAssignment_05919 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rule__Action__StateRefAssignment_25958 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_FLOAT_in_rule__Action__LocalRateAssignment_45993 = new BitSet(new long[]{0x0000000000000002L});
 
 }

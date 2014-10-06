@@ -974,7 +974,7 @@ public class InternalMarkovPopulationModelsParser extends AbstractInternalAntlrP
 
 
     // $ANTLR start "rulegl_tran"
-    // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:425:1: rulegl_tran returns [EObject current=null] : (otherlv_0= 'transition' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' ( (lv_l_tran_3_0= ruleloc_tran ) ) (otherlv_4= '&' ( (lv_l_tran_5_0= ruleloc_tran ) ) )* otherlv_6= '=>' ( (lv_rate_7_0= RULE_FLOAT ) ) otherlv_8= '}' ) ;
+    // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:425:1: rulegl_tran returns [EObject current=null] : (otherlv_0= 'transition' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' ( (lv_lTran_3_0= ruleloc_tran ) ) (otherlv_4= '&' ( (lv_lTran_5_0= ruleloc_tran ) ) )* otherlv_6= '=>' ( (lv_rate_7_0= RULE_FLOAT ) ) otherlv_8= '}' ) ;
     public final EObject rulegl_tran() throws RecognitionException {
         EObject current = null;
 
@@ -985,19 +985,19 @@ public class InternalMarkovPopulationModelsParser extends AbstractInternalAntlrP
         Token otherlv_6=null;
         Token lv_rate_7_0=null;
         Token otherlv_8=null;
-        EObject lv_l_tran_3_0 = null;
+        EObject lv_lTran_3_0 = null;
 
-        EObject lv_l_tran_5_0 = null;
+        EObject lv_lTran_5_0 = null;
 
 
          enterRule(); 
             
         try {
-            // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:428:28: ( (otherlv_0= 'transition' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' ( (lv_l_tran_3_0= ruleloc_tran ) ) (otherlv_4= '&' ( (lv_l_tran_5_0= ruleloc_tran ) ) )* otherlv_6= '=>' ( (lv_rate_7_0= RULE_FLOAT ) ) otherlv_8= '}' ) )
-            // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:429:1: (otherlv_0= 'transition' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' ( (lv_l_tran_3_0= ruleloc_tran ) ) (otherlv_4= '&' ( (lv_l_tran_5_0= ruleloc_tran ) ) )* otherlv_6= '=>' ( (lv_rate_7_0= RULE_FLOAT ) ) otherlv_8= '}' )
+            // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:428:28: ( (otherlv_0= 'transition' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' ( (lv_lTran_3_0= ruleloc_tran ) ) (otherlv_4= '&' ( (lv_lTran_5_0= ruleloc_tran ) ) )* otherlv_6= '=>' ( (lv_rate_7_0= RULE_FLOAT ) ) otherlv_8= '}' ) )
+            // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:429:1: (otherlv_0= 'transition' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' ( (lv_lTran_3_0= ruleloc_tran ) ) (otherlv_4= '&' ( (lv_lTran_5_0= ruleloc_tran ) ) )* otherlv_6= '=>' ( (lv_rate_7_0= RULE_FLOAT ) ) otherlv_8= '}' )
             {
-            // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:429:1: (otherlv_0= 'transition' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' ( (lv_l_tran_3_0= ruleloc_tran ) ) (otherlv_4= '&' ( (lv_l_tran_5_0= ruleloc_tran ) ) )* otherlv_6= '=>' ( (lv_rate_7_0= RULE_FLOAT ) ) otherlv_8= '}' )
-            // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:429:3: otherlv_0= 'transition' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' ( (lv_l_tran_3_0= ruleloc_tran ) ) (otherlv_4= '&' ( (lv_l_tran_5_0= ruleloc_tran ) ) )* otherlv_6= '=>' ( (lv_rate_7_0= RULE_FLOAT ) ) otherlv_8= '}'
+            // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:429:1: (otherlv_0= 'transition' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' ( (lv_lTran_3_0= ruleloc_tran ) ) (otherlv_4= '&' ( (lv_lTran_5_0= ruleloc_tran ) ) )* otherlv_6= '=>' ( (lv_rate_7_0= RULE_FLOAT ) ) otherlv_8= '}' )
+            // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:429:3: otherlv_0= 'transition' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' ( (lv_lTran_3_0= ruleloc_tran ) ) (otherlv_4= '&' ( (lv_lTran_5_0= ruleloc_tran ) ) )* otherlv_6= '=>' ( (lv_rate_7_0= RULE_FLOAT ) ) otherlv_8= '}'
             {
             otherlv_0=(Token)match(input,19,FOLLOW_19_in_rulegl_tran895); 
 
@@ -1033,17 +1033,17 @@ public class InternalMarkovPopulationModelsParser extends AbstractInternalAntlrP
 
                 	newLeafNode(otherlv_2, grammarAccess.getGl_tranAccess().getLeftCurlyBracketKeyword_2());
                 
-            // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:455:1: ( (lv_l_tran_3_0= ruleloc_tran ) )
-            // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:456:1: (lv_l_tran_3_0= ruleloc_tran )
+            // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:455:1: ( (lv_lTran_3_0= ruleloc_tran ) )
+            // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:456:1: (lv_lTran_3_0= ruleloc_tran )
             {
-            // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:456:1: (lv_l_tran_3_0= ruleloc_tran )
-            // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:457:3: lv_l_tran_3_0= ruleloc_tran
+            // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:456:1: (lv_lTran_3_0= ruleloc_tran )
+            // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:457:3: lv_lTran_3_0= ruleloc_tran
             {
              
-            	        newCompositeNode(grammarAccess.getGl_tranAccess().getL_tranLoc_tranParserRuleCall_3_0()); 
+            	        newCompositeNode(grammarAccess.getGl_tranAccess().getLTranLoc_tranParserRuleCall_3_0()); 
             	    
             pushFollow(FOLLOW_ruleloc_tran_in_rulegl_tran950);
-            lv_l_tran_3_0=ruleloc_tran();
+            lv_lTran_3_0=ruleloc_tran();
 
             state._fsp--;
 
@@ -1053,8 +1053,8 @@ public class InternalMarkovPopulationModelsParser extends AbstractInternalAntlrP
             	        }
                    		add(
                    			current, 
-                   			"l_tran",
-                    		lv_l_tran_3_0, 
+                   			"lTran",
+                    		lv_lTran_3_0, 
                     		"loc_tran");
             	        afterParserOrEnumRuleCall();
             	    
@@ -1064,7 +1064,7 @@ public class InternalMarkovPopulationModelsParser extends AbstractInternalAntlrP
 
             }
 
-            // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:473:2: (otherlv_4= '&' ( (lv_l_tran_5_0= ruleloc_tran ) ) )*
+            // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:473:2: (otherlv_4= '&' ( (lv_lTran_5_0= ruleloc_tran ) ) )*
             loop5:
             do {
                 int alt5=2;
@@ -1077,23 +1077,23 @@ public class InternalMarkovPopulationModelsParser extends AbstractInternalAntlrP
 
                 switch (alt5) {
             	case 1 :
-            	    // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:473:4: otherlv_4= '&' ( (lv_l_tran_5_0= ruleloc_tran ) )
+            	    // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:473:4: otherlv_4= '&' ( (lv_lTran_5_0= ruleloc_tran ) )
             	    {
             	    otherlv_4=(Token)match(input,20,FOLLOW_20_in_rulegl_tran963); 
 
             	        	newLeafNode(otherlv_4, grammarAccess.getGl_tranAccess().getAmpersandKeyword_4_0());
             	        
-            	    // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:477:1: ( (lv_l_tran_5_0= ruleloc_tran ) )
-            	    // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:478:1: (lv_l_tran_5_0= ruleloc_tran )
+            	    // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:477:1: ( (lv_lTran_5_0= ruleloc_tran ) )
+            	    // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:478:1: (lv_lTran_5_0= ruleloc_tran )
             	    {
-            	    // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:478:1: (lv_l_tran_5_0= ruleloc_tran )
-            	    // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:479:3: lv_l_tran_5_0= ruleloc_tran
+            	    // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:478:1: (lv_lTran_5_0= ruleloc_tran )
+            	    // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:479:3: lv_lTran_5_0= ruleloc_tran
             	    {
             	     
-            	    	        newCompositeNode(grammarAccess.getGl_tranAccess().getL_tranLoc_tranParserRuleCall_4_1_0()); 
+            	    	        newCompositeNode(grammarAccess.getGl_tranAccess().getLTranLoc_tranParserRuleCall_4_1_0()); 
             	    	    
             	    pushFollow(FOLLOW_ruleloc_tran_in_rulegl_tran984);
-            	    lv_l_tran_5_0=ruleloc_tran();
+            	    lv_lTran_5_0=ruleloc_tran();
 
             	    state._fsp--;
 
@@ -1103,8 +1103,8 @@ public class InternalMarkovPopulationModelsParser extends AbstractInternalAntlrP
             	    	        }
             	           		add(
             	           			current, 
-            	           			"l_tran",
-            	            		lv_l_tran_5_0, 
+            	           			"lTran",
+            	            		lv_lTran_5_0, 
             	            		"loc_tran");
             	    	        afterParserOrEnumRuleCall();
             	    	    
@@ -1214,7 +1214,7 @@ public class InternalMarkovPopulationModelsParser extends AbstractInternalAntlrP
 
 
     // $ANTLR start "ruleloc_tran"
-    // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:538:1: ruleloc_tran returns [EObject current=null] : ( (otherlv_0= 'new' ( (otherlv_1= RULE_ID ) ) ) | (otherlv_2= 'kill' ( (otherlv_3= RULE_ID ) ) ) | ( ( (lv_s_cond_4_0= rulestate_cond ) ) otherlv_5= ':' ( (lv_a_cond_6_0= ruleaction_cond ) ) ) ) ;
+    // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:538:1: ruleloc_tran returns [EObject current=null] : ( (otherlv_0= 'new' ( (otherlv_1= RULE_ID ) ) ) | (otherlv_2= 'kill' ( (otherlv_3= RULE_ID ) ) ) | ( ( (lv_sCond_4_0= rulestate_cond ) ) otherlv_5= ':' ( (lv_aCond_6_0= ruleaction_cond ) ) ) ) ;
     public final EObject ruleloc_tran() throws RecognitionException {
         EObject current = null;
 
@@ -1223,18 +1223,18 @@ public class InternalMarkovPopulationModelsParser extends AbstractInternalAntlrP
         Token otherlv_2=null;
         Token otherlv_3=null;
         Token otherlv_5=null;
-        EObject lv_s_cond_4_0 = null;
+        EObject lv_sCond_4_0 = null;
 
-        EObject lv_a_cond_6_0 = null;
+        EObject lv_aCond_6_0 = null;
 
 
          enterRule(); 
             
         try {
-            // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:541:28: ( ( (otherlv_0= 'new' ( (otherlv_1= RULE_ID ) ) ) | (otherlv_2= 'kill' ( (otherlv_3= RULE_ID ) ) ) | ( ( (lv_s_cond_4_0= rulestate_cond ) ) otherlv_5= ':' ( (lv_a_cond_6_0= ruleaction_cond ) ) ) ) )
-            // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:542:1: ( (otherlv_0= 'new' ( (otherlv_1= RULE_ID ) ) ) | (otherlv_2= 'kill' ( (otherlv_3= RULE_ID ) ) ) | ( ( (lv_s_cond_4_0= rulestate_cond ) ) otherlv_5= ':' ( (lv_a_cond_6_0= ruleaction_cond ) ) ) )
+            // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:541:28: ( ( (otherlv_0= 'new' ( (otherlv_1= RULE_ID ) ) ) | (otherlv_2= 'kill' ( (otherlv_3= RULE_ID ) ) ) | ( ( (lv_sCond_4_0= rulestate_cond ) ) otherlv_5= ':' ( (lv_aCond_6_0= ruleaction_cond ) ) ) ) )
+            // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:542:1: ( (otherlv_0= 'new' ( (otherlv_1= RULE_ID ) ) ) | (otherlv_2= 'kill' ( (otherlv_3= RULE_ID ) ) ) | ( ( (lv_sCond_4_0= rulestate_cond ) ) otherlv_5= ':' ( (lv_aCond_6_0= ruleaction_cond ) ) ) )
             {
-            // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:542:1: ( (otherlv_0= 'new' ( (otherlv_1= RULE_ID ) ) ) | (otherlv_2= 'kill' ( (otherlv_3= RULE_ID ) ) ) | ( ( (lv_s_cond_4_0= rulestate_cond ) ) otherlv_5= ':' ( (lv_a_cond_6_0= ruleaction_cond ) ) ) )
+            // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:542:1: ( (otherlv_0= 'new' ( (otherlv_1= RULE_ID ) ) ) | (otherlv_2= 'kill' ( (otherlv_3= RULE_ID ) ) ) | ( ( (lv_sCond_4_0= rulestate_cond ) ) otherlv_5= ':' ( (lv_aCond_6_0= ruleaction_cond ) ) ) )
             int alt6=3;
             switch ( input.LA(1) ) {
             case 22:
@@ -1336,22 +1336,22 @@ public class InternalMarkovPopulationModelsParser extends AbstractInternalAntlrP
                     }
                     break;
                 case 3 :
-                    // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:578:6: ( ( (lv_s_cond_4_0= rulestate_cond ) ) otherlv_5= ':' ( (lv_a_cond_6_0= ruleaction_cond ) ) )
+                    // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:578:6: ( ( (lv_sCond_4_0= rulestate_cond ) ) otherlv_5= ':' ( (lv_aCond_6_0= ruleaction_cond ) ) )
                     {
-                    // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:578:6: ( ( (lv_s_cond_4_0= rulestate_cond ) ) otherlv_5= ':' ( (lv_a_cond_6_0= ruleaction_cond ) ) )
-                    // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:578:7: ( (lv_s_cond_4_0= rulestate_cond ) ) otherlv_5= ':' ( (lv_a_cond_6_0= ruleaction_cond ) )
+                    // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:578:6: ( ( (lv_sCond_4_0= rulestate_cond ) ) otherlv_5= ':' ( (lv_aCond_6_0= ruleaction_cond ) ) )
+                    // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:578:7: ( (lv_sCond_4_0= rulestate_cond ) ) otherlv_5= ':' ( (lv_aCond_6_0= ruleaction_cond ) )
                     {
-                    // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:578:7: ( (lv_s_cond_4_0= rulestate_cond ) )
-                    // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:579:1: (lv_s_cond_4_0= rulestate_cond )
+                    // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:578:7: ( (lv_sCond_4_0= rulestate_cond ) )
+                    // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:579:1: (lv_sCond_4_0= rulestate_cond )
                     {
-                    // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:579:1: (lv_s_cond_4_0= rulestate_cond )
-                    // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:580:3: lv_s_cond_4_0= rulestate_cond
+                    // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:579:1: (lv_sCond_4_0= rulestate_cond )
+                    // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:580:3: lv_sCond_4_0= rulestate_cond
                     {
                      
-                    	        newCompositeNode(grammarAccess.getLoc_tranAccess().getS_condState_condParserRuleCall_2_0_0()); 
+                    	        newCompositeNode(grammarAccess.getLoc_tranAccess().getSCondState_condParserRuleCall_2_0_0()); 
                     	    
                     pushFollow(FOLLOW_rulestate_cond_in_ruleloc_tran1205);
-                    lv_s_cond_4_0=rulestate_cond();
+                    lv_sCond_4_0=rulestate_cond();
 
                     state._fsp--;
 
@@ -1361,8 +1361,8 @@ public class InternalMarkovPopulationModelsParser extends AbstractInternalAntlrP
                     	        }
                            		set(
                            			current, 
-                           			"s_cond",
-                            		lv_s_cond_4_0, 
+                           			"sCond",
+                            		lv_sCond_4_0, 
                             		"state_cond");
                     	        afterParserOrEnumRuleCall();
                     	    
@@ -1376,17 +1376,17 @@ public class InternalMarkovPopulationModelsParser extends AbstractInternalAntlrP
 
                         	newLeafNode(otherlv_5, grammarAccess.getLoc_tranAccess().getColonKeyword_2_1());
                         
-                    // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:600:1: ( (lv_a_cond_6_0= ruleaction_cond ) )
-                    // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:601:1: (lv_a_cond_6_0= ruleaction_cond )
+                    // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:600:1: ( (lv_aCond_6_0= ruleaction_cond ) )
+                    // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:601:1: (lv_aCond_6_0= ruleaction_cond )
                     {
-                    // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:601:1: (lv_a_cond_6_0= ruleaction_cond )
-                    // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:602:3: lv_a_cond_6_0= ruleaction_cond
+                    // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:601:1: (lv_aCond_6_0= ruleaction_cond )
+                    // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:602:3: lv_aCond_6_0= ruleaction_cond
                     {
                      
-                    	        newCompositeNode(grammarAccess.getLoc_tranAccess().getA_condAction_condParserRuleCall_2_2_0()); 
+                    	        newCompositeNode(grammarAccess.getLoc_tranAccess().getACondAction_condParserRuleCall_2_2_0()); 
                     	    
                     pushFollow(FOLLOW_ruleaction_cond_in_ruleloc_tran1238);
-                    lv_a_cond_6_0=ruleaction_cond();
+                    lv_aCond_6_0=ruleaction_cond();
 
                     state._fsp--;
 
@@ -1396,8 +1396,8 @@ public class InternalMarkovPopulationModelsParser extends AbstractInternalAntlrP
                     	        }
                            		set(
                            			current, 
-                           			"a_cond",
-                            		lv_a_cond_6_0, 
+                           			"aCond",
+                            		lv_aCond_6_0, 
                             		"action_cond");
                     	        afterParserOrEnumRuleCall();
                     	    
@@ -1470,21 +1470,21 @@ public class InternalMarkovPopulationModelsParser extends AbstractInternalAntlrP
 
 
     // $ANTLR start "rulestate_cond"
-    // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:635:1: rulestate_cond returns [EObject current=null] : ( ( () otherlv_1= 'any' ) | ( (lv_s_ref_2_0= rulestate_ref ) ) ) ;
+    // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:635:1: rulestate_cond returns [EObject current=null] : ( ( () otherlv_1= 'any' ) | ( (lv_stateRef_2_0= rulestate_ref ) ) ) ;
     public final EObject rulestate_cond() throws RecognitionException {
         EObject current = null;
 
         Token otherlv_1=null;
-        EObject lv_s_ref_2_0 = null;
+        EObject lv_stateRef_2_0 = null;
 
 
          enterRule(); 
             
         try {
-            // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:638:28: ( ( ( () otherlv_1= 'any' ) | ( (lv_s_ref_2_0= rulestate_ref ) ) ) )
-            // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:639:1: ( ( () otherlv_1= 'any' ) | ( (lv_s_ref_2_0= rulestate_ref ) ) )
+            // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:638:28: ( ( ( () otherlv_1= 'any' ) | ( (lv_stateRef_2_0= rulestate_ref ) ) ) )
+            // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:639:1: ( ( () otherlv_1= 'any' ) | ( (lv_stateRef_2_0= rulestate_ref ) ) )
             {
-            // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:639:1: ( ( () otherlv_1= 'any' ) | ( (lv_s_ref_2_0= rulestate_ref ) ) )
+            // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:639:1: ( ( () otherlv_1= 'any' ) | ( (lv_stateRef_2_0= rulestate_ref ) ) )
             int alt7=2;
             int LA7_0 = input.LA(1);
 
@@ -1529,19 +1529,19 @@ public class InternalMarkovPopulationModelsParser extends AbstractInternalAntlrP
                     }
                     break;
                 case 2 :
-                    // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:650:6: ( (lv_s_ref_2_0= rulestate_ref ) )
+                    // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:650:6: ( (lv_stateRef_2_0= rulestate_ref ) )
                     {
-                    // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:650:6: ( (lv_s_ref_2_0= rulestate_ref ) )
-                    // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:651:1: (lv_s_ref_2_0= rulestate_ref )
+                    // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:650:6: ( (lv_stateRef_2_0= rulestate_ref ) )
+                    // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:651:1: (lv_stateRef_2_0= rulestate_ref )
                     {
-                    // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:651:1: (lv_s_ref_2_0= rulestate_ref )
-                    // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:652:3: lv_s_ref_2_0= rulestate_ref
+                    // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:651:1: (lv_stateRef_2_0= rulestate_ref )
+                    // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:652:3: lv_stateRef_2_0= rulestate_ref
                     {
                      
-                    	        newCompositeNode(grammarAccess.getState_condAccess().getS_refState_refParserRuleCall_1_0()); 
+                    	        newCompositeNode(grammarAccess.getState_condAccess().getStateRefState_refParserRuleCall_1_0()); 
                     	    
                     pushFollow(FOLLOW_rulestate_ref_in_rulestate_cond1360);
-                    lv_s_ref_2_0=rulestate_ref();
+                    lv_stateRef_2_0=rulestate_ref();
 
                     state._fsp--;
 
@@ -1551,8 +1551,8 @@ public class InternalMarkovPopulationModelsParser extends AbstractInternalAntlrP
                     	        }
                            		set(
                            			current, 
-                           			"s_ref",
-                            		lv_s_ref_2_0, 
+                           			"stateRef",
+                            		lv_stateRef_2_0, 
                             		"state_ref");
                     	        afterParserOrEnumRuleCall();
                     	    
@@ -1622,38 +1622,33 @@ public class InternalMarkovPopulationModelsParser extends AbstractInternalAntlrP
 
 
     // $ANTLR start "rulestate_ref"
-    // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:685:1: rulestate_ref returns [EObject current=null] : ( (lv_name_0_0= RULE_ID ) ) ;
+    // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:685:1: rulestate_ref returns [EObject current=null] : ( (otherlv_0= RULE_ID ) ) ;
     public final EObject rulestate_ref() throws RecognitionException {
         EObject current = null;
 
-        Token lv_name_0_0=null;
+        Token otherlv_0=null;
 
          enterRule(); 
             
         try {
-            // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:688:28: ( ( (lv_name_0_0= RULE_ID ) ) )
-            // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:689:1: ( (lv_name_0_0= RULE_ID ) )
+            // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:688:28: ( ( (otherlv_0= RULE_ID ) ) )
+            // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:689:1: ( (otherlv_0= RULE_ID ) )
             {
-            // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:689:1: ( (lv_name_0_0= RULE_ID ) )
-            // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:690:1: (lv_name_0_0= RULE_ID )
+            // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:689:1: ( (otherlv_0= RULE_ID ) )
+            // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:690:1: (otherlv_0= RULE_ID )
             {
-            // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:690:1: (lv_name_0_0= RULE_ID )
-            // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:691:3: lv_name_0_0= RULE_ID
+            // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:690:1: (otherlv_0= RULE_ID )
+            // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:691:3: otherlv_0= RULE_ID
             {
-            lv_name_0_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_rulestate_ref1447); 
 
-            			newLeafNode(lv_name_0_0, grammarAccess.getState_refAccess().getNameIDTerminalRuleCall_0()); 
-            		
-
-            	        if (current==null) {
+            			if (current==null) {
             	            current = createModelElement(grammarAccess.getState_refRule());
             	        }
-                   		setWithLastConsumed(
-                   			current, 
-                   			"name",
-                    		lv_name_0_0, 
-                    		"ID");
-            	    
+                    
+            otherlv_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_rulestate_ref1450); 
+
+            		newLeafNode(otherlv_0, grammarAccess.getState_refAccess().getStateRefStateCrossReference_0()); 
+            	
 
             }
 
@@ -1678,7 +1673,7 @@ public class InternalMarkovPopulationModelsParser extends AbstractInternalAntlrP
 
 
     // $ANTLR start "entryRuleaction_cond"
-    // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:715:1: entryRuleaction_cond returns [EObject current=null] : iv_ruleaction_cond= ruleaction_cond EOF ;
+    // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:710:1: entryRuleaction_cond returns [EObject current=null] : iv_ruleaction_cond= ruleaction_cond EOF ;
     public final EObject entryRuleaction_cond() throws RecognitionException {
         EObject current = null;
 
@@ -1686,17 +1681,17 @@ public class InternalMarkovPopulationModelsParser extends AbstractInternalAntlrP
 
 
         try {
-            // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:716:2: (iv_ruleaction_cond= ruleaction_cond EOF )
-            // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:717:2: iv_ruleaction_cond= ruleaction_cond EOF
+            // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:711:2: (iv_ruleaction_cond= ruleaction_cond EOF )
+            // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:712:2: iv_ruleaction_cond= ruleaction_cond EOF
             {
              newCompositeNode(grammarAccess.getAction_condRule()); 
-            pushFollow(FOLLOW_ruleaction_cond_in_entryRuleaction_cond1487);
+            pushFollow(FOLLOW_ruleaction_cond_in_entryRuleaction_cond1485);
             iv_ruleaction_cond=ruleaction_cond();
 
             state._fsp--;
 
              current =iv_ruleaction_cond; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleaction_cond1497); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleaction_cond1495); 
 
             }
 
@@ -1714,20 +1709,20 @@ public class InternalMarkovPopulationModelsParser extends AbstractInternalAntlrP
 
 
     // $ANTLR start "ruleaction_cond"
-    // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:724:1: ruleaction_cond returns [EObject current=null] : ( ( () otherlv_1= 'any' ) | ( (lv_name_2_0= RULE_ID ) ) ) ;
+    // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:719:1: ruleaction_cond returns [EObject current=null] : ( ( () otherlv_1= 'any' ) | ( (otherlv_2= RULE_ID ) ) ) ;
     public final EObject ruleaction_cond() throws RecognitionException {
         EObject current = null;
 
         Token otherlv_1=null;
-        Token lv_name_2_0=null;
+        Token otherlv_2=null;
 
          enterRule(); 
             
         try {
-            // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:727:28: ( ( ( () otherlv_1= 'any' ) | ( (lv_name_2_0= RULE_ID ) ) ) )
-            // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:728:1: ( ( () otherlv_1= 'any' ) | ( (lv_name_2_0= RULE_ID ) ) )
+            // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:722:28: ( ( ( () otherlv_1= 'any' ) | ( (otherlv_2= RULE_ID ) ) ) )
+            // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:723:1: ( ( () otherlv_1= 'any' ) | ( (otherlv_2= RULE_ID ) ) )
             {
-            // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:728:1: ( ( () otherlv_1= 'any' ) | ( (lv_name_2_0= RULE_ID ) ) )
+            // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:723:1: ( ( () otherlv_1= 'any' ) | ( (otherlv_2= RULE_ID ) ) )
             int alt8=2;
             int LA8_0 = input.LA(1);
 
@@ -1745,13 +1740,13 @@ public class InternalMarkovPopulationModelsParser extends AbstractInternalAntlrP
             }
             switch (alt8) {
                 case 1 :
-                    // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:728:2: ( () otherlv_1= 'any' )
+                    // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:723:2: ( () otherlv_1= 'any' )
                     {
-                    // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:728:2: ( () otherlv_1= 'any' )
-                    // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:728:3: () otherlv_1= 'any'
+                    // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:723:2: ( () otherlv_1= 'any' )
+                    // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:723:3: () otherlv_1= 'any'
                     {
-                    // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:728:3: ()
-                    // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:729:5: 
+                    // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:723:3: ()
+                    // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:724:5: 
                     {
 
                             current = forceCreateModelElement(
@@ -1761,7 +1756,7 @@ public class InternalMarkovPopulationModelsParser extends AbstractInternalAntlrP
 
                     }
 
-                    otherlv_1=(Token)match(input,25,FOLLOW_25_in_ruleaction_cond1544); 
+                    otherlv_1=(Token)match(input,25,FOLLOW_25_in_ruleaction_cond1542); 
 
                         	newLeafNode(otherlv_1, grammarAccess.getAction_condAccess().getAnyKeyword_0_1());
                         
@@ -1772,28 +1767,23 @@ public class InternalMarkovPopulationModelsParser extends AbstractInternalAntlrP
                     }
                     break;
                 case 2 :
-                    // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:739:6: ( (lv_name_2_0= RULE_ID ) )
+                    // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:734:6: ( (otherlv_2= RULE_ID ) )
                     {
-                    // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:739:6: ( (lv_name_2_0= RULE_ID ) )
-                    // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:740:1: (lv_name_2_0= RULE_ID )
+                    // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:734:6: ( (otherlv_2= RULE_ID ) )
+                    // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:735:1: (otherlv_2= RULE_ID )
                     {
-                    // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:740:1: (lv_name_2_0= RULE_ID )
-                    // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:741:3: lv_name_2_0= RULE_ID
+                    // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:735:1: (otherlv_2= RULE_ID )
+                    // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:736:3: otherlv_2= RULE_ID
                     {
-                    lv_name_2_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleaction_cond1568); 
 
-                    			newLeafNode(lv_name_2_0, grammarAccess.getAction_condAccess().getNameIDTerminalRuleCall_1_0()); 
-                    		
-
-                    	        if (current==null) {
+                    			if (current==null) {
                     	            current = createModelElement(grammarAccess.getAction_condRule());
                     	        }
-                           		setWithLastConsumed(
-                           			current, 
-                           			"name",
-                            		lv_name_2_0, 
-                            		"ID");
-                    	    
+                            
+                    otherlv_2=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleaction_cond1569); 
+
+                    		newLeafNode(otherlv_2, grammarAccess.getAction_condAccess().getActionRefLabelCrossReference_1_0()); 
+                    	
 
                     }
 
@@ -1824,7 +1814,7 @@ public class InternalMarkovPopulationModelsParser extends AbstractInternalAntlrP
 
 
     // $ANTLR start "entryRuleagent"
-    // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:765:1: entryRuleagent returns [EObject current=null] : iv_ruleagent= ruleagent EOF ;
+    // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:755:1: entryRuleagent returns [EObject current=null] : iv_ruleagent= ruleagent EOF ;
     public final EObject entryRuleagent() throws RecognitionException {
         EObject current = null;
 
@@ -1832,17 +1822,17 @@ public class InternalMarkovPopulationModelsParser extends AbstractInternalAntlrP
 
 
         try {
-            // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:766:2: (iv_ruleagent= ruleagent EOF )
-            // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:767:2: iv_ruleagent= ruleagent EOF
+            // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:756:2: (iv_ruleagent= ruleagent EOF )
+            // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:757:2: iv_ruleagent= ruleagent EOF
             {
              newCompositeNode(grammarAccess.getAgentRule()); 
-            pushFollow(FOLLOW_ruleagent_in_entryRuleagent1609);
+            pushFollow(FOLLOW_ruleagent_in_entryRuleagent1605);
             iv_ruleagent=ruleagent();
 
             state._fsp--;
 
              current =iv_ruleagent; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleagent1619); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleagent1615); 
 
             }
 
@@ -1860,7 +1850,7 @@ public class InternalMarkovPopulationModelsParser extends AbstractInternalAntlrP
 
 
     // $ANTLR start "ruleagent"
-    // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:774:1: ruleagent returns [EObject current=null] : (otherlv_0= 'agent' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' otherlv_3= 'actions' ( (lv_act_4_0= rulelabel ) )+ ( (lv_s_5_0= rulestate ) )+ otherlv_6= '}' ) ;
+    // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:764:1: ruleagent returns [EObject current=null] : (otherlv_0= 'agent' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' otherlv_3= 'actions' ( (lv_act_4_0= rulelabel ) )+ ( (lv_s_5_0= rulestate ) )+ otherlv_6= '}' ) ;
     public final EObject ruleagent() throws RecognitionException {
         EObject current = null;
 
@@ -1877,23 +1867,23 @@ public class InternalMarkovPopulationModelsParser extends AbstractInternalAntlrP
          enterRule(); 
             
         try {
-            // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:777:28: ( (otherlv_0= 'agent' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' otherlv_3= 'actions' ( (lv_act_4_0= rulelabel ) )+ ( (lv_s_5_0= rulestate ) )+ otherlv_6= '}' ) )
-            // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:778:1: (otherlv_0= 'agent' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' otherlv_3= 'actions' ( (lv_act_4_0= rulelabel ) )+ ( (lv_s_5_0= rulestate ) )+ otherlv_6= '}' )
+            // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:767:28: ( (otherlv_0= 'agent' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' otherlv_3= 'actions' ( (lv_act_4_0= rulelabel ) )+ ( (lv_s_5_0= rulestate ) )+ otherlv_6= '}' ) )
+            // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:768:1: (otherlv_0= 'agent' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' otherlv_3= 'actions' ( (lv_act_4_0= rulelabel ) )+ ( (lv_s_5_0= rulestate ) )+ otherlv_6= '}' )
             {
-            // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:778:1: (otherlv_0= 'agent' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' otherlv_3= 'actions' ( (lv_act_4_0= rulelabel ) )+ ( (lv_s_5_0= rulestate ) )+ otherlv_6= '}' )
-            // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:778:3: otherlv_0= 'agent' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' otherlv_3= 'actions' ( (lv_act_4_0= rulelabel ) )+ ( (lv_s_5_0= rulestate ) )+ otherlv_6= '}'
+            // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:768:1: (otherlv_0= 'agent' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' otherlv_3= 'actions' ( (lv_act_4_0= rulelabel ) )+ ( (lv_s_5_0= rulestate ) )+ otherlv_6= '}' )
+            // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:768:3: otherlv_0= 'agent' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' otherlv_3= 'actions' ( (lv_act_4_0= rulelabel ) )+ ( (lv_s_5_0= rulestate ) )+ otherlv_6= '}'
             {
-            otherlv_0=(Token)match(input,26,FOLLOW_26_in_ruleagent1656); 
+            otherlv_0=(Token)match(input,26,FOLLOW_26_in_ruleagent1652); 
 
                 	newLeafNode(otherlv_0, grammarAccess.getAgentAccess().getAgentKeyword_0());
                 
-            // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:782:1: ( (lv_name_1_0= RULE_ID ) )
-            // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:783:1: (lv_name_1_0= RULE_ID )
+            // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:772:1: ( (lv_name_1_0= RULE_ID ) )
+            // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:773:1: (lv_name_1_0= RULE_ID )
             {
-            // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:783:1: (lv_name_1_0= RULE_ID )
-            // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:784:3: lv_name_1_0= RULE_ID
+            // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:773:1: (lv_name_1_0= RULE_ID )
+            // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:774:3: lv_name_1_0= RULE_ID
             {
-            lv_name_1_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleagent1673); 
+            lv_name_1_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleagent1669); 
 
             			newLeafNode(lv_name_1_0, grammarAccess.getAgentAccess().getNameIDTerminalRuleCall_1_0()); 
             		
@@ -1913,15 +1903,15 @@ public class InternalMarkovPopulationModelsParser extends AbstractInternalAntlrP
 
             }
 
-            otherlv_2=(Token)match(input,13,FOLLOW_13_in_ruleagent1690); 
+            otherlv_2=(Token)match(input,13,FOLLOW_13_in_ruleagent1686); 
 
                 	newLeafNode(otherlv_2, grammarAccess.getAgentAccess().getLeftCurlyBracketKeyword_2());
                 
-            otherlv_3=(Token)match(input,27,FOLLOW_27_in_ruleagent1702); 
+            otherlv_3=(Token)match(input,27,FOLLOW_27_in_ruleagent1698); 
 
                 	newLeafNode(otherlv_3, grammarAccess.getAgentAccess().getActionsKeyword_3());
                 
-            // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:808:1: ( (lv_act_4_0= rulelabel ) )+
+            // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:798:1: ( (lv_act_4_0= rulelabel ) )+
             int cnt9=0;
             loop9:
             do {
@@ -1935,15 +1925,15 @@ public class InternalMarkovPopulationModelsParser extends AbstractInternalAntlrP
 
                 switch (alt9) {
             	case 1 :
-            	    // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:809:1: (lv_act_4_0= rulelabel )
+            	    // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:799:1: (lv_act_4_0= rulelabel )
             	    {
-            	    // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:809:1: (lv_act_4_0= rulelabel )
-            	    // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:810:3: lv_act_4_0= rulelabel
+            	    // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:799:1: (lv_act_4_0= rulelabel )
+            	    // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:800:3: lv_act_4_0= rulelabel
             	    {
             	     
             	    	        newCompositeNode(grammarAccess.getAgentAccess().getActLabelParserRuleCall_4_0()); 
             	    	    
-            	    pushFollow(FOLLOW_rulelabel_in_ruleagent1723);
+            	    pushFollow(FOLLOW_rulelabel_in_ruleagent1719);
             	    lv_act_4_0=rulelabel();
 
             	    state._fsp--;
@@ -1975,7 +1965,7 @@ public class InternalMarkovPopulationModelsParser extends AbstractInternalAntlrP
                 cnt9++;
             } while (true);
 
-            // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:826:3: ( (lv_s_5_0= rulestate ) )+
+            // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:816:3: ( (lv_s_5_0= rulestate ) )+
             int cnt10=0;
             loop10:
             do {
@@ -1989,15 +1979,15 @@ public class InternalMarkovPopulationModelsParser extends AbstractInternalAntlrP
 
                 switch (alt10) {
             	case 1 :
-            	    // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:827:1: (lv_s_5_0= rulestate )
+            	    // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:817:1: (lv_s_5_0= rulestate )
             	    {
-            	    // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:827:1: (lv_s_5_0= rulestate )
-            	    // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:828:3: lv_s_5_0= rulestate
+            	    // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:817:1: (lv_s_5_0= rulestate )
+            	    // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:818:3: lv_s_5_0= rulestate
             	    {
             	     
             	    	        newCompositeNode(grammarAccess.getAgentAccess().getSStateParserRuleCall_5_0()); 
             	    	    
-            	    pushFollow(FOLLOW_rulestate_in_ruleagent1745);
+            	    pushFollow(FOLLOW_rulestate_in_ruleagent1741);
             	    lv_s_5_0=rulestate();
 
             	    state._fsp--;
@@ -2029,7 +2019,7 @@ public class InternalMarkovPopulationModelsParser extends AbstractInternalAntlrP
                 cnt10++;
             } while (true);
 
-            otherlv_6=(Token)match(input,16,FOLLOW_16_in_ruleagent1758); 
+            otherlv_6=(Token)match(input,16,FOLLOW_16_in_ruleagent1754); 
 
                 	newLeafNode(otherlv_6, grammarAccess.getAgentAccess().getRightCurlyBracketKeyword_6());
                 
@@ -2054,7 +2044,7 @@ public class InternalMarkovPopulationModelsParser extends AbstractInternalAntlrP
 
 
     // $ANTLR start "entryRulelabel"
-    // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:856:1: entryRulelabel returns [EObject current=null] : iv_rulelabel= rulelabel EOF ;
+    // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:846:1: entryRulelabel returns [EObject current=null] : iv_rulelabel= rulelabel EOF ;
     public final EObject entryRulelabel() throws RecognitionException {
         EObject current = null;
 
@@ -2062,17 +2052,17 @@ public class InternalMarkovPopulationModelsParser extends AbstractInternalAntlrP
 
 
         try {
-            // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:857:2: (iv_rulelabel= rulelabel EOF )
-            // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:858:2: iv_rulelabel= rulelabel EOF
+            // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:847:2: (iv_rulelabel= rulelabel EOF )
+            // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:848:2: iv_rulelabel= rulelabel EOF
             {
              newCompositeNode(grammarAccess.getLabelRule()); 
-            pushFollow(FOLLOW_rulelabel_in_entryRulelabel1794);
+            pushFollow(FOLLOW_rulelabel_in_entryRulelabel1790);
             iv_rulelabel=rulelabel();
 
             state._fsp--;
 
              current =iv_rulelabel; 
-            match(input,EOF,FOLLOW_EOF_in_entryRulelabel1804); 
+            match(input,EOF,FOLLOW_EOF_in_entryRulelabel1800); 
 
             }
 
@@ -2090,7 +2080,7 @@ public class InternalMarkovPopulationModelsParser extends AbstractInternalAntlrP
 
 
     // $ANTLR start "rulelabel"
-    // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:865:1: rulelabel returns [EObject current=null] : ( (lv_name_0_0= RULE_ID ) ) ;
+    // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:855:1: rulelabel returns [EObject current=null] : ( (lv_name_0_0= RULE_ID ) ) ;
     public final EObject rulelabel() throws RecognitionException {
         EObject current = null;
 
@@ -2099,16 +2089,16 @@ public class InternalMarkovPopulationModelsParser extends AbstractInternalAntlrP
          enterRule(); 
             
         try {
-            // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:868:28: ( ( (lv_name_0_0= RULE_ID ) ) )
-            // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:869:1: ( (lv_name_0_0= RULE_ID ) )
+            // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:858:28: ( ( (lv_name_0_0= RULE_ID ) ) )
+            // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:859:1: ( (lv_name_0_0= RULE_ID ) )
             {
-            // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:869:1: ( (lv_name_0_0= RULE_ID ) )
-            // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:870:1: (lv_name_0_0= RULE_ID )
+            // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:859:1: ( (lv_name_0_0= RULE_ID ) )
+            // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:860:1: (lv_name_0_0= RULE_ID )
             {
-            // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:870:1: (lv_name_0_0= RULE_ID )
-            // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:871:3: lv_name_0_0= RULE_ID
+            // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:860:1: (lv_name_0_0= RULE_ID )
+            // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:861:3: lv_name_0_0= RULE_ID
             {
-            lv_name_0_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_rulelabel1845); 
+            lv_name_0_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_rulelabel1841); 
 
             			newLeafNode(lv_name_0_0, grammarAccess.getLabelAccess().getNameIDTerminalRuleCall_0()); 
             		
@@ -2146,7 +2136,7 @@ public class InternalMarkovPopulationModelsParser extends AbstractInternalAntlrP
 
 
     // $ANTLR start "entryRulestate"
-    // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:895:1: entryRulestate returns [EObject current=null] : iv_rulestate= rulestate EOF ;
+    // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:885:1: entryRulestate returns [EObject current=null] : iv_rulestate= rulestate EOF ;
     public final EObject entryRulestate() throws RecognitionException {
         EObject current = null;
 
@@ -2154,17 +2144,17 @@ public class InternalMarkovPopulationModelsParser extends AbstractInternalAntlrP
 
 
         try {
-            // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:896:2: (iv_rulestate= rulestate EOF )
-            // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:897:2: iv_rulestate= rulestate EOF
+            // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:886:2: (iv_rulestate= rulestate EOF )
+            // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:887:2: iv_rulestate= rulestate EOF
             {
              newCompositeNode(grammarAccess.getStateRule()); 
-            pushFollow(FOLLOW_rulestate_in_entryRulestate1885);
+            pushFollow(FOLLOW_rulestate_in_entryRulestate1881);
             iv_rulestate=rulestate();
 
             state._fsp--;
 
              current =iv_rulestate; 
-            match(input,EOF,FOLLOW_EOF_in_entryRulestate1895); 
+            match(input,EOF,FOLLOW_EOF_in_entryRulestate1891); 
 
             }
 
@@ -2182,7 +2172,7 @@ public class InternalMarkovPopulationModelsParser extends AbstractInternalAntlrP
 
 
     // $ANTLR start "rulestate"
-    // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:904:1: rulestate returns [EObject current=null] : (otherlv_0= 'state' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' ( (lv_spontaneous_act_3_0= ruleaction ) )+ otherlv_4= '}' ) ;
+    // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:894:1: rulestate returns [EObject current=null] : (otherlv_0= 'state' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' ( (lv_spontaneousAct_3_0= ruleaction ) )+ otherlv_4= '}' ) ;
     public final EObject rulestate() throws RecognitionException {
         EObject current = null;
 
@@ -2190,29 +2180,29 @@ public class InternalMarkovPopulationModelsParser extends AbstractInternalAntlrP
         Token lv_name_1_0=null;
         Token otherlv_2=null;
         Token otherlv_4=null;
-        EObject lv_spontaneous_act_3_0 = null;
+        EObject lv_spontaneousAct_3_0 = null;
 
 
          enterRule(); 
             
         try {
-            // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:907:28: ( (otherlv_0= 'state' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' ( (lv_spontaneous_act_3_0= ruleaction ) )+ otherlv_4= '}' ) )
-            // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:908:1: (otherlv_0= 'state' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' ( (lv_spontaneous_act_3_0= ruleaction ) )+ otherlv_4= '}' )
+            // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:897:28: ( (otherlv_0= 'state' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' ( (lv_spontaneousAct_3_0= ruleaction ) )+ otherlv_4= '}' ) )
+            // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:898:1: (otherlv_0= 'state' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' ( (lv_spontaneousAct_3_0= ruleaction ) )+ otherlv_4= '}' )
             {
-            // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:908:1: (otherlv_0= 'state' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' ( (lv_spontaneous_act_3_0= ruleaction ) )+ otherlv_4= '}' )
-            // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:908:3: otherlv_0= 'state' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' ( (lv_spontaneous_act_3_0= ruleaction ) )+ otherlv_4= '}'
+            // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:898:1: (otherlv_0= 'state' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' ( (lv_spontaneousAct_3_0= ruleaction ) )+ otherlv_4= '}' )
+            // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:898:3: otherlv_0= 'state' ( (lv_name_1_0= RULE_ID ) ) otherlv_2= '{' ( (lv_spontaneousAct_3_0= ruleaction ) )+ otherlv_4= '}'
             {
-            otherlv_0=(Token)match(input,28,FOLLOW_28_in_rulestate1932); 
+            otherlv_0=(Token)match(input,28,FOLLOW_28_in_rulestate1928); 
 
                 	newLeafNode(otherlv_0, grammarAccess.getStateAccess().getStateKeyword_0());
                 
-            // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:912:1: ( (lv_name_1_0= RULE_ID ) )
-            // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:913:1: (lv_name_1_0= RULE_ID )
+            // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:902:1: ( (lv_name_1_0= RULE_ID ) )
+            // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:903:1: (lv_name_1_0= RULE_ID )
             {
-            // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:913:1: (lv_name_1_0= RULE_ID )
-            // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:914:3: lv_name_1_0= RULE_ID
+            // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:903:1: (lv_name_1_0= RULE_ID )
+            // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:904:3: lv_name_1_0= RULE_ID
             {
-            lv_name_1_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_rulestate1949); 
+            lv_name_1_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_rulestate1945); 
 
             			newLeafNode(lv_name_1_0, grammarAccess.getStateAccess().getNameIDTerminalRuleCall_1_0()); 
             		
@@ -2232,11 +2222,11 @@ public class InternalMarkovPopulationModelsParser extends AbstractInternalAntlrP
 
             }
 
-            otherlv_2=(Token)match(input,13,FOLLOW_13_in_rulestate1966); 
+            otherlv_2=(Token)match(input,13,FOLLOW_13_in_rulestate1962); 
 
                 	newLeafNode(otherlv_2, grammarAccess.getStateAccess().getLeftCurlyBracketKeyword_2());
                 
-            // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:934:1: ( (lv_spontaneous_act_3_0= ruleaction ) )+
+            // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:924:1: ( (lv_spontaneousAct_3_0= ruleaction ) )+
             int cnt11=0;
             loop11:
             do {
@@ -2250,16 +2240,16 @@ public class InternalMarkovPopulationModelsParser extends AbstractInternalAntlrP
 
                 switch (alt11) {
             	case 1 :
-            	    // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:935:1: (lv_spontaneous_act_3_0= ruleaction )
+            	    // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:925:1: (lv_spontaneousAct_3_0= ruleaction )
             	    {
-            	    // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:935:1: (lv_spontaneous_act_3_0= ruleaction )
-            	    // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:936:3: lv_spontaneous_act_3_0= ruleaction
+            	    // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:925:1: (lv_spontaneousAct_3_0= ruleaction )
+            	    // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:926:3: lv_spontaneousAct_3_0= ruleaction
             	    {
             	     
-            	    	        newCompositeNode(grammarAccess.getStateAccess().getSpontaneous_actActionParserRuleCall_3_0()); 
+            	    	        newCompositeNode(grammarAccess.getStateAccess().getSpontaneousActActionParserRuleCall_3_0()); 
             	    	    
-            	    pushFollow(FOLLOW_ruleaction_in_rulestate1987);
-            	    lv_spontaneous_act_3_0=ruleaction();
+            	    pushFollow(FOLLOW_ruleaction_in_rulestate1983);
+            	    lv_spontaneousAct_3_0=ruleaction();
 
             	    state._fsp--;
 
@@ -2269,8 +2259,8 @@ public class InternalMarkovPopulationModelsParser extends AbstractInternalAntlrP
             	    	        }
             	           		add(
             	           			current, 
-            	           			"spontaneous_act",
-            	            		lv_spontaneous_act_3_0, 
+            	           			"spontaneousAct",
+            	            		lv_spontaneousAct_3_0, 
             	            		"action");
             	    	        afterParserOrEnumRuleCall();
             	    	    
@@ -2290,7 +2280,7 @@ public class InternalMarkovPopulationModelsParser extends AbstractInternalAntlrP
                 cnt11++;
             } while (true);
 
-            otherlv_4=(Token)match(input,16,FOLLOW_16_in_rulestate2000); 
+            otherlv_4=(Token)match(input,16,FOLLOW_16_in_rulestate1996); 
 
                 	newLeafNode(otherlv_4, grammarAccess.getStateAccess().getRightCurlyBracketKeyword_4());
                 
@@ -2315,7 +2305,7 @@ public class InternalMarkovPopulationModelsParser extends AbstractInternalAntlrP
 
 
     // $ANTLR start "entryRuleaction"
-    // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:964:1: entryRuleaction returns [EObject current=null] : iv_ruleaction= ruleaction EOF ;
+    // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:954:1: entryRuleaction returns [EObject current=null] : iv_ruleaction= ruleaction EOF ;
     public final EObject entryRuleaction() throws RecognitionException {
         EObject current = null;
 
@@ -2323,17 +2313,17 @@ public class InternalMarkovPopulationModelsParser extends AbstractInternalAntlrP
 
 
         try {
-            // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:965:2: (iv_ruleaction= ruleaction EOF )
-            // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:966:2: iv_ruleaction= ruleaction EOF
+            // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:955:2: (iv_ruleaction= ruleaction EOF )
+            // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:956:2: iv_ruleaction= ruleaction EOF
             {
              newCompositeNode(grammarAccess.getActionRule()); 
-            pushFollow(FOLLOW_ruleaction_in_entryRuleaction2036);
+            pushFollow(FOLLOW_ruleaction_in_entryRuleaction2032);
             iv_ruleaction=ruleaction();
 
             state._fsp--;
 
              current =iv_ruleaction; 
-            match(input,EOF,FOLLOW_EOF_in_entryRuleaction2046); 
+            match(input,EOF,FOLLOW_EOF_in_entryRuleaction2042); 
 
             }
 
@@ -2351,7 +2341,7 @@ public class InternalMarkovPopulationModelsParser extends AbstractInternalAntlrP
 
 
     // $ANTLR start "ruleaction"
-    // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:973:1: ruleaction returns [EObject current=null] : ( ( (otherlv_0= RULE_ID ) ) otherlv_1= '-->' ( (otherlv_2= RULE_ID ) ) otherlv_3= ':' ( (lv_localRate_4_0= RULE_FLOAT ) ) ) ;
+    // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:963:1: ruleaction returns [EObject current=null] : ( ( (otherlv_0= RULE_ID ) ) otherlv_1= '-->' ( (otherlv_2= RULE_ID ) ) otherlv_3= ':' ( (lv_localRate_4_0= RULE_FLOAT ) ) ) ;
     public final EObject ruleaction() throws RecognitionException {
         EObject current = null;
 
@@ -2364,24 +2354,24 @@ public class InternalMarkovPopulationModelsParser extends AbstractInternalAntlrP
          enterRule(); 
             
         try {
-            // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:976:28: ( ( ( (otherlv_0= RULE_ID ) ) otherlv_1= '-->' ( (otherlv_2= RULE_ID ) ) otherlv_3= ':' ( (lv_localRate_4_0= RULE_FLOAT ) ) ) )
-            // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:977:1: ( ( (otherlv_0= RULE_ID ) ) otherlv_1= '-->' ( (otherlv_2= RULE_ID ) ) otherlv_3= ':' ( (lv_localRate_4_0= RULE_FLOAT ) ) )
+            // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:966:28: ( ( ( (otherlv_0= RULE_ID ) ) otherlv_1= '-->' ( (otherlv_2= RULE_ID ) ) otherlv_3= ':' ( (lv_localRate_4_0= RULE_FLOAT ) ) ) )
+            // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:967:1: ( ( (otherlv_0= RULE_ID ) ) otherlv_1= '-->' ( (otherlv_2= RULE_ID ) ) otherlv_3= ':' ( (lv_localRate_4_0= RULE_FLOAT ) ) )
             {
-            // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:977:1: ( ( (otherlv_0= RULE_ID ) ) otherlv_1= '-->' ( (otherlv_2= RULE_ID ) ) otherlv_3= ':' ( (lv_localRate_4_0= RULE_FLOAT ) ) )
-            // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:977:2: ( (otherlv_0= RULE_ID ) ) otherlv_1= '-->' ( (otherlv_2= RULE_ID ) ) otherlv_3= ':' ( (lv_localRate_4_0= RULE_FLOAT ) )
+            // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:967:1: ( ( (otherlv_0= RULE_ID ) ) otherlv_1= '-->' ( (otherlv_2= RULE_ID ) ) otherlv_3= ':' ( (lv_localRate_4_0= RULE_FLOAT ) ) )
+            // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:967:2: ( (otherlv_0= RULE_ID ) ) otherlv_1= '-->' ( (otherlv_2= RULE_ID ) ) otherlv_3= ':' ( (lv_localRate_4_0= RULE_FLOAT ) )
             {
-            // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:977:2: ( (otherlv_0= RULE_ID ) )
-            // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:978:1: (otherlv_0= RULE_ID )
+            // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:967:2: ( (otherlv_0= RULE_ID ) )
+            // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:968:1: (otherlv_0= RULE_ID )
             {
-            // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:978:1: (otherlv_0= RULE_ID )
-            // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:979:3: otherlv_0= RULE_ID
+            // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:968:1: (otherlv_0= RULE_ID )
+            // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:969:3: otherlv_0= RULE_ID
             {
 
             			if (current==null) {
             	            current = createModelElement(grammarAccess.getActionRule());
             	        }
                     
-            otherlv_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleaction2091); 
+            otherlv_0=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleaction2087); 
 
             		newLeafNode(otherlv_0, grammarAccess.getActionAccess().getActRefLabelCrossReference_0_0()); 
             	
@@ -2391,22 +2381,22 @@ public class InternalMarkovPopulationModelsParser extends AbstractInternalAntlrP
 
             }
 
-            otherlv_1=(Token)match(input,29,FOLLOW_29_in_ruleaction2103); 
+            otherlv_1=(Token)match(input,29,FOLLOW_29_in_ruleaction2099); 
 
                 	newLeafNode(otherlv_1, grammarAccess.getActionAccess().getHyphenMinusHyphenMinusGreaterThanSignKeyword_1());
                 
-            // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:994:1: ( (otherlv_2= RULE_ID ) )
-            // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:995:1: (otherlv_2= RULE_ID )
+            // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:984:1: ( (otherlv_2= RULE_ID ) )
+            // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:985:1: (otherlv_2= RULE_ID )
             {
-            // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:995:1: (otherlv_2= RULE_ID )
-            // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:996:3: otherlv_2= RULE_ID
+            // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:985:1: (otherlv_2= RULE_ID )
+            // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:986:3: otherlv_2= RULE_ID
             {
 
             			if (current==null) {
             	            current = createModelElement(grammarAccess.getActionRule());
             	        }
                     
-            otherlv_2=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleaction2123); 
+            otherlv_2=(Token)match(input,RULE_ID,FOLLOW_RULE_ID_in_ruleaction2119); 
 
             		newLeafNode(otherlv_2, grammarAccess.getActionAccess().getStateRefStateCrossReference_2_0()); 
             	
@@ -2416,17 +2406,17 @@ public class InternalMarkovPopulationModelsParser extends AbstractInternalAntlrP
 
             }
 
-            otherlv_3=(Token)match(input,24,FOLLOW_24_in_ruleaction2135); 
+            otherlv_3=(Token)match(input,24,FOLLOW_24_in_ruleaction2131); 
 
                 	newLeafNode(otherlv_3, grammarAccess.getActionAccess().getColonKeyword_3());
                 
-            // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:1011:1: ( (lv_localRate_4_0= RULE_FLOAT ) )
-            // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:1012:1: (lv_localRate_4_0= RULE_FLOAT )
+            // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:1001:1: ( (lv_localRate_4_0= RULE_FLOAT ) )
+            // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:1002:1: (lv_localRate_4_0= RULE_FLOAT )
             {
-            // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:1012:1: (lv_localRate_4_0= RULE_FLOAT )
-            // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:1013:3: lv_localRate_4_0= RULE_FLOAT
+            // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:1002:1: (lv_localRate_4_0= RULE_FLOAT )
+            // ../imt.simhya.language/src-gen/imt/simhya/language/parser/antlr/internal/InternalMarkovPopulationModels.g:1003:3: lv_localRate_4_0= RULE_FLOAT
             {
-            lv_localRate_4_0=(Token)match(input,RULE_FLOAT,FOLLOW_RULE_FLOAT_in_ruleaction2152); 
+            lv_localRate_4_0=(Token)match(input,RULE_FLOAT,FOLLOW_RULE_FLOAT_in_ruleaction2148); 
 
             			newLeafNode(lv_localRate_4_0, grammarAccess.getActionAccess().getLocalRateFLOATTerminalRuleCall_4_0()); 
             		
@@ -2524,36 +2514,36 @@ public class InternalMarkovPopulationModelsParser extends AbstractInternalAntlrP
     public static final BitSet FOLLOW_rulestate_ref_in_rulestate_cond1360 = new BitSet(new long[]{0x0000000000000002L});
     public static final BitSet FOLLOW_rulestate_ref_in_entryRulestate_ref1396 = new BitSet(new long[]{0x0000000000000000L});
     public static final BitSet FOLLOW_EOF_in_entryRulestate_ref1406 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rulestate_ref1447 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleaction_cond_in_entryRuleaction_cond1487 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleaction_cond1497 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_25_in_ruleaction_cond1544 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleaction_cond1568 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleagent_in_entryRuleagent1609 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleagent1619 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_26_in_ruleagent1656 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleagent1673 = new BitSet(new long[]{0x0000000000002000L});
-    public static final BitSet FOLLOW_13_in_ruleagent1690 = new BitSet(new long[]{0x0000000008000000L});
-    public static final BitSet FOLLOW_27_in_ruleagent1702 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_rulelabel_in_ruleagent1723 = new BitSet(new long[]{0x0000000010000010L});
-    public static final BitSet FOLLOW_rulestate_in_ruleagent1745 = new BitSet(new long[]{0x0000000010010000L});
-    public static final BitSet FOLLOW_16_in_ruleagent1758 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rulelabel_in_entryRulelabel1794 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRulelabel1804 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_rulelabel1845 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_rulestate_in_entryRulestate1885 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRulestate1895 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_28_in_rulestate1932 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_RULE_ID_in_rulestate1949 = new BitSet(new long[]{0x0000000000002000L});
-    public static final BitSet FOLLOW_13_in_rulestate1966 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_ruleaction_in_rulestate1987 = new BitSet(new long[]{0x0000000000010010L});
-    public static final BitSet FOLLOW_16_in_rulestate2000 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_ruleaction_in_entryRuleaction2036 = new BitSet(new long[]{0x0000000000000000L});
-    public static final BitSet FOLLOW_EOF_in_entryRuleaction2046 = new BitSet(new long[]{0x0000000000000002L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleaction2091 = new BitSet(new long[]{0x0000000020000000L});
-    public static final BitSet FOLLOW_29_in_ruleaction2103 = new BitSet(new long[]{0x0000000000000010L});
-    public static final BitSet FOLLOW_RULE_ID_in_ruleaction2123 = new BitSet(new long[]{0x0000000001000000L});
-    public static final BitSet FOLLOW_24_in_ruleaction2135 = new BitSet(new long[]{0x0000000000000040L});
-    public static final BitSet FOLLOW_RULE_FLOAT_in_ruleaction2152 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rulestate_ref1450 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleaction_cond_in_entryRuleaction_cond1485 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleaction_cond1495 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_25_in_ruleaction_cond1542 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleaction_cond1569 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleagent_in_entryRuleagent1605 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleagent1615 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_26_in_ruleagent1652 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleagent1669 = new BitSet(new long[]{0x0000000000002000L});
+    public static final BitSet FOLLOW_13_in_ruleagent1686 = new BitSet(new long[]{0x0000000008000000L});
+    public static final BitSet FOLLOW_27_in_ruleagent1698 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_rulelabel_in_ruleagent1719 = new BitSet(new long[]{0x0000000010000010L});
+    public static final BitSet FOLLOW_rulestate_in_ruleagent1741 = new BitSet(new long[]{0x0000000010010000L});
+    public static final BitSet FOLLOW_16_in_ruleagent1754 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rulelabel_in_entryRulelabel1790 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRulelabel1800 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_rulelabel1841 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_rulestate_in_entryRulestate1881 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRulestate1891 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_28_in_rulestate1928 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_RULE_ID_in_rulestate1945 = new BitSet(new long[]{0x0000000000002000L});
+    public static final BitSet FOLLOW_13_in_rulestate1962 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_ruleaction_in_rulestate1983 = new BitSet(new long[]{0x0000000000010010L});
+    public static final BitSet FOLLOW_16_in_rulestate1996 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_ruleaction_in_entryRuleaction2032 = new BitSet(new long[]{0x0000000000000000L});
+    public static final BitSet FOLLOW_EOF_in_entryRuleaction2042 = new BitSet(new long[]{0x0000000000000002L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleaction2087 = new BitSet(new long[]{0x0000000020000000L});
+    public static final BitSet FOLLOW_29_in_ruleaction2099 = new BitSet(new long[]{0x0000000000000010L});
+    public static final BitSet FOLLOW_RULE_ID_in_ruleaction2119 = new BitSet(new long[]{0x0000000001000000L});
+    public static final BitSet FOLLOW_24_in_ruleaction2131 = new BitSet(new long[]{0x0000000000000040L});
+    public static final BitSet FOLLOW_RULE_FLOAT_in_ruleaction2148 = new BitSet(new long[]{0x0000000000000002L});
 
 }

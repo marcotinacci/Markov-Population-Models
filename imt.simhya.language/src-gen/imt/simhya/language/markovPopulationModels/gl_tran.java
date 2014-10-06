@@ -15,7 +15,7 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * <ul>
  *   <li>{@link imt.simhya.language.markovPopulationModels.gl_tran#getName <em>Name</em>}</li>
- *   <li>{@link imt.simhya.language.markovPopulationModels.gl_tran#getL_tran <em>Ltran</em>}</li>
+ *   <li>{@link imt.simhya.language.markovPopulationModels.gl_tran#getLTran <em>LTran</em>}</li>
  *   <li>{@link imt.simhya.language.markovPopulationModels.gl_tran#getRate <em>Rate</em>}</li>
  * </ul>
  * </p>
@@ -53,20 +53,20 @@ public interface gl_tran extends EObject
   void setName(String value);
 
   /**
-   * Returns the value of the '<em><b>Ltran</b></em>' containment reference list.
+   * Returns the value of the '<em><b>LTran</b></em>' containment reference list.
    * The list contents are of type {@link imt.simhya.language.markovPopulationModels.loc_tran}.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Ltran</em>' containment reference list isn't clear,
+   * If the meaning of the '<em>LTran</em>' containment reference list isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Ltran</em>' containment reference list.
-   * @see imt.simhya.language.markovPopulationModels.MarkovPopulationModelsPackage#getgl_tran_L_tran()
+   * @return the value of the '<em>LTran</em>' containment reference list.
+   * @see imt.simhya.language.markovPopulationModels.MarkovPopulationModelsPackage#getgl_tran_LTran()
    * @model containment="true"
    * @generated
    */
-  EList<loc_tran> getL_tran();
+  EList<loc_tran> getLTran();
 
   /**
    * Returns the value of the '<em><b>Rate</b></em>' attribute.

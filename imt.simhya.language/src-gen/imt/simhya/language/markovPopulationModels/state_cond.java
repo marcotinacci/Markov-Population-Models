@@ -12,7 +12,7 @@ import org.eclipse.emf.ecore.EObject;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link imt.simhya.language.markovPopulationModels.state_cond#getS_ref <em>Sref</em>}</li>
+ *   <li>{@link imt.simhya.language.markovPopulationModels.state_cond#getStateRef <em>State Ref</em>}</li>
  * </ul>
  * </p>
  *
@@ -23,29 +23,29 @@ import org.eclipse.emf.ecore.EObject;
 public interface state_cond extends EObject
 {
   /**
-   * Returns the value of the '<em><b>Sref</b></em>' containment reference.
+   * Returns the value of the '<em><b>State Ref</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Sref</em>' containment reference isn't clear,
+   * If the meaning of the '<em>State Ref</em>' containment reference isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Sref</em>' containment reference.
-   * @see #setS_ref(state_ref)
-   * @see imt.simhya.language.markovPopulationModels.MarkovPopulationModelsPackage#getstate_cond_S_ref()
+   * @return the value of the '<em>State Ref</em>' containment reference.
+   * @see #setStateRef(state_ref)
+   * @see imt.simhya.language.markovPopulationModels.MarkovPopulationModelsPackage#getstate_cond_StateRef()
    * @model containment="true"
    * @generated
    */
-  state_ref getS_ref();
+  state_ref getStateRef();
 
   /**
-   * Sets the value of the '{@link imt.simhya.language.markovPopulationModels.state_cond#getS_ref <em>Sref</em>}' containment reference.
+   * Sets the value of the '{@link imt.simhya.language.markovPopulationModels.state_cond#getStateRef <em>State Ref</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Sref</em>' containment reference.
-   * @see #getS_ref()
+   * @param value the new value of the '<em>State Ref</em>' containment reference.
+   * @see #getStateRef()
    * @generated
    */
-  void setS_ref(state_ref value);
+  void setStateRef(state_ref value);
 
 } // state_cond

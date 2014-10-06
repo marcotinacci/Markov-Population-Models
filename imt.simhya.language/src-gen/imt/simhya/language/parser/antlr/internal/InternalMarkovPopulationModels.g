@@ -455,16 +455,16 @@ rulegl_tran returns [EObject current=null]
 (
 (
 		{ 
-	        newCompositeNode(grammarAccess.getGl_tranAccess().getL_tranLoc_tranParserRuleCall_3_0()); 
+	        newCompositeNode(grammarAccess.getGl_tranAccess().getLTranLoc_tranParserRuleCall_3_0()); 
 	    }
-		lv_l_tran_3_0=ruleloc_tran		{
+		lv_lTran_3_0=ruleloc_tran		{
 	        if ($current==null) {
 	            $current = createModelElementForParent(grammarAccess.getGl_tranRule());
 	        }
        		add(
        			$current, 
-       			"l_tran",
-        		lv_l_tran_3_0, 
+       			"lTran",
+        		lv_lTran_3_0, 
         		"loc_tran");
 	        afterParserOrEnumRuleCall();
 	    }
@@ -477,16 +477,16 @@ rulegl_tran returns [EObject current=null]
 (
 (
 		{ 
-	        newCompositeNode(grammarAccess.getGl_tranAccess().getL_tranLoc_tranParserRuleCall_4_1_0()); 
+	        newCompositeNode(grammarAccess.getGl_tranAccess().getLTranLoc_tranParserRuleCall_4_1_0()); 
 	    }
-		lv_l_tran_5_0=ruleloc_tran		{
+		lv_lTran_5_0=ruleloc_tran		{
 	        if ($current==null) {
 	            $current = createModelElementForParent(grammarAccess.getGl_tranRule());
 	        }
        		add(
        			$current, 
-       			"l_tran",
-        		lv_l_tran_5_0, 
+       			"lTran",
+        		lv_lTran_5_0, 
         		"loc_tran");
 	        afterParserOrEnumRuleCall();
 	    }
@@ -578,16 +578,16 @@ ruleloc_tran returns [EObject current=null]
     |((
 (
 		{ 
-	        newCompositeNode(grammarAccess.getLoc_tranAccess().getS_condState_condParserRuleCall_2_0_0()); 
+	        newCompositeNode(grammarAccess.getLoc_tranAccess().getSCondState_condParserRuleCall_2_0_0()); 
 	    }
-		lv_s_cond_4_0=rulestate_cond		{
+		lv_sCond_4_0=rulestate_cond		{
 	        if ($current==null) {
 	            $current = createModelElementForParent(grammarAccess.getLoc_tranRule());
 	        }
        		set(
        			$current, 
-       			"s_cond",
-        		lv_s_cond_4_0, 
+       			"sCond",
+        		lv_sCond_4_0, 
         		"state_cond");
 	        afterParserOrEnumRuleCall();
 	    }
@@ -600,16 +600,16 @@ ruleloc_tran returns [EObject current=null]
 (
 (
 		{ 
-	        newCompositeNode(grammarAccess.getLoc_tranAccess().getA_condAction_condParserRuleCall_2_2_0()); 
+	        newCompositeNode(grammarAccess.getLoc_tranAccess().getACondAction_condParserRuleCall_2_2_0()); 
 	    }
-		lv_a_cond_6_0=ruleaction_cond		{
+		lv_aCond_6_0=ruleaction_cond		{
 	        if ($current==null) {
 	            $current = createModelElementForParent(grammarAccess.getLoc_tranRule());
 	        }
        		set(
        			$current, 
-       			"a_cond",
-        		lv_a_cond_6_0, 
+       			"aCond",
+        		lv_aCond_6_0, 
         		"action_cond");
 	        afterParserOrEnumRuleCall();
 	    }
@@ -650,16 +650,16 @@ rulestate_cond returns [EObject current=null]
     |(
 (
 		{ 
-	        newCompositeNode(grammarAccess.getState_condAccess().getS_refState_refParserRuleCall_1_0()); 
+	        newCompositeNode(grammarAccess.getState_condAccess().getStateRefState_refParserRuleCall_1_0()); 
 	    }
-		lv_s_ref_2_0=rulestate_ref		{
+		lv_stateRef_2_0=rulestate_ref		{
 	        if ($current==null) {
 	            $current = createModelElementForParent(grammarAccess.getState_condRule());
 	        }
        		set(
        			$current, 
-       			"s_ref",
-        		lv_s_ref_2_0, 
+       			"stateRef",
+        		lv_stateRef_2_0, 
         		"state_ref");
 	        afterParserOrEnumRuleCall();
 	    }
@@ -688,20 +688,15 @@ rulestate_ref returns [EObject current=null]
     @after { leaveRule(); }:
 (
 (
-		lv_name_0_0=RULE_ID
 		{
-			newLeafNode(lv_name_0_0, grammarAccess.getState_refAccess().getNameIDTerminalRuleCall_0()); 
-		}
-		{
-	        if ($current==null) {
+			if ($current==null) {
 	            $current = createModelElement(grammarAccess.getState_refRule());
 	        }
-       		setWithLastConsumed(
-       			$current, 
-       			"name",
-        		lv_name_0_0, 
-        		"ID");
-	    }
+        }
+	otherlv_0=RULE_ID
+	{
+		newLeafNode(otherlv_0, grammarAccess.getState_refAccess().getStateRefStateCrossReference_0()); 
+	}
 
 )
 )
@@ -738,20 +733,15 @@ ruleaction_cond returns [EObject current=null]
 )
     |(
 (
-		lv_name_2_0=RULE_ID
 		{
-			newLeafNode(lv_name_2_0, grammarAccess.getAction_condAccess().getNameIDTerminalRuleCall_1_0()); 
-		}
-		{
-	        if ($current==null) {
+			if ($current==null) {
 	            $current = createModelElement(grammarAccess.getAction_condRule());
 	        }
-       		setWithLastConsumed(
-       			$current, 
-       			"name",
-        		lv_name_2_0, 
-        		"ID");
-	    }
+        }
+	otherlv_2=RULE_ID
+	{
+		newLeafNode(otherlv_2, grammarAccess.getAction_condAccess().getActionRefLabelCrossReference_1_0()); 
+	}
 
 )
 ))
@@ -934,16 +924,16 @@ rulestate returns [EObject current=null]
 (
 (
 		{ 
-	        newCompositeNode(grammarAccess.getStateAccess().getSpontaneous_actActionParserRuleCall_3_0()); 
+	        newCompositeNode(grammarAccess.getStateAccess().getSpontaneousActActionParserRuleCall_3_0()); 
 	    }
-		lv_spontaneous_act_3_0=ruleaction		{
+		lv_spontaneousAct_3_0=ruleaction		{
 	        if ($current==null) {
 	            $current = createModelElementForParent(grammarAccess.getStateRule());
 	        }
        		add(
        			$current, 
-       			"spontaneous_act",
-        		lv_spontaneous_act_3_0, 
+       			"spontaneousAct",
+        		lv_spontaneousAct_3_0, 
         		"action");
 	        afterParserOrEnumRuleCall();
 	    }

@@ -12,7 +12,7 @@ import org.eclipse.emf.ecore.EObject;
  * <p>
  * The following features are supported:
  * <ul>
- *   <li>{@link imt.simhya.language.markovPopulationModels.action_cond#getName <em>Name</em>}</li>
+ *   <li>{@link imt.simhya.language.markovPopulationModels.action_cond#getActionRef <em>Action Ref</em>}</li>
  * </ul>
  * </p>
  *
@@ -23,29 +23,29 @@ import org.eclipse.emf.ecore.EObject;
 public interface action_cond extends EObject
 {
   /**
-   * Returns the value of the '<em><b>Name</b></em>' attribute.
+   * Returns the value of the '<em><b>Action Ref</b></em>' reference.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Name</em>' attribute isn't clear,
+   * If the meaning of the '<em>Action Ref</em>' reference isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Name</em>' attribute.
-   * @see #setName(String)
-   * @see imt.simhya.language.markovPopulationModels.MarkovPopulationModelsPackage#getaction_cond_Name()
+   * @return the value of the '<em>Action Ref</em>' reference.
+   * @see #setActionRef(label)
+   * @see imt.simhya.language.markovPopulationModels.MarkovPopulationModelsPackage#getaction_cond_ActionRef()
    * @model
    * @generated
    */
-  String getName();
+  label getActionRef();
 
   /**
-   * Sets the value of the '{@link imt.simhya.language.markovPopulationModels.action_cond#getName <em>Name</em>}' attribute.
+   * Sets the value of the '{@link imt.simhya.language.markovPopulationModels.action_cond#getActionRef <em>Action Ref</em>}' reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Name</em>' attribute.
-   * @see #getName()
+   * @param value the new value of the '<em>Action Ref</em>' reference.
+   * @see #getActionRef()
    * @generated
    */
-  void setName(String value);
+  void setActionRef(label value);
 
 } // action_cond

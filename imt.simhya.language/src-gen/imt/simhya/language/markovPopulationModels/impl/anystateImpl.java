@@ -5,10 +5,12 @@ package imt.simhya.language.markovPopulationModels.impl;
 import imt.simhya.language.markovPopulationModels.MarkovPopulationModelsPackage;
 import imt.simhya.language.markovPopulationModels.action_cond;
 import imt.simhya.language.markovPopulationModels.anystate;
+import imt.simhya.language.markovPopulationModels.label;
 
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 
@@ -19,7 +21,7 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link imt.simhya.language.markovPopulationModels.impl.anystateImpl#getName <em>Name</em>}</li>
+ *   <li>{@link imt.simhya.language.markovPopulationModels.impl.anystateImpl#getActionRef <em>Action Ref</em>}</li>
  * </ul>
  * </p>
  *
@@ -28,24 +30,14 @@ import org.eclipse.emf.ecore.impl.ENotificationImpl;
 public class anystateImpl extends state_condImpl implements anystate
 {
   /**
-   * The default value of the '{@link #getName() <em>Name</em>}' attribute.
+   * The cached value of the '{@link #getActionRef() <em>Action Ref</em>}' reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getName()
+   * @see #getActionRef()
    * @generated
    * @ordered
    */
-  protected static final String NAME_EDEFAULT = null;
-
-  /**
-   * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getName()
-   * @generated
-   * @ordered
-   */
-  protected String name = NAME_EDEFAULT;
+  protected label actionRef;
 
   /**
    * <!-- begin-user-doc -->
@@ -73,9 +65,19 @@ public class anystateImpl extends state_condImpl implements anystate
    * <!-- end-user-doc -->
    * @generated
    */
-  public String getName()
+  public label getActionRef()
   {
-    return name;
+    if (actionRef != null && actionRef.eIsProxy())
+    {
+      InternalEObject oldActionRef = (InternalEObject)actionRef;
+      actionRef = (label)eResolveProxy(oldActionRef);
+      if (actionRef != oldActionRef)
+      {
+        if (eNotificationRequired())
+          eNotify(new ENotificationImpl(this, Notification.RESOLVE, MarkovPopulationModelsPackage.ANYSTATE__ACTION_REF, oldActionRef, actionRef));
+      }
+    }
+    return actionRef;
   }
 
   /**
@@ -83,12 +85,22 @@ public class anystateImpl extends state_condImpl implements anystate
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setName(String newName)
+  public label basicGetActionRef()
   {
-    String oldName = name;
-    name = newName;
+    return actionRef;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setActionRef(label newActionRef)
+  {
+    label oldActionRef = actionRef;
+    actionRef = newActionRef;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, MarkovPopulationModelsPackage.ANYSTATE__NAME, oldName, name));
+      eNotify(new ENotificationImpl(this, Notification.SET, MarkovPopulationModelsPackage.ANYSTATE__ACTION_REF, oldActionRef, actionRef));
   }
 
   /**
@@ -101,8 +113,9 @@ public class anystateImpl extends state_condImpl implements anystate
   {
     switch (featureID)
     {
-      case MarkovPopulationModelsPackage.ANYSTATE__NAME:
-        return getName();
+      case MarkovPopulationModelsPackage.ANYSTATE__ACTION_REF:
+        if (resolve) return getActionRef();
+        return basicGetActionRef();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -117,8 +130,8 @@ public class anystateImpl extends state_condImpl implements anystate
   {
     switch (featureID)
     {
-      case MarkovPopulationModelsPackage.ANYSTATE__NAME:
-        setName((String)newValue);
+      case MarkovPopulationModelsPackage.ANYSTATE__ACTION_REF:
+        setActionRef((label)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -134,8 +147,8 @@ public class anystateImpl extends state_condImpl implements anystate
   {
     switch (featureID)
     {
-      case MarkovPopulationModelsPackage.ANYSTATE__NAME:
-        setName(NAME_EDEFAULT);
+      case MarkovPopulationModelsPackage.ANYSTATE__ACTION_REF:
+        setActionRef((label)null);
         return;
     }
     super.eUnset(featureID);
@@ -151,8 +164,8 @@ public class anystateImpl extends state_condImpl implements anystate
   {
     switch (featureID)
     {
-      case MarkovPopulationModelsPackage.ANYSTATE__NAME:
-        return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+      case MarkovPopulationModelsPackage.ANYSTATE__ACTION_REF:
+        return actionRef != null;
     }
     return super.eIsSet(featureID);
   }
@@ -169,7 +182,7 @@ public class anystateImpl extends state_condImpl implements anystate
     {
       switch (derivedFeatureID)
       {
-        case MarkovPopulationModelsPackage.ANYSTATE__NAME: return MarkovPopulationModelsPackage.ACTION_COND__NAME;
+        case MarkovPopulationModelsPackage.ANYSTATE__ACTION_REF: return MarkovPopulationModelsPackage.ACTION_COND__ACTION_REF;
         default: return -1;
       }
     }
@@ -188,28 +201,11 @@ public class anystateImpl extends state_condImpl implements anystate
     {
       switch (baseFeatureID)
       {
-        case MarkovPopulationModelsPackage.ACTION_COND__NAME: return MarkovPopulationModelsPackage.ANYSTATE__NAME;
+        case MarkovPopulationModelsPackage.ACTION_COND__ACTION_REF: return MarkovPopulationModelsPackage.ANYSTATE__ACTION_REF;
         default: return -1;
       }
     }
     return super.eDerivedStructuralFeatureID(baseFeatureID, baseClass);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public String toString()
-  {
-    if (eIsProxy()) return super.toString();
-
-    StringBuffer result = new StringBuffer(super.toString());
-    result.append(" (name: ");
-    result.append(name);
-    result.append(')');
-    return result.toString();
   }
 
 } //anystateImpl

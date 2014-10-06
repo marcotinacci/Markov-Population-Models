@@ -233,7 +233,7 @@ public interface MarkovPopulationModelsPackage extends EPackage
   int GL_TRAN__NAME = 0;
 
   /**
-   * The feature id for the '<em><b>Ltran</b></em>' containment reference list.
+   * The feature id for the '<em><b>LTran</b></em>' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
@@ -279,7 +279,7 @@ public interface MarkovPopulationModelsPackage extends EPackage
   int LOC_TRAN__STATE_REF = 0;
 
   /**
-   * The feature id for the '<em><b>Scond</b></em>' containment reference.
+   * The feature id for the '<em><b>SCond</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
@@ -288,7 +288,7 @@ public interface MarkovPopulationModelsPackage extends EPackage
   int LOC_TRAN__SCOND = 1;
 
   /**
-   * The feature id for the '<em><b>Acond</b></em>' containment reference.
+   * The feature id for the '<em><b>ACond</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
@@ -316,13 +316,13 @@ public interface MarkovPopulationModelsPackage extends EPackage
   int STATE_COND = 6;
 
   /**
-   * The feature id for the '<em><b>Sref</b></em>' containment reference.
+   * The feature id for the '<em><b>State Ref</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int STATE_COND__SREF = 0;
+  int STATE_COND__STATE_REF = 0;
 
   /**
    * The number of structural features of the '<em>state cond</em>' class.
@@ -344,13 +344,13 @@ public interface MarkovPopulationModelsPackage extends EPackage
   int STATE_REF = 7;
 
   /**
-   * The feature id for the '<em><b>Name</b></em>' attribute.
+   * The feature id for the '<em><b>State Ref</b></em>' reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int STATE_REF__NAME = 0;
+  int STATE_REF__STATE_REF = 0;
 
   /**
    * The number of structural features of the '<em>state ref</em>' class.
@@ -372,13 +372,13 @@ public interface MarkovPopulationModelsPackage extends EPackage
   int ACTION_COND = 8;
 
   /**
-   * The feature id for the '<em><b>Name</b></em>' attribute.
+   * The feature id for the '<em><b>Action Ref</b></em>' reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int ACTION_COND__NAME = 0;
+  int ACTION_COND__ACTION_REF = 0;
 
   /**
    * The number of structural features of the '<em>action cond</em>' class.
@@ -483,7 +483,7 @@ public interface MarkovPopulationModelsPackage extends EPackage
   int STATE__NAME = 0;
 
   /**
-   * The feature id for the '<em><b>Spontaneous act</b></em>' containment reference list.
+   * The feature id for the '<em><b>Spontaneous Act</b></em>' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
@@ -557,22 +557,22 @@ public interface MarkovPopulationModelsPackage extends EPackage
   int ANYSTATE = 13;
 
   /**
-   * The feature id for the '<em><b>Sref</b></em>' containment reference.
+   * The feature id for the '<em><b>State Ref</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int ANYSTATE__SREF = STATE_COND__SREF;
+  int ANYSTATE__STATE_REF = STATE_COND__STATE_REF;
 
   /**
-   * The feature id for the '<em><b>Name</b></em>' attribute.
+   * The feature id for the '<em><b>Action Ref</b></em>' reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int ANYSTATE__NAME = STATE_COND_FEATURE_COUNT + 0;
+  int ANYSTATE__ACTION_REF = STATE_COND_FEATURE_COUNT + 0;
 
   /**
    * The number of structural features of the '<em>anystate</em>' class.
@@ -745,15 +745,15 @@ public interface MarkovPopulationModelsPackage extends EPackage
   EAttribute getgl_tran_Name();
 
   /**
-   * Returns the meta object for the containment reference list '{@link imt.simhya.language.markovPopulationModels.gl_tran#getL_tran <em>Ltran</em>}'.
+   * Returns the meta object for the containment reference list '{@link imt.simhya.language.markovPopulationModels.gl_tran#getLTran <em>LTran</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>Ltran</em>'.
-   * @see imt.simhya.language.markovPopulationModels.gl_tran#getL_tran()
+   * @return the meta object for the containment reference list '<em>LTran</em>'.
+   * @see imt.simhya.language.markovPopulationModels.gl_tran#getLTran()
    * @see #getgl_tran()
    * @generated
    */
-  EReference getgl_tran_L_tran();
+  EReference getgl_tran_LTran();
 
   /**
    * Returns the meta object for the attribute '{@link imt.simhya.language.markovPopulationModels.gl_tran#getRate <em>Rate</em>}'.
@@ -788,26 +788,26 @@ public interface MarkovPopulationModelsPackage extends EPackage
   EReference getloc_tran_StateRef();
 
   /**
-   * Returns the meta object for the containment reference '{@link imt.simhya.language.markovPopulationModels.loc_tran#getS_cond <em>Scond</em>}'.
+   * Returns the meta object for the containment reference '{@link imt.simhya.language.markovPopulationModels.loc_tran#getSCond <em>SCond</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Scond</em>'.
-   * @see imt.simhya.language.markovPopulationModels.loc_tran#getS_cond()
+   * @return the meta object for the containment reference '<em>SCond</em>'.
+   * @see imt.simhya.language.markovPopulationModels.loc_tran#getSCond()
    * @see #getloc_tran()
    * @generated
    */
-  EReference getloc_tran_S_cond();
+  EReference getloc_tran_SCond();
 
   /**
-   * Returns the meta object for the containment reference '{@link imt.simhya.language.markovPopulationModels.loc_tran#getA_cond <em>Acond</em>}'.
+   * Returns the meta object for the containment reference '{@link imt.simhya.language.markovPopulationModels.loc_tran#getACond <em>ACond</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Acond</em>'.
-   * @see imt.simhya.language.markovPopulationModels.loc_tran#getA_cond()
+   * @return the meta object for the containment reference '<em>ACond</em>'.
+   * @see imt.simhya.language.markovPopulationModels.loc_tran#getACond()
    * @see #getloc_tran()
    * @generated
    */
-  EReference getloc_tran_A_cond();
+  EReference getloc_tran_ACond();
 
   /**
    * Returns the meta object for class '{@link imt.simhya.language.markovPopulationModels.state_cond <em>state cond</em>}'.
@@ -820,15 +820,15 @@ public interface MarkovPopulationModelsPackage extends EPackage
   EClass getstate_cond();
 
   /**
-   * Returns the meta object for the containment reference '{@link imt.simhya.language.markovPopulationModels.state_cond#getS_ref <em>Sref</em>}'.
+   * Returns the meta object for the containment reference '{@link imt.simhya.language.markovPopulationModels.state_cond#getStateRef <em>State Ref</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference '<em>Sref</em>'.
-   * @see imt.simhya.language.markovPopulationModels.state_cond#getS_ref()
+   * @return the meta object for the containment reference '<em>State Ref</em>'.
+   * @see imt.simhya.language.markovPopulationModels.state_cond#getStateRef()
    * @see #getstate_cond()
    * @generated
    */
-  EReference getstate_cond_S_ref();
+  EReference getstate_cond_StateRef();
 
   /**
    * Returns the meta object for class '{@link imt.simhya.language.markovPopulationModels.state_ref <em>state ref</em>}'.
@@ -841,15 +841,15 @@ public interface MarkovPopulationModelsPackage extends EPackage
   EClass getstate_ref();
 
   /**
-   * Returns the meta object for the attribute '{@link imt.simhya.language.markovPopulationModels.state_ref#getName <em>Name</em>}'.
+   * Returns the meta object for the reference '{@link imt.simhya.language.markovPopulationModels.state_ref#getStateRef <em>State Ref</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Name</em>'.
-   * @see imt.simhya.language.markovPopulationModels.state_ref#getName()
+   * @return the meta object for the reference '<em>State Ref</em>'.
+   * @see imt.simhya.language.markovPopulationModels.state_ref#getStateRef()
    * @see #getstate_ref()
    * @generated
    */
-  EAttribute getstate_ref_Name();
+  EReference getstate_ref_StateRef();
 
   /**
    * Returns the meta object for class '{@link imt.simhya.language.markovPopulationModels.action_cond <em>action cond</em>}'.
@@ -862,15 +862,15 @@ public interface MarkovPopulationModelsPackage extends EPackage
   EClass getaction_cond();
 
   /**
-   * Returns the meta object for the attribute '{@link imt.simhya.language.markovPopulationModels.action_cond#getName <em>Name</em>}'.
+   * Returns the meta object for the reference '{@link imt.simhya.language.markovPopulationModels.action_cond#getActionRef <em>Action Ref</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the attribute '<em>Name</em>'.
-   * @see imt.simhya.language.markovPopulationModels.action_cond#getName()
+   * @return the meta object for the reference '<em>Action Ref</em>'.
+   * @see imt.simhya.language.markovPopulationModels.action_cond#getActionRef()
    * @see #getaction_cond()
    * @generated
    */
-  EAttribute getaction_cond_Name();
+  EReference getaction_cond_ActionRef();
 
   /**
    * Returns the meta object for class '{@link imt.simhya.language.markovPopulationModels.agent <em>agent</em>}'.
@@ -958,15 +958,15 @@ public interface MarkovPopulationModelsPackage extends EPackage
   EAttribute getstate_Name();
 
   /**
-   * Returns the meta object for the containment reference list '{@link imt.simhya.language.markovPopulationModels.state#getSpontaneous_act <em>Spontaneous act</em>}'.
+   * Returns the meta object for the containment reference list '{@link imt.simhya.language.markovPopulationModels.state#getSpontaneousAct <em>Spontaneous Act</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return the meta object for the containment reference list '<em>Spontaneous act</em>'.
-   * @see imt.simhya.language.markovPopulationModels.state#getSpontaneous_act()
+   * @return the meta object for the containment reference list '<em>Spontaneous Act</em>'.
+   * @see imt.simhya.language.markovPopulationModels.state#getSpontaneousAct()
    * @see #getstate()
    * @generated
    */
-  EReference getstate_Spontaneous_act();
+  EReference getstate_SpontaneousAct();
 
   /**
    * Returns the meta object for class '{@link imt.simhya.language.markovPopulationModels.action <em>action</em>}'.
@@ -1175,12 +1175,12 @@ public interface MarkovPopulationModelsPackage extends EPackage
     EAttribute GL_TRAN__NAME = eINSTANCE.getgl_tran_Name();
 
     /**
-     * The meta object literal for the '<em><b>Ltran</b></em>' containment reference list feature.
+     * The meta object literal for the '<em><b>LTran</b></em>' containment reference list feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference GL_TRAN__LTRAN = eINSTANCE.getgl_tran_L_tran();
+    EReference GL_TRAN__LTRAN = eINSTANCE.getgl_tran_LTran();
 
     /**
      * The meta object literal for the '<em><b>Rate</b></em>' attribute feature.
@@ -1209,20 +1209,20 @@ public interface MarkovPopulationModelsPackage extends EPackage
     EReference LOC_TRAN__STATE_REF = eINSTANCE.getloc_tran_StateRef();
 
     /**
-     * The meta object literal for the '<em><b>Scond</b></em>' containment reference feature.
+     * The meta object literal for the '<em><b>SCond</b></em>' containment reference feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference LOC_TRAN__SCOND = eINSTANCE.getloc_tran_S_cond();
+    EReference LOC_TRAN__SCOND = eINSTANCE.getloc_tran_SCond();
 
     /**
-     * The meta object literal for the '<em><b>Acond</b></em>' containment reference feature.
+     * The meta object literal for the '<em><b>ACond</b></em>' containment reference feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference LOC_TRAN__ACOND = eINSTANCE.getloc_tran_A_cond();
+    EReference LOC_TRAN__ACOND = eINSTANCE.getloc_tran_ACond();
 
     /**
      * The meta object literal for the '{@link imt.simhya.language.markovPopulationModels.impl.state_condImpl <em>state cond</em>}' class.
@@ -1235,12 +1235,12 @@ public interface MarkovPopulationModelsPackage extends EPackage
     EClass STATE_COND = eINSTANCE.getstate_cond();
 
     /**
-     * The meta object literal for the '<em><b>Sref</b></em>' containment reference feature.
+     * The meta object literal for the '<em><b>State Ref</b></em>' containment reference feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference STATE_COND__SREF = eINSTANCE.getstate_cond_S_ref();
+    EReference STATE_COND__STATE_REF = eINSTANCE.getstate_cond_StateRef();
 
     /**
      * The meta object literal for the '{@link imt.simhya.language.markovPopulationModels.impl.state_refImpl <em>state ref</em>}' class.
@@ -1253,12 +1253,12 @@ public interface MarkovPopulationModelsPackage extends EPackage
     EClass STATE_REF = eINSTANCE.getstate_ref();
 
     /**
-     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+     * The meta object literal for the '<em><b>State Ref</b></em>' reference feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute STATE_REF__NAME = eINSTANCE.getstate_ref_Name();
+    EReference STATE_REF__STATE_REF = eINSTANCE.getstate_ref_StateRef();
 
     /**
      * The meta object literal for the '{@link imt.simhya.language.markovPopulationModels.impl.action_condImpl <em>action cond</em>}' class.
@@ -1271,12 +1271,12 @@ public interface MarkovPopulationModelsPackage extends EPackage
     EClass ACTION_COND = eINSTANCE.getaction_cond();
 
     /**
-     * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+     * The meta object literal for the '<em><b>Action Ref</b></em>' reference feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EAttribute ACTION_COND__NAME = eINSTANCE.getaction_cond_Name();
+    EReference ACTION_COND__ACTION_REF = eINSTANCE.getaction_cond_ActionRef();
 
     /**
      * The meta object literal for the '{@link imt.simhya.language.markovPopulationModels.impl.agentImpl <em>agent</em>}' class.
@@ -1349,12 +1349,12 @@ public interface MarkovPopulationModelsPackage extends EPackage
     EAttribute STATE__NAME = eINSTANCE.getstate_Name();
 
     /**
-     * The meta object literal for the '<em><b>Spontaneous act</b></em>' containment reference list feature.
+     * The meta object literal for the '<em><b>Spontaneous Act</b></em>' containment reference list feature.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
      * @generated
      */
-    EReference STATE__SPONTANEOUS_ACT = eINSTANCE.getstate_Spontaneous_act();
+    EReference STATE__SPONTANEOUS_ACT = eINSTANCE.getstate_SpontaneousAct();
 
     /**
      * The meta object literal for the '{@link imt.simhya.language.markovPopulationModels.impl.actionImpl <em>action</em>}' class.

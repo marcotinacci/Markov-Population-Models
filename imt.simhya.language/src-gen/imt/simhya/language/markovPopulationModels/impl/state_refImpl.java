@@ -3,11 +3,13 @@
 package imt.simhya.language.markovPopulationModels.impl;
 
 import imt.simhya.language.markovPopulationModels.MarkovPopulationModelsPackage;
+import imt.simhya.language.markovPopulationModels.state;
 import imt.simhya.language.markovPopulationModels.state_ref;
 
 import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
@@ -19,7 +21,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link imt.simhya.language.markovPopulationModels.impl.state_refImpl#getName <em>Name</em>}</li>
+ *   <li>{@link imt.simhya.language.markovPopulationModels.impl.state_refImpl#getStateRef <em>State Ref</em>}</li>
  * </ul>
  * </p>
  *
@@ -28,24 +30,14 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 public class state_refImpl extends MinimalEObjectImpl.Container implements state_ref
 {
   /**
-   * The default value of the '{@link #getName() <em>Name</em>}' attribute.
+   * The cached value of the '{@link #getStateRef() <em>State Ref</em>}' reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getName()
+   * @see #getStateRef()
    * @generated
    * @ordered
    */
-  protected static final String NAME_EDEFAULT = null;
-
-  /**
-   * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getName()
-   * @generated
-   * @ordered
-   */
-  protected String name = NAME_EDEFAULT;
+  protected state stateRef;
 
   /**
    * <!-- begin-user-doc -->
@@ -73,9 +65,19 @@ public class state_refImpl extends MinimalEObjectImpl.Container implements state
    * <!-- end-user-doc -->
    * @generated
    */
-  public String getName()
+  public state getStateRef()
   {
-    return name;
+    if (stateRef != null && stateRef.eIsProxy())
+    {
+      InternalEObject oldStateRef = (InternalEObject)stateRef;
+      stateRef = (state)eResolveProxy(oldStateRef);
+      if (stateRef != oldStateRef)
+      {
+        if (eNotificationRequired())
+          eNotify(new ENotificationImpl(this, Notification.RESOLVE, MarkovPopulationModelsPackage.STATE_REF__STATE_REF, oldStateRef, stateRef));
+      }
+    }
+    return stateRef;
   }
 
   /**
@@ -83,12 +85,22 @@ public class state_refImpl extends MinimalEObjectImpl.Container implements state
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setName(String newName)
+  public state basicGetStateRef()
   {
-    String oldName = name;
-    name = newName;
+    return stateRef;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setStateRef(state newStateRef)
+  {
+    state oldStateRef = stateRef;
+    stateRef = newStateRef;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, MarkovPopulationModelsPackage.STATE_REF__NAME, oldName, name));
+      eNotify(new ENotificationImpl(this, Notification.SET, MarkovPopulationModelsPackage.STATE_REF__STATE_REF, oldStateRef, stateRef));
   }
 
   /**
@@ -101,8 +113,9 @@ public class state_refImpl extends MinimalEObjectImpl.Container implements state
   {
     switch (featureID)
     {
-      case MarkovPopulationModelsPackage.STATE_REF__NAME:
-        return getName();
+      case MarkovPopulationModelsPackage.STATE_REF__STATE_REF:
+        if (resolve) return getStateRef();
+        return basicGetStateRef();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -117,8 +130,8 @@ public class state_refImpl extends MinimalEObjectImpl.Container implements state
   {
     switch (featureID)
     {
-      case MarkovPopulationModelsPackage.STATE_REF__NAME:
-        setName((String)newValue);
+      case MarkovPopulationModelsPackage.STATE_REF__STATE_REF:
+        setStateRef((state)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -134,8 +147,8 @@ public class state_refImpl extends MinimalEObjectImpl.Container implements state
   {
     switch (featureID)
     {
-      case MarkovPopulationModelsPackage.STATE_REF__NAME:
-        setName(NAME_EDEFAULT);
+      case MarkovPopulationModelsPackage.STATE_REF__STATE_REF:
+        setStateRef((state)null);
         return;
     }
     super.eUnset(featureID);
@@ -151,27 +164,10 @@ public class state_refImpl extends MinimalEObjectImpl.Container implements state
   {
     switch (featureID)
     {
-      case MarkovPopulationModelsPackage.STATE_REF__NAME:
-        return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+      case MarkovPopulationModelsPackage.STATE_REF__STATE_REF:
+        return stateRef != null;
     }
     return super.eIsSet(featureID);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public String toString()
-  {
-    if (eIsProxy()) return super.toString();
-
-    StringBuffer result = new StringBuffer(super.toString());
-    result.append(" (name: ");
-    result.append(name);
-    result.append(')');
-    return result.toString();
   }
 
 } //state_refImpl

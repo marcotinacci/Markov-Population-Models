@@ -29,28 +29,28 @@ stateInit:
 gl_tran:
 	'transition'
 	name=ID '{'
-	l_tran+=loc_tran ('&' l_tran+=loc_tran)* '=>' rate=FLOAT
+		lTran+=loc_tran ('&' lTran+=loc_tran)* '=>' rate=FLOAT
 	'}'
 ;
 
 loc_tran:
 	'new' stateRef=[state]|
 	'kill' stateRef=[state]|
-	 s_cond= state_cond ':' a_cond=action_cond	
+	 sCond= state_cond ':' aCond=action_cond	
 ;
 
 state_cond:
 	{anystate} 'any' |
-	s_ref=state_ref
+	stateRef=state_ref
 ;
 
 state_ref:
-	name=ID
+	stateRef=[state]
 ;
 
 action_cond:
 	{anystate} 'any' |
-	name= ID	
+	actionRef= [label]	
 ;
 
 agent:
@@ -66,7 +66,7 @@ label:
 
 state:
 	'state' name=ID '{'
-		spontaneous_act+=action+
+		spontaneousAct+=action+
 	'}'
 ;
 

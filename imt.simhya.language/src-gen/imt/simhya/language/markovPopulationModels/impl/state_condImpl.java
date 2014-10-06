@@ -22,7 +22,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * <p>
  * The following features are implemented:
  * <ul>
- *   <li>{@link imt.simhya.language.markovPopulationModels.impl.state_condImpl#getS_ref <em>Sref</em>}</li>
+ *   <li>{@link imt.simhya.language.markovPopulationModels.impl.state_condImpl#getStateRef <em>State Ref</em>}</li>
  * </ul>
  * </p>
  *
@@ -31,14 +31,14 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 public class state_condImpl extends MinimalEObjectImpl.Container implements state_cond
 {
   /**
-   * The cached value of the '{@link #getS_ref() <em>Sref</em>}' containment reference.
+   * The cached value of the '{@link #getStateRef() <em>State Ref</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getS_ref()
+   * @see #getStateRef()
    * @generated
    * @ordered
    */
-  protected state_ref s_ref;
+  protected state_ref stateRef;
 
   /**
    * <!-- begin-user-doc -->
@@ -66,9 +66,9 @@ public class state_condImpl extends MinimalEObjectImpl.Container implements stat
    * <!-- end-user-doc -->
    * @generated
    */
-  public state_ref getS_ref()
+  public state_ref getStateRef()
   {
-    return s_ref;
+    return stateRef;
   }
 
   /**
@@ -76,13 +76,13 @@ public class state_condImpl extends MinimalEObjectImpl.Container implements stat
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetS_ref(state_ref newS_ref, NotificationChain msgs)
+  public NotificationChain basicSetStateRef(state_ref newStateRef, NotificationChain msgs)
   {
-    state_ref oldS_ref = s_ref;
-    s_ref = newS_ref;
+    state_ref oldStateRef = stateRef;
+    stateRef = newStateRef;
     if (eNotificationRequired())
     {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, MarkovPopulationModelsPackage.STATE_COND__SREF, oldS_ref, newS_ref);
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, MarkovPopulationModelsPackage.STATE_COND__STATE_REF, oldStateRef, newStateRef);
       if (msgs == null) msgs = notification; else msgs.add(notification);
     }
     return msgs;
@@ -93,20 +93,20 @@ public class state_condImpl extends MinimalEObjectImpl.Container implements stat
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setS_ref(state_ref newS_ref)
+  public void setStateRef(state_ref newStateRef)
   {
-    if (newS_ref != s_ref)
+    if (newStateRef != stateRef)
     {
       NotificationChain msgs = null;
-      if (s_ref != null)
-        msgs = ((InternalEObject)s_ref).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - MarkovPopulationModelsPackage.STATE_COND__SREF, null, msgs);
-      if (newS_ref != null)
-        msgs = ((InternalEObject)newS_ref).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - MarkovPopulationModelsPackage.STATE_COND__SREF, null, msgs);
-      msgs = basicSetS_ref(newS_ref, msgs);
+      if (stateRef != null)
+        msgs = ((InternalEObject)stateRef).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - MarkovPopulationModelsPackage.STATE_COND__STATE_REF, null, msgs);
+      if (newStateRef != null)
+        msgs = ((InternalEObject)newStateRef).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - MarkovPopulationModelsPackage.STATE_COND__STATE_REF, null, msgs);
+      msgs = basicSetStateRef(newStateRef, msgs);
       if (msgs != null) msgs.dispatch();
     }
     else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, MarkovPopulationModelsPackage.STATE_COND__SREF, newS_ref, newS_ref));
+      eNotify(new ENotificationImpl(this, Notification.SET, MarkovPopulationModelsPackage.STATE_COND__STATE_REF, newStateRef, newStateRef));
   }
 
   /**
@@ -119,8 +119,8 @@ public class state_condImpl extends MinimalEObjectImpl.Container implements stat
   {
     switch (featureID)
     {
-      case MarkovPopulationModelsPackage.STATE_COND__SREF:
-        return basicSetS_ref(null, msgs);
+      case MarkovPopulationModelsPackage.STATE_COND__STATE_REF:
+        return basicSetStateRef(null, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
   }
@@ -135,8 +135,8 @@ public class state_condImpl extends MinimalEObjectImpl.Container implements stat
   {
     switch (featureID)
     {
-      case MarkovPopulationModelsPackage.STATE_COND__SREF:
-        return getS_ref();
+      case MarkovPopulationModelsPackage.STATE_COND__STATE_REF:
+        return getStateRef();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -151,8 +151,8 @@ public class state_condImpl extends MinimalEObjectImpl.Container implements stat
   {
     switch (featureID)
     {
-      case MarkovPopulationModelsPackage.STATE_COND__SREF:
-        setS_ref((state_ref)newValue);
+      case MarkovPopulationModelsPackage.STATE_COND__STATE_REF:
+        setStateRef((state_ref)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -168,8 +168,8 @@ public class state_condImpl extends MinimalEObjectImpl.Container implements stat
   {
     switch (featureID)
     {
-      case MarkovPopulationModelsPackage.STATE_COND__SREF:
-        setS_ref((state_ref)null);
+      case MarkovPopulationModelsPackage.STATE_COND__STATE_REF:
+        setStateRef((state_ref)null);
         return;
     }
     super.eUnset(featureID);
@@ -185,8 +185,8 @@ public class state_condImpl extends MinimalEObjectImpl.Container implements stat
   {
     switch (featureID)
     {
-      case MarkovPopulationModelsPackage.STATE_COND__SREF:
-        return s_ref != null;
+      case MarkovPopulationModelsPackage.STATE_COND__STATE_REF:
+        return stateRef != null;
     }
     return super.eIsSet(featureID);
   }

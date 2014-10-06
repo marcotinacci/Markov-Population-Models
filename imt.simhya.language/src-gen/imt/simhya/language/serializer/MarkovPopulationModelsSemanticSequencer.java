@@ -151,16 +151,16 @@ public class MarkovPopulationModelsSemanticSequencer extends AbstractDelegatingS
 	
 	/**
 	 * Constraint:
-	 *     name=ID
+	 *     actionRef=[label|ID]
 	 */
 	protected void sequence_action_cond(EObject context, action_cond semanticObject) {
 		if(errorAcceptor != null) {
-			if(transientValues.isValueTransient(semanticObject, MarkovPopulationModelsPackage.Literals.ACTION_COND__NAME) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, MarkovPopulationModelsPackage.Literals.ACTION_COND__NAME));
+			if(transientValues.isValueTransient(semanticObject, MarkovPopulationModelsPackage.Literals.ACTION_COND__ACTION_REF) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, MarkovPopulationModelsPackage.Literals.ACTION_COND__ACTION_REF));
 		}
 		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
 		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
-		feeder.accept(grammarAccess.getAction_condAccess().getNameIDTerminalRuleCall_1_0(), semanticObject.getName());
+		feeder.accept(grammarAccess.getAction_condAccess().getActionRefLabelIDTerminalRuleCall_1_0_1(), semanticObject.getActionRef());
 		feeder.finish();
 	}
 	
@@ -185,7 +185,7 @@ public class MarkovPopulationModelsSemanticSequencer extends AbstractDelegatingS
 	
 	/**
 	 * Constraint:
-	 *     (name=ID l_tran+=loc_tran l_tran+=loc_tran* rate=FLOAT)
+	 *     (name=ID lTran+=loc_tran lTran+=loc_tran* rate=FLOAT)
 	 */
 	protected void sequence_gl_tran(EObject context, gl_tran semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -219,7 +219,7 @@ public class MarkovPopulationModelsSemanticSequencer extends AbstractDelegatingS
 	
 	/**
 	 * Constraint:
-	 *     (stateRef=[state|ID] | stateRef=[state|ID] | (s_cond=state_cond a_cond=action_cond))
+	 *     (stateRef=[state|ID] | stateRef=[state|ID] | (sCond=state_cond aCond=action_cond))
 	 */
 	protected void sequence_loc_tran(EObject context, loc_tran semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -265,39 +265,39 @@ public class MarkovPopulationModelsSemanticSequencer extends AbstractDelegatingS
 	
 	/**
 	 * Constraint:
-	 *     s_ref=state_ref
+	 *     stateRef=state_ref
 	 */
 	protected void sequence_state_cond(EObject context, state_cond semanticObject) {
 		if(errorAcceptor != null) {
-			if(transientValues.isValueTransient(semanticObject, MarkovPopulationModelsPackage.Literals.STATE_COND__SREF) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, MarkovPopulationModelsPackage.Literals.STATE_COND__SREF));
+			if(transientValues.isValueTransient(semanticObject, MarkovPopulationModelsPackage.Literals.STATE_COND__STATE_REF) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, MarkovPopulationModelsPackage.Literals.STATE_COND__STATE_REF));
 		}
 		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
 		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
-		feeder.accept(grammarAccess.getState_condAccess().getS_refState_refParserRuleCall_1_0(), semanticObject.getS_ref());
+		feeder.accept(grammarAccess.getState_condAccess().getStateRefState_refParserRuleCall_1_0(), semanticObject.getStateRef());
 		feeder.finish();
 	}
 	
 	
 	/**
 	 * Constraint:
-	 *     name=ID
+	 *     stateRef=[state|ID]
 	 */
 	protected void sequence_state_ref(EObject context, state_ref semanticObject) {
 		if(errorAcceptor != null) {
-			if(transientValues.isValueTransient(semanticObject, MarkovPopulationModelsPackage.Literals.STATE_REF__NAME) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, MarkovPopulationModelsPackage.Literals.STATE_REF__NAME));
+			if(transientValues.isValueTransient(semanticObject, MarkovPopulationModelsPackage.Literals.STATE_REF__STATE_REF) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, MarkovPopulationModelsPackage.Literals.STATE_REF__STATE_REF));
 		}
 		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
 		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
-		feeder.accept(grammarAccess.getState_refAccess().getNameIDTerminalRuleCall_0(), semanticObject.getName());
+		feeder.accept(grammarAccess.getState_refAccess().getStateRefStateIDTerminalRuleCall_0_1(), semanticObject.getStateRef());
 		feeder.finish();
 	}
 	
 	
 	/**
 	 * Constraint:
-	 *     (name=ID spontaneous_act+=action+)
+	 *     (name=ID spontaneousAct+=action+)
 	 */
 	protected void sequence_state(EObject context, state semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
