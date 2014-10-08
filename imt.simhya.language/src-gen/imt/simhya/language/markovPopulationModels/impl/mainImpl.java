@@ -62,14 +62,14 @@ public class mainImpl extends MinimalEObjectImpl.Container implements main
   protected population populationDef;
 
   /**
-   * The cached value of the '{@link #getAgentDef() <em>Agent Def</em>}' containment reference.
+   * The cached value of the '{@link #getAgentDef() <em>Agent Def</em>}' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @see #getAgentDef()
    * @generated
    * @ordered
    */
-  protected agent agentDef;
+  protected EList<agent> agentDef;
 
   /**
    * <!-- begin-user-doc -->
@@ -159,47 +159,13 @@ public class mainImpl extends MinimalEObjectImpl.Container implements main
    * <!-- end-user-doc -->
    * @generated
    */
-  public agent getAgentDef()
+  public EList<agent> getAgentDef()
   {
+    if (agentDef == null)
+    {
+      agentDef = new EObjectContainmentEList<agent>(agent.class, this, MarkovPopulationModelsPackage.MAIN__AGENT_DEF);
+    }
     return agentDef;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public NotificationChain basicSetAgentDef(agent newAgentDef, NotificationChain msgs)
-  {
-    agent oldAgentDef = agentDef;
-    agentDef = newAgentDef;
-    if (eNotificationRequired())
-    {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, MarkovPopulationModelsPackage.MAIN__AGENT_DEF, oldAgentDef, newAgentDef);
-      if (msgs == null) msgs = notification; else msgs.add(notification);
-    }
-    return msgs;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setAgentDef(agent newAgentDef)
-  {
-    if (newAgentDef != agentDef)
-    {
-      NotificationChain msgs = null;
-      if (agentDef != null)
-        msgs = ((InternalEObject)agentDef).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - MarkovPopulationModelsPackage.MAIN__AGENT_DEF, null, msgs);
-      if (newAgentDef != null)
-        msgs = ((InternalEObject)newAgentDef).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - MarkovPopulationModelsPackage.MAIN__AGENT_DEF, null, msgs);
-      msgs = basicSetAgentDef(newAgentDef, msgs);
-      if (msgs != null) msgs.dispatch();
-    }
-    else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, MarkovPopulationModelsPackage.MAIN__AGENT_DEF, newAgentDef, newAgentDef));
   }
 
   /**
@@ -217,7 +183,7 @@ public class mainImpl extends MinimalEObjectImpl.Container implements main
       case MarkovPopulationModelsPackage.MAIN__POPULATION_DEF:
         return basicSetPopulationDef(null, msgs);
       case MarkovPopulationModelsPackage.MAIN__AGENT_DEF:
-        return basicSetAgentDef(null, msgs);
+        return ((InternalEList<?>)getAgentDef()).basicRemove(otherEnd, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
   }
@@ -261,7 +227,8 @@ public class mainImpl extends MinimalEObjectImpl.Container implements main
         setPopulationDef((population)newValue);
         return;
       case MarkovPopulationModelsPackage.MAIN__AGENT_DEF:
-        setAgentDef((agent)newValue);
+        getAgentDef().clear();
+        getAgentDef().addAll((Collection<? extends agent>)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -284,7 +251,7 @@ public class mainImpl extends MinimalEObjectImpl.Container implements main
         setPopulationDef((population)null);
         return;
       case MarkovPopulationModelsPackage.MAIN__AGENT_DEF:
-        setAgentDef((agent)null);
+        getAgentDef().clear();
         return;
     }
     super.eUnset(featureID);
@@ -305,7 +272,7 @@ public class mainImpl extends MinimalEObjectImpl.Container implements main
       case MarkovPopulationModelsPackage.MAIN__POPULATION_DEF:
         return populationDef != null;
       case MarkovPopulationModelsPackage.MAIN__AGENT_DEF:
-        return agentDef != null;
+        return agentDef != null && !agentDef.isEmpty();
     }
     return super.eIsSet(featureID);
   }

@@ -3,6 +3,7 @@
 package imt.simhya.language.markovPopulationModels.impl;
 
 import imt.simhya.language.markovPopulationModels.MarkovPopulationModelsPackage;
+import imt.simhya.language.markovPopulationModels.actual_parameters;
 import imt.simhya.language.markovPopulationModels.agent;
 import imt.simhya.language.markovPopulationModels.init;
 import imt.simhya.language.markovPopulationModels.stateInit;
@@ -31,6 +32,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * The following features are implemented:
  * <ul>
  *   <li>{@link imt.simhya.language.markovPopulationModels.impl.initImpl#getAgentRef <em>Agent Ref</em>}</li>
+ *   <li>{@link imt.simhya.language.markovPopulationModels.impl.initImpl#getActualParameters <em>Actual Parameters</em>}</li>
  *   <li>{@link imt.simhya.language.markovPopulationModels.impl.initImpl#getStates <em>States</em>}</li>
  * </ul>
  * </p>
@@ -48,6 +50,16 @@ public class initImpl extends MinimalEObjectImpl.Container implements init
    * @ordered
    */
   protected agent agentRef;
+
+  /**
+   * The cached value of the '{@link #getActualParameters() <em>Actual Parameters</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getActualParameters()
+   * @generated
+   * @ordered
+   */
+  protected actual_parameters actualParameters;
 
   /**
    * The cached value of the '{@link #getStates() <em>States</em>}' containment reference list.
@@ -128,6 +140,54 @@ public class initImpl extends MinimalEObjectImpl.Container implements init
    * <!-- end-user-doc -->
    * @generated
    */
+  public actual_parameters getActualParameters()
+  {
+    return actualParameters;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public NotificationChain basicSetActualParameters(actual_parameters newActualParameters, NotificationChain msgs)
+  {
+    actual_parameters oldActualParameters = actualParameters;
+    actualParameters = newActualParameters;
+    if (eNotificationRequired())
+    {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, MarkovPopulationModelsPackage.INIT__ACTUAL_PARAMETERS, oldActualParameters, newActualParameters);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
+    }
+    return msgs;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setActualParameters(actual_parameters newActualParameters)
+  {
+    if (newActualParameters != actualParameters)
+    {
+      NotificationChain msgs = null;
+      if (actualParameters != null)
+        msgs = ((InternalEObject)actualParameters).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - MarkovPopulationModelsPackage.INIT__ACTUAL_PARAMETERS, null, msgs);
+      if (newActualParameters != null)
+        msgs = ((InternalEObject)newActualParameters).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - MarkovPopulationModelsPackage.INIT__ACTUAL_PARAMETERS, null, msgs);
+      msgs = basicSetActualParameters(newActualParameters, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, MarkovPopulationModelsPackage.INIT__ACTUAL_PARAMETERS, newActualParameters, newActualParameters));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EList<stateInit> getStates()
   {
     if (states == null)
@@ -147,6 +207,8 @@ public class initImpl extends MinimalEObjectImpl.Container implements init
   {
     switch (featureID)
     {
+      case MarkovPopulationModelsPackage.INIT__ACTUAL_PARAMETERS:
+        return basicSetActualParameters(null, msgs);
       case MarkovPopulationModelsPackage.INIT__STATES:
         return ((InternalEList<?>)getStates()).basicRemove(otherEnd, msgs);
     }
@@ -166,6 +228,8 @@ public class initImpl extends MinimalEObjectImpl.Container implements init
       case MarkovPopulationModelsPackage.INIT__AGENT_REF:
         if (resolve) return getAgentRef();
         return basicGetAgentRef();
+      case MarkovPopulationModelsPackage.INIT__ACTUAL_PARAMETERS:
+        return getActualParameters();
       case MarkovPopulationModelsPackage.INIT__STATES:
         return getStates();
     }
@@ -185,6 +249,9 @@ public class initImpl extends MinimalEObjectImpl.Container implements init
     {
       case MarkovPopulationModelsPackage.INIT__AGENT_REF:
         setAgentRef((agent)newValue);
+        return;
+      case MarkovPopulationModelsPackage.INIT__ACTUAL_PARAMETERS:
+        setActualParameters((actual_parameters)newValue);
         return;
       case MarkovPopulationModelsPackage.INIT__STATES:
         getStates().clear();
@@ -207,6 +274,9 @@ public class initImpl extends MinimalEObjectImpl.Container implements init
       case MarkovPopulationModelsPackage.INIT__AGENT_REF:
         setAgentRef((agent)null);
         return;
+      case MarkovPopulationModelsPackage.INIT__ACTUAL_PARAMETERS:
+        setActualParameters((actual_parameters)null);
+        return;
       case MarkovPopulationModelsPackage.INIT__STATES:
         getStates().clear();
         return;
@@ -226,6 +296,8 @@ public class initImpl extends MinimalEObjectImpl.Container implements init
     {
       case MarkovPopulationModelsPackage.INIT__AGENT_REF:
         return agentRef != null;
+      case MarkovPopulationModelsPackage.INIT__ACTUAL_PARAMETERS:
+        return actualParameters != null;
       case MarkovPopulationModelsPackage.INIT__STATES:
         return states != null && !states.isEmpty();
     }

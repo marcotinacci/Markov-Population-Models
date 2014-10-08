@@ -3,6 +3,7 @@
 package imt.simhya.language.markovPopulationModels.impl;
 
 import imt.simhya.language.markovPopulationModels.MarkovPopulationModelsPackage;
+import imt.simhya.language.markovPopulationModels.agent_state_ref;
 import imt.simhya.language.markovPopulationModels.state_cond;
 import imt.simhya.language.markovPopulationModels.state_ref;
 
@@ -28,6 +29,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * The following features are implemented:
  * <ul>
  *   <li>{@link imt.simhya.language.markovPopulationModels.impl.state_condImpl#getStateRef <em>State Ref</em>}</li>
+ *   <li>{@link imt.simhya.language.markovPopulationModels.impl.state_condImpl#getAgentStateRef <em>Agent State Ref</em>}</li>
  * </ul>
  * </p>
  *
@@ -44,6 +46,16 @@ public class state_condImpl extends MinimalEObjectImpl.Container implements stat
    * @ordered
    */
   protected EList<state_ref> stateRef;
+
+  /**
+   * The cached value of the '{@link #getAgentStateRef() <em>Agent State Ref</em>}' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getAgentStateRef()
+   * @generated
+   * @ordered
+   */
+  protected EList<agent_state_ref> agentStateRef;
 
   /**
    * <!-- begin-user-doc -->
@@ -85,6 +97,20 @@ public class state_condImpl extends MinimalEObjectImpl.Container implements stat
    * <!-- end-user-doc -->
    * @generated
    */
+  public EList<agent_state_ref> getAgentStateRef()
+  {
+    if (agentStateRef == null)
+    {
+      agentStateRef = new EObjectContainmentEList<agent_state_ref>(agent_state_ref.class, this, MarkovPopulationModelsPackage.STATE_COND__AGENT_STATE_REF);
+    }
+    return agentStateRef;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   @Override
   public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
   {
@@ -92,6 +118,8 @@ public class state_condImpl extends MinimalEObjectImpl.Container implements stat
     {
       case MarkovPopulationModelsPackage.STATE_COND__STATE_REF:
         return ((InternalEList<?>)getStateRef()).basicRemove(otherEnd, msgs);
+      case MarkovPopulationModelsPackage.STATE_COND__AGENT_STATE_REF:
+        return ((InternalEList<?>)getAgentStateRef()).basicRemove(otherEnd, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
   }
@@ -108,6 +136,8 @@ public class state_condImpl extends MinimalEObjectImpl.Container implements stat
     {
       case MarkovPopulationModelsPackage.STATE_COND__STATE_REF:
         return getStateRef();
+      case MarkovPopulationModelsPackage.STATE_COND__AGENT_STATE_REF:
+        return getAgentStateRef();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -127,6 +157,10 @@ public class state_condImpl extends MinimalEObjectImpl.Container implements stat
         getStateRef().clear();
         getStateRef().addAll((Collection<? extends state_ref>)newValue);
         return;
+      case MarkovPopulationModelsPackage.STATE_COND__AGENT_STATE_REF:
+        getAgentStateRef().clear();
+        getAgentStateRef().addAll((Collection<? extends agent_state_ref>)newValue);
+        return;
     }
     super.eSet(featureID, newValue);
   }
@@ -144,6 +178,9 @@ public class state_condImpl extends MinimalEObjectImpl.Container implements stat
       case MarkovPopulationModelsPackage.STATE_COND__STATE_REF:
         getStateRef().clear();
         return;
+      case MarkovPopulationModelsPackage.STATE_COND__AGENT_STATE_REF:
+        getAgentStateRef().clear();
+        return;
     }
     super.eUnset(featureID);
   }
@@ -160,6 +197,8 @@ public class state_condImpl extends MinimalEObjectImpl.Container implements stat
     {
       case MarkovPopulationModelsPackage.STATE_COND__STATE_REF:
         return stateRef != null && !stateRef.isEmpty();
+      case MarkovPopulationModelsPackage.STATE_COND__AGENT_STATE_REF:
+        return agentStateRef != null && !agentStateRef.isEmpty();
     }
     return super.eIsSet(featureID);
   }

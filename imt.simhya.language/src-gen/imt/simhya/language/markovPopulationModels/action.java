@@ -2,6 +2,8 @@
  */
 package imt.simhya.language.markovPopulationModels;
 
+import org.eclipse.emf.common.util.EList;
+
 import org.eclipse.emf.ecore.EObject;
 
 /**
@@ -14,6 +16,7 @@ import org.eclipse.emf.ecore.EObject;
  * <ul>
  *   <li>{@link imt.simhya.language.markovPopulationModels.action#getActRef <em>Act Ref</em>}</li>
  *   <li>{@link imt.simhya.language.markovPopulationModels.action#getStateRef <em>State Ref</em>}</li>
+ *   <li>{@link imt.simhya.language.markovPopulationModels.action#getParams <em>Params</em>}</li>
  *   <li>{@link imt.simhya.language.markovPopulationModels.action#getLocalRate <em>Local Rate</em>}</li>
  * </ul>
  * </p>
@@ -77,6 +80,22 @@ public interface action extends EObject
   void setStateRef(state value);
 
   /**
+   * Returns the value of the '<em><b>Params</b></em>' containment reference list.
+   * The list contents are of type {@link imt.simhya.language.markovPopulationModels.exprova}.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Params</em>' containment reference list isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Params</em>' containment reference list.
+   * @see imt.simhya.language.markovPopulationModels.MarkovPopulationModelsPackage#getaction_Params()
+   * @model containment="true"
+   * @generated
+   */
+  EList<exprova> getParams();
+
+  /**
    * Returns the value of the '<em><b>Local Rate</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <p>
@@ -85,12 +104,12 @@ public interface action extends EObject
    * </p>
    * <!-- end-user-doc -->
    * @return the value of the '<em>Local Rate</em>' containment reference.
-   * @see #setLocalRate(local_rate)
+   * @see #setLocalRate(expr)
    * @see imt.simhya.language.markovPopulationModels.MarkovPopulationModelsPackage#getaction_LocalRate()
    * @model containment="true"
    * @generated
    */
-  local_rate getLocalRate();
+  expr getLocalRate();
 
   /**
    * Sets the value of the '{@link imt.simhya.language.markovPopulationModels.action#getLocalRate <em>Local Rate</em>}' containment reference.
@@ -100,6 +119,6 @@ public interface action extends EObject
    * @see #getLocalRate()
    * @generated
    */
-  void setLocalRate(local_rate value);
+  void setLocalRate(expr value);
 
 } // action

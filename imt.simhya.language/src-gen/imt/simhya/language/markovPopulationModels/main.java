@@ -69,29 +69,19 @@ public interface main extends EObject
   void setPopulationDef(population value);
 
   /**
-   * Returns the value of the '<em><b>Agent Def</b></em>' containment reference.
+   * Returns the value of the '<em><b>Agent Def</b></em>' containment reference list.
+   * The list contents are of type {@link imt.simhya.language.markovPopulationModels.agent}.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Agent Def</em>' containment reference isn't clear,
+   * If the meaning of the '<em>Agent Def</em>' containment reference list isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Agent Def</em>' containment reference.
-   * @see #setAgentDef(agent)
+   * @return the value of the '<em>Agent Def</em>' containment reference list.
    * @see imt.simhya.language.markovPopulationModels.MarkovPopulationModelsPackage#getmain_AgentDef()
    * @model containment="true"
    * @generated
    */
-  agent getAgentDef();
-
-  /**
-   * Sets the value of the '{@link imt.simhya.language.markovPopulationModels.main#getAgentDef <em>Agent Def</em>}' containment reference.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Agent Def</em>' containment reference.
-   * @see #getAgentDef()
-   * @generated
-   */
-  void setAgentDef(agent value);
+  EList<agent> getAgentDef();
 
 } // main

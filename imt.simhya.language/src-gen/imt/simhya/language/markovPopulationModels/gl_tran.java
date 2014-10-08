@@ -15,6 +15,7 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * <ul>
  *   <li>{@link imt.simhya.language.markovPopulationModels.gl_tran#getName <em>Name</em>}</li>
+ *   <li>{@link imt.simhya.language.markovPopulationModels.gl_tran#getGenerators <em>Generators</em>}</li>
  *   <li>{@link imt.simhya.language.markovPopulationModels.gl_tran#getLTran <em>LTran</em>}</li>
  *   <li>{@link imt.simhya.language.markovPopulationModels.gl_tran#getRate <em>Rate</em>}</li>
  * </ul>
@@ -51,6 +52,22 @@ public interface gl_tran extends EObject
    * @generated
    */
   void setName(String value);
+
+  /**
+   * Returns the value of the '<em><b>Generators</b></em>' containment reference list.
+   * The list contents are of type {@link imt.simhya.language.markovPopulationModels.generator}.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Generators</em>' containment reference list isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Generators</em>' containment reference list.
+   * @see imt.simhya.language.markovPopulationModels.MarkovPopulationModelsPackage#getgl_tran_Generators()
+   * @model containment="true"
+   * @generated
+   */
+  EList<generator> getGenerators();
 
   /**
    * Returns the value of the '<em><b>LTran</b></em>' containment reference list.

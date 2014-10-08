@@ -5,6 +5,7 @@ package imt.simhya.language.markovPopulationModels.impl;
 import imt.simhya.language.markovPopulationModels.MarkovPopulationModelsPackage;
 import imt.simhya.language.markovPopulationModels.agent;
 import imt.simhya.language.markovPopulationModels.label;
+import imt.simhya.language.markovPopulationModels.params;
 import imt.simhya.language.markovPopulationModels.state;
 
 import java.util.Collection;
@@ -31,6 +32,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * The following features are implemented:
  * <ul>
  *   <li>{@link imt.simhya.language.markovPopulationModels.impl.agentImpl#getName <em>Name</em>}</li>
+ *   <li>{@link imt.simhya.language.markovPopulationModels.impl.agentImpl#getParamList <em>Param List</em>}</li>
  *   <li>{@link imt.simhya.language.markovPopulationModels.impl.agentImpl#getAct <em>Act</em>}</li>
  *   <li>{@link imt.simhya.language.markovPopulationModels.impl.agentImpl#getS <em>S</em>}</li>
  * </ul>
@@ -59,6 +61,16 @@ public class agentImpl extends MinimalEObjectImpl.Container implements agent
    * @ordered
    */
   protected String name = NAME_EDEFAULT;
+
+  /**
+   * The cached value of the '{@link #getParamList() <em>Param List</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getParamList()
+   * @generated
+   * @ordered
+   */
+  protected params paramList;
 
   /**
    * The cached value of the '{@link #getAct() <em>Act</em>}' containment reference list.
@@ -129,6 +141,54 @@ public class agentImpl extends MinimalEObjectImpl.Container implements agent
    * <!-- end-user-doc -->
    * @generated
    */
+  public params getParamList()
+  {
+    return paramList;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public NotificationChain basicSetParamList(params newParamList, NotificationChain msgs)
+  {
+    params oldParamList = paramList;
+    paramList = newParamList;
+    if (eNotificationRequired())
+    {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, MarkovPopulationModelsPackage.AGENT__PARAM_LIST, oldParamList, newParamList);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
+    }
+    return msgs;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setParamList(params newParamList)
+  {
+    if (newParamList != paramList)
+    {
+      NotificationChain msgs = null;
+      if (paramList != null)
+        msgs = ((InternalEObject)paramList).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - MarkovPopulationModelsPackage.AGENT__PARAM_LIST, null, msgs);
+      if (newParamList != null)
+        msgs = ((InternalEObject)newParamList).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - MarkovPopulationModelsPackage.AGENT__PARAM_LIST, null, msgs);
+      msgs = basicSetParamList(newParamList, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, MarkovPopulationModelsPackage.AGENT__PARAM_LIST, newParamList, newParamList));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EList<label> getAct()
   {
     if (act == null)
@@ -162,6 +222,8 @@ public class agentImpl extends MinimalEObjectImpl.Container implements agent
   {
     switch (featureID)
     {
+      case MarkovPopulationModelsPackage.AGENT__PARAM_LIST:
+        return basicSetParamList(null, msgs);
       case MarkovPopulationModelsPackage.AGENT__ACT:
         return ((InternalEList<?>)getAct()).basicRemove(otherEnd, msgs);
       case MarkovPopulationModelsPackage.AGENT__S:
@@ -182,6 +244,8 @@ public class agentImpl extends MinimalEObjectImpl.Container implements agent
     {
       case MarkovPopulationModelsPackage.AGENT__NAME:
         return getName();
+      case MarkovPopulationModelsPackage.AGENT__PARAM_LIST:
+        return getParamList();
       case MarkovPopulationModelsPackage.AGENT__ACT:
         return getAct();
       case MarkovPopulationModelsPackage.AGENT__S:
@@ -203,6 +267,9 @@ public class agentImpl extends MinimalEObjectImpl.Container implements agent
     {
       case MarkovPopulationModelsPackage.AGENT__NAME:
         setName((String)newValue);
+        return;
+      case MarkovPopulationModelsPackage.AGENT__PARAM_LIST:
+        setParamList((params)newValue);
         return;
       case MarkovPopulationModelsPackage.AGENT__ACT:
         getAct().clear();
@@ -229,6 +296,9 @@ public class agentImpl extends MinimalEObjectImpl.Container implements agent
       case MarkovPopulationModelsPackage.AGENT__NAME:
         setName(NAME_EDEFAULT);
         return;
+      case MarkovPopulationModelsPackage.AGENT__PARAM_LIST:
+        setParamList((params)null);
+        return;
       case MarkovPopulationModelsPackage.AGENT__ACT:
         getAct().clear();
         return;
@@ -251,6 +321,8 @@ public class agentImpl extends MinimalEObjectImpl.Container implements agent
     {
       case MarkovPopulationModelsPackage.AGENT__NAME:
         return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+      case MarkovPopulationModelsPackage.AGENT__PARAM_LIST:
+        return paramList != null;
       case MarkovPopulationModelsPackage.AGENT__ACT:
         return act != null && !act.isEmpty();
       case MarkovPopulationModelsPackage.AGENT__S:

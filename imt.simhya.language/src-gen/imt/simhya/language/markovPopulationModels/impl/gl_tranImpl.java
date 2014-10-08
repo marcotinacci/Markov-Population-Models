@@ -4,6 +4,7 @@ package imt.simhya.language.markovPopulationModels.impl;
 
 import imt.simhya.language.markovPopulationModels.MarkovPopulationModelsPackage;
 import imt.simhya.language.markovPopulationModels.expr;
+import imt.simhya.language.markovPopulationModels.generator;
 import imt.simhya.language.markovPopulationModels.gl_tran;
 import imt.simhya.language.markovPopulationModels.loc_tran;
 
@@ -31,6 +32,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * The following features are implemented:
  * <ul>
  *   <li>{@link imt.simhya.language.markovPopulationModels.impl.gl_tranImpl#getName <em>Name</em>}</li>
+ *   <li>{@link imt.simhya.language.markovPopulationModels.impl.gl_tranImpl#getGenerators <em>Generators</em>}</li>
  *   <li>{@link imt.simhya.language.markovPopulationModels.impl.gl_tranImpl#getLTran <em>LTran</em>}</li>
  *   <li>{@link imt.simhya.language.markovPopulationModels.impl.gl_tranImpl#getRate <em>Rate</em>}</li>
  * </ul>
@@ -59,6 +61,16 @@ public class gl_tranImpl extends MinimalEObjectImpl.Container implements gl_tran
    * @ordered
    */
   protected String name = NAME_EDEFAULT;
+
+  /**
+   * The cached value of the '{@link #getGenerators() <em>Generators</em>}' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getGenerators()
+   * @generated
+   * @ordered
+   */
+  protected EList<generator> generators;
 
   /**
    * The cached value of the '{@link #getLTran() <em>LTran</em>}' containment reference list.
@@ -122,6 +134,20 @@ public class gl_tranImpl extends MinimalEObjectImpl.Container implements gl_tran
     name = newName;
     if (eNotificationRequired())
       eNotify(new ENotificationImpl(this, Notification.SET, MarkovPopulationModelsPackage.GL_TRAN__NAME, oldName, name));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EList<generator> getGenerators()
+  {
+    if (generators == null)
+    {
+      generators = new EObjectContainmentEList<generator>(generator.class, this, MarkovPopulationModelsPackage.GL_TRAN__GENERATORS);
+    }
+    return generators;
   }
 
   /**
@@ -196,6 +222,8 @@ public class gl_tranImpl extends MinimalEObjectImpl.Container implements gl_tran
   {
     switch (featureID)
     {
+      case MarkovPopulationModelsPackage.GL_TRAN__GENERATORS:
+        return ((InternalEList<?>)getGenerators()).basicRemove(otherEnd, msgs);
       case MarkovPopulationModelsPackage.GL_TRAN__LTRAN:
         return ((InternalEList<?>)getLTran()).basicRemove(otherEnd, msgs);
       case MarkovPopulationModelsPackage.GL_TRAN__RATE:
@@ -216,6 +244,8 @@ public class gl_tranImpl extends MinimalEObjectImpl.Container implements gl_tran
     {
       case MarkovPopulationModelsPackage.GL_TRAN__NAME:
         return getName();
+      case MarkovPopulationModelsPackage.GL_TRAN__GENERATORS:
+        return getGenerators();
       case MarkovPopulationModelsPackage.GL_TRAN__LTRAN:
         return getLTran();
       case MarkovPopulationModelsPackage.GL_TRAN__RATE:
@@ -237,6 +267,10 @@ public class gl_tranImpl extends MinimalEObjectImpl.Container implements gl_tran
     {
       case MarkovPopulationModelsPackage.GL_TRAN__NAME:
         setName((String)newValue);
+        return;
+      case MarkovPopulationModelsPackage.GL_TRAN__GENERATORS:
+        getGenerators().clear();
+        getGenerators().addAll((Collection<? extends generator>)newValue);
         return;
       case MarkovPopulationModelsPackage.GL_TRAN__LTRAN:
         getLTran().clear();
@@ -262,6 +296,9 @@ public class gl_tranImpl extends MinimalEObjectImpl.Container implements gl_tran
       case MarkovPopulationModelsPackage.GL_TRAN__NAME:
         setName(NAME_EDEFAULT);
         return;
+      case MarkovPopulationModelsPackage.GL_TRAN__GENERATORS:
+        getGenerators().clear();
+        return;
       case MarkovPopulationModelsPackage.GL_TRAN__LTRAN:
         getLTran().clear();
         return;
@@ -284,6 +321,8 @@ public class gl_tranImpl extends MinimalEObjectImpl.Container implements gl_tran
     {
       case MarkovPopulationModelsPackage.GL_TRAN__NAME:
         return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+      case MarkovPopulationModelsPackage.GL_TRAN__GENERATORS:
+        return generators != null && !generators.isEmpty();
       case MarkovPopulationModelsPackage.GL_TRAN__LTRAN:
         return lTran != null && !lTran.isEmpty();
       case MarkovPopulationModelsPackage.GL_TRAN__RATE:

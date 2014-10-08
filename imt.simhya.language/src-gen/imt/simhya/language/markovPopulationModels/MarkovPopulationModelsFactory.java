@@ -41,6 +41,33 @@ public interface MarkovPopulationModelsFactory extends EFactory
   constant createconstant();
 
   /**
+   * Returns a new object of class '<em>expr</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>expr</em>'.
+   * @generated
+   */
+  expr createexpr();
+
+  /**
+   * Returns a new object of class '<em>params</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>params</em>'.
+   * @generated
+   */
+  params createparams();
+
+  /**
+   * Returns a new object of class '<em>actual parameters</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>actual parameters</em>'.
+   * @generated
+   */
+  actual_parameters createactual_parameters();
+
+  /**
    * Returns a new object of class '<em>agent</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -77,13 +104,13 @@ public interface MarkovPopulationModelsFactory extends EFactory
   action createaction();
 
   /**
-   * Returns a new object of class '<em>local rate</em>'.
+   * Returns a new object of class '<em>exprova</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @return a new object of class '<em>local rate</em>'.
+   * @return a new object of class '<em>exprova</em>'.
    * @generated
    */
-  local_rate createlocal_rate();
+  exprova createexprova();
 
   /**
    * Returns a new object of class '<em>population</em>'.
@@ -122,6 +149,15 @@ public interface MarkovPopulationModelsFactory extends EFactory
   gl_tran creategl_tran();
 
   /**
+   * Returns a new object of class '<em>generator</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>generator</em>'.
+   * @generated
+   */
+  generator creategenerator();
+
+  /**
    * Returns a new object of class '<em>loc tran</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -149,6 +185,15 @@ public interface MarkovPopulationModelsFactory extends EFactory
   state_ref createstate_ref();
 
   /**
+   * Returns a new object of class '<em>agent state ref</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>agent state ref</em>'.
+   * @generated
+   */
+  agent_state_ref createagent_state_ref();
+
+  /**
    * Returns a new object of class '<em>action cond</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -156,15 +201,6 @@ public interface MarkovPopulationModelsFactory extends EFactory
    * @generated
    */
   action_cond createaction_cond();
-
-  /**
-   * Returns a new object of class '<em>expr</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>expr</em>'.
-   * @generated
-   */
-  expr createexpr();
 
   /**
    * Returns a new object of class '<em>anystate</em>'.

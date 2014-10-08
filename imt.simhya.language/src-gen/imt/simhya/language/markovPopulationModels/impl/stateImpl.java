@@ -4,6 +4,7 @@ package imt.simhya.language.markovPopulationModels.impl;
 
 import imt.simhya.language.markovPopulationModels.MarkovPopulationModelsPackage;
 import imt.simhya.language.markovPopulationModels.action;
+import imt.simhya.language.markovPopulationModels.params;
 import imt.simhya.language.markovPopulationModels.state;
 
 import java.util.Collection;
@@ -30,6 +31,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * The following features are implemented:
  * <ul>
  *   <li>{@link imt.simhya.language.markovPopulationModels.impl.stateImpl#getName <em>Name</em>}</li>
+ *   <li>{@link imt.simhya.language.markovPopulationModels.impl.stateImpl#getParamList <em>Param List</em>}</li>
  *   <li>{@link imt.simhya.language.markovPopulationModels.impl.stateImpl#getSpontaneousAct <em>Spontaneous Act</em>}</li>
  * </ul>
  * </p>
@@ -57,6 +59,16 @@ public class stateImpl extends MinimalEObjectImpl.Container implements state
    * @ordered
    */
   protected String name = NAME_EDEFAULT;
+
+  /**
+   * The cached value of the '{@link #getParamList() <em>Param List</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getParamList()
+   * @generated
+   * @ordered
+   */
+  protected params paramList;
 
   /**
    * The cached value of the '{@link #getSpontaneousAct() <em>Spontaneous Act</em>}' containment reference list.
@@ -117,6 +129,54 @@ public class stateImpl extends MinimalEObjectImpl.Container implements state
    * <!-- end-user-doc -->
    * @generated
    */
+  public params getParamList()
+  {
+    return paramList;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public NotificationChain basicSetParamList(params newParamList, NotificationChain msgs)
+  {
+    params oldParamList = paramList;
+    paramList = newParamList;
+    if (eNotificationRequired())
+    {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, MarkovPopulationModelsPackage.STATE__PARAM_LIST, oldParamList, newParamList);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
+    }
+    return msgs;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setParamList(params newParamList)
+  {
+    if (newParamList != paramList)
+    {
+      NotificationChain msgs = null;
+      if (paramList != null)
+        msgs = ((InternalEObject)paramList).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - MarkovPopulationModelsPackage.STATE__PARAM_LIST, null, msgs);
+      if (newParamList != null)
+        msgs = ((InternalEObject)newParamList).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - MarkovPopulationModelsPackage.STATE__PARAM_LIST, null, msgs);
+      msgs = basicSetParamList(newParamList, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, MarkovPopulationModelsPackage.STATE__PARAM_LIST, newParamList, newParamList));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EList<action> getSpontaneousAct()
   {
     if (spontaneousAct == null)
@@ -136,6 +196,8 @@ public class stateImpl extends MinimalEObjectImpl.Container implements state
   {
     switch (featureID)
     {
+      case MarkovPopulationModelsPackage.STATE__PARAM_LIST:
+        return basicSetParamList(null, msgs);
       case MarkovPopulationModelsPackage.STATE__SPONTANEOUS_ACT:
         return ((InternalEList<?>)getSpontaneousAct()).basicRemove(otherEnd, msgs);
     }
@@ -154,6 +216,8 @@ public class stateImpl extends MinimalEObjectImpl.Container implements state
     {
       case MarkovPopulationModelsPackage.STATE__NAME:
         return getName();
+      case MarkovPopulationModelsPackage.STATE__PARAM_LIST:
+        return getParamList();
       case MarkovPopulationModelsPackage.STATE__SPONTANEOUS_ACT:
         return getSpontaneousAct();
     }
@@ -173,6 +237,9 @@ public class stateImpl extends MinimalEObjectImpl.Container implements state
     {
       case MarkovPopulationModelsPackage.STATE__NAME:
         setName((String)newValue);
+        return;
+      case MarkovPopulationModelsPackage.STATE__PARAM_LIST:
+        setParamList((params)newValue);
         return;
       case MarkovPopulationModelsPackage.STATE__SPONTANEOUS_ACT:
         getSpontaneousAct().clear();
@@ -195,6 +262,9 @@ public class stateImpl extends MinimalEObjectImpl.Container implements state
       case MarkovPopulationModelsPackage.STATE__NAME:
         setName(NAME_EDEFAULT);
         return;
+      case MarkovPopulationModelsPackage.STATE__PARAM_LIST:
+        setParamList((params)null);
+        return;
       case MarkovPopulationModelsPackage.STATE__SPONTANEOUS_ACT:
         getSpontaneousAct().clear();
         return;
@@ -214,6 +284,8 @@ public class stateImpl extends MinimalEObjectImpl.Container implements state
     {
       case MarkovPopulationModelsPackage.STATE__NAME:
         return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
+      case MarkovPopulationModelsPackage.STATE__PARAM_LIST:
+        return paramList != null;
       case MarkovPopulationModelsPackage.STATE__SPONTANEOUS_ACT:
         return spontaneousAct != null && !spontaneousAct.isEmpty();
     }

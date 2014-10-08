@@ -15,6 +15,7 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * <ul>
  *   <li>{@link imt.simhya.language.markovPopulationModels.state#getName <em>Name</em>}</li>
+ *   <li>{@link imt.simhya.language.markovPopulationModels.state#getParamList <em>Param List</em>}</li>
  *   <li>{@link imt.simhya.language.markovPopulationModels.state#getSpontaneousAct <em>Spontaneous Act</em>}</li>
  * </ul>
  * </p>
@@ -50,6 +51,32 @@ public interface state extends EObject
    * @generated
    */
   void setName(String value);
+
+  /**
+   * Returns the value of the '<em><b>Param List</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Param List</em>' containment reference isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Param List</em>' containment reference.
+   * @see #setParamList(params)
+   * @see imt.simhya.language.markovPopulationModels.MarkovPopulationModelsPackage#getstate_ParamList()
+   * @model containment="true"
+   * @generated
+   */
+  params getParamList();
+
+  /**
+   * Sets the value of the '{@link imt.simhya.language.markovPopulationModels.state#getParamList <em>Param List</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Param List</em>' containment reference.
+   * @see #getParamList()
+   * @generated
+   */
+  void setParamList(params value);
 
   /**
    * Returns the value of the '<em><b>Spontaneous Act</b></em>' containment reference list.

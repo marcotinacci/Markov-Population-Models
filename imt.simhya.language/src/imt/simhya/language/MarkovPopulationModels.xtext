@@ -6,7 +6,7 @@ generate markovPopulationModels "http://www.simhya.imt/language/MarkovPopulation
 //extension
 
 main:
-	(constDef+= constant)* & populationDef=population & agentDef=agent
+	(constDef+= constant)* & populationDef=population & (agentDef+=agent)+ 
 ;
 
 constant:
@@ -14,8 +14,24 @@ constant:
 	'const real' name=ID '=' constFLOAT=FLOAT
 ;
 
+expr:
+	constRef= [constant]|
+	constFLOAT= FLOAT|
+	constINT= INT
+	//stateRef=[state]	
+;
+
+params:
+	'[' params+= ID (',' params+= ID)*']'	
+;
+
+actual_parameters:
+	'[' actualParams+= expr (',' actualParams+= expr)*']'	
+;
+
+
 agent:
-	'agent' name=ID '{'
+	'agent' name=ID paramList=params?	'{'
 		'actions' act+=label+
 		s+=state+
 	'}'
@@ -26,71 +42,82 @@ label:
 ;
 
 state:
-	'state' name=ID '{'
+	'state' name=ID paramList=params?	 '{'
 		spontaneousAct+=action+
 	'}'
 ;
 
+
 // TODO guards
+// no state[params] but state[param_expr]
 action:
-	actRef=[label] '-->' stateRef=[state] ':' localRate=local_rate
+	actRef=[label] '-->' stateRef=[state] ('[' params+=exprova (',' params+=exprova)*']')? ':' localRate=expr
 ;
 
-local_rate:
-	constRef=[constant]|
-	localRate= FLOAT
+exprova:
+	expr= ID|
+	expr= ID '+' num=INT|
+	expr= ID '-' num=INT
 ;
+
 
 population:
-	'population' name=ID '{'
+	'population' name=ID paramList=params? '{'
 		'init' agents+=init ('||' agents+=init)*
 		tran+= gl_tran+
 	'}'
 ;
 
 init:
-	agentRef=[agent] '{'
+	agentRef=[agent] actualParameters=actual_parameters? '{'
 		states+=stateInit (',' states+=stateInit)*
 	'}'
 ;
 
 stateInit:
-	stateRef=[state] '=' card=INT	
+	stateRef=state_ref '=' card=expr
 ;
 
 gl_tran:
 	'transition'
-	name=ID '{'
+	name=ID ('[' generators+=generator (';' generators+=generator)*']')? '{'
 		lTran+=loc_tran ('&' lTran+=loc_tran)* '=>' rate=expr
 	'}'
 ;
 
+generator:
+	name=ID '='	( 
+		valueEXP=expr | 
+		valueMin = expr '...' valueMax = expr |
+		'{' valueList+= expr (',' valueList+= expr )+ '}'
+		)
+;
+
 loc_tran:
-	'new' stateRef=[state]|
-	'kill' stateRef=[state]|
+	'new' stateRef=state_ref|
+	'kill' stateRef=state_ref|
 	 sCond= state_cond ':' aCond=action_cond	
 ;
 
 state_cond:
 	{anystate} 'any' |
-	// stateRef= state_ref
-	stateRef+=state_ref ('or' stateRef+= state_ref)* 
+	stateRef+=state_ref ('or' stateRef+= state_ref)* |
+	agentStateRef+=agent_state_ref ('or' agentStateRef+=agent_state_ref)* 
+// qui potremmmo volere state_ref con parametri generali e non attuali per le regole
 ;
 
 state_ref:
-	stateRef=[state]
+	stateRef=[state] actualParameters=actual_parameters? 
+//	agentStateRef= [agent]'.'stateRef = [state] actualParameters=actual_parameters?
+;
+
+agent_state_ref:
+	agentStateRef= [agent]'.'stateRef = state_ref
 ;
 
 action_cond:
 	{anystate} 'any' |
 	actionRef= [label]	
-;
-
-expr:
-	constRef= [constant]|
-	constFLOAT= FLOAT|
-	constINT= INT
-	//{stateExpr} stateRef=[state]	
 ;
 
 terminal INT returns ecore::EInt: ('0'..'9')+;

@@ -15,6 +15,7 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * <ul>
  *   <li>{@link imt.simhya.language.markovPopulationModels.init#getAgentRef <em>Agent Ref</em>}</li>
+ *   <li>{@link imt.simhya.language.markovPopulationModels.init#getActualParameters <em>Actual Parameters</em>}</li>
  *   <li>{@link imt.simhya.language.markovPopulationModels.init#getStates <em>States</em>}</li>
  * </ul>
  * </p>
@@ -50,6 +51,32 @@ public interface init extends EObject
    * @generated
    */
   void setAgentRef(agent value);
+
+  /**
+   * Returns the value of the '<em><b>Actual Parameters</b></em>' containment reference.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Actual Parameters</em>' containment reference isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Actual Parameters</em>' containment reference.
+   * @see #setActualParameters(actual_parameters)
+   * @see imt.simhya.language.markovPopulationModels.MarkovPopulationModelsPackage#getinit_ActualParameters()
+   * @model containment="true"
+   * @generated
+   */
+  actual_parameters getActualParameters();
+
+  /**
+   * Sets the value of the '{@link imt.simhya.language.markovPopulationModels.init#getActualParameters <em>Actual Parameters</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Actual Parameters</em>' containment reference.
+   * @see #getActualParameters()
+   * @generated
+   */
+  void setActualParameters(actual_parameters value);
 
   /**
    * Returns the value of the '<em><b>States</b></em>' containment reference list.

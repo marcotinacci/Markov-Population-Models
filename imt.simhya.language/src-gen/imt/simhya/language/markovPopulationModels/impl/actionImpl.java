@@ -4,18 +4,26 @@ package imt.simhya.language.markovPopulationModels.impl;
 
 import imt.simhya.language.markovPopulationModels.MarkovPopulationModelsPackage;
 import imt.simhya.language.markovPopulationModels.action;
+import imt.simhya.language.markovPopulationModels.expr;
+import imt.simhya.language.markovPopulationModels.exprova;
 import imt.simhya.language.markovPopulationModels.label;
-import imt.simhya.language.markovPopulationModels.local_rate;
 import imt.simhya.language.markovPopulationModels.state;
+
+import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
+
+import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
+
+import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
  * <!-- begin-user-doc -->
@@ -26,6 +34,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * <ul>
  *   <li>{@link imt.simhya.language.markovPopulationModels.impl.actionImpl#getActRef <em>Act Ref</em>}</li>
  *   <li>{@link imt.simhya.language.markovPopulationModels.impl.actionImpl#getStateRef <em>State Ref</em>}</li>
+ *   <li>{@link imt.simhya.language.markovPopulationModels.impl.actionImpl#getParams <em>Params</em>}</li>
  *   <li>{@link imt.simhya.language.markovPopulationModels.impl.actionImpl#getLocalRate <em>Local Rate</em>}</li>
  * </ul>
  * </p>
@@ -55,6 +64,16 @@ public class actionImpl extends MinimalEObjectImpl.Container implements action
   protected state stateRef;
 
   /**
+   * The cached value of the '{@link #getParams() <em>Params</em>}' containment reference list.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getParams()
+   * @generated
+   * @ordered
+   */
+  protected EList<exprova> params;
+
+  /**
    * The cached value of the '{@link #getLocalRate() <em>Local Rate</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -62,7 +81,7 @@ public class actionImpl extends MinimalEObjectImpl.Container implements action
    * @generated
    * @ordered
    */
-  protected local_rate localRate;
+  protected expr localRate;
 
   /**
    * <!-- begin-user-doc -->
@@ -176,7 +195,21 @@ public class actionImpl extends MinimalEObjectImpl.Container implements action
    * <!-- end-user-doc -->
    * @generated
    */
-  public local_rate getLocalRate()
+  public EList<exprova> getParams()
+  {
+    if (params == null)
+    {
+      params = new EObjectContainmentEList<exprova>(exprova.class, this, MarkovPopulationModelsPackage.ACTION__PARAMS);
+    }
+    return params;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public expr getLocalRate()
   {
     return localRate;
   }
@@ -186,9 +219,9 @@ public class actionImpl extends MinimalEObjectImpl.Container implements action
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetLocalRate(local_rate newLocalRate, NotificationChain msgs)
+  public NotificationChain basicSetLocalRate(expr newLocalRate, NotificationChain msgs)
   {
-    local_rate oldLocalRate = localRate;
+    expr oldLocalRate = localRate;
     localRate = newLocalRate;
     if (eNotificationRequired())
     {
@@ -203,7 +236,7 @@ public class actionImpl extends MinimalEObjectImpl.Container implements action
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setLocalRate(local_rate newLocalRate)
+  public void setLocalRate(expr newLocalRate)
   {
     if (newLocalRate != localRate)
     {
@@ -229,6 +262,8 @@ public class actionImpl extends MinimalEObjectImpl.Container implements action
   {
     switch (featureID)
     {
+      case MarkovPopulationModelsPackage.ACTION__PARAMS:
+        return ((InternalEList<?>)getParams()).basicRemove(otherEnd, msgs);
       case MarkovPopulationModelsPackage.ACTION__LOCAL_RATE:
         return basicSetLocalRate(null, msgs);
     }
@@ -251,6 +286,8 @@ public class actionImpl extends MinimalEObjectImpl.Container implements action
       case MarkovPopulationModelsPackage.ACTION__STATE_REF:
         if (resolve) return getStateRef();
         return basicGetStateRef();
+      case MarkovPopulationModelsPackage.ACTION__PARAMS:
+        return getParams();
       case MarkovPopulationModelsPackage.ACTION__LOCAL_RATE:
         return getLocalRate();
     }
@@ -262,6 +299,7 @@ public class actionImpl extends MinimalEObjectImpl.Container implements action
    * <!-- end-user-doc -->
    * @generated
    */
+  @SuppressWarnings("unchecked")
   @Override
   public void eSet(int featureID, Object newValue)
   {
@@ -273,8 +311,12 @@ public class actionImpl extends MinimalEObjectImpl.Container implements action
       case MarkovPopulationModelsPackage.ACTION__STATE_REF:
         setStateRef((state)newValue);
         return;
+      case MarkovPopulationModelsPackage.ACTION__PARAMS:
+        getParams().clear();
+        getParams().addAll((Collection<? extends exprova>)newValue);
+        return;
       case MarkovPopulationModelsPackage.ACTION__LOCAL_RATE:
-        setLocalRate((local_rate)newValue);
+        setLocalRate((expr)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -296,8 +338,11 @@ public class actionImpl extends MinimalEObjectImpl.Container implements action
       case MarkovPopulationModelsPackage.ACTION__STATE_REF:
         setStateRef((state)null);
         return;
+      case MarkovPopulationModelsPackage.ACTION__PARAMS:
+        getParams().clear();
+        return;
       case MarkovPopulationModelsPackage.ACTION__LOCAL_RATE:
-        setLocalRate((local_rate)null);
+        setLocalRate((expr)null);
         return;
     }
     super.eUnset(featureID);
@@ -317,6 +362,8 @@ public class actionImpl extends MinimalEObjectImpl.Container implements action
         return actRef != null;
       case MarkovPopulationModelsPackage.ACTION__STATE_REF:
         return stateRef != null;
+      case MarkovPopulationModelsPackage.ACTION__PARAMS:
+        return params != null && !params.isEmpty();
       case MarkovPopulationModelsPackage.ACTION__LOCAL_RATE:
         return localRate != null;
     }
