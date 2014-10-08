@@ -8,7 +8,6 @@ import imt.simhya.language.markovPopulationModels.action;
 import imt.simhya.language.markovPopulationModels.action_cond;
 import imt.simhya.language.markovPopulationModels.actual_parameters;
 import imt.simhya.language.markovPopulationModels.agent;
-import imt.simhya.language.markovPopulationModels.agent_state_ref;
 import imt.simhya.language.markovPopulationModels.anystate;
 import imt.simhya.language.markovPopulationModels.constant;
 import imt.simhya.language.markovPopulationModels.expr;
@@ -166,13 +165,6 @@ public class MarkovPopulationModelsPackageImpl extends EPackageImpl implements M
    * @generated
    */
   private EClass state_refEClass = null;
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  private EClass agent_state_refEClass = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -696,6 +688,26 @@ public class MarkovPopulationModelsPackageImpl extends EPackageImpl implements M
    * <!-- end-user-doc -->
    * @generated
    */
+  public EReference getinit_PopRef()
+  {
+    return (EReference)initEClass.getEStructuralFeatures().get(3);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getinit_Card()
+  {
+    return (EReference)initEClass.getEStructuralFeatures().get(4);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EClass getstateInit()
   {
     return stateInitEClass;
@@ -896,16 +908,6 @@ public class MarkovPopulationModelsPackageImpl extends EPackageImpl implements M
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getstate_cond_AgentStateRef()
-  {
-    return (EReference)state_condEClass.getEStructuralFeatures().get(1);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
   public EClass getstate_ref()
   {
     return state_refEClass;
@@ -936,9 +938,9 @@ public class MarkovPopulationModelsPackageImpl extends EPackageImpl implements M
    * <!-- end-user-doc -->
    * @generated
    */
-  public EClass getagent_state_ref()
+  public EReference getstate_ref_AgentStateRef()
   {
-    return agent_state_refEClass;
+    return (EReference)state_refEClass.getEStructuralFeatures().get(2);
   }
 
   /**
@@ -946,19 +948,9 @@ public class MarkovPopulationModelsPackageImpl extends EPackageImpl implements M
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getagent_state_ref_AgentStateRef()
+  public EReference getstate_ref_PopAgentStateRef()
   {
-    return (EReference)agent_state_refEClass.getEStructuralFeatures().get(0);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public EReference getagent_state_ref_StateRef()
-  {
-    return (EReference)agent_state_refEClass.getEStructuralFeatures().get(1);
+    return (EReference)state_refEClass.getEStructuralFeatures().get(3);
   }
 
   /**
@@ -1076,6 +1068,8 @@ public class MarkovPopulationModelsPackageImpl extends EPackageImpl implements M
     createEReference(initEClass, INIT__AGENT_REF);
     createEReference(initEClass, INIT__ACTUAL_PARAMETERS);
     createEReference(initEClass, INIT__STATES);
+    createEReference(initEClass, INIT__POP_REF);
+    createEReference(initEClass, INIT__CARD);
 
     stateInitEClass = createEClass(STATE_INIT);
     createEReference(stateInitEClass, STATE_INIT__STATE_REF);
@@ -1101,15 +1095,12 @@ public class MarkovPopulationModelsPackageImpl extends EPackageImpl implements M
 
     state_condEClass = createEClass(STATE_COND);
     createEReference(state_condEClass, STATE_COND__STATE_REF);
-    createEReference(state_condEClass, STATE_COND__AGENT_STATE_REF);
 
     state_refEClass = createEClass(STATE_REF);
     createEReference(state_refEClass, STATE_REF__STATE_REF);
     createEReference(state_refEClass, STATE_REF__ACTUAL_PARAMETERS);
-
-    agent_state_refEClass = createEClass(AGENT_STATE_REF);
-    createEReference(agent_state_refEClass, AGENT_STATE_REF__AGENT_STATE_REF);
-    createEReference(agent_state_refEClass, AGENT_STATE_REF__STATE_REF);
+    createEReference(state_refEClass, STATE_REF__AGENT_STATE_REF);
+    createEReference(state_refEClass, STATE_REF__POP_AGENT_STATE_REF);
 
     action_condEClass = createEClass(ACTION_COND);
     createEReference(action_condEClass, ACTION_COND__ACTION_REF);
@@ -1152,7 +1143,7 @@ public class MarkovPopulationModelsPackageImpl extends EPackageImpl implements M
     // Initialize classes and features; add operations and parameters
     initEClass(mainEClass, main.class, "main", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getmain_ConstDef(), this.getconstant(), null, "constDef", null, 0, -1, main.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getmain_PopulationDef(), this.getpopulation(), null, "populationDef", null, 0, 1, main.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getmain_PopulationDef(), this.getpopulation(), null, "populationDef", null, 0, -1, main.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getmain_AgentDef(), this.getagent(), null, "agentDef", null, 0, -1, main.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(constantEClass, constant.class, "constant", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -1205,6 +1196,8 @@ public class MarkovPopulationModelsPackageImpl extends EPackageImpl implements M
     initEReference(getinit_AgentRef(), this.getagent(), null, "agentRef", null, 0, 1, init.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getinit_ActualParameters(), this.getactual_parameters(), null, "actualParameters", null, 0, 1, init.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getinit_States(), this.getstateInit(), null, "states", null, 0, -1, init.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getinit_PopRef(), this.getpopulation(), null, "popRef", null, 0, 1, init.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getinit_Card(), this.getexpr(), null, "card", null, 0, 1, init.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(stateInitEClass, stateInit.class, "stateInit", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getstateInit_StateRef(), this.getstate_ref(), null, "stateRef", null, 0, 1, stateInit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1230,15 +1223,12 @@ public class MarkovPopulationModelsPackageImpl extends EPackageImpl implements M
 
     initEClass(state_condEClass, state_cond.class, "state_cond", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getstate_cond_StateRef(), this.getstate_ref(), null, "stateRef", null, 0, -1, state_cond.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getstate_cond_AgentStateRef(), this.getagent_state_ref(), null, "agentStateRef", null, 0, -1, state_cond.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(state_refEClass, state_ref.class, "state_ref", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getstate_ref_StateRef(), this.getstate(), null, "stateRef", null, 0, 1, state_ref.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getstate_ref_ActualParameters(), this.getactual_parameters(), null, "actualParameters", null, 0, 1, state_ref.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-
-    initEClass(agent_state_refEClass, agent_state_ref.class, "agent_state_ref", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getagent_state_ref_AgentStateRef(), this.getagent(), null, "agentStateRef", null, 0, 1, agent_state_ref.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getagent_state_ref_StateRef(), this.getstate_ref(), null, "stateRef", null, 0, 1, agent_state_ref.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getstate_ref_AgentStateRef(), this.getagent(), null, "agentStateRef", null, 0, 1, state_ref.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getstate_ref_PopAgentStateRef(), this.getpopulation(), null, "popAgentStateRef", null, 0, 1, state_ref.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(action_condEClass, action_cond.class, "action_cond", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getaction_cond_ActionRef(), this.getlabel(), null, "actionRef", null, 0, 1, action_cond.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

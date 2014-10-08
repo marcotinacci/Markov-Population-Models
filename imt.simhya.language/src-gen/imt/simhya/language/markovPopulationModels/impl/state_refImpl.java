@@ -4,6 +4,8 @@ package imt.simhya.language.markovPopulationModels.impl;
 
 import imt.simhya.language.markovPopulationModels.MarkovPopulationModelsPackage;
 import imt.simhya.language.markovPopulationModels.actual_parameters;
+import imt.simhya.language.markovPopulationModels.agent;
+import imt.simhya.language.markovPopulationModels.population;
 import imt.simhya.language.markovPopulationModels.state;
 import imt.simhya.language.markovPopulationModels.state_ref;
 
@@ -25,6 +27,8 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * <ul>
  *   <li>{@link imt.simhya.language.markovPopulationModels.impl.state_refImpl#getStateRef <em>State Ref</em>}</li>
  *   <li>{@link imt.simhya.language.markovPopulationModels.impl.state_refImpl#getActualParameters <em>Actual Parameters</em>}</li>
+ *   <li>{@link imt.simhya.language.markovPopulationModels.impl.state_refImpl#getAgentStateRef <em>Agent State Ref</em>}</li>
+ *   <li>{@link imt.simhya.language.markovPopulationModels.impl.state_refImpl#getPopAgentStateRef <em>Pop Agent State Ref</em>}</li>
  * </ul>
  * </p>
  *
@@ -51,6 +55,26 @@ public class state_refImpl extends MinimalEObjectImpl.Container implements state
    * @ordered
    */
   protected actual_parameters actualParameters;
+
+  /**
+   * The cached value of the '{@link #getAgentStateRef() <em>Agent State Ref</em>}' reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getAgentStateRef()
+   * @generated
+   * @ordered
+   */
+  protected agent agentStateRef;
+
+  /**
+   * The cached value of the '{@link #getPopAgentStateRef() <em>Pop Agent State Ref</em>}' reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getPopAgentStateRef()
+   * @generated
+   * @ordered
+   */
+  protected population popAgentStateRef;
 
   /**
    * <!-- begin-user-doc -->
@@ -169,6 +193,92 @@ public class state_refImpl extends MinimalEObjectImpl.Container implements state
    * <!-- end-user-doc -->
    * @generated
    */
+  public agent getAgentStateRef()
+  {
+    if (agentStateRef != null && agentStateRef.eIsProxy())
+    {
+      InternalEObject oldAgentStateRef = (InternalEObject)agentStateRef;
+      agentStateRef = (agent)eResolveProxy(oldAgentStateRef);
+      if (agentStateRef != oldAgentStateRef)
+      {
+        if (eNotificationRequired())
+          eNotify(new ENotificationImpl(this, Notification.RESOLVE, MarkovPopulationModelsPackage.STATE_REF__AGENT_STATE_REF, oldAgentStateRef, agentStateRef));
+      }
+    }
+    return agentStateRef;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public agent basicGetAgentStateRef()
+  {
+    return agentStateRef;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setAgentStateRef(agent newAgentStateRef)
+  {
+    agent oldAgentStateRef = agentStateRef;
+    agentStateRef = newAgentStateRef;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, MarkovPopulationModelsPackage.STATE_REF__AGENT_STATE_REF, oldAgentStateRef, agentStateRef));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public population getPopAgentStateRef()
+  {
+    if (popAgentStateRef != null && popAgentStateRef.eIsProxy())
+    {
+      InternalEObject oldPopAgentStateRef = (InternalEObject)popAgentStateRef;
+      popAgentStateRef = (population)eResolveProxy(oldPopAgentStateRef);
+      if (popAgentStateRef != oldPopAgentStateRef)
+      {
+        if (eNotificationRequired())
+          eNotify(new ENotificationImpl(this, Notification.RESOLVE, MarkovPopulationModelsPackage.STATE_REF__POP_AGENT_STATE_REF, oldPopAgentStateRef, popAgentStateRef));
+      }
+    }
+    return popAgentStateRef;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public population basicGetPopAgentStateRef()
+  {
+    return popAgentStateRef;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setPopAgentStateRef(population newPopAgentStateRef)
+  {
+    population oldPopAgentStateRef = popAgentStateRef;
+    popAgentStateRef = newPopAgentStateRef;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, MarkovPopulationModelsPackage.STATE_REF__POP_AGENT_STATE_REF, oldPopAgentStateRef, popAgentStateRef));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   @Override
   public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
   {
@@ -195,6 +305,12 @@ public class state_refImpl extends MinimalEObjectImpl.Container implements state
         return basicGetStateRef();
       case MarkovPopulationModelsPackage.STATE_REF__ACTUAL_PARAMETERS:
         return getActualParameters();
+      case MarkovPopulationModelsPackage.STATE_REF__AGENT_STATE_REF:
+        if (resolve) return getAgentStateRef();
+        return basicGetAgentStateRef();
+      case MarkovPopulationModelsPackage.STATE_REF__POP_AGENT_STATE_REF:
+        if (resolve) return getPopAgentStateRef();
+        return basicGetPopAgentStateRef();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -214,6 +330,12 @@ public class state_refImpl extends MinimalEObjectImpl.Container implements state
         return;
       case MarkovPopulationModelsPackage.STATE_REF__ACTUAL_PARAMETERS:
         setActualParameters((actual_parameters)newValue);
+        return;
+      case MarkovPopulationModelsPackage.STATE_REF__AGENT_STATE_REF:
+        setAgentStateRef((agent)newValue);
+        return;
+      case MarkovPopulationModelsPackage.STATE_REF__POP_AGENT_STATE_REF:
+        setPopAgentStateRef((population)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -235,6 +357,12 @@ public class state_refImpl extends MinimalEObjectImpl.Container implements state
       case MarkovPopulationModelsPackage.STATE_REF__ACTUAL_PARAMETERS:
         setActualParameters((actual_parameters)null);
         return;
+      case MarkovPopulationModelsPackage.STATE_REF__AGENT_STATE_REF:
+        setAgentStateRef((agent)null);
+        return;
+      case MarkovPopulationModelsPackage.STATE_REF__POP_AGENT_STATE_REF:
+        setPopAgentStateRef((population)null);
+        return;
     }
     super.eUnset(featureID);
   }
@@ -253,6 +381,10 @@ public class state_refImpl extends MinimalEObjectImpl.Container implements state
         return stateRef != null;
       case MarkovPopulationModelsPackage.STATE_REF__ACTUAL_PARAMETERS:
         return actualParameters != null;
+      case MarkovPopulationModelsPackage.STATE_REF__AGENT_STATE_REF:
+        return agentStateRef != null;
+      case MarkovPopulationModelsPackage.STATE_REF__POP_AGENT_STATE_REF:
+        return popAgentStateRef != null;
     }
     return super.eIsSet(featureID);
   }

@@ -165,11 +165,6 @@ public class MarkovPopulationModelsAdapterFactory extends AdapterFactoryImpl
         return createstate_refAdapter();
       }
       @Override
-      public Adapter caseagent_state_ref(agent_state_ref object)
-      {
-        return createagent_state_refAdapter();
-      }
-      @Override
       public Adapter caseaction_cond(action_cond object)
       {
         return createaction_condAdapter();
@@ -467,21 +462,6 @@ public class MarkovPopulationModelsAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createstate_refAdapter()
-  {
-    return null;
-  }
-
-  /**
-   * Creates a new adapter for an object of class '{@link imt.simhya.language.markovPopulationModels.agent_state_ref <em>agent state ref</em>}'.
-   * <!-- begin-user-doc -->
-   * This default implementation returns null so that we can easily ignore cases;
-   * it's useful to ignore a case when inheritance will catch all the cases anyway.
-   * <!-- end-user-doc -->
-   * @return the new adapter.
-   * @see imt.simhya.language.markovPopulationModels.agent_state_ref
-   * @generated
-   */
-  public Adapter createagent_state_refAdapter()
   {
     return null;
   }

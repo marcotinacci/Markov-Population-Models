@@ -14,6 +14,8 @@ import org.eclipse.emf.ecore.EObject;
  * <ul>
  *   <li>{@link imt.simhya.language.markovPopulationModels.state_ref#getStateRef <em>State Ref</em>}</li>
  *   <li>{@link imt.simhya.language.markovPopulationModels.state_ref#getActualParameters <em>Actual Parameters</em>}</li>
+ *   <li>{@link imt.simhya.language.markovPopulationModels.state_ref#getAgentStateRef <em>Agent State Ref</em>}</li>
+ *   <li>{@link imt.simhya.language.markovPopulationModels.state_ref#getPopAgentStateRef <em>Pop Agent State Ref</em>}</li>
  * </ul>
  * </p>
  *
@@ -74,5 +76,57 @@ public interface state_ref extends EObject
    * @generated
    */
   void setActualParameters(actual_parameters value);
+
+  /**
+   * Returns the value of the '<em><b>Agent State Ref</b></em>' reference.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Agent State Ref</em>' reference isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Agent State Ref</em>' reference.
+   * @see #setAgentStateRef(agent)
+   * @see imt.simhya.language.markovPopulationModels.MarkovPopulationModelsPackage#getstate_ref_AgentStateRef()
+   * @model
+   * @generated
+   */
+  agent getAgentStateRef();
+
+  /**
+   * Sets the value of the '{@link imt.simhya.language.markovPopulationModels.state_ref#getAgentStateRef <em>Agent State Ref</em>}' reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Agent State Ref</em>' reference.
+   * @see #getAgentStateRef()
+   * @generated
+   */
+  void setAgentStateRef(agent value);
+
+  /**
+   * Returns the value of the '<em><b>Pop Agent State Ref</b></em>' reference.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Pop Agent State Ref</em>' reference isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Pop Agent State Ref</em>' reference.
+   * @see #setPopAgentStateRef(population)
+   * @see imt.simhya.language.markovPopulationModels.MarkovPopulationModelsPackage#getstate_ref_PopAgentStateRef()
+   * @model
+   * @generated
+   */
+  population getPopAgentStateRef();
+
+  /**
+   * Sets the value of the '{@link imt.simhya.language.markovPopulationModels.state_ref#getPopAgentStateRef <em>Pop Agent State Ref</em>}' reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Pop Agent State Ref</em>' reference.
+   * @see #getPopAgentStateRef()
+   * @generated
+   */
+  void setPopAgentStateRef(population value);
 
 } // state_ref

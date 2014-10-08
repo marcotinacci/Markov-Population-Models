@@ -5,8 +5,8 @@
   <eClassifiers xsi:type="ecore:EClass" name="main">
     <eStructuralFeatures xsi:type="ecore:EReference" name="constDef" upperBound="-1"
         eType="#//constant" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="populationDef" eType="#//population"
-        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="populationDef" upperBound="-1"
+        eType="#//population" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="agentDef" upperBound="-1"
         eType="#//agent" containment="true"/>
   </eClassifiers>
@@ -74,6 +74,8 @@
         containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="states" upperBound="-1"
         eType="#//stateInit" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="popRef" eType="#//population"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="card" eType="#//expr" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="stateInit">
     <eStructuralFeatures xsi:type="ecore:EReference" name="stateRef" eType="#//state_ref"
@@ -110,18 +112,13 @@
   <eClassifiers xsi:type="ecore:EClass" name="state_cond">
     <eStructuralFeatures xsi:type="ecore:EReference" name="stateRef" upperBound="-1"
         eType="#//state_ref" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="agentStateRef" upperBound="-1"
-        eType="#//agent_state_ref" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="state_ref">
     <eStructuralFeatures xsi:type="ecore:EReference" name="stateRef" eType="#//state"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="actualParameters" eType="#//actual_parameters"
         containment="true"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="agent_state_ref">
     <eStructuralFeatures xsi:type="ecore:EReference" name="agentStateRef" eType="#//agent"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="stateRef" eType="#//state_ref"
-        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="popAgentStateRef" eType="#//population"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="action_cond">
     <eStructuralFeatures xsi:type="ecore:EReference" name="actionRef" eType="#//label"/>

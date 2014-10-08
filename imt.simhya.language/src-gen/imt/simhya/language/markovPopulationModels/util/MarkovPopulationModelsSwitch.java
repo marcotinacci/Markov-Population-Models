@@ -198,13 +198,6 @@ public class MarkovPopulationModelsSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
-      case MarkovPopulationModelsPackage.AGENT_STATE_REF:
-      {
-        agent_state_ref agent_state_ref = (agent_state_ref)theEObject;
-        T result = caseagent_state_ref(agent_state_ref);
-        if (result == null) result = defaultCase(theEObject);
-        return result;
-      }
       case MarkovPopulationModelsPackage.ACTION_COND:
       {
         action_cond action_cond = (action_cond)theEObject;
@@ -509,22 +502,6 @@ public class MarkovPopulationModelsSwitch<T> extends Switch<T>
    * @generated
    */
   public T casestate_ref(state_ref object)
-  {
-    return null;
-  }
-
-  /**
-   * Returns the result of interpreting the object as an instance of '<em>agent state ref</em>'.
-   * <!-- begin-user-doc -->
-   * This implementation returns null;
-   * returning a non-null result will terminate the switch.
-   * <!-- end-user-doc -->
-   * @param object the target of the switch.
-   * @return the result of interpreting the object as an instance of '<em>agent state ref</em>'.
-   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
-   * @generated
-   */
-  public T caseagent_state_ref(agent_state_ref object)
   {
     return null;
   }

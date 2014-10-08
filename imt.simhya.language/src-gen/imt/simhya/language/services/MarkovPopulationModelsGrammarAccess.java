@@ -30,10 +30,10 @@ public class MarkovPopulationModelsGrammarAccess extends AbstractGrammarElementF
 		
 		////extension
 		//main:
-		//	constDef+=constant* & populationDef=population & agentDef+=agent+;
+		//	constDef+=constant* & populationDef+=population+ & agentDef+=agent+;
 		public ParserRule getRule() { return rule; }
 
-		//constDef+=constant* & populationDef=population & agentDef+=agent+
+		//constDef+=constant* & populationDef+=population+ & agentDef+=agent+
 		public UnorderedGroup getUnorderedGroup() { return cUnorderedGroup; }
 
 		//constDef+=constant*
@@ -42,7 +42,7 @@ public class MarkovPopulationModelsGrammarAccess extends AbstractGrammarElementF
 		//constant
 		public RuleCall getConstDefConstantParserRuleCall_0_0() { return cConstDefConstantParserRuleCall_0_0; }
 
-		//populationDef=population
+		//populationDef+=population+
 		public Assignment getPopulationDefAssignment_1() { return cPopulationDefAssignment_1; }
 
 		//population
@@ -612,66 +612,104 @@ public class MarkovPopulationModelsGrammarAccess extends AbstractGrammarElementF
 
 	public class InitElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "init");
-		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Assignment cAgentRefAssignment_0 = (Assignment)cGroup.eContents().get(0);
-		private final CrossReference cAgentRefAgentCrossReference_0_0 = (CrossReference)cAgentRefAssignment_0.eContents().get(0);
-		private final RuleCall cAgentRefAgentIDTerminalRuleCall_0_0_1 = (RuleCall)cAgentRefAgentCrossReference_0_0.eContents().get(1);
-		private final Assignment cActualParametersAssignment_1 = (Assignment)cGroup.eContents().get(1);
-		private final RuleCall cActualParametersActual_parametersParserRuleCall_1_0 = (RuleCall)cActualParametersAssignment_1.eContents().get(0);
-		private final Keyword cLeftCurlyBracketKeyword_2 = (Keyword)cGroup.eContents().get(2);
-		private final Assignment cStatesAssignment_3 = (Assignment)cGroup.eContents().get(3);
-		private final RuleCall cStatesStateInitParserRuleCall_3_0 = (RuleCall)cStatesAssignment_3.eContents().get(0);
-		private final Group cGroup_4 = (Group)cGroup.eContents().get(4);
-		private final Keyword cCommaKeyword_4_0 = (Keyword)cGroup_4.eContents().get(0);
-		private final Assignment cStatesAssignment_4_1 = (Assignment)cGroup_4.eContents().get(1);
-		private final RuleCall cStatesStateInitParserRuleCall_4_1_0 = (RuleCall)cStatesAssignment_4_1.eContents().get(0);
-		private final Keyword cRightCurlyBracketKeyword_5 = (Keyword)cGroup.eContents().get(5);
+		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
+		private final Group cGroup_0 = (Group)cAlternatives.eContents().get(0);
+		private final Assignment cAgentRefAssignment_0_0 = (Assignment)cGroup_0.eContents().get(0);
+		private final CrossReference cAgentRefAgentCrossReference_0_0_0 = (CrossReference)cAgentRefAssignment_0_0.eContents().get(0);
+		private final RuleCall cAgentRefAgentIDTerminalRuleCall_0_0_0_1 = (RuleCall)cAgentRefAgentCrossReference_0_0_0.eContents().get(1);
+		private final Assignment cActualParametersAssignment_0_1 = (Assignment)cGroup_0.eContents().get(1);
+		private final RuleCall cActualParametersActual_parametersParserRuleCall_0_1_0 = (RuleCall)cActualParametersAssignment_0_1.eContents().get(0);
+		private final Keyword cLeftCurlyBracketKeyword_0_2 = (Keyword)cGroup_0.eContents().get(2);
+		private final Assignment cStatesAssignment_0_3 = (Assignment)cGroup_0.eContents().get(3);
+		private final RuleCall cStatesStateInitParserRuleCall_0_3_0 = (RuleCall)cStatesAssignment_0_3.eContents().get(0);
+		private final Group cGroup_0_4 = (Group)cGroup_0.eContents().get(4);
+		private final Keyword cCommaKeyword_0_4_0 = (Keyword)cGroup_0_4.eContents().get(0);
+		private final Assignment cStatesAssignment_0_4_1 = (Assignment)cGroup_0_4.eContents().get(1);
+		private final RuleCall cStatesStateInitParserRuleCall_0_4_1_0 = (RuleCall)cStatesAssignment_0_4_1.eContents().get(0);
+		private final Keyword cRightCurlyBracketKeyword_0_5 = (Keyword)cGroup_0.eContents().get(5);
+		private final Group cGroup_1 = (Group)cAlternatives.eContents().get(1);
+		private final Assignment cPopRefAssignment_1_0 = (Assignment)cGroup_1.eContents().get(0);
+		private final CrossReference cPopRefPopulationCrossReference_1_0_0 = (CrossReference)cPopRefAssignment_1_0.eContents().get(0);
+		private final RuleCall cPopRefPopulationIDTerminalRuleCall_1_0_0_1 = (RuleCall)cPopRefPopulationCrossReference_1_0_0.eContents().get(1);
+		private final Keyword cLeftCurlyBracketKeyword_1_1 = (Keyword)cGroup_1.eContents().get(1);
+		private final Assignment cCardAssignment_1_2 = (Assignment)cGroup_1.eContents().get(2);
+		private final RuleCall cCardExprParserRuleCall_1_2_0 = (RuleCall)cCardAssignment_1_2.eContents().get(0);
+		private final Keyword cRightCurlyBracketKeyword_1_3 = (Keyword)cGroup_1.eContents().get(3);
 		
 		//init:
-		//	agentRef=[agent] actualParameters=actual_parameters? "{" states+=stateInit ("," states+=stateInit)* "}";
+		//	agentRef=[agent] actualParameters=actual_parameters? "{" states+=stateInit ("," states+=stateInit)* "}" |
+		//	popRef=[population] "{" card=expr "}";
 		public ParserRule getRule() { return rule; }
 
+		//agentRef=[agent] actualParameters=actual_parameters? "{" states+=stateInit ("," states+=stateInit)* "}" |
+		//popRef=[population] "{" card=expr "}"
+		public Alternatives getAlternatives() { return cAlternatives; }
+
 		//agentRef=[agent] actualParameters=actual_parameters? "{" states+=stateInit ("," states+=stateInit)* "}"
-		public Group getGroup() { return cGroup; }
+		public Group getGroup_0() { return cGroup_0; }
 
 		//agentRef=[agent]
-		public Assignment getAgentRefAssignment_0() { return cAgentRefAssignment_0; }
+		public Assignment getAgentRefAssignment_0_0() { return cAgentRefAssignment_0_0; }
 
 		//[agent]
-		public CrossReference getAgentRefAgentCrossReference_0_0() { return cAgentRefAgentCrossReference_0_0; }
+		public CrossReference getAgentRefAgentCrossReference_0_0_0() { return cAgentRefAgentCrossReference_0_0_0; }
 
 		//ID
-		public RuleCall getAgentRefAgentIDTerminalRuleCall_0_0_1() { return cAgentRefAgentIDTerminalRuleCall_0_0_1; }
+		public RuleCall getAgentRefAgentIDTerminalRuleCall_0_0_0_1() { return cAgentRefAgentIDTerminalRuleCall_0_0_0_1; }
 
 		//actualParameters=actual_parameters?
-		public Assignment getActualParametersAssignment_1() { return cActualParametersAssignment_1; }
+		public Assignment getActualParametersAssignment_0_1() { return cActualParametersAssignment_0_1; }
 
 		//actual_parameters
-		public RuleCall getActualParametersActual_parametersParserRuleCall_1_0() { return cActualParametersActual_parametersParserRuleCall_1_0; }
+		public RuleCall getActualParametersActual_parametersParserRuleCall_0_1_0() { return cActualParametersActual_parametersParserRuleCall_0_1_0; }
 
 		//"{"
-		public Keyword getLeftCurlyBracketKeyword_2() { return cLeftCurlyBracketKeyword_2; }
+		public Keyword getLeftCurlyBracketKeyword_0_2() { return cLeftCurlyBracketKeyword_0_2; }
 
 		//states+=stateInit
-		public Assignment getStatesAssignment_3() { return cStatesAssignment_3; }
+		public Assignment getStatesAssignment_0_3() { return cStatesAssignment_0_3; }
 
 		//stateInit
-		public RuleCall getStatesStateInitParserRuleCall_3_0() { return cStatesStateInitParserRuleCall_3_0; }
+		public RuleCall getStatesStateInitParserRuleCall_0_3_0() { return cStatesStateInitParserRuleCall_0_3_0; }
 
 		//("," states+=stateInit)*
-		public Group getGroup_4() { return cGroup_4; }
+		public Group getGroup_0_4() { return cGroup_0_4; }
 
 		//","
-		public Keyword getCommaKeyword_4_0() { return cCommaKeyword_4_0; }
+		public Keyword getCommaKeyword_0_4_0() { return cCommaKeyword_0_4_0; }
 
 		//states+=stateInit
-		public Assignment getStatesAssignment_4_1() { return cStatesAssignment_4_1; }
+		public Assignment getStatesAssignment_0_4_1() { return cStatesAssignment_0_4_1; }
 
 		//stateInit
-		public RuleCall getStatesStateInitParserRuleCall_4_1_0() { return cStatesStateInitParserRuleCall_4_1_0; }
+		public RuleCall getStatesStateInitParserRuleCall_0_4_1_0() { return cStatesStateInitParserRuleCall_0_4_1_0; }
 
 		//"}"
-		public Keyword getRightCurlyBracketKeyword_5() { return cRightCurlyBracketKeyword_5; }
+		public Keyword getRightCurlyBracketKeyword_0_5() { return cRightCurlyBracketKeyword_0_5; }
+
+		//popRef=[population] "{" card=expr "}"
+		public Group getGroup_1() { return cGroup_1; }
+
+		//popRef=[population]
+		public Assignment getPopRefAssignment_1_0() { return cPopRefAssignment_1_0; }
+
+		//[population]
+		public CrossReference getPopRefPopulationCrossReference_1_0_0() { return cPopRefPopulationCrossReference_1_0_0; }
+
+		//ID
+		public RuleCall getPopRefPopulationIDTerminalRuleCall_1_0_0_1() { return cPopRefPopulationIDTerminalRuleCall_1_0_0_1; }
+
+		//"{"
+		public Keyword getLeftCurlyBracketKeyword_1_1() { return cLeftCurlyBracketKeyword_1_1; }
+
+		//card=expr
+		public Assignment getCardAssignment_1_2() { return cCardAssignment_1_2; }
+
+		//expr
+		public RuleCall getCardExprParserRuleCall_1_2_0() { return cCardExprParserRuleCall_1_2_0; }
+
+		//"}"
+		public Keyword getRightCurlyBracketKeyword_1_3() { return cRightCurlyBracketKeyword_1_3; }
 	}
 
 	public class StateInitElements extends AbstractParserRuleElementFinder {
@@ -989,22 +1027,13 @@ public class MarkovPopulationModelsGrammarAccess extends AbstractGrammarElementF
 		private final Keyword cOrKeyword_1_1_0 = (Keyword)cGroup_1_1.eContents().get(0);
 		private final Assignment cStateRefAssignment_1_1_1 = (Assignment)cGroup_1_1.eContents().get(1);
 		private final RuleCall cStateRefState_refParserRuleCall_1_1_1_0 = (RuleCall)cStateRefAssignment_1_1_1.eContents().get(0);
-		private final Group cGroup_2 = (Group)cAlternatives.eContents().get(2);
-		private final Assignment cAgentStateRefAssignment_2_0 = (Assignment)cGroup_2.eContents().get(0);
-		private final RuleCall cAgentStateRefAgent_state_refParserRuleCall_2_0_0 = (RuleCall)cAgentStateRefAssignment_2_0.eContents().get(0);
-		private final Group cGroup_2_1 = (Group)cGroup_2.eContents().get(1);
-		private final Keyword cOrKeyword_2_1_0 = (Keyword)cGroup_2_1.eContents().get(0);
-		private final Assignment cAgentStateRefAssignment_2_1_1 = (Assignment)cGroup_2_1.eContents().get(1);
-		private final RuleCall cAgentStateRefAgent_state_refParserRuleCall_2_1_1_0 = (RuleCall)cAgentStateRefAssignment_2_1_1.eContents().get(0);
 		
 		//// qui potremmmo volere state_ref con parametri generali e non attuali per le regole
 		//state_cond:
-		//	{anystate} "any" | stateRef+=state_ref ("or" stateRef+=state_ref)* | agentStateRef+=agent_state_ref ("or"
-		//	agentStateRef+=agent_state_ref)*;
+		//	{anystate} "any" | stateRef+=state_ref ("or" stateRef+=state_ref)*;
 		public ParserRule getRule() { return rule; }
 
-		//{anystate} "any" | stateRef+=state_ref ("or" stateRef+=state_ref)* | agentStateRef+=agent_state_ref ("or"
-		//agentStateRef+=agent_state_ref)*
+		//{anystate} "any" | stateRef+=state_ref ("or" stateRef+=state_ref)*
 		public Alternatives getAlternatives() { return cAlternatives; }
 
 		//{anystate} "any"
@@ -1036,96 +1065,142 @@ public class MarkovPopulationModelsGrammarAccess extends AbstractGrammarElementF
 
 		//state_ref
 		public RuleCall getStateRefState_refParserRuleCall_1_1_1_0() { return cStateRefState_refParserRuleCall_1_1_1_0; }
-
-		//agentStateRef+=agent_state_ref ("or" agentStateRef+=agent_state_ref)*
-		public Group getGroup_2() { return cGroup_2; }
-
-		//agentStateRef+=agent_state_ref
-		public Assignment getAgentStateRefAssignment_2_0() { return cAgentStateRefAssignment_2_0; }
-
-		//agent_state_ref
-		public RuleCall getAgentStateRefAgent_state_refParserRuleCall_2_0_0() { return cAgentStateRefAgent_state_refParserRuleCall_2_0_0; }
-
-		//("or" agentStateRef+=agent_state_ref)*
-		public Group getGroup_2_1() { return cGroup_2_1; }
-
-		//"or"
-		public Keyword getOrKeyword_2_1_0() { return cOrKeyword_2_1_0; }
-
-		//agentStateRef+=agent_state_ref
-		public Assignment getAgentStateRefAssignment_2_1_1() { return cAgentStateRefAssignment_2_1_1; }
-
-		//agent_state_ref
-		public RuleCall getAgentStateRefAgent_state_refParserRuleCall_2_1_1_0() { return cAgentStateRefAgent_state_refParserRuleCall_2_1_1_0; }
 	}
 
 	public class State_refElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "state_ref");
-		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Assignment cStateRefAssignment_0 = (Assignment)cGroup.eContents().get(0);
-		private final CrossReference cStateRefStateCrossReference_0_0 = (CrossReference)cStateRefAssignment_0.eContents().get(0);
-		private final RuleCall cStateRefStateIDTerminalRuleCall_0_0_1 = (RuleCall)cStateRefStateCrossReference_0_0.eContents().get(1);
-		private final Assignment cActualParametersAssignment_1 = (Assignment)cGroup.eContents().get(1);
-		private final RuleCall cActualParametersActual_parametersParserRuleCall_1_0 = (RuleCall)cActualParametersAssignment_1.eContents().get(0);
+		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
+		private final Group cGroup_0 = (Group)cAlternatives.eContents().get(0);
+		private final Assignment cStateRefAssignment_0_0 = (Assignment)cGroup_0.eContents().get(0);
+		private final CrossReference cStateRefStateCrossReference_0_0_0 = (CrossReference)cStateRefAssignment_0_0.eContents().get(0);
+		private final RuleCall cStateRefStateIDTerminalRuleCall_0_0_0_1 = (RuleCall)cStateRefStateCrossReference_0_0_0.eContents().get(1);
+		private final Assignment cActualParametersAssignment_0_1 = (Assignment)cGroup_0.eContents().get(1);
+		private final RuleCall cActualParametersActual_parametersParserRuleCall_0_1_0 = (RuleCall)cActualParametersAssignment_0_1.eContents().get(0);
+		private final Group cGroup_1 = (Group)cAlternatives.eContents().get(1);
+		private final Assignment cAgentStateRefAssignment_1_0 = (Assignment)cGroup_1.eContents().get(0);
+		private final CrossReference cAgentStateRefAgentCrossReference_1_0_0 = (CrossReference)cAgentStateRefAssignment_1_0.eContents().get(0);
+		private final RuleCall cAgentStateRefAgentIDTerminalRuleCall_1_0_0_1 = (RuleCall)cAgentStateRefAgentCrossReference_1_0_0.eContents().get(1);
+		private final Keyword cFullStopKeyword_1_1 = (Keyword)cGroup_1.eContents().get(1);
+		private final Assignment cStateRefAssignment_1_2 = (Assignment)cGroup_1.eContents().get(2);
+		private final CrossReference cStateRefStateCrossReference_1_2_0 = (CrossReference)cStateRefAssignment_1_2.eContents().get(0);
+		private final RuleCall cStateRefStateIDTerminalRuleCall_1_2_0_1 = (RuleCall)cStateRefStateCrossReference_1_2_0.eContents().get(1);
+		private final Assignment cActualParametersAssignment_1_3 = (Assignment)cGroup_1.eContents().get(3);
+		private final RuleCall cActualParametersActual_parametersParserRuleCall_1_3_0 = (RuleCall)cActualParametersAssignment_1_3.eContents().get(0);
+		private final Group cGroup_2 = (Group)cAlternatives.eContents().get(2);
+		private final Assignment cPopAgentStateRefAssignment_2_0 = (Assignment)cGroup_2.eContents().get(0);
+		private final CrossReference cPopAgentStateRefPopulationCrossReference_2_0_0 = (CrossReference)cPopAgentStateRefAssignment_2_0.eContents().get(0);
+		private final RuleCall cPopAgentStateRefPopulationIDTerminalRuleCall_2_0_0_1 = (RuleCall)cPopAgentStateRefPopulationCrossReference_2_0_0.eContents().get(1);
+		private final Keyword cFullStopKeyword_2_1 = (Keyword)cGroup_2.eContents().get(1);
+		private final Assignment cAgentStateRefAssignment_2_2 = (Assignment)cGroup_2.eContents().get(2);
+		private final CrossReference cAgentStateRefAgentCrossReference_2_2_0 = (CrossReference)cAgentStateRefAssignment_2_2.eContents().get(0);
+		private final RuleCall cAgentStateRefAgentIDTerminalRuleCall_2_2_0_1 = (RuleCall)cAgentStateRefAgentCrossReference_2_2_0.eContents().get(1);
+		private final Keyword cFullStopKeyword_2_3 = (Keyword)cGroup_2.eContents().get(3);
+		private final Assignment cStateRefAssignment_2_4 = (Assignment)cGroup_2.eContents().get(4);
+		private final CrossReference cStateRefStateCrossReference_2_4_0 = (CrossReference)cStateRefAssignment_2_4.eContents().get(0);
+		private final RuleCall cStateRefStateIDTerminalRuleCall_2_4_0_1 = (RuleCall)cStateRefStateCrossReference_2_4_0.eContents().get(1);
+		private final Assignment cActualParametersAssignment_2_5 = (Assignment)cGroup_2.eContents().get(5);
+		private final RuleCall cActualParametersActual_parametersParserRuleCall_2_5_0 = (RuleCall)cActualParametersAssignment_2_5.eContents().get(0);
 		
-		////	agentStateRef= [agent]'.'stateRef = [state] actualParameters=actual_parameters?
 		//state_ref:
-		//	stateRef=[state] actualParameters=actual_parameters?;
+		//	stateRef=[state] actualParameters=actual_parameters? | agentStateRef=[agent] "." stateRef=[state]
+		//	actualParameters=actual_parameters? | popAgentStateRef=[population] "." agentStateRef=[agent] "." stateRef=[state]
+		//	actualParameters=actual_parameters?;
 		public ParserRule getRule() { return rule; }
+
+		//stateRef=[state] actualParameters=actual_parameters? | agentStateRef=[agent] "." stateRef=[state]
+		//actualParameters=actual_parameters? | popAgentStateRef=[population] "." agentStateRef=[agent] "." stateRef=[state]
+		//actualParameters=actual_parameters?
+		public Alternatives getAlternatives() { return cAlternatives; }
 
 		//stateRef=[state] actualParameters=actual_parameters?
-		public Group getGroup() { return cGroup; }
+		public Group getGroup_0() { return cGroup_0; }
 
 		//stateRef=[state]
-		public Assignment getStateRefAssignment_0() { return cStateRefAssignment_0; }
+		public Assignment getStateRefAssignment_0_0() { return cStateRefAssignment_0_0; }
 
 		//[state]
-		public CrossReference getStateRefStateCrossReference_0_0() { return cStateRefStateCrossReference_0_0; }
+		public CrossReference getStateRefStateCrossReference_0_0_0() { return cStateRefStateCrossReference_0_0_0; }
 
 		//ID
-		public RuleCall getStateRefStateIDTerminalRuleCall_0_0_1() { return cStateRefStateIDTerminalRuleCall_0_0_1; }
+		public RuleCall getStateRefStateIDTerminalRuleCall_0_0_0_1() { return cStateRefStateIDTerminalRuleCall_0_0_0_1; }
 
 		//actualParameters=actual_parameters?
-		public Assignment getActualParametersAssignment_1() { return cActualParametersAssignment_1; }
+		public Assignment getActualParametersAssignment_0_1() { return cActualParametersAssignment_0_1; }
 
 		//actual_parameters
-		public RuleCall getActualParametersActual_parametersParserRuleCall_1_0() { return cActualParametersActual_parametersParserRuleCall_1_0; }
-	}
+		public RuleCall getActualParametersActual_parametersParserRuleCall_0_1_0() { return cActualParametersActual_parametersParserRuleCall_0_1_0; }
 
-	public class Agent_state_refElements extends AbstractParserRuleElementFinder {
-		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "agent_state_ref");
-		private final Group cGroup = (Group)rule.eContents().get(1);
-		private final Assignment cAgentStateRefAssignment_0 = (Assignment)cGroup.eContents().get(0);
-		private final CrossReference cAgentStateRefAgentCrossReference_0_0 = (CrossReference)cAgentStateRefAssignment_0.eContents().get(0);
-		private final RuleCall cAgentStateRefAgentIDTerminalRuleCall_0_0_1 = (RuleCall)cAgentStateRefAgentCrossReference_0_0.eContents().get(1);
-		private final Keyword cFullStopKeyword_1 = (Keyword)cGroup.eContents().get(1);
-		private final Assignment cStateRefAssignment_2 = (Assignment)cGroup.eContents().get(2);
-		private final RuleCall cStateRefState_refParserRuleCall_2_0 = (RuleCall)cStateRefAssignment_2.eContents().get(0);
-		
-		//agent_state_ref:
-		//	agentStateRef=[agent] "." stateRef=state_ref;
-		public ParserRule getRule() { return rule; }
-
-		//agentStateRef=[agent] "." stateRef=state_ref
-		public Group getGroup() { return cGroup; }
+		//agentStateRef=[agent] "." stateRef=[state] actualParameters=actual_parameters?
+		public Group getGroup_1() { return cGroup_1; }
 
 		//agentStateRef=[agent]
-		public Assignment getAgentStateRefAssignment_0() { return cAgentStateRefAssignment_0; }
+		public Assignment getAgentStateRefAssignment_1_0() { return cAgentStateRefAssignment_1_0; }
 
 		//[agent]
-		public CrossReference getAgentStateRefAgentCrossReference_0_0() { return cAgentStateRefAgentCrossReference_0_0; }
+		public CrossReference getAgentStateRefAgentCrossReference_1_0_0() { return cAgentStateRefAgentCrossReference_1_0_0; }
 
 		//ID
-		public RuleCall getAgentStateRefAgentIDTerminalRuleCall_0_0_1() { return cAgentStateRefAgentIDTerminalRuleCall_0_0_1; }
+		public RuleCall getAgentStateRefAgentIDTerminalRuleCall_1_0_0_1() { return cAgentStateRefAgentIDTerminalRuleCall_1_0_0_1; }
 
 		//"."
-		public Keyword getFullStopKeyword_1() { return cFullStopKeyword_1; }
+		public Keyword getFullStopKeyword_1_1() { return cFullStopKeyword_1_1; }
 
-		//stateRef=state_ref
-		public Assignment getStateRefAssignment_2() { return cStateRefAssignment_2; }
+		//stateRef=[state]
+		public Assignment getStateRefAssignment_1_2() { return cStateRefAssignment_1_2; }
 
-		//state_ref
-		public RuleCall getStateRefState_refParserRuleCall_2_0() { return cStateRefState_refParserRuleCall_2_0; }
+		//[state]
+		public CrossReference getStateRefStateCrossReference_1_2_0() { return cStateRefStateCrossReference_1_2_0; }
+
+		//ID
+		public RuleCall getStateRefStateIDTerminalRuleCall_1_2_0_1() { return cStateRefStateIDTerminalRuleCall_1_2_0_1; }
+
+		//actualParameters=actual_parameters?
+		public Assignment getActualParametersAssignment_1_3() { return cActualParametersAssignment_1_3; }
+
+		//actual_parameters
+		public RuleCall getActualParametersActual_parametersParserRuleCall_1_3_0() { return cActualParametersActual_parametersParserRuleCall_1_3_0; }
+
+		//popAgentStateRef=[population] "." agentStateRef=[agent] "." stateRef=[state] actualParameters=actual_parameters?
+		public Group getGroup_2() { return cGroup_2; }
+
+		//popAgentStateRef=[population]
+		public Assignment getPopAgentStateRefAssignment_2_0() { return cPopAgentStateRefAssignment_2_0; }
+
+		//[population]
+		public CrossReference getPopAgentStateRefPopulationCrossReference_2_0_0() { return cPopAgentStateRefPopulationCrossReference_2_0_0; }
+
+		//ID
+		public RuleCall getPopAgentStateRefPopulationIDTerminalRuleCall_2_0_0_1() { return cPopAgentStateRefPopulationIDTerminalRuleCall_2_0_0_1; }
+
+		//"."
+		public Keyword getFullStopKeyword_2_1() { return cFullStopKeyword_2_1; }
+
+		//agentStateRef=[agent]
+		public Assignment getAgentStateRefAssignment_2_2() { return cAgentStateRefAssignment_2_2; }
+
+		//[agent]
+		public CrossReference getAgentStateRefAgentCrossReference_2_2_0() { return cAgentStateRefAgentCrossReference_2_2_0; }
+
+		//ID
+		public RuleCall getAgentStateRefAgentIDTerminalRuleCall_2_2_0_1() { return cAgentStateRefAgentIDTerminalRuleCall_2_2_0_1; }
+
+		//"."
+		public Keyword getFullStopKeyword_2_3() { return cFullStopKeyword_2_3; }
+
+		//stateRef=[state]
+		public Assignment getStateRefAssignment_2_4() { return cStateRefAssignment_2_4; }
+
+		//[state]
+		public CrossReference getStateRefStateCrossReference_2_4_0() { return cStateRefStateCrossReference_2_4_0; }
+
+		//ID
+		public RuleCall getStateRefStateIDTerminalRuleCall_2_4_0_1() { return cStateRefStateIDTerminalRuleCall_2_4_0_1; }
+
+		//actualParameters=actual_parameters?
+		public Assignment getActualParametersAssignment_2_5() { return cActualParametersAssignment_2_5; }
+
+		//actual_parameters
+		public RuleCall getActualParametersActual_parametersParserRuleCall_2_5_0() { return cActualParametersActual_parametersParserRuleCall_2_5_0; }
 	}
 
 	public class Action_condElements extends AbstractParserRuleElementFinder {
@@ -1183,7 +1258,6 @@ public class MarkovPopulationModelsGrammarAccess extends AbstractGrammarElementF
 	private final Loc_tranElements pLoc_tran;
 	private final State_condElements pState_cond;
 	private final State_refElements pState_ref;
-	private final Agent_state_refElements pAgent_state_ref;
 	private final Action_condElements pAction_cond;
 	private final TerminalRule tINT;
 	private final TerminalRule tFLOAT;
@@ -1215,7 +1289,6 @@ public class MarkovPopulationModelsGrammarAccess extends AbstractGrammarElementF
 		this.pLoc_tran = new Loc_tranElements();
 		this.pState_cond = new State_condElements();
 		this.pState_ref = new State_refElements();
-		this.pAgent_state_ref = new Agent_state_refElements();
 		this.pAction_cond = new Action_condElements();
 		this.tINT = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "INT");
 		this.tFLOAT = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "FLOAT");
@@ -1250,7 +1323,7 @@ public class MarkovPopulationModelsGrammarAccess extends AbstractGrammarElementF
 	
 	////extension
 	//main:
-	//	constDef+=constant* & populationDef=population & agentDef+=agent+;
+	//	constDef+=constant* & populationDef+=population+ & agentDef+=agent+;
 	public MainElements getMainAccess() {
 		return pMain;
 	}
@@ -1363,7 +1436,8 @@ public class MarkovPopulationModelsGrammarAccess extends AbstractGrammarElementF
 	}
 
 	//init:
-	//	agentRef=[agent] actualParameters=actual_parameters? "{" states+=stateInit ("," states+=stateInit)* "}";
+	//	agentRef=[agent] actualParameters=actual_parameters? "{" states+=stateInit ("," states+=stateInit)* "}" |
+	//	popRef=[population] "{" card=expr "}";
 	public InitElements getInitAccess() {
 		return pInit;
 	}
@@ -1415,8 +1489,7 @@ public class MarkovPopulationModelsGrammarAccess extends AbstractGrammarElementF
 
 	//// qui potremmmo volere state_ref con parametri generali e non attuali per le regole
 	//state_cond:
-	//	{anystate} "any" | stateRef+=state_ref ("or" stateRef+=state_ref)* | agentStateRef+=agent_state_ref ("or"
-	//	agentStateRef+=agent_state_ref)*;
+	//	{anystate} "any" | stateRef+=state_ref ("or" stateRef+=state_ref)*;
 	public State_condElements getState_condAccess() {
 		return pState_cond;
 	}
@@ -1425,25 +1498,16 @@ public class MarkovPopulationModelsGrammarAccess extends AbstractGrammarElementF
 		return getState_condAccess().getRule();
 	}
 
-	////	agentStateRef= [agent]'.'stateRef = [state] actualParameters=actual_parameters?
 	//state_ref:
-	//	stateRef=[state] actualParameters=actual_parameters?;
+	//	stateRef=[state] actualParameters=actual_parameters? | agentStateRef=[agent] "." stateRef=[state]
+	//	actualParameters=actual_parameters? | popAgentStateRef=[population] "." agentStateRef=[agent] "." stateRef=[state]
+	//	actualParameters=actual_parameters?;
 	public State_refElements getState_refAccess() {
 		return pState_ref;
 	}
 	
 	public ParserRule getState_refRule() {
 		return getState_refAccess().getRule();
-	}
-
-	//agent_state_ref:
-	//	agentStateRef=[agent] "." stateRef=state_ref;
-	public Agent_state_refElements getAgent_state_refAccess() {
-		return pAgent_state_ref;
-	}
-	
-	public ParserRule getAgent_state_refRule() {
-		return getAgent_state_refAccess().getRule();
 	}
 
 	//action_cond:

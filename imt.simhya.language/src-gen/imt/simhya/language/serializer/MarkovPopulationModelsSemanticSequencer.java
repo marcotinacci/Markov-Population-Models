@@ -7,7 +7,6 @@ import imt.simhya.language.markovPopulationModels.action;
 import imt.simhya.language.markovPopulationModels.action_cond;
 import imt.simhya.language.markovPopulationModels.actual_parameters;
 import imt.simhya.language.markovPopulationModels.agent;
-import imt.simhya.language.markovPopulationModels.agent_state_ref;
 import imt.simhya.language.markovPopulationModels.anystate;
 import imt.simhya.language.markovPopulationModels.constant;
 import imt.simhya.language.markovPopulationModels.expr;
@@ -66,12 +65,6 @@ public class MarkovPopulationModelsSemanticSequencer extends AbstractDelegatingS
 			case MarkovPopulationModelsPackage.AGENT:
 				if(context == grammarAccess.getAgentRule()) {
 					sequence_agent(context, (agent) semanticObject); 
-					return; 
-				}
-				else break;
-			case MarkovPopulationModelsPackage.AGENT_STATE_REF:
-				if(context == grammarAccess.getAgent_state_refRule()) {
-					sequence_agent_state_ref(context, (agent_state_ref) semanticObject); 
 					return; 
 				}
 				else break;
@@ -230,25 +223,6 @@ public class MarkovPopulationModelsSemanticSequencer extends AbstractDelegatingS
 	
 	/**
 	 * Constraint:
-	 *     (agentStateRef=[agent|ID] stateRef=state_ref)
-	 */
-	protected void sequence_agent_state_ref(EObject context, agent_state_ref semanticObject) {
-		if(errorAcceptor != null) {
-			if(transientValues.isValueTransient(semanticObject, MarkovPopulationModelsPackage.Literals.AGENT_STATE_REF__AGENT_STATE_REF) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, MarkovPopulationModelsPackage.Literals.AGENT_STATE_REF__AGENT_STATE_REF));
-			if(transientValues.isValueTransient(semanticObject, MarkovPopulationModelsPackage.Literals.AGENT_STATE_REF__STATE_REF) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, MarkovPopulationModelsPackage.Literals.AGENT_STATE_REF__STATE_REF));
-		}
-		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
-		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
-		feeder.accept(grammarAccess.getAgent_state_refAccess().getAgentStateRefAgentIDTerminalRuleCall_0_0_1(), semanticObject.getAgentStateRef());
-		feeder.accept(grammarAccess.getAgent_state_refAccess().getStateRefState_refParserRuleCall_2_0(), semanticObject.getStateRef());
-		feeder.finish();
-	}
-	
-	
-	/**
-	 * Constraint:
 	 *     ((name=ID constINT=INT) | (name=ID constFLOAT=FLOAT))
 	 */
 	protected void sequence_constant(EObject context, constant semanticObject) {
@@ -294,7 +268,7 @@ public class MarkovPopulationModelsSemanticSequencer extends AbstractDelegatingS
 	
 	/**
 	 * Constraint:
-	 *     (agentRef=[agent|ID] actualParameters=actual_parameters? states+=stateInit states+=stateInit*)
+	 *     ((agentRef=[agent|ID] actualParameters=actual_parameters? states+=stateInit states+=stateInit*) | (popRef=[population|ID] card=expr))
 	 */
 	protected void sequence_init(EObject context, init semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -328,7 +302,7 @@ public class MarkovPopulationModelsSemanticSequencer extends AbstractDelegatingS
 	
 	/**
 	 * Constraint:
-	 *     (constDef+=constant* populationDef=population agentDef+=agent+)
+	 *     (constDef+=constant* populationDef+=population+ agentDef+=agent+)
 	 */
 	protected void sequence_main(EObject context, main semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -374,7 +348,7 @@ public class MarkovPopulationModelsSemanticSequencer extends AbstractDelegatingS
 	
 	/**
 	 * Constraint:
-	 *     ((stateRef+=state_ref stateRef+=state_ref*) | (agentStateRef+=agent_state_ref agentStateRef+=agent_state_ref*))
+	 *     (stateRef+=state_ref stateRef+=state_ref*)
 	 */
 	protected void sequence_state_cond(EObject context, state_cond semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -383,7 +357,11 @@ public class MarkovPopulationModelsSemanticSequencer extends AbstractDelegatingS
 	
 	/**
 	 * Constraint:
-	 *     (stateRef=[state|ID] actualParameters=actual_parameters?)
+	 *     (
+	 *         (stateRef=[state|ID] actualParameters=actual_parameters?) | 
+	 *         (agentStateRef=[agent|ID] stateRef=[state|ID] actualParameters=actual_parameters?) | 
+	 *         (popAgentStateRef=[population|ID] agentStateRef=[agent|ID] stateRef=[state|ID] actualParameters=actual_parameters?)
+	 *     )
 	 */
 	protected void sequence_state_ref(EObject context, state_ref semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);

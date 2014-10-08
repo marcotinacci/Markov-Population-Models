@@ -10,7 +10,6 @@ import imt.simhya.language.markovPopulationModels.population;
 
 import java.util.Collection;
 
-import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.common.util.EList;
@@ -18,7 +17,6 @@ import org.eclipse.emf.common.util.EList;
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
 
-import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
@@ -52,14 +50,14 @@ public class mainImpl extends MinimalEObjectImpl.Container implements main
   protected EList<constant> constDef;
 
   /**
-   * The cached value of the '{@link #getPopulationDef() <em>Population Def</em>}' containment reference.
+   * The cached value of the '{@link #getPopulationDef() <em>Population Def</em>}' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @see #getPopulationDef()
    * @generated
    * @ordered
    */
-  protected population populationDef;
+  protected EList<population> populationDef;
 
   /**
    * The cached value of the '{@link #getAgentDef() <em>Agent Def</em>}' containment reference list.
@@ -111,47 +109,13 @@ public class mainImpl extends MinimalEObjectImpl.Container implements main
    * <!-- end-user-doc -->
    * @generated
    */
-  public population getPopulationDef()
+  public EList<population> getPopulationDef()
   {
+    if (populationDef == null)
+    {
+      populationDef = new EObjectContainmentEList<population>(population.class, this, MarkovPopulationModelsPackage.MAIN__POPULATION_DEF);
+    }
     return populationDef;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public NotificationChain basicSetPopulationDef(population newPopulationDef, NotificationChain msgs)
-  {
-    population oldPopulationDef = populationDef;
-    populationDef = newPopulationDef;
-    if (eNotificationRequired())
-    {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, MarkovPopulationModelsPackage.MAIN__POPULATION_DEF, oldPopulationDef, newPopulationDef);
-      if (msgs == null) msgs = notification; else msgs.add(notification);
-    }
-    return msgs;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public void setPopulationDef(population newPopulationDef)
-  {
-    if (newPopulationDef != populationDef)
-    {
-      NotificationChain msgs = null;
-      if (populationDef != null)
-        msgs = ((InternalEObject)populationDef).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - MarkovPopulationModelsPackage.MAIN__POPULATION_DEF, null, msgs);
-      if (newPopulationDef != null)
-        msgs = ((InternalEObject)newPopulationDef).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - MarkovPopulationModelsPackage.MAIN__POPULATION_DEF, null, msgs);
-      msgs = basicSetPopulationDef(newPopulationDef, msgs);
-      if (msgs != null) msgs.dispatch();
-    }
-    else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, MarkovPopulationModelsPackage.MAIN__POPULATION_DEF, newPopulationDef, newPopulationDef));
   }
 
   /**
@@ -181,7 +145,7 @@ public class mainImpl extends MinimalEObjectImpl.Container implements main
       case MarkovPopulationModelsPackage.MAIN__CONST_DEF:
         return ((InternalEList<?>)getConstDef()).basicRemove(otherEnd, msgs);
       case MarkovPopulationModelsPackage.MAIN__POPULATION_DEF:
-        return basicSetPopulationDef(null, msgs);
+        return ((InternalEList<?>)getPopulationDef()).basicRemove(otherEnd, msgs);
       case MarkovPopulationModelsPackage.MAIN__AGENT_DEF:
         return ((InternalEList<?>)getAgentDef()).basicRemove(otherEnd, msgs);
     }
@@ -224,7 +188,8 @@ public class mainImpl extends MinimalEObjectImpl.Container implements main
         getConstDef().addAll((Collection<? extends constant>)newValue);
         return;
       case MarkovPopulationModelsPackage.MAIN__POPULATION_DEF:
-        setPopulationDef((population)newValue);
+        getPopulationDef().clear();
+        getPopulationDef().addAll((Collection<? extends population>)newValue);
         return;
       case MarkovPopulationModelsPackage.MAIN__AGENT_DEF:
         getAgentDef().clear();
@@ -248,7 +213,7 @@ public class mainImpl extends MinimalEObjectImpl.Container implements main
         getConstDef().clear();
         return;
       case MarkovPopulationModelsPackage.MAIN__POPULATION_DEF:
-        setPopulationDef((population)null);
+        getPopulationDef().clear();
         return;
       case MarkovPopulationModelsPackage.MAIN__AGENT_DEF:
         getAgentDef().clear();
@@ -270,7 +235,7 @@ public class mainImpl extends MinimalEObjectImpl.Container implements main
       case MarkovPopulationModelsPackage.MAIN__CONST_DEF:
         return constDef != null && !constDef.isEmpty();
       case MarkovPopulationModelsPackage.MAIN__POPULATION_DEF:
-        return populationDef != null;
+        return populationDef != null && !populationDef.isEmpty();
       case MarkovPopulationModelsPackage.MAIN__AGENT_DEF:
         return agentDef != null && !agentDef.isEmpty();
     }

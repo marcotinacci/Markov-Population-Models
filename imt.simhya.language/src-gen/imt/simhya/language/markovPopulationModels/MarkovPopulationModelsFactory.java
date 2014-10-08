@@ -185,15 +185,6 @@ public interface MarkovPopulationModelsFactory extends EFactory
   state_ref createstate_ref();
 
   /**
-   * Returns a new object of class '<em>agent state ref</em>'.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @return a new object of class '<em>agent state ref</em>'.
-   * @generated
-   */
-  agent_state_ref createagent_state_ref();
-
-  /**
    * Returns a new object of class '<em>action cond</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->

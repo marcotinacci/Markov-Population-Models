@@ -82,7 +82,6 @@ public class MarkovPopulationModelsFactoryImpl extends EFactoryImpl implements M
       case MarkovPopulationModelsPackage.LOC_TRAN: return createloc_tran();
       case MarkovPopulationModelsPackage.STATE_COND: return createstate_cond();
       case MarkovPopulationModelsPackage.STATE_REF: return createstate_ref();
-      case MarkovPopulationModelsPackage.AGENT_STATE_REF: return createagent_state_ref();
       case MarkovPopulationModelsPackage.ACTION_COND: return createaction_cond();
       case MarkovPopulationModelsPackage.ANYSTATE: return createanystate();
       default:
@@ -286,17 +285,6 @@ public class MarkovPopulationModelsFactoryImpl extends EFactoryImpl implements M
   {
     state_refImpl state_ref = new state_refImpl();
     return state_ref;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public agent_state_ref createagent_state_ref()
-  {
-    agent_state_refImpl agent_state_ref = new agent_state_refImpl();
-    return agent_state_ref;
   }
 
   /**
