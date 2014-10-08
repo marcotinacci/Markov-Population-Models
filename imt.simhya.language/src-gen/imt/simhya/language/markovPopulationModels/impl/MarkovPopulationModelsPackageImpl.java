@@ -17,6 +17,7 @@ import imt.simhya.language.markovPopulationModels.gl_tran;
 import imt.simhya.language.markovPopulationModels.init;
 import imt.simhya.language.markovPopulationModels.label;
 import imt.simhya.language.markovPopulationModels.loc_tran;
+import imt.simhya.language.markovPopulationModels.location;
 import imt.simhya.language.markovPopulationModels.main;
 import imt.simhya.language.markovPopulationModels.params;
 import imt.simhya.language.markovPopulationModels.population;
@@ -74,6 +75,13 @@ public class MarkovPopulationModelsPackageImpl extends EPackageImpl implements M
    * @generated
    */
   private EClass actual_parametersEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass locationEClass = null;
 
   /**
    * <!-- begin-user-doc -->
@@ -268,7 +276,7 @@ public class MarkovPopulationModelsPackageImpl extends EPackageImpl implements M
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getmain_PopulationDef()
+  public EReference getmain_LocationDef()
   {
     return (EReference)mainEClass.getEStructuralFeatures().get(1);
   }
@@ -281,6 +289,16 @@ public class MarkovPopulationModelsPackageImpl extends EPackageImpl implements M
   public EReference getmain_AgentDef()
   {
     return (EReference)mainEClass.getEStructuralFeatures().get(2);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getmain_PopulationDef()
+  {
+    return (EReference)mainEClass.getEStructuralFeatures().get(3);
   }
 
   /**
@@ -401,6 +419,56 @@ public class MarkovPopulationModelsPackageImpl extends EPackageImpl implements M
   public EReference getactual_parameters_ActualParams()
   {
     return (EReference)actual_parametersEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getlocation()
+  {
+    return locationEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getlocation_Name()
+  {
+    return (EAttribute)locationEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getlocation_ParamList()
+  {
+    return (EReference)locationEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getlocation_Act()
+  {
+    return (EReference)locationEClass.getEStructuralFeatures().get(2);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getlocation_S()
+  {
+    return (EReference)locationEClass.getEStructuralFeatures().get(3);
   }
 
   /**
@@ -688,7 +756,7 @@ public class MarkovPopulationModelsPackageImpl extends EPackageImpl implements M
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getinit_PopRef()
+  public EReference getinit_LocRef()
   {
     return (EReference)initEClass.getEStructuralFeatures().get(3);
   }
@@ -698,9 +766,19 @@ public class MarkovPopulationModelsPackageImpl extends EPackageImpl implements M
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getinit_Card()
+  public EReference getinit_PopRef()
   {
     return (EReference)initEClass.getEStructuralFeatures().get(4);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getinit_Card()
+  {
+    return (EReference)initEClass.getEStructuralFeatures().get(5);
   }
 
   /**
@@ -938,7 +1016,7 @@ public class MarkovPopulationModelsPackageImpl extends EPackageImpl implements M
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getstate_ref_AgentStateRef()
+  public EReference getstate_ref_LocRef()
   {
     return (EReference)state_refEClass.getEStructuralFeatures().get(2);
   }
@@ -948,9 +1026,19 @@ public class MarkovPopulationModelsPackageImpl extends EPackageImpl implements M
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getstate_ref_PopAgentStateRef()
+  public EReference getstate_ref_AgentStateRef()
   {
     return (EReference)state_refEClass.getEStructuralFeatures().get(3);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getstate_ref_PopAgentStateRef()
+  {
+    return (EReference)state_refEClass.getEStructuralFeatures().get(4);
   }
 
   /**
@@ -1015,8 +1103,9 @@ public class MarkovPopulationModelsPackageImpl extends EPackageImpl implements M
     // Create classes and their features
     mainEClass = createEClass(MAIN);
     createEReference(mainEClass, MAIN__CONST_DEF);
-    createEReference(mainEClass, MAIN__POPULATION_DEF);
+    createEReference(mainEClass, MAIN__LOCATION_DEF);
     createEReference(mainEClass, MAIN__AGENT_DEF);
+    createEReference(mainEClass, MAIN__POPULATION_DEF);
 
     constantEClass = createEClass(CONSTANT);
     createEAttribute(constantEClass, CONSTANT__NAME);
@@ -1033,6 +1122,12 @@ public class MarkovPopulationModelsPackageImpl extends EPackageImpl implements M
 
     actual_parametersEClass = createEClass(ACTUAL_PARAMETERS);
     createEReference(actual_parametersEClass, ACTUAL_PARAMETERS__ACTUAL_PARAMS);
+
+    locationEClass = createEClass(LOCATION);
+    createEAttribute(locationEClass, LOCATION__NAME);
+    createEReference(locationEClass, LOCATION__PARAM_LIST);
+    createEReference(locationEClass, LOCATION__ACT);
+    createEReference(locationEClass, LOCATION__S);
 
     agentEClass = createEClass(AGENT);
     createEAttribute(agentEClass, AGENT__NAME);
@@ -1068,6 +1163,7 @@ public class MarkovPopulationModelsPackageImpl extends EPackageImpl implements M
     createEReference(initEClass, INIT__AGENT_REF);
     createEReference(initEClass, INIT__ACTUAL_PARAMETERS);
     createEReference(initEClass, INIT__STATES);
+    createEReference(initEClass, INIT__LOC_REF);
     createEReference(initEClass, INIT__POP_REF);
     createEReference(initEClass, INIT__CARD);
 
@@ -1099,6 +1195,7 @@ public class MarkovPopulationModelsPackageImpl extends EPackageImpl implements M
     state_refEClass = createEClass(STATE_REF);
     createEReference(state_refEClass, STATE_REF__STATE_REF);
     createEReference(state_refEClass, STATE_REF__ACTUAL_PARAMETERS);
+    createEReference(state_refEClass, STATE_REF__LOC_REF);
     createEReference(state_refEClass, STATE_REF__AGENT_STATE_REF);
     createEReference(state_refEClass, STATE_REF__POP_AGENT_STATE_REF);
 
@@ -1143,8 +1240,9 @@ public class MarkovPopulationModelsPackageImpl extends EPackageImpl implements M
     // Initialize classes and features; add operations and parameters
     initEClass(mainEClass, main.class, "main", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getmain_ConstDef(), this.getconstant(), null, "constDef", null, 0, -1, main.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getmain_PopulationDef(), this.getpopulation(), null, "populationDef", null, 0, -1, main.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getmain_LocationDef(), this.getlocation(), null, "locationDef", null, 0, 1, main.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getmain_AgentDef(), this.getagent(), null, "agentDef", null, 0, -1, main.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getmain_PopulationDef(), this.getpopulation(), null, "populationDef", null, 0, -1, main.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(constantEClass, constant.class, "constant", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getconstant_Name(), ecorePackage.getEString(), "name", null, 0, 1, constant.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1161,6 +1259,12 @@ public class MarkovPopulationModelsPackageImpl extends EPackageImpl implements M
 
     initEClass(actual_parametersEClass, actual_parameters.class, "actual_parameters", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getactual_parameters_ActualParams(), this.getexpr(), null, "actualParams", null, 0, -1, actual_parameters.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(locationEClass, location.class, "location", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getlocation_Name(), ecorePackage.getEString(), "name", null, 0, 1, location.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getlocation_ParamList(), this.getparams(), null, "paramList", null, 0, 1, location.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getlocation_Act(), this.getlabel(), null, "act", null, 0, -1, location.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getlocation_S(), this.getstate(), null, "s", null, 0, -1, location.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(agentEClass, agent.class, "agent", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getagent_Name(), ecorePackage.getEString(), "name", null, 0, 1, agent.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -1196,6 +1300,7 @@ public class MarkovPopulationModelsPackageImpl extends EPackageImpl implements M
     initEReference(getinit_AgentRef(), this.getagent(), null, "agentRef", null, 0, 1, init.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getinit_ActualParameters(), this.getactual_parameters(), null, "actualParameters", null, 0, 1, init.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getinit_States(), this.getstateInit(), null, "states", null, 0, -1, init.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getinit_LocRef(), this.getlocation(), null, "locRef", null, 0, 1, init.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getinit_PopRef(), this.getpopulation(), null, "popRef", null, 0, 1, init.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getinit_Card(), this.getexpr(), null, "card", null, 0, 1, init.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
@@ -1227,6 +1332,7 @@ public class MarkovPopulationModelsPackageImpl extends EPackageImpl implements M
     initEClass(state_refEClass, state_ref.class, "state_ref", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getstate_ref_StateRef(), this.getstate(), null, "stateRef", null, 0, 1, state_ref.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getstate_ref_ActualParameters(), this.getactual_parameters(), null, "actualParameters", null, 0, 1, state_ref.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getstate_ref_LocRef(), this.getlocation(), null, "locRef", null, 0, 1, state_ref.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getstate_ref_AgentStateRef(), this.getagent(), null, "agentStateRef", null, 0, 1, state_ref.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getstate_ref_PopAgentStateRef(), this.getpopulation(), null, "popAgentStateRef", null, 0, 1, state_ref.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 

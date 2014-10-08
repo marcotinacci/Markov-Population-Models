@@ -5,6 +5,7 @@ package imt.simhya.language.markovPopulationModels.impl;
 import imt.simhya.language.markovPopulationModels.MarkovPopulationModelsPackage;
 import imt.simhya.language.markovPopulationModels.actual_parameters;
 import imt.simhya.language.markovPopulationModels.agent;
+import imt.simhya.language.markovPopulationModels.location;
 import imt.simhya.language.markovPopulationModels.population;
 import imt.simhya.language.markovPopulationModels.state;
 import imt.simhya.language.markovPopulationModels.state_ref;
@@ -27,6 +28,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * <ul>
  *   <li>{@link imt.simhya.language.markovPopulationModels.impl.state_refImpl#getStateRef <em>State Ref</em>}</li>
  *   <li>{@link imt.simhya.language.markovPopulationModels.impl.state_refImpl#getActualParameters <em>Actual Parameters</em>}</li>
+ *   <li>{@link imt.simhya.language.markovPopulationModels.impl.state_refImpl#getLocRef <em>Loc Ref</em>}</li>
  *   <li>{@link imt.simhya.language.markovPopulationModels.impl.state_refImpl#getAgentStateRef <em>Agent State Ref</em>}</li>
  *   <li>{@link imt.simhya.language.markovPopulationModels.impl.state_refImpl#getPopAgentStateRef <em>Pop Agent State Ref</em>}</li>
  * </ul>
@@ -55,6 +57,16 @@ public class state_refImpl extends MinimalEObjectImpl.Container implements state
    * @ordered
    */
   protected actual_parameters actualParameters;
+
+  /**
+   * The cached value of the '{@link #getLocRef() <em>Loc Ref</em>}' reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getLocRef()
+   * @generated
+   * @ordered
+   */
+  protected location locRef;
 
   /**
    * The cached value of the '{@link #getAgentStateRef() <em>Agent State Ref</em>}' reference.
@@ -193,6 +205,49 @@ public class state_refImpl extends MinimalEObjectImpl.Container implements state
    * <!-- end-user-doc -->
    * @generated
    */
+  public location getLocRef()
+  {
+    if (locRef != null && locRef.eIsProxy())
+    {
+      InternalEObject oldLocRef = (InternalEObject)locRef;
+      locRef = (location)eResolveProxy(oldLocRef);
+      if (locRef != oldLocRef)
+      {
+        if (eNotificationRequired())
+          eNotify(new ENotificationImpl(this, Notification.RESOLVE, MarkovPopulationModelsPackage.STATE_REF__LOC_REF, oldLocRef, locRef));
+      }
+    }
+    return locRef;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public location basicGetLocRef()
+  {
+    return locRef;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setLocRef(location newLocRef)
+  {
+    location oldLocRef = locRef;
+    locRef = newLocRef;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, MarkovPopulationModelsPackage.STATE_REF__LOC_REF, oldLocRef, locRef));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public agent getAgentStateRef()
   {
     if (agentStateRef != null && agentStateRef.eIsProxy())
@@ -305,6 +360,9 @@ public class state_refImpl extends MinimalEObjectImpl.Container implements state
         return basicGetStateRef();
       case MarkovPopulationModelsPackage.STATE_REF__ACTUAL_PARAMETERS:
         return getActualParameters();
+      case MarkovPopulationModelsPackage.STATE_REF__LOC_REF:
+        if (resolve) return getLocRef();
+        return basicGetLocRef();
       case MarkovPopulationModelsPackage.STATE_REF__AGENT_STATE_REF:
         if (resolve) return getAgentStateRef();
         return basicGetAgentStateRef();
@@ -330,6 +388,9 @@ public class state_refImpl extends MinimalEObjectImpl.Container implements state
         return;
       case MarkovPopulationModelsPackage.STATE_REF__ACTUAL_PARAMETERS:
         setActualParameters((actual_parameters)newValue);
+        return;
+      case MarkovPopulationModelsPackage.STATE_REF__LOC_REF:
+        setLocRef((location)newValue);
         return;
       case MarkovPopulationModelsPackage.STATE_REF__AGENT_STATE_REF:
         setAgentStateRef((agent)newValue);
@@ -357,6 +418,9 @@ public class state_refImpl extends MinimalEObjectImpl.Container implements state
       case MarkovPopulationModelsPackage.STATE_REF__ACTUAL_PARAMETERS:
         setActualParameters((actual_parameters)null);
         return;
+      case MarkovPopulationModelsPackage.STATE_REF__LOC_REF:
+        setLocRef((location)null);
+        return;
       case MarkovPopulationModelsPackage.STATE_REF__AGENT_STATE_REF:
         setAgentStateRef((agent)null);
         return;
@@ -381,6 +445,8 @@ public class state_refImpl extends MinimalEObjectImpl.Container implements state
         return stateRef != null;
       case MarkovPopulationModelsPackage.STATE_REF__ACTUAL_PARAMETERS:
         return actualParameters != null;
+      case MarkovPopulationModelsPackage.STATE_REF__LOC_REF:
+        return locRef != null;
       case MarkovPopulationModelsPackage.STATE_REF__AGENT_STATE_REF:
         return agentStateRef != null;
       case MarkovPopulationModelsPackage.STATE_REF__POP_AGENT_STATE_REF:

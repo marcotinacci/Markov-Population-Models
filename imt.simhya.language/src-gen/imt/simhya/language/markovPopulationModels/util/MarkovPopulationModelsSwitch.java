@@ -107,6 +107,13 @@ public class MarkovPopulationModelsSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
+      case MarkovPopulationModelsPackage.LOCATION:
+      {
+        location location = (location)theEObject;
+        T result = caselocation(location);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
       case MarkovPopulationModelsPackage.AGENT:
       {
         agent agent = (agent)theEObject;
@@ -294,6 +301,22 @@ public class MarkovPopulationModelsSwitch<T> extends Switch<T>
    * @generated
    */
   public T caseactual_parameters(actual_parameters object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>location</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>location</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caselocation(location object)
   {
     return null;
   }

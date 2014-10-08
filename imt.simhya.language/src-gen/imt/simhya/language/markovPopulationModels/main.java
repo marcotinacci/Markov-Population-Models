@@ -15,8 +15,9 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * <ul>
  *   <li>{@link imt.simhya.language.markovPopulationModels.main#getConstDef <em>Const Def</em>}</li>
- *   <li>{@link imt.simhya.language.markovPopulationModels.main#getPopulationDef <em>Population Def</em>}</li>
+ *   <li>{@link imt.simhya.language.markovPopulationModels.main#getLocationDef <em>Location Def</em>}</li>
  *   <li>{@link imt.simhya.language.markovPopulationModels.main#getAgentDef <em>Agent Def</em>}</li>
+ *   <li>{@link imt.simhya.language.markovPopulationModels.main#getPopulationDef <em>Population Def</em>}</li>
  * </ul>
  * </p>
  *
@@ -43,20 +44,30 @@ public interface main extends EObject
   EList<constant> getConstDef();
 
   /**
-   * Returns the value of the '<em><b>Population Def</b></em>' containment reference list.
-   * The list contents are of type {@link imt.simhya.language.markovPopulationModels.population}.
+   * Returns the value of the '<em><b>Location Def</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Population Def</em>' containment reference list isn't clear,
+   * If the meaning of the '<em>Location Def</em>' containment reference isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Population Def</em>' containment reference list.
-   * @see imt.simhya.language.markovPopulationModels.MarkovPopulationModelsPackage#getmain_PopulationDef()
+   * @return the value of the '<em>Location Def</em>' containment reference.
+   * @see #setLocationDef(location)
+   * @see imt.simhya.language.markovPopulationModels.MarkovPopulationModelsPackage#getmain_LocationDef()
    * @model containment="true"
    * @generated
    */
-  EList<population> getPopulationDef();
+  location getLocationDef();
+
+  /**
+   * Sets the value of the '{@link imt.simhya.language.markovPopulationModels.main#getLocationDef <em>Location Def</em>}' containment reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Location Def</em>' containment reference.
+   * @see #getLocationDef()
+   * @generated
+   */
+  void setLocationDef(location value);
 
   /**
    * Returns the value of the '<em><b>Agent Def</b></em>' containment reference list.
@@ -73,5 +84,21 @@ public interface main extends EObject
    * @generated
    */
   EList<agent> getAgentDef();
+
+  /**
+   * Returns the value of the '<em><b>Population Def</b></em>' containment reference list.
+   * The list contents are of type {@link imt.simhya.language.markovPopulationModels.population}.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Population Def</em>' containment reference list isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Population Def</em>' containment reference list.
+   * @see imt.simhya.language.markovPopulationModels.MarkovPopulationModelsPackage#getmain_PopulationDef()
+   * @model containment="true"
+   * @generated
+   */
+  EList<population> getPopulationDef();
 
 } // main

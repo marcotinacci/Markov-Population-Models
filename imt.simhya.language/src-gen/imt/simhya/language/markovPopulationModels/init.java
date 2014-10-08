@@ -17,6 +17,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link imt.simhya.language.markovPopulationModels.init#getAgentRef <em>Agent Ref</em>}</li>
  *   <li>{@link imt.simhya.language.markovPopulationModels.init#getActualParameters <em>Actual Parameters</em>}</li>
  *   <li>{@link imt.simhya.language.markovPopulationModels.init#getStates <em>States</em>}</li>
+ *   <li>{@link imt.simhya.language.markovPopulationModels.init#getLocRef <em>Loc Ref</em>}</li>
  *   <li>{@link imt.simhya.language.markovPopulationModels.init#getPopRef <em>Pop Ref</em>}</li>
  *   <li>{@link imt.simhya.language.markovPopulationModels.init#getCard <em>Card</em>}</li>
  * </ul>
@@ -95,6 +96,32 @@ public interface init extends EObject
    * @generated
    */
   EList<stateInit> getStates();
+
+  /**
+   * Returns the value of the '<em><b>Loc Ref</b></em>' reference.
+   * <!-- begin-user-doc -->
+   * <p>
+   * If the meaning of the '<em>Loc Ref</em>' reference isn't clear,
+   * there really should be more of a description here...
+   * </p>
+   * <!-- end-user-doc -->
+   * @return the value of the '<em>Loc Ref</em>' reference.
+   * @see #setLocRef(location)
+   * @see imt.simhya.language.markovPopulationModels.MarkovPopulationModelsPackage#getinit_LocRef()
+   * @model
+   * @generated
+   */
+  location getLocRef();
+
+  /**
+   * Sets the value of the '{@link imt.simhya.language.markovPopulationModels.init#getLocRef <em>Loc Ref</em>}' reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @param value the new value of the '<em>Loc Ref</em>' reference.
+   * @see #getLocRef()
+   * @generated
+   */
+  void setLocRef(location value);
 
   /**
    * Returns the value of the '<em><b>Pop Ref</b></em>' reference.

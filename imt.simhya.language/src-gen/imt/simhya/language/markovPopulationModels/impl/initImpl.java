@@ -7,6 +7,7 @@ import imt.simhya.language.markovPopulationModels.actual_parameters;
 import imt.simhya.language.markovPopulationModels.agent;
 import imt.simhya.language.markovPopulationModels.expr;
 import imt.simhya.language.markovPopulationModels.init;
+import imt.simhya.language.markovPopulationModels.location;
 import imt.simhya.language.markovPopulationModels.population;
 import imt.simhya.language.markovPopulationModels.stateInit;
 
@@ -36,6 +37,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link imt.simhya.language.markovPopulationModels.impl.initImpl#getAgentRef <em>Agent Ref</em>}</li>
  *   <li>{@link imt.simhya.language.markovPopulationModels.impl.initImpl#getActualParameters <em>Actual Parameters</em>}</li>
  *   <li>{@link imt.simhya.language.markovPopulationModels.impl.initImpl#getStates <em>States</em>}</li>
+ *   <li>{@link imt.simhya.language.markovPopulationModels.impl.initImpl#getLocRef <em>Loc Ref</em>}</li>
  *   <li>{@link imt.simhya.language.markovPopulationModels.impl.initImpl#getPopRef <em>Pop Ref</em>}</li>
  *   <li>{@link imt.simhya.language.markovPopulationModels.impl.initImpl#getCard <em>Card</em>}</li>
  * </ul>
@@ -74,6 +76,16 @@ public class initImpl extends MinimalEObjectImpl.Container implements init
    * @ordered
    */
   protected EList<stateInit> states;
+
+  /**
+   * The cached value of the '{@link #getLocRef() <em>Loc Ref</em>}' reference.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @see #getLocRef()
+   * @generated
+   * @ordered
+   */
+  protected location locRef;
 
   /**
    * The cached value of the '{@link #getPopRef() <em>Pop Ref</em>}' reference.
@@ -226,6 +238,49 @@ public class initImpl extends MinimalEObjectImpl.Container implements init
    * <!-- end-user-doc -->
    * @generated
    */
+  public location getLocRef()
+  {
+    if (locRef != null && locRef.eIsProxy())
+    {
+      InternalEObject oldLocRef = (InternalEObject)locRef;
+      locRef = (location)eResolveProxy(oldLocRef);
+      if (locRef != oldLocRef)
+      {
+        if (eNotificationRequired())
+          eNotify(new ENotificationImpl(this, Notification.RESOLVE, MarkovPopulationModelsPackage.INIT__LOC_REF, oldLocRef, locRef));
+      }
+    }
+    return locRef;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public location basicGetLocRef()
+  {
+    return locRef;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setLocRef(location newLocRef)
+  {
+    location oldLocRef = locRef;
+    locRef = newLocRef;
+    if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, MarkovPopulationModelsPackage.INIT__LOC_REF, oldLocRef, locRef));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public population getPopRef()
   {
     if (popRef != null && popRef.eIsProxy())
@@ -349,6 +404,9 @@ public class initImpl extends MinimalEObjectImpl.Container implements init
         return getActualParameters();
       case MarkovPopulationModelsPackage.INIT__STATES:
         return getStates();
+      case MarkovPopulationModelsPackage.INIT__LOC_REF:
+        if (resolve) return getLocRef();
+        return basicGetLocRef();
       case MarkovPopulationModelsPackage.INIT__POP_REF:
         if (resolve) return getPopRef();
         return basicGetPopRef();
@@ -379,6 +437,9 @@ public class initImpl extends MinimalEObjectImpl.Container implements init
         getStates().clear();
         getStates().addAll((Collection<? extends stateInit>)newValue);
         return;
+      case MarkovPopulationModelsPackage.INIT__LOC_REF:
+        setLocRef((location)newValue);
+        return;
       case MarkovPopulationModelsPackage.INIT__POP_REF:
         setPopRef((population)newValue);
         return;
@@ -408,6 +469,9 @@ public class initImpl extends MinimalEObjectImpl.Container implements init
       case MarkovPopulationModelsPackage.INIT__STATES:
         getStates().clear();
         return;
+      case MarkovPopulationModelsPackage.INIT__LOC_REF:
+        setLocRef((location)null);
+        return;
       case MarkovPopulationModelsPackage.INIT__POP_REF:
         setPopRef((population)null);
         return;
@@ -434,6 +498,8 @@ public class initImpl extends MinimalEObjectImpl.Container implements init
         return actualParameters != null;
       case MarkovPopulationModelsPackage.INIT__STATES:
         return states != null && !states.isEmpty();
+      case MarkovPopulationModelsPackage.INIT__LOC_REF:
+        return locRef != null;
       case MarkovPopulationModelsPackage.INIT__POP_REF:
         return popRef != null;
       case MarkovPopulationModelsPackage.INIT__CARD:

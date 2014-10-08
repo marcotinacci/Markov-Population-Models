@@ -6,7 +6,7 @@ generate markovPopulationModels "http://www.simhya.imt/language/MarkovPopulation
 //extension
 
 main:
-	(constDef+= constant)* & (populationDef+=population)+ & (agentDef+=agent)+ 
+	(constDef+= constant)* & (locationDef=location)?  & (agentDef+=agent)+ & (populationDef+=population)+
 ;
 
 constant:
@@ -29,6 +29,14 @@ actual_parameters:
 	'[' actualParams+= expr (',' actualParams+= expr)*']'	
 ;
 
+
+location:
+	'location' name=ID paramList=params? '{'
+		'actions' act+=label+
+		s+=state+
+	'}'
+	
+;
 
 agent:
 	'agent' name=ID paramList=params?	'{'
@@ -57,7 +65,8 @@ action:
 exprova:
 	expr= ID|
 	expr= ID '+' num=INT|
-	expr= ID '-' num=INT
+	expr= ID '-' num=INT|
+	num=INT
 ;
 
 
@@ -69,10 +78,10 @@ population:
 ;
 
 init:
-	(agentRef=[agent] actualParameters=actual_parameters? '{'
+	(agentRef=[agent] actualParameters=actual_parameters? ('in' locRef=[location])? '{'
 		states+=stateInit (',' states+=stateInit)*
-	'}')|
-	(popRef=[population] '{' card=expr'}')
+	'}'  )|
+	(popRef=[population] ('in' locRef=[location])? '{' card=expr'}' )
 ;
 
 stateInit:
@@ -107,11 +116,10 @@ state_cond:
 ;
 
 state_ref:
-	(stateRef=[state] actualParameters=actual_parameters? )|
-	(agentStateRef= [agent]'.'stateRef = [state] actualParameters=actual_parameters?)|
-	(popAgentStateRef= [population]'.'agentStateRef=[agent]'.'stateRef = [state] actualParameters=actual_parameters?)
+	(stateRef=[state] actualParameters=actual_parameters? ('in' locRef=[location])	)|
+	(agentStateRef= [agent]'.'stateRef = [state] actualParameters=actual_parameters? ('in' locRef=[location])	)|
+	(popAgentStateRef= [population]'.'agentStateRef=[agent]'.'stateRef = [state] actualParameters=actual_parameters? ('in' locRef=[location])	)
 ;
-
 
 action_cond:
 	{anystate} 'any' |

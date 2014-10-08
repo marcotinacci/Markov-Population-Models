@@ -69,6 +69,7 @@ public class MarkovPopulationModelsFactoryImpl extends EFactoryImpl implements M
       case MarkovPopulationModelsPackage.EXPR: return createexpr();
       case MarkovPopulationModelsPackage.PARAMS: return createparams();
       case MarkovPopulationModelsPackage.ACTUAL_PARAMETERS: return createactual_parameters();
+      case MarkovPopulationModelsPackage.LOCATION: return createlocation();
       case MarkovPopulationModelsPackage.AGENT: return createagent();
       case MarkovPopulationModelsPackage.LABEL: return createlabel();
       case MarkovPopulationModelsPackage.STATE: return createstate();
@@ -142,6 +143,17 @@ public class MarkovPopulationModelsFactoryImpl extends EFactoryImpl implements M
   {
     actual_parametersImpl actual_parameters = new actual_parametersImpl();
     return actual_parameters;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public location createlocation()
+  {
+    locationImpl location = new locationImpl();
+    return location;
   }
 
   /**

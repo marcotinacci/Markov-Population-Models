@@ -16,6 +16,7 @@ import imt.simhya.language.markovPopulationModels.gl_tran;
 import imt.simhya.language.markovPopulationModels.init;
 import imt.simhya.language.markovPopulationModels.label;
 import imt.simhya.language.markovPopulationModels.loc_tran;
+import imt.simhya.language.markovPopulationModels.location;
 import imt.simhya.language.markovPopulationModels.main;
 import imt.simhya.language.markovPopulationModels.params;
 import imt.simhya.language.markovPopulationModels.population;
@@ -120,6 +121,12 @@ public class MarkovPopulationModelsSemanticSequencer extends AbstractDelegatingS
 			case MarkovPopulationModelsPackage.LOC_TRAN:
 				if(context == grammarAccess.getLoc_tranRule()) {
 					sequence_loc_tran(context, (loc_tran) semanticObject); 
+					return; 
+				}
+				else break;
+			case MarkovPopulationModelsPackage.LOCATION:
+				if(context == grammarAccess.getLocationRule()) {
+					sequence_location(context, (location) semanticObject); 
 					return; 
 				}
 				else break;
@@ -241,7 +248,7 @@ public class MarkovPopulationModelsSemanticSequencer extends AbstractDelegatingS
 	
 	/**
 	 * Constraint:
-	 *     (expr=ID | (expr=ID num=INT) | (expr=ID num=INT))
+	 *     (expr=ID | (expr=ID num=INT) | (expr=ID num=INT) | num=INT)
 	 */
 	protected void sequence_exprova(EObject context, exprova semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -268,7 +275,10 @@ public class MarkovPopulationModelsSemanticSequencer extends AbstractDelegatingS
 	
 	/**
 	 * Constraint:
-	 *     ((agentRef=[agent|ID] actualParameters=actual_parameters? states+=stateInit states+=stateInit*) | (popRef=[population|ID] card=expr))
+	 *     (
+	 *         (agentRef=[agent|ID] actualParameters=actual_parameters? states+=stateInit states+=stateInit* locRef=[location|ID]?) | 
+	 *         (popRef=[population|ID] card=expr locRef=[location|ID]?)
+	 *     )
 	 */
 	protected void sequence_init(EObject context, init semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -302,7 +312,16 @@ public class MarkovPopulationModelsSemanticSequencer extends AbstractDelegatingS
 	
 	/**
 	 * Constraint:
-	 *     (constDef+=constant* populationDef+=population+ agentDef+=agent+)
+	 *     (name=ID paramList=params? act+=label+ s+=state+)
+	 */
+	protected void sequence_location(EObject context, location semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     (constDef+=constant* locationDef=location? agentDef+=agent+ populationDef+=population+)
 	 */
 	protected void sequence_main(EObject context, main semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -358,9 +377,9 @@ public class MarkovPopulationModelsSemanticSequencer extends AbstractDelegatingS
 	/**
 	 * Constraint:
 	 *     (
-	 *         (stateRef=[state|ID] actualParameters=actual_parameters?) | 
-	 *         (agentStateRef=[agent|ID] stateRef=[state|ID] actualParameters=actual_parameters?) | 
-	 *         (popAgentStateRef=[population|ID] agentStateRef=[agent|ID] stateRef=[state|ID] actualParameters=actual_parameters?)
+	 *         (stateRef=[state|ID] actualParameters=actual_parameters? locRef=[location|ID]) | 
+	 *         (agentStateRef=[agent|ID] stateRef=[state|ID] actualParameters=actual_parameters? locRef=[location|ID]) | 
+	 *         (popAgentStateRef=[population|ID] agentStateRef=[agent|ID] stateRef=[state|ID] actualParameters=actual_parameters? locRef=[location|ID])
 	 *     )
 	 */
 	protected void sequence_state_ref(EObject context, state_ref semanticObject) {

@@ -5,10 +5,12 @@
   <eClassifiers xsi:type="ecore:EClass" name="main">
     <eStructuralFeatures xsi:type="ecore:EReference" name="constDef" upperBound="-1"
         eType="#//constant" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="populationDef" upperBound="-1"
-        eType="#//population" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="locationDef" eType="#//location"
+        containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="agentDef" upperBound="-1"
         eType="#//agent" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="populationDef" upperBound="-1"
+        eType="#//population" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="constant">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -27,6 +29,15 @@
   <eClassifiers xsi:type="ecore:EClass" name="actual_parameters">
     <eStructuralFeatures xsi:type="ecore:EReference" name="actualParams" upperBound="-1"
         eType="#//expr" containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="location">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="paramList" eType="#//params"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="act" upperBound="-1" eType="#//label"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="s" upperBound="-1" eType="#//state"
+        containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="agent">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -74,6 +85,7 @@
         containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="states" upperBound="-1"
         eType="#//stateInit" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="locRef" eType="#//location"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="popRef" eType="#//population"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="card" eType="#//expr" containment="true"/>
   </eClassifiers>
@@ -117,6 +129,7 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="stateRef" eType="#//state"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="actualParameters" eType="#//actual_parameters"
         containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="locRef" eType="#//location"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="agentStateRef" eType="#//agent"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="popAgentStateRef" eType="#//population"/>
   </eClassifiers>

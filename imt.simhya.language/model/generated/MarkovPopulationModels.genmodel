@@ -10,8 +10,9 @@
       fileExtensions="mpm" ecorePackage="MarkovPopulationModels.ecore#/">
     <genClasses ecoreClass="MarkovPopulationModels.ecore#//main">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MarkovPopulationModels.ecore#//main/constDef"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MarkovPopulationModels.ecore#//main/populationDef"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MarkovPopulationModels.ecore#//main/locationDef"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MarkovPopulationModels.ecore#//main/agentDef"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MarkovPopulationModels.ecore#//main/populationDef"/>
     </genClasses>
     <genClasses ecoreClass="MarkovPopulationModels.ecore#//constant">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MarkovPopulationModels.ecore#//constant/name"/>
@@ -28,6 +29,12 @@
     </genClasses>
     <genClasses ecoreClass="MarkovPopulationModels.ecore#//actual_parameters">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MarkovPopulationModels.ecore#//actual_parameters/actualParams"/>
+    </genClasses>
+    <genClasses ecoreClass="MarkovPopulationModels.ecore#//location">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MarkovPopulationModels.ecore#//location/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MarkovPopulationModels.ecore#//location/paramList"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MarkovPopulationModels.ecore#//location/act"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MarkovPopulationModels.ecore#//location/s"/>
     </genClasses>
     <genClasses ecoreClass="MarkovPopulationModels.ecore#//agent">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MarkovPopulationModels.ecore#//agent/name"/>
@@ -63,6 +70,7 @@
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference MarkovPopulationModels.ecore#//init/agentRef"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MarkovPopulationModels.ecore#//init/actualParameters"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MarkovPopulationModels.ecore#//init/states"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference MarkovPopulationModels.ecore#//init/locRef"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference MarkovPopulationModels.ecore#//init/popRef"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MarkovPopulationModels.ecore#//init/card"/>
     </genClasses>
@@ -94,6 +102,7 @@
     <genClasses ecoreClass="MarkovPopulationModels.ecore#//state_ref">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference MarkovPopulationModels.ecore#//state_ref/stateRef"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MarkovPopulationModels.ecore#//state_ref/actualParameters"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference MarkovPopulationModels.ecore#//state_ref/locRef"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference MarkovPopulationModels.ecore#//state_ref/agentStateRef"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference MarkovPopulationModels.ecore#//state_ref/popAgentStateRef"/>
     </genClasses>

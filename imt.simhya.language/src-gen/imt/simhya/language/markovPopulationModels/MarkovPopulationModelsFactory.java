@@ -68,6 +68,15 @@ public interface MarkovPopulationModelsFactory extends EFactory
   actual_parameters createactual_parameters();
 
   /**
+   * Returns a new object of class '<em>location</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>location</em>'.
+   * @generated
+   */
+  location createlocation();
+
+  /**
    * Returns a new object of class '<em>agent</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->

@@ -12,7 +12,9 @@ import java.util.ArrayList;
 
 @SuppressWarnings("all")
 public class InternalMarkovPopulationModelsLexer extends Lexer {
+    public static final int T__40=40;
     public static final int RULE_ID=4;
+    public static final int T__41=41;
     public static final int T__29=29;
     public static final int T__28=28;
     public static final int T__27=27;
@@ -190,10 +192,10 @@ public class InternalMarkovPopulationModelsLexer extends Lexer {
         try {
             int _type = T__18;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:17:7: ( 'agent' )
-            // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:17:9: 'agent'
+            // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:17:7: ( 'location' )
+            // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:17:9: 'location'
             {
-            match("agent"); 
+            match("location"); 
 
 
             }
@@ -272,10 +274,10 @@ public class InternalMarkovPopulationModelsLexer extends Lexer {
         try {
             int _type = T__22;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:21:7: ( 'state' )
-            // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:21:9: 'state'
+            // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:21:7: ( 'agent' )
+            // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:21:9: 'agent'
             {
-            match("state"); 
+            match("agent"); 
 
 
             }
@@ -293,10 +295,10 @@ public class InternalMarkovPopulationModelsLexer extends Lexer {
         try {
             int _type = T__23;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:22:7: ( '-->' )
-            // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:22:9: '-->'
+            // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:22:7: ( 'state' )
+            // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:22:9: 'state'
             {
-            match("-->"); 
+            match("state"); 
 
 
             }
@@ -314,10 +316,11 @@ public class InternalMarkovPopulationModelsLexer extends Lexer {
         try {
             int _type = T__24;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:23:7: ( ':' )
-            // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:23:9: ':'
+            // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:23:7: ( '-->' )
+            // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:23:9: '-->'
             {
-            match(':'); 
+            match("-->"); 
+
 
             }
 
@@ -334,10 +337,10 @@ public class InternalMarkovPopulationModelsLexer extends Lexer {
         try {
             int _type = T__25;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:24:7: ( '+' )
-            // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:24:9: '+'
+            // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:24:7: ( ':' )
+            // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:24:9: ':'
             {
-            match('+'); 
+            match(':'); 
 
             }
 
@@ -354,10 +357,10 @@ public class InternalMarkovPopulationModelsLexer extends Lexer {
         try {
             int _type = T__26;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:25:7: ( '-' )
-            // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:25:9: '-'
+            // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:25:7: ( '+' )
+            // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:25:9: '+'
             {
-            match('-'); 
+            match('+'); 
 
             }
 
@@ -374,11 +377,10 @@ public class InternalMarkovPopulationModelsLexer extends Lexer {
         try {
             int _type = T__27;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:26:7: ( 'population' )
-            // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:26:9: 'population'
+            // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:26:7: ( '-' )
+            // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:26:9: '-'
             {
-            match("population"); 
-
+            match('-'); 
 
             }
 
@@ -395,10 +397,10 @@ public class InternalMarkovPopulationModelsLexer extends Lexer {
         try {
             int _type = T__28;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:27:7: ( 'init' )
-            // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:27:9: 'init'
+            // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:27:7: ( 'population' )
+            // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:27:9: 'population'
             {
-            match("init"); 
+            match("population"); 
 
 
             }
@@ -416,10 +418,10 @@ public class InternalMarkovPopulationModelsLexer extends Lexer {
         try {
             int _type = T__29;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:28:7: ( '||' )
-            // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:28:9: '||'
+            // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:28:7: ( 'init' )
+            // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:28:9: 'init'
             {
-            match("||"); 
+            match("init"); 
 
 
             }
@@ -437,10 +439,10 @@ public class InternalMarkovPopulationModelsLexer extends Lexer {
         try {
             int _type = T__30;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:29:7: ( 'transition' )
-            // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:29:9: 'transition'
+            // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:29:7: ( '||' )
+            // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:29:9: '||'
             {
-            match("transition"); 
+            match("||"); 
 
 
             }
@@ -458,10 +460,10 @@ public class InternalMarkovPopulationModelsLexer extends Lexer {
         try {
             int _type = T__31;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:30:7: ( '=>' )
-            // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:30:9: '=>'
+            // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:30:7: ( 'in' )
+            // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:30:9: 'in'
             {
-            match("=>"); 
+            match("in"); 
 
 
             }
@@ -479,10 +481,11 @@ public class InternalMarkovPopulationModelsLexer extends Lexer {
         try {
             int _type = T__32;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:31:7: ( ';' )
-            // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:31:9: ';'
+            // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:31:7: ( 'transition' )
+            // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:31:9: 'transition'
             {
-            match(';'); 
+            match("transition"); 
+
 
             }
 
@@ -499,10 +502,11 @@ public class InternalMarkovPopulationModelsLexer extends Lexer {
         try {
             int _type = T__33;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:32:7: ( '&' )
-            // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:32:9: '&'
+            // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:32:7: ( '=>' )
+            // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:32:9: '=>'
             {
-            match('&'); 
+            match("=>"); 
+
 
             }
 
@@ -519,11 +523,10 @@ public class InternalMarkovPopulationModelsLexer extends Lexer {
         try {
             int _type = T__34;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:33:7: ( '...' )
-            // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:33:9: '...'
+            // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:33:7: ( ';' )
+            // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:33:9: ';'
             {
-            match("..."); 
-
+            match(';'); 
 
             }
 
@@ -540,11 +543,10 @@ public class InternalMarkovPopulationModelsLexer extends Lexer {
         try {
             int _type = T__35;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:34:7: ( 'new' )
-            // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:34:9: 'new'
+            // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:34:7: ( '&' )
+            // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:34:9: '&'
             {
-            match("new"); 
-
+            match('&'); 
 
             }
 
@@ -561,10 +563,10 @@ public class InternalMarkovPopulationModelsLexer extends Lexer {
         try {
             int _type = T__36;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:35:7: ( 'kill' )
-            // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:35:9: 'kill'
+            // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:35:7: ( '...' )
+            // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:35:9: '...'
             {
-            match("kill"); 
+            match("..."); 
 
 
             }
@@ -582,10 +584,10 @@ public class InternalMarkovPopulationModelsLexer extends Lexer {
         try {
             int _type = T__37;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:36:7: ( 'any' )
-            // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:36:9: 'any'
+            // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:36:7: ( 'new' )
+            // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:36:9: 'new'
             {
-            match("any"); 
+            match("new"); 
 
 
             }
@@ -603,10 +605,10 @@ public class InternalMarkovPopulationModelsLexer extends Lexer {
         try {
             int _type = T__38;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:37:7: ( 'or' )
-            // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:37:9: 'or'
+            // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:37:7: ( 'kill' )
+            // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:37:9: 'kill'
             {
-            match("or"); 
+            match("kill"); 
 
 
             }
@@ -624,10 +626,11 @@ public class InternalMarkovPopulationModelsLexer extends Lexer {
         try {
             int _type = T__39;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:38:7: ( '.' )
-            // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:38:9: '.'
+            // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:38:7: ( 'any' )
+            // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:38:9: 'any'
             {
-            match('.'); 
+            match("any"); 
+
 
             }
 
@@ -639,15 +642,56 @@ public class InternalMarkovPopulationModelsLexer extends Lexer {
     }
     // $ANTLR end "T__39"
 
+    // $ANTLR start "T__40"
+    public final void mT__40() throws RecognitionException {
+        try {
+            int _type = T__40;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:39:7: ( 'or' )
+            // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:39:9: 'or'
+            {
+            match("or"); 
+
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "T__40"
+
+    // $ANTLR start "T__41"
+    public final void mT__41() throws RecognitionException {
+        try {
+            int _type = T__41;
+            int _channel = DEFAULT_TOKEN_CHANNEL;
+            // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:40:7: ( '.' )
+            // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:40:9: '.'
+            {
+            match('.'); 
+
+            }
+
+            state.type = _type;
+            state.channel = _channel;
+        }
+        finally {
+        }
+    }
+    // $ANTLR end "T__41"
+
     // $ANTLR start "RULE_INT"
     public final void mRULE_INT() throws RecognitionException {
         try {
             int _type = RULE_INT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:6381:10: ( ( '0' .. '9' )+ )
-            // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:6381:12: ( '0' .. '9' )+
+            // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:7371:10: ( ( '0' .. '9' )+ )
+            // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:7371:12: ( '0' .. '9' )+
             {
-            // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:6381:12: ( '0' .. '9' )+
+            // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:7371:12: ( '0' .. '9' )+
             int cnt1=0;
             loop1:
             do {
@@ -661,7 +705,7 @@ public class InternalMarkovPopulationModelsLexer extends Lexer {
 
                 switch (alt1) {
             	case 1 :
-            	    // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:6381:13: '0' .. '9'
+            	    // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:7371:13: '0' .. '9'
             	    {
             	    matchRange('0','9'); 
 
@@ -693,10 +737,10 @@ public class InternalMarkovPopulationModelsLexer extends Lexer {
         try {
             int _type = RULE_FLOAT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:6383:12: ( ( '-' )? RULE_INT '.' RULE_INT )
-            // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:6383:14: ( '-' )? RULE_INT '.' RULE_INT
+            // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:7373:12: ( ( '-' )? RULE_INT '.' RULE_INT )
+            // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:7373:14: ( '-' )? RULE_INT '.' RULE_INT
             {
-            // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:6383:14: ( '-' )?
+            // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:7373:14: ( '-' )?
             int alt2=2;
             int LA2_0 = input.LA(1);
 
@@ -705,7 +749,7 @@ public class InternalMarkovPopulationModelsLexer extends Lexer {
             }
             switch (alt2) {
                 case 1 :
-                    // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:6383:14: '-'
+                    // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:7373:14: '-'
                     {
                     match('-'); 
 
@@ -733,10 +777,10 @@ public class InternalMarkovPopulationModelsLexer extends Lexer {
         try {
             int _type = RULE_ID;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:6385:9: ( ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )* )
-            // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:6385:11: ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
+            // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:7375:9: ( ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )* )
+            // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:7375:11: ( '^' )? ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
             {
-            // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:6385:11: ( '^' )?
+            // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:7375:11: ( '^' )?
             int alt3=2;
             int LA3_0 = input.LA(1);
 
@@ -745,7 +789,7 @@ public class InternalMarkovPopulationModelsLexer extends Lexer {
             }
             switch (alt3) {
                 case 1 :
-                    // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:6385:11: '^'
+                    // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:7375:11: '^'
                     {
                     match('^'); 
 
@@ -763,7 +807,7 @@ public class InternalMarkovPopulationModelsLexer extends Lexer {
                 recover(mse);
                 throw mse;}
 
-            // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:6385:40: ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
+            // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:7375:40: ( 'a' .. 'z' | 'A' .. 'Z' | '_' | '0' .. '9' )*
             loop4:
             do {
                 int alt4=2;
@@ -812,10 +856,10 @@ public class InternalMarkovPopulationModelsLexer extends Lexer {
         try {
             int _type = RULE_STRING;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:6387:13: ( ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' ) )
-            // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:6387:15: ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
+            // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:7377:13: ( ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' ) )
+            // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:7377:15: ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
             {
-            // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:6387:15: ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
+            // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:7377:15: ( '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"' | '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\'' )
             int alt7=2;
             int LA7_0 = input.LA(1);
 
@@ -833,10 +877,10 @@ public class InternalMarkovPopulationModelsLexer extends Lexer {
             }
             switch (alt7) {
                 case 1 :
-                    // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:6387:16: '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"'
+                    // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:7377:16: '\"' ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )* '\"'
                     {
                     match('\"'); 
-                    // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:6387:20: ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )*
+                    // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:7377:20: ( '\\\\' . | ~ ( ( '\\\\' | '\"' ) ) )*
                     loop5:
                     do {
                         int alt5=3;
@@ -852,7 +896,7 @@ public class InternalMarkovPopulationModelsLexer extends Lexer {
 
                         switch (alt5) {
                     	case 1 :
-                    	    // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:6387:21: '\\\\' .
+                    	    // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:7377:21: '\\\\' .
                     	    {
                     	    match('\\'); 
                     	    matchAny(); 
@@ -860,7 +904,7 @@ public class InternalMarkovPopulationModelsLexer extends Lexer {
                     	    }
                     	    break;
                     	case 2 :
-                    	    // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:6387:28: ~ ( ( '\\\\' | '\"' ) )
+                    	    // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:7377:28: ~ ( ( '\\\\' | '\"' ) )
                     	    {
                     	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='!')||(input.LA(1)>='#' && input.LA(1)<='[')||(input.LA(1)>=']' && input.LA(1)<='\uFFFF') ) {
                     	        input.consume();
@@ -885,10 +929,10 @@ public class InternalMarkovPopulationModelsLexer extends Lexer {
                     }
                     break;
                 case 2 :
-                    // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:6387:48: '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\''
+                    // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:7377:48: '\\'' ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )* '\\''
                     {
                     match('\''); 
-                    // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:6387:53: ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )*
+                    // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:7377:53: ( '\\\\' . | ~ ( ( '\\\\' | '\\'' ) ) )*
                     loop6:
                     do {
                         int alt6=3;
@@ -904,7 +948,7 @@ public class InternalMarkovPopulationModelsLexer extends Lexer {
 
                         switch (alt6) {
                     	case 1 :
-                    	    // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:6387:54: '\\\\' .
+                    	    // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:7377:54: '\\\\' .
                     	    {
                     	    match('\\'); 
                     	    matchAny(); 
@@ -912,7 +956,7 @@ public class InternalMarkovPopulationModelsLexer extends Lexer {
                     	    }
                     	    break;
                     	case 2 :
-                    	    // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:6387:61: ~ ( ( '\\\\' | '\\'' ) )
+                    	    // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:7377:61: ~ ( ( '\\\\' | '\\'' ) )
                     	    {
                     	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='&')||(input.LA(1)>='(' && input.LA(1)<='[')||(input.LA(1)>=']' && input.LA(1)<='\uFFFF') ) {
                     	        input.consume();
@@ -955,12 +999,12 @@ public class InternalMarkovPopulationModelsLexer extends Lexer {
         try {
             int _type = RULE_ML_COMMENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:6389:17: ( '/*' ( options {greedy=false; } : . )* '*/' )
-            // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:6389:19: '/*' ( options {greedy=false; } : . )* '*/'
+            // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:7379:17: ( '/*' ( options {greedy=false; } : . )* '*/' )
+            // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:7379:19: '/*' ( options {greedy=false; } : . )* '*/'
             {
             match("/*"); 
 
-            // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:6389:24: ( options {greedy=false; } : . )*
+            // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:7379:24: ( options {greedy=false; } : . )*
             loop8:
             do {
                 int alt8=2;
@@ -985,7 +1029,7 @@ public class InternalMarkovPopulationModelsLexer extends Lexer {
 
                 switch (alt8) {
             	case 1 :
-            	    // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:6389:52: .
+            	    // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:7379:52: .
             	    {
             	    matchAny(); 
 
@@ -1015,12 +1059,12 @@ public class InternalMarkovPopulationModelsLexer extends Lexer {
         try {
             int _type = RULE_SL_COMMENT;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:6391:17: ( '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )? )
-            // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:6391:19: '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )?
+            // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:7381:17: ( '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )? )
+            // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:7381:19: '//' (~ ( ( '\\n' | '\\r' ) ) )* ( ( '\\r' )? '\\n' )?
             {
             match("//"); 
 
-            // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:6391:24: (~ ( ( '\\n' | '\\r' ) ) )*
+            // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:7381:24: (~ ( ( '\\n' | '\\r' ) ) )*
             loop9:
             do {
                 int alt9=2;
@@ -1033,7 +1077,7 @@ public class InternalMarkovPopulationModelsLexer extends Lexer {
 
                 switch (alt9) {
             	case 1 :
-            	    // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:6391:24: ~ ( ( '\\n' | '\\r' ) )
+            	    // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:7381:24: ~ ( ( '\\n' | '\\r' ) )
             	    {
             	    if ( (input.LA(1)>='\u0000' && input.LA(1)<='\t')||(input.LA(1)>='\u000B' && input.LA(1)<='\f')||(input.LA(1)>='\u000E' && input.LA(1)<='\uFFFF') ) {
             	        input.consume();
@@ -1053,7 +1097,7 @@ public class InternalMarkovPopulationModelsLexer extends Lexer {
                 }
             } while (true);
 
-            // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:6391:40: ( ( '\\r' )? '\\n' )?
+            // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:7381:40: ( ( '\\r' )? '\\n' )?
             int alt11=2;
             int LA11_0 = input.LA(1);
 
@@ -1062,9 +1106,9 @@ public class InternalMarkovPopulationModelsLexer extends Lexer {
             }
             switch (alt11) {
                 case 1 :
-                    // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:6391:41: ( '\\r' )? '\\n'
+                    // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:7381:41: ( '\\r' )? '\\n'
                     {
-                    // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:6391:41: ( '\\r' )?
+                    // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:7381:41: ( '\\r' )?
                     int alt10=2;
                     int LA10_0 = input.LA(1);
 
@@ -1073,7 +1117,7 @@ public class InternalMarkovPopulationModelsLexer extends Lexer {
                     }
                     switch (alt10) {
                         case 1 :
-                            // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:6391:41: '\\r'
+                            // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:7381:41: '\\r'
                             {
                             match('\r'); 
 
@@ -1105,10 +1149,10 @@ public class InternalMarkovPopulationModelsLexer extends Lexer {
         try {
             int _type = RULE_WS;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:6393:9: ( ( ' ' | '\\t' | '\\r' | '\\n' )+ )
-            // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:6393:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
+            // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:7383:9: ( ( ' ' | '\\t' | '\\r' | '\\n' )+ )
+            // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:7383:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
             {
-            // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:6393:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
+            // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:7383:11: ( ' ' | '\\t' | '\\r' | '\\n' )+
             int cnt12=0;
             loop12:
             do {
@@ -1162,8 +1206,8 @@ public class InternalMarkovPopulationModelsLexer extends Lexer {
         try {
             int _type = RULE_ANY_OTHER;
             int _channel = DEFAULT_TOKEN_CHANNEL;
-            // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:6395:16: ( . )
-            // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:6395:18: .
+            // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:7385:16: ( . )
+            // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:7385:18: .
             {
             matchAny(); 
 
@@ -1178,8 +1222,8 @@ public class InternalMarkovPopulationModelsLexer extends Lexer {
     // $ANTLR end "RULE_ANY_OTHER"
 
     public void mTokens() throws RecognitionException {
-        // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:1:8: ( T__12 | T__13 | T__14 | T__15 | T__16 | T__17 | T__18 | T__19 | T__20 | T__21 | T__22 | T__23 | T__24 | T__25 | T__26 | T__27 | T__28 | T__29 | T__30 | T__31 | T__32 | T__33 | T__34 | T__35 | T__36 | T__37 | T__38 | T__39 | RULE_INT | RULE_FLOAT | RULE_ID | RULE_STRING | RULE_ML_COMMENT | RULE_SL_COMMENT | RULE_WS | RULE_ANY_OTHER )
-        int alt13=36;
+        // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:1:8: ( T__12 | T__13 | T__14 | T__15 | T__16 | T__17 | T__18 | T__19 | T__20 | T__21 | T__22 | T__23 | T__24 | T__25 | T__26 | T__27 | T__28 | T__29 | T__30 | T__31 | T__32 | T__33 | T__34 | T__35 | T__36 | T__37 | T__38 | T__39 | T__40 | T__41 | RULE_INT | RULE_FLOAT | RULE_ID | RULE_STRING | RULE_ML_COMMENT | RULE_SL_COMMENT | RULE_WS | RULE_ANY_OTHER )
+        int alt13=38;
         alt13 = dfa13.predict(input);
         switch (alt13) {
             case 1 :
@@ -1379,56 +1423,70 @@ public class InternalMarkovPopulationModelsLexer extends Lexer {
                 }
                 break;
             case 29 :
-                // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:1:178: RULE_INT
+                // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:1:178: T__40
+                {
+                mT__40(); 
+
+                }
+                break;
+            case 30 :
+                // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:1:184: T__41
+                {
+                mT__41(); 
+
+                }
+                break;
+            case 31 :
+                // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:1:190: RULE_INT
                 {
                 mRULE_INT(); 
 
                 }
                 break;
-            case 30 :
-                // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:1:187: RULE_FLOAT
+            case 32 :
+                // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:1:199: RULE_FLOAT
                 {
                 mRULE_FLOAT(); 
 
                 }
                 break;
-            case 31 :
-                // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:1:198: RULE_ID
+            case 33 :
+                // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:1:210: RULE_ID
                 {
                 mRULE_ID(); 
 
                 }
                 break;
-            case 32 :
-                // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:1:206: RULE_STRING
+            case 34 :
+                // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:1:218: RULE_STRING
                 {
                 mRULE_STRING(); 
 
                 }
                 break;
-            case 33 :
-                // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:1:218: RULE_ML_COMMENT
+            case 35 :
+                // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:1:230: RULE_ML_COMMENT
                 {
                 mRULE_ML_COMMENT(); 
 
                 }
                 break;
-            case 34 :
-                // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:1:234: RULE_SL_COMMENT
+            case 36 :
+                // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:1:246: RULE_SL_COMMENT
                 {
                 mRULE_SL_COMMENT(); 
 
                 }
                 break;
-            case 35 :
-                // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:1:250: RULE_WS
+            case 37 :
+                // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:1:262: RULE_WS
                 {
                 mRULE_WS(); 
 
                 }
                 break;
-            case 36 :
-                // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:1:258: RULE_ANY_OTHER
+            case 38 :
+                // ../imt.simhya.language.ui/src-gen/imt/simhya/language/ui/contentassist/antlr/internal/InternalMarkovPopulationModels.g:1:270: RULE_ANY_OTHER
                 {
                 mRULE_ANY_OTHER(); 
 
@@ -1442,67 +1500,60 @@ public class InternalMarkovPopulationModelsLexer extends Lexer {
 
     protected DFA13 dfa13 = new DFA13(this);
     static final String DFA13_eotS =
-        "\1\uffff\1\40\1\42\3\uffff\1\40\2\uffff\1\40\1\55\2\uffff\2\40\1\36\1\40\2\uffff\1\70\3\40\1\74\1\36\1\uffff\3\36\2\uffff\1\40\6\uffff\3\40\2\uffff\1\40\5\uffff\2\40\1\uffff\1\40\4\uffff\2\40\1\114\1\uffff\1\74\4\uffff\3\40\1\120\4\40\1\125\1\40\1\uffff\3\40\1\uffff\2\40\1\134\1\40\1\uffff\1\136\1\40\1\140\1\40\1\142\1\40\1\uffff\1\40\3\uffff\1\40\1\uffff\2\40\2\uffff\1\152\2\40\1\uffff\4\40\1\161\1\162\2\uffff";
+        "\1\uffff\1\41\1\43\3\uffff\1\41\1\uffff\1\41\1\uffff\1\41\1\60\2\uffff\2\41\1\37\1\41\2\uffff\1\72\3\41\1\76\1\37\1\uffff\3\37\2\uffff\1\41\6\uffff\1\41\1\uffff\3\41\1\uffff\1\41\5\uffff\1\41\1\114\1\uffff\1\41\4\uffff\2\41\1\120\1\uffff\1\76\4\uffff\4\41\1\125\3\41\1\uffff\1\41\1\132\1\41\1\uffff\4\41\1\uffff\2\41\1\142\1\41\1\uffff\1\144\3\41\1\150\1\151\1\41\1\uffff\1\41\2\uffff\2\41\2\uffff\2\41\2\uffff\1\41\1\163\2\41\1\166\1\uffff\2\41\1\uffff\2\41\1\173\1\174\2\uffff";
     static final String DFA13_eofS =
-        "\163\uffff";
+        "\175\uffff";
     static final String DFA13_minS =
-        "\1\0\1\157\1\76\3\uffff\1\143\2\uffff\1\164\1\55\2\uffff\1\157\1\156\1\174\1\162\2\uffff\1\56\1\145\1\151\1\162\1\56\1\101\1\uffff\2\0\1\52\2\uffff\1\156\6\uffff\1\145\1\164\1\171\2\uffff\1\141\5\uffff\1\160\1\151\1\uffff\1\141\4\uffff\1\167\1\154\1\60\1\uffff\1\56\4\uffff\1\163\1\156\1\151\1\60\1\164\1\165\1\164\1\156\1\60\1\154\1\uffff\2\164\1\157\1\uffff\1\145\1\154\1\60\1\163\1\uffff\1\60\1\40\1\60\1\156\1\60\1\141\1\uffff\1\151\1\uffff\1\151\1\uffff\1\163\1\uffff\2\164\2\uffff\1\60\2\151\1\uffff\2\157\2\156\2\60\2\uffff";
+        "\1\0\1\157\1\76\3\uffff\1\157\1\uffff\1\143\1\uffff\1\164\1\55\2\uffff\1\157\1\156\1\174\1\162\2\uffff\1\56\1\145\1\151\1\162\1\56\1\101\1\uffff\2\0\1\52\2\uffff\1\156\6\uffff\1\143\1\uffff\1\164\1\145\1\171\1\uffff\1\141\5\uffff\1\160\1\60\1\uffff\1\141\4\uffff\1\167\1\154\1\60\1\uffff\1\56\4\uffff\1\163\1\141\1\151\1\156\1\60\1\164\1\165\1\164\1\uffff\1\156\1\60\1\154\1\uffff\2\164\1\157\1\164\1\uffff\1\145\1\154\1\60\1\163\1\uffff\1\60\1\40\1\151\1\156\2\60\1\141\1\uffff\1\151\1\uffff\1\151\1\157\1\163\2\uffff\2\164\2\uffff\1\156\1\60\2\151\1\60\1\uffff\2\157\1\uffff\2\156\2\60\2\uffff";
     static final String DFA13_maxS =
-        "\1\uffff\1\157\1\76\3\uffff\1\156\2\uffff\1\164\1\71\2\uffff\1\157\1\156\1\174\1\162\2\uffff\1\56\1\145\1\151\1\162\1\71\1\172\1\uffff\2\uffff\1\57\2\uffff\1\156\6\uffff\1\145\1\164\1\171\2\uffff\1\141\5\uffff\1\160\1\151\1\uffff\1\141\4\uffff\1\167\1\154\1\172\1\uffff\1\71\4\uffff\1\163\1\156\1\151\1\172\1\164\1\165\1\164\1\156\1\172\1\154\1\uffff\2\164\1\157\1\uffff\1\145\1\154\1\172\1\163\1\uffff\1\172\1\40\1\172\1\156\1\172\1\141\1\uffff\1\151\1\uffff\1\162\1\uffff\1\163\1\uffff\2\164\2\uffff\1\172\2\151\1\uffff\2\157\2\156\2\172\2\uffff";
+        "\1\uffff\1\157\1\76\3\uffff\1\157\1\uffff\1\156\1\uffff\1\164\1\71\2\uffff\1\157\1\156\1\174\1\162\2\uffff\1\56\1\145\1\151\1\162\1\71\1\172\1\uffff\2\uffff\1\57\2\uffff\1\156\6\uffff\1\143\1\uffff\1\164\1\145\1\171\1\uffff\1\141\5\uffff\1\160\1\172\1\uffff\1\141\4\uffff\1\167\1\154\1\172\1\uffff\1\71\4\uffff\1\163\1\141\1\151\1\156\1\172\1\164\1\165\1\164\1\uffff\1\156\1\172\1\154\1\uffff\2\164\1\157\1\164\1\uffff\1\145\1\154\1\172\1\163\1\uffff\1\172\1\40\1\151\1\156\2\172\1\141\1\uffff\1\151\1\uffff\1\162\1\157\1\163\2\uffff\2\164\2\uffff\1\156\1\172\2\151\1\172\1\uffff\2\157\1\uffff\2\156\2\172\2\uffff";
     static final String DFA13_acceptS =
-        "\3\uffff\1\4\1\5\1\6\1\uffff\1\10\1\12\2\uffff\1\15\1\16\4\uffff\1\25\1\26\6\uffff\1\37\3\uffff\1\43\1\44\1\uffff\1\37\1\24\1\2\1\4\1\5\1\6\3\uffff\1\10\1\12\1\uffff\1\14\1\17\1\36\1\15\1\16\2\uffff\1\22\1\uffff\1\25\1\26\1\27\1\34\3\uffff\1\35\1\uffff\1\40\1\41\1\42\1\43\12\uffff\1\33\3\uffff\1\32\4\uffff\1\30\6\uffff\1\21\1\uffff\1\31\1\uffff\1\7\1\uffff\1\13\2\uffff\1\1\1\3\3\uffff\1\11\6\uffff\1\20\1\23";
+        "\3\uffff\1\4\1\5\1\6\1\uffff\1\10\1\uffff\1\12\2\uffff\1\16\1\17\4\uffff\1\27\1\30\6\uffff\1\41\3\uffff\1\45\1\46\1\uffff\1\41\1\26\1\2\1\4\1\5\1\6\1\uffff\1\10\3\uffff\1\12\1\uffff\1\15\1\40\1\20\1\16\1\17\2\uffff\1\23\1\uffff\1\27\1\30\1\31\1\36\3\uffff\1\37\1\uffff\1\42\1\43\1\44\1\45\10\uffff\1\24\3\uffff\1\35\4\uffff\1\34\4\uffff\1\32\7\uffff\1\22\1\uffff\1\33\3\uffff\1\13\1\14\2\uffff\1\1\1\3\5\uffff\1\11\2\uffff\1\7\4\uffff\1\21\1\25";
     static final String DFA13_specialS =
-        "\1\1\31\uffff\1\2\1\0\127\uffff}>";
+        "\1\1\32\uffff\1\0\1\2\140\uffff}>";
     static final String[] DFA13_transitionS = {
-            "\11\36\2\35\2\36\1\35\22\36\1\35\1\36\1\32\3\36\1\22\1\33\3\36\1\14\1\5\1\12\1\23\1\34\12\27\1\13\1\21\1\36\1\2\3\36\32\31\1\3\1\36\1\4\1\30\1\31\1\36\1\6\1\31\1\1\5\31\1\16\1\31\1\25\2\31\1\24\1\26\1\15\2\31\1\11\1\20\6\31\1\7\1\17\1\10\uff82\36",
-            "\1\37",
-            "\1\41",
+            "\11\37\2\36\2\37\1\36\22\37\1\36\1\37\1\33\3\37\1\23\1\34\3\37\1\15\1\5\1\13\1\24\1\35\12\30\1\14\1\22\1\37\1\2\3\37\32\32\1\3\1\37\1\4\1\31\1\32\1\37\1\10\1\32\1\1\5\32\1\17\1\32\1\26\1\6\1\32\1\25\1\27\1\16\2\32\1\12\1\21\6\32\1\7\1\20\1\11\uff82\37",
+            "\1\40",
+            "\1\42",
             "",
             "",
             "",
-            "\1\47\3\uffff\1\46\6\uffff\1\50",
+            "\1\47",
+            "",
+            "\1\51\3\uffff\1\52\6\uffff\1\53",
+            "",
+            "\1\55",
+            "\1\56\2\uffff\12\57",
             "",
             "",
-            "\1\53",
-            "\1\54\2\uffff\12\56",
-            "",
-            "",
-            "\1\61",
-            "\1\62",
             "\1\63",
             "\1\64",
+            "\1\65",
+            "\1\66",
             "",
             "",
-            "\1\67",
             "\1\71",
-            "\1\72",
             "\1\73",
-            "\1\56\1\uffff\12\75",
-            "\32\40\4\uffff\1\40\1\uffff\32\40",
+            "\1\74",
+            "\1\75",
+            "\1\57\1\uffff\12\77",
+            "\32\41\4\uffff\1\41\1\uffff\32\41",
             "",
-            "\0\76",
-            "\0\76",
-            "\1\77\4\uffff\1\100",
-            "",
-            "",
-            "\1\102",
-            "",
+            "\0\100",
+            "\0\100",
+            "\1\101\4\uffff\1\102",
             "",
             "",
-            "",
-            "",
-            "",
-            "\1\103",
             "\1\104",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
             "\1\105",
             "",
-            "",
             "\1\106",
-            "",
-            "",
-            "",
-            "",
-            "",
             "\1\107",
             "\1\110",
             "",
@@ -1511,62 +1562,79 @@ public class InternalMarkovPopulationModelsLexer extends Lexer {
             "",
             "",
             "",
+            "",
             "\1\112",
-            "\1\113",
-            "\12\40\7\uffff\32\40\4\uffff\1\40\1\uffff\32\40",
-            "",
-            "\1\56\1\uffff\12\75",
-            "",
-            "",
-            "",
+            "\12\41\7\uffff\32\41\4\uffff\1\41\1\uffff\10\41\1\113\21\41",
             "",
             "\1\115",
+            "",
+            "",
+            "",
+            "",
             "\1\116",
             "\1\117",
-            "\12\40\7\uffff\32\40\4\uffff\1\40\1\uffff\32\40",
+            "\12\41\7\uffff\32\41\4\uffff\1\41\1\uffff\32\41",
+            "",
+            "\1\57\1\uffff\12\77",
+            "",
+            "",
+            "",
+            "",
             "\1\121",
             "\1\122",
             "\1\123",
             "\1\124",
-            "\12\40\7\uffff\32\40\4\uffff\1\40\1\uffff\32\40",
+            "\12\41\7\uffff\32\41\4\uffff\1\41\1\uffff\32\41",
             "\1\126",
-            "",
             "\1\127",
             "\1\130",
+            "",
             "\1\131",
-            "",
-            "\1\132",
+            "\12\41\7\uffff\32\41\4\uffff\1\41\1\uffff\32\41",
             "\1\133",
-            "\12\40\7\uffff\32\40\4\uffff\1\40\1\uffff\32\40",
-            "\1\135",
             "",
-            "\12\40\7\uffff\32\40\4\uffff\1\40\1\uffff\32\40",
+            "\1\134",
+            "\1\135",
+            "\1\136",
             "\1\137",
-            "\12\40\7\uffff\32\40\4\uffff\1\40\1\uffff\32\40",
+            "",
+            "\1\140",
             "\1\141",
-            "\12\40\7\uffff\32\40\4\uffff\1\40\1\uffff\32\40",
+            "\12\41\7\uffff\32\41\4\uffff\1\41\1\uffff\32\41",
             "\1\143",
             "",
-            "\1\144",
-            "",
-            "\1\145\10\uffff\1\146",
-            "",
+            "\12\41\7\uffff\32\41\4\uffff\1\41\1\uffff\32\41",
+            "\1\145",
+            "\1\146",
             "\1\147",
+            "\12\41\7\uffff\32\41\4\uffff\1\41\1\uffff\32\41",
+            "\12\41\7\uffff\32\41\4\uffff\1\41\1\uffff\32\41",
+            "\1\152",
             "",
-            "\1\150",
-            "\1\151",
-            "",
-            "",
-            "\12\40\7\uffff\32\40\4\uffff\1\40\1\uffff\32\40",
             "\1\153",
-            "\1\154",
             "",
-            "\1\155",
+            "\1\154\10\uffff\1\155",
             "\1\156",
             "\1\157",
+            "",
+            "",
             "\1\160",
-            "\12\40\7\uffff\32\40\4\uffff\1\40\1\uffff\32\40",
-            "\12\40\7\uffff\32\40\4\uffff\1\40\1\uffff\32\40",
+            "\1\161",
+            "",
+            "",
+            "\1\162",
+            "\12\41\7\uffff\32\41\4\uffff\1\41\1\uffff\32\41",
+            "\1\164",
+            "\1\165",
+            "\12\41\7\uffff\32\41\4\uffff\1\41\1\uffff\32\41",
+            "",
+            "\1\167",
+            "\1\170",
+            "",
+            "\1\171",
+            "\1\172",
+            "\12\41\7\uffff\32\41\4\uffff\1\41\1\uffff\32\41",
+            "\12\41\7\uffff\32\41\4\uffff\1\41\1\uffff\32\41",
             "",
             ""
     };
@@ -1601,7 +1669,7 @@ public class InternalMarkovPopulationModelsLexer extends Lexer {
             this.transition = DFA13_transition;
         }
         public String getDescription() {
-            return "1:1: Tokens : ( T__12 | T__13 | T__14 | T__15 | T__16 | T__17 | T__18 | T__19 | T__20 | T__21 | T__22 | T__23 | T__24 | T__25 | T__26 | T__27 | T__28 | T__29 | T__30 | T__31 | T__32 | T__33 | T__34 | T__35 | T__36 | T__37 | T__38 | T__39 | RULE_INT | RULE_FLOAT | RULE_ID | RULE_STRING | RULE_ML_COMMENT | RULE_SL_COMMENT | RULE_WS | RULE_ANY_OTHER );";
+            return "1:1: Tokens : ( T__12 | T__13 | T__14 | T__15 | T__16 | T__17 | T__18 | T__19 | T__20 | T__21 | T__22 | T__23 | T__24 | T__25 | T__26 | T__27 | T__28 | T__29 | T__30 | T__31 | T__32 | T__33 | T__34 | T__35 | T__36 | T__37 | T__38 | T__39 | T__40 | T__41 | RULE_INT | RULE_FLOAT | RULE_ID | RULE_STRING | RULE_ML_COMMENT | RULE_SL_COMMENT | RULE_WS | RULE_ANY_OTHER );";
         }
         public int specialStateTransition(int s, IntStream _input) throws NoViableAltException {
             IntStream input = _input;
@@ -1611,9 +1679,9 @@ public class InternalMarkovPopulationModelsLexer extends Lexer {
                         int LA13_27 = input.LA(1);
 
                         s = -1;
-                        if ( ((LA13_27>='\u0000' && LA13_27<='\uFFFF')) ) {s = 62;}
+                        if ( ((LA13_27>='\u0000' && LA13_27<='\uFFFF')) ) {s = 64;}
 
-                        else s = 30;
+                        else s = 31;
 
                         if ( s>=0 ) return s;
                         break;
@@ -1631,65 +1699,67 @@ public class InternalMarkovPopulationModelsLexer extends Lexer {
 
                         else if ( (LA13_0==',') ) {s = 5;}
 
-                        else if ( (LA13_0=='a') ) {s = 6;}
+                        else if ( (LA13_0=='l') ) {s = 6;}
 
                         else if ( (LA13_0=='{') ) {s = 7;}
 
-                        else if ( (LA13_0=='}') ) {s = 8;}
+                        else if ( (LA13_0=='a') ) {s = 8;}
 
-                        else if ( (LA13_0=='s') ) {s = 9;}
+                        else if ( (LA13_0=='}') ) {s = 9;}
 
-                        else if ( (LA13_0=='-') ) {s = 10;}
+                        else if ( (LA13_0=='s') ) {s = 10;}
 
-                        else if ( (LA13_0==':') ) {s = 11;}
+                        else if ( (LA13_0=='-') ) {s = 11;}
 
-                        else if ( (LA13_0=='+') ) {s = 12;}
+                        else if ( (LA13_0==':') ) {s = 12;}
 
-                        else if ( (LA13_0=='p') ) {s = 13;}
+                        else if ( (LA13_0=='+') ) {s = 13;}
 
-                        else if ( (LA13_0=='i') ) {s = 14;}
+                        else if ( (LA13_0=='p') ) {s = 14;}
 
-                        else if ( (LA13_0=='|') ) {s = 15;}
+                        else if ( (LA13_0=='i') ) {s = 15;}
 
-                        else if ( (LA13_0=='t') ) {s = 16;}
+                        else if ( (LA13_0=='|') ) {s = 16;}
 
-                        else if ( (LA13_0==';') ) {s = 17;}
+                        else if ( (LA13_0=='t') ) {s = 17;}
 
-                        else if ( (LA13_0=='&') ) {s = 18;}
+                        else if ( (LA13_0==';') ) {s = 18;}
 
-                        else if ( (LA13_0=='.') ) {s = 19;}
+                        else if ( (LA13_0=='&') ) {s = 19;}
 
-                        else if ( (LA13_0=='n') ) {s = 20;}
+                        else if ( (LA13_0=='.') ) {s = 20;}
 
-                        else if ( (LA13_0=='k') ) {s = 21;}
+                        else if ( (LA13_0=='n') ) {s = 21;}
 
-                        else if ( (LA13_0=='o') ) {s = 22;}
+                        else if ( (LA13_0=='k') ) {s = 22;}
 
-                        else if ( ((LA13_0>='0' && LA13_0<='9')) ) {s = 23;}
+                        else if ( (LA13_0=='o') ) {s = 23;}
 
-                        else if ( (LA13_0=='^') ) {s = 24;}
+                        else if ( ((LA13_0>='0' && LA13_0<='9')) ) {s = 24;}
 
-                        else if ( ((LA13_0>='A' && LA13_0<='Z')||LA13_0=='_'||LA13_0=='b'||(LA13_0>='d' && LA13_0<='h')||LA13_0=='j'||(LA13_0>='l' && LA13_0<='m')||(LA13_0>='q' && LA13_0<='r')||(LA13_0>='u' && LA13_0<='z')) ) {s = 25;}
+                        else if ( (LA13_0=='^') ) {s = 25;}
 
-                        else if ( (LA13_0=='\"') ) {s = 26;}
+                        else if ( ((LA13_0>='A' && LA13_0<='Z')||LA13_0=='_'||LA13_0=='b'||(LA13_0>='d' && LA13_0<='h')||LA13_0=='j'||LA13_0=='m'||(LA13_0>='q' && LA13_0<='r')||(LA13_0>='u' && LA13_0<='z')) ) {s = 26;}
 
-                        else if ( (LA13_0=='\'') ) {s = 27;}
+                        else if ( (LA13_0=='\"') ) {s = 27;}
 
-                        else if ( (LA13_0=='/') ) {s = 28;}
+                        else if ( (LA13_0=='\'') ) {s = 28;}
 
-                        else if ( ((LA13_0>='\t' && LA13_0<='\n')||LA13_0=='\r'||LA13_0==' ') ) {s = 29;}
+                        else if ( (LA13_0=='/') ) {s = 29;}
 
-                        else if ( ((LA13_0>='\u0000' && LA13_0<='\b')||(LA13_0>='\u000B' && LA13_0<='\f')||(LA13_0>='\u000E' && LA13_0<='\u001F')||LA13_0=='!'||(LA13_0>='#' && LA13_0<='%')||(LA13_0>='(' && LA13_0<='*')||LA13_0=='<'||(LA13_0>='>' && LA13_0<='@')||LA13_0=='\\'||LA13_0=='`'||(LA13_0>='~' && LA13_0<='\uFFFF')) ) {s = 30;}
+                        else if ( ((LA13_0>='\t' && LA13_0<='\n')||LA13_0=='\r'||LA13_0==' ') ) {s = 30;}
+
+                        else if ( ((LA13_0>='\u0000' && LA13_0<='\b')||(LA13_0>='\u000B' && LA13_0<='\f')||(LA13_0>='\u000E' && LA13_0<='\u001F')||LA13_0=='!'||(LA13_0>='#' && LA13_0<='%')||(LA13_0>='(' && LA13_0<='*')||LA13_0=='<'||(LA13_0>='>' && LA13_0<='@')||LA13_0=='\\'||LA13_0=='`'||(LA13_0>='~' && LA13_0<='\uFFFF')) ) {s = 31;}
 
                         if ( s>=0 ) return s;
                         break;
                     case 2 : 
-                        int LA13_26 = input.LA(1);
+                        int LA13_28 = input.LA(1);
 
                         s = -1;
-                        if ( ((LA13_26>='\u0000' && LA13_26<='\uFFFF')) ) {s = 62;}
+                        if ( ((LA13_28>='\u0000' && LA13_28<='\uFFFF')) ) {s = 64;}
 
-                        else s = 30;
+                        else s = 31;
 
                         if ( s>=0 ) return s;
                         break;
