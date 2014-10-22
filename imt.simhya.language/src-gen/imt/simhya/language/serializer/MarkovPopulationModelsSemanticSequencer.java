@@ -2,7 +2,12 @@ package imt.simhya.language.serializer;
 
 import com.google.inject.Inject;
 import com.google.inject.Provider;
+import imt.simhya.language.markovPopulationModels.FloatExpression;
+import imt.simhya.language.markovPopulationModels.IntExpression;
 import imt.simhya.language.markovPopulationModels.MarkovPopulationModelsPackage;
+import imt.simhya.language.markovPopulationModels.MultiplicationDivision;
+import imt.simhya.language.markovPopulationModels.Reference;
+import imt.simhya.language.markovPopulationModels.SummationSubtraction;
 import imt.simhya.language.markovPopulationModels.action;
 import imt.simhya.language.markovPopulationModels.action_cond;
 import imt.simhya.language.markovPopulationModels.agent;
@@ -38,6 +43,61 @@ public class MarkovPopulationModelsSemanticSequencer extends AbstractDelegatingS
 	
 	public void createSequence(EObject context, EObject semanticObject) {
 		if(semanticObject.eClass().getEPackage() == MarkovPopulationModelsPackage.eINSTANCE) switch(semanticObject.eClass().getClassifierID()) {
+			case MarkovPopulationModelsPackage.FLOAT_EXPRESSION:
+				if(context == grammarAccess.getBaseExpressionRule() ||
+				   context == grammarAccess.getExpressionRule() ||
+				   context == grammarAccess.getMultiplicationDivisionRule() ||
+				   context == grammarAccess.getMultiplicationDivisionAccess().getMultiplicationDivisionLeftAction_1_0() ||
+				   context == grammarAccess.getSummationSubtractionRule() ||
+				   context == grammarAccess.getSummationSubtractionAccess().getSummationSubtractionLeftAction_1_0()) {
+					sequence_BaseExpression(context, (FloatExpression) semanticObject); 
+					return; 
+				}
+				else break;
+			case MarkovPopulationModelsPackage.INT_EXPRESSION:
+				if(context == grammarAccess.getBaseExpressionRule() ||
+				   context == grammarAccess.getExpressionRule() ||
+				   context == grammarAccess.getMultiplicationDivisionRule() ||
+				   context == grammarAccess.getMultiplicationDivisionAccess().getMultiplicationDivisionLeftAction_1_0() ||
+				   context == grammarAccess.getSummationSubtractionRule() ||
+				   context == grammarAccess.getSummationSubtractionAccess().getSummationSubtractionLeftAction_1_0()) {
+					sequence_BaseExpression(context, (IntExpression) semanticObject); 
+					return; 
+				}
+				else break;
+			case MarkovPopulationModelsPackage.MULTIPLICATION_DIVISION:
+				if(context == grammarAccess.getBaseExpressionRule() ||
+				   context == grammarAccess.getExpressionRule() ||
+				   context == grammarAccess.getMultiplicationDivisionRule() ||
+				   context == grammarAccess.getMultiplicationDivisionAccess().getMultiplicationDivisionLeftAction_1_0() ||
+				   context == grammarAccess.getSummationSubtractionRule() ||
+				   context == grammarAccess.getSummationSubtractionAccess().getSummationSubtractionLeftAction_1_0()) {
+					sequence_MultiplicationDivision(context, (MultiplicationDivision) semanticObject); 
+					return; 
+				}
+				else break;
+			case MarkovPopulationModelsPackage.REFERENCE:
+				if(context == grammarAccess.getBaseExpressionRule() ||
+				   context == grammarAccess.getExpressionRule() ||
+				   context == grammarAccess.getMultiplicationDivisionRule() ||
+				   context == grammarAccess.getMultiplicationDivisionAccess().getMultiplicationDivisionLeftAction_1_0() ||
+				   context == grammarAccess.getSummationSubtractionRule() ||
+				   context == grammarAccess.getSummationSubtractionAccess().getSummationSubtractionLeftAction_1_0()) {
+					sequence_BaseExpression(context, (Reference) semanticObject); 
+					return; 
+				}
+				else break;
+			case MarkovPopulationModelsPackage.SUMMATION_SUBTRACTION:
+				if(context == grammarAccess.getBaseExpressionRule() ||
+				   context == grammarAccess.getExpressionRule() ||
+				   context == grammarAccess.getMultiplicationDivisionRule() ||
+				   context == grammarAccess.getMultiplicationDivisionAccess().getMultiplicationDivisionLeftAction_1_0() ||
+				   context == grammarAccess.getSummationSubtractionRule() ||
+				   context == grammarAccess.getSummationSubtractionAccess().getSummationSubtractionLeftAction_1_0()) {
+					sequence_SummationSubtraction(context, (SummationSubtraction) semanticObject); 
+					return; 
+				}
+				else break;
 			case MarkovPopulationModelsPackage.ACTION:
 				if(context == grammarAccess.getActionRule()) {
 					sequence_action(context, (action) semanticObject); 
@@ -129,7 +189,59 @@ public class MarkovPopulationModelsSemanticSequencer extends AbstractDelegatingS
 	
 	/**
 	 * Constraint:
-	 *     (actRef=[label|ID] stateRef=[state|ID] localRate=FLOAT)
+	 *     {FloatExpression}
+	 */
+	protected void sequence_BaseExpression(EObject context, FloatExpression semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     {IntExpression}
+	 */
+	protected void sequence_BaseExpression(EObject context, IntExpression semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     stateRef=state_ref
+	 */
+	protected void sequence_BaseExpression(EObject context, Reference semanticObject) {
+		if(errorAcceptor != null) {
+			if(transientValues.isValueTransient(semanticObject, MarkovPopulationModelsPackage.Literals.REFERENCE__STATE_REF) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, MarkovPopulationModelsPackage.Literals.REFERENCE__STATE_REF));
+		}
+		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
+		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
+		feeder.accept(grammarAccess.getBaseExpressionAccess().getStateRefState_refParserRuleCall_2_1_0(), semanticObject.getStateRef());
+		feeder.finish();
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     (left=MultiplicationDivision_MultiplicationDivision_1_0 (op='*' | op='/') right=MultiplicationDivision)
+	 */
+	protected void sequence_MultiplicationDivision(EObject context, MultiplicationDivision semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     (left=SummationSubtraction_SummationSubtraction_1_0 (op='+' | op='-') right=SummationSubtraction)
+	 */
+	protected void sequence_SummationSubtraction(EObject context, SummationSubtraction semanticObject) {
+		genericSequencer.createSequence(context, semanticObject);
+	}
+	
+	
+	/**
+	 * Constraint:
+	 *     (actRef=[label|ID] stateRef=[state|ID] localRate=Expression)
 	 */
 	protected void sequence_action(EObject context, action semanticObject) {
 		if(errorAcceptor != null) {
@@ -144,23 +256,23 @@ public class MarkovPopulationModelsSemanticSequencer extends AbstractDelegatingS
 		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
 		feeder.accept(grammarAccess.getActionAccess().getActRefLabelIDTerminalRuleCall_0_0_1(), semanticObject.getActRef());
 		feeder.accept(grammarAccess.getActionAccess().getStateRefStateIDTerminalRuleCall_2_0_1(), semanticObject.getStateRef());
-		feeder.accept(grammarAccess.getActionAccess().getLocalRateFLOATTerminalRuleCall_4_0(), semanticObject.getLocalRate());
+		feeder.accept(grammarAccess.getActionAccess().getLocalRateExpressionParserRuleCall_4_0(), semanticObject.getLocalRate());
 		feeder.finish();
 	}
 	
 	
 	/**
 	 * Constraint:
-	 *     name=ID
+	 *     actionRef=[label|ID]
 	 */
 	protected void sequence_action_cond(EObject context, action_cond semanticObject) {
 		if(errorAcceptor != null) {
-			if(transientValues.isValueTransient(semanticObject, MarkovPopulationModelsPackage.Literals.ACTION_COND__NAME) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, MarkovPopulationModelsPackage.Literals.ACTION_COND__NAME));
+			if(transientValues.isValueTransient(semanticObject, MarkovPopulationModelsPackage.Literals.ACTION_COND__ACTION_REF) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, MarkovPopulationModelsPackage.Literals.ACTION_COND__ACTION_REF));
 		}
 		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
 		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
-		feeder.accept(grammarAccess.getAction_condAccess().getNameIDTerminalRuleCall_1_0(), semanticObject.getName());
+		feeder.accept(grammarAccess.getAction_condAccess().getActionRefLabelIDTerminalRuleCall_1_0_1(), semanticObject.getActionRef());
 		feeder.finish();
 	}
 	
@@ -185,7 +297,7 @@ public class MarkovPopulationModelsSemanticSequencer extends AbstractDelegatingS
 	
 	/**
 	 * Constraint:
-	 *     (name=ID l_tran+=loc_tran l_tran+=loc_tran* rate=FLOAT)
+	 *     (name=ID lTran+=loc_tran lTran+=loc_tran* rate=Expression)
 	 */
 	protected void sequence_gl_tran(EObject context, gl_tran semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -219,7 +331,7 @@ public class MarkovPopulationModelsSemanticSequencer extends AbstractDelegatingS
 	
 	/**
 	 * Constraint:
-	 *     (stateRef=[state|ID] | stateRef=[state|ID] | (s_cond=state_cond a_cond=action_cond))
+	 *     (stateRef=[state|ID] | stateRef=[state|ID] | (sCond=state_cond aCond=action_cond))
 	 */
 	protected void sequence_loc_tran(EObject context, loc_tran semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);
@@ -246,7 +358,7 @@ public class MarkovPopulationModelsSemanticSequencer extends AbstractDelegatingS
 	
 	/**
 	 * Constraint:
-	 *     (stateRef=[state|ID] card=INT)
+	 *     (stateRef=state_ref card=Expression)
 	 */
 	protected void sequence_stateInit(EObject context, stateInit semanticObject) {
 		if(errorAcceptor != null) {
@@ -257,47 +369,47 @@ public class MarkovPopulationModelsSemanticSequencer extends AbstractDelegatingS
 		}
 		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
 		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
-		feeder.accept(grammarAccess.getStateInitAccess().getStateRefStateIDTerminalRuleCall_0_0_1(), semanticObject.getStateRef());
-		feeder.accept(grammarAccess.getStateInitAccess().getCardINTTerminalRuleCall_2_0(), semanticObject.getCard());
+		feeder.accept(grammarAccess.getStateInitAccess().getStateRefState_refParserRuleCall_0_0(), semanticObject.getStateRef());
+		feeder.accept(grammarAccess.getStateInitAccess().getCardExpressionParserRuleCall_2_0(), semanticObject.getCard());
 		feeder.finish();
 	}
 	
 	
 	/**
 	 * Constraint:
-	 *     s_ref=state_ref
+	 *     stateRef=state_ref
 	 */
 	protected void sequence_state_cond(EObject context, state_cond semanticObject) {
 		if(errorAcceptor != null) {
-			if(transientValues.isValueTransient(semanticObject, MarkovPopulationModelsPackage.Literals.STATE_COND__SREF) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, MarkovPopulationModelsPackage.Literals.STATE_COND__SREF));
+			if(transientValues.isValueTransient(semanticObject, MarkovPopulationModelsPackage.Literals.STATE_COND__STATE_REF) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, MarkovPopulationModelsPackage.Literals.STATE_COND__STATE_REF));
 		}
 		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
 		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
-		feeder.accept(grammarAccess.getState_condAccess().getS_refState_refParserRuleCall_1_0(), semanticObject.getS_ref());
+		feeder.accept(grammarAccess.getState_condAccess().getStateRefState_refParserRuleCall_1_0(), semanticObject.getStateRef());
 		feeder.finish();
 	}
 	
 	
 	/**
 	 * Constraint:
-	 *     name=ID
+	 *     stateRef=[state|ID]
 	 */
 	protected void sequence_state_ref(EObject context, state_ref semanticObject) {
 		if(errorAcceptor != null) {
-			if(transientValues.isValueTransient(semanticObject, MarkovPopulationModelsPackage.Literals.STATE_REF__NAME) == ValueTransient.YES)
-				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, MarkovPopulationModelsPackage.Literals.STATE_REF__NAME));
+			if(transientValues.isValueTransient(semanticObject, MarkovPopulationModelsPackage.Literals.STATE_REF__STATE_REF) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, MarkovPopulationModelsPackage.Literals.STATE_REF__STATE_REF));
 		}
 		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
 		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
-		feeder.accept(grammarAccess.getState_refAccess().getNameIDTerminalRuleCall_0(), semanticObject.getName());
+		feeder.accept(grammarAccess.getState_refAccess().getStateRefStateIDTerminalRuleCall_0_1(), semanticObject.getStateRef());
 		feeder.finish();
 	}
 	
 	
 	/**
 	 * Constraint:
-	 *     (name=ID spontaneous_act+=action+)
+	 *     (name=ID spontaneousAct+=action+)
 	 */
 	protected void sequence_state(EObject context, state semanticObject) {
 		genericSequencer.createSequence(context, semanticObject);

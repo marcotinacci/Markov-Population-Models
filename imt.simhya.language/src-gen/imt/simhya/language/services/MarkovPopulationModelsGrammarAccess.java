@@ -26,7 +26,7 @@ public class MarkovPopulationModelsGrammarAccess extends AbstractGrammarElementF
 		private final Assignment cAgentDefAssignment_1 = (Assignment)cUnorderedGroup.eContents().get(1);
 		private final RuleCall cAgentDefAgentParserRuleCall_1_0 = (RuleCall)cAgentDefAssignment_1.eContents().get(0);
 		
-		//// new notation
+		////extension
 		//main:
 		//	populationDef=population & agentDef=agent;
 		public ParserRule getRule() { return rule; }
@@ -175,36 +175,32 @@ public class MarkovPopulationModelsGrammarAccess extends AbstractGrammarElementF
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "stateInit");
 		private final Group cGroup = (Group)rule.eContents().get(1);
 		private final Assignment cStateRefAssignment_0 = (Assignment)cGroup.eContents().get(0);
-		private final CrossReference cStateRefStateCrossReference_0_0 = (CrossReference)cStateRefAssignment_0.eContents().get(0);
-		private final RuleCall cStateRefStateIDTerminalRuleCall_0_0_1 = (RuleCall)cStateRefStateCrossReference_0_0.eContents().get(1);
+		private final RuleCall cStateRefState_refParserRuleCall_0_0 = (RuleCall)cStateRefAssignment_0.eContents().get(0);
 		private final Keyword cEqualsSignKeyword_1 = (Keyword)cGroup.eContents().get(1);
 		private final Assignment cCardAssignment_2 = (Assignment)cGroup.eContents().get(2);
-		private final RuleCall cCardINTTerminalRuleCall_2_0 = (RuleCall)cCardAssignment_2.eContents().get(0);
+		private final RuleCall cCardExpressionParserRuleCall_2_0 = (RuleCall)cCardAssignment_2.eContents().get(0);
 		
 		//stateInit:
-		//	stateRef=[state] "=" card=INT;
+		//	stateRef=state_ref "=" card=Expression;
 		public ParserRule getRule() { return rule; }
 
-		//stateRef=[state] "=" card=INT
+		//stateRef=state_ref "=" card=Expression
 		public Group getGroup() { return cGroup; }
 
-		//stateRef=[state]
+		//stateRef=state_ref
 		public Assignment getStateRefAssignment_0() { return cStateRefAssignment_0; }
 
-		//[state]
-		public CrossReference getStateRefStateCrossReference_0_0() { return cStateRefStateCrossReference_0_0; }
-
-		//ID
-		public RuleCall getStateRefStateIDTerminalRuleCall_0_0_1() { return cStateRefStateIDTerminalRuleCall_0_0_1; }
+		//state_ref
+		public RuleCall getStateRefState_refParserRuleCall_0_0() { return cStateRefState_refParserRuleCall_0_0; }
 
 		//"="
 		public Keyword getEqualsSignKeyword_1() { return cEqualsSignKeyword_1; }
 
-		//card=INT
+		//card=Expression
 		public Assignment getCardAssignment_2() { return cCardAssignment_2; }
 
-		//INT
-		public RuleCall getCardINTTerminalRuleCall_2_0() { return cCardINTTerminalRuleCall_2_0; }
+		//Expression
+		public RuleCall getCardExpressionParserRuleCall_2_0() { return cCardExpressionParserRuleCall_2_0; }
 	}
 
 	public class Gl_tranElements extends AbstractParserRuleElementFinder {
@@ -214,22 +210,22 @@ public class MarkovPopulationModelsGrammarAccess extends AbstractGrammarElementF
 		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
 		private final RuleCall cNameIDTerminalRuleCall_1_0 = (RuleCall)cNameAssignment_1.eContents().get(0);
 		private final Keyword cLeftCurlyBracketKeyword_2 = (Keyword)cGroup.eContents().get(2);
-		private final Assignment cL_tranAssignment_3 = (Assignment)cGroup.eContents().get(3);
-		private final RuleCall cL_tranLoc_tranParserRuleCall_3_0 = (RuleCall)cL_tranAssignment_3.eContents().get(0);
+		private final Assignment cLTranAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cLTranLoc_tranParserRuleCall_3_0 = (RuleCall)cLTranAssignment_3.eContents().get(0);
 		private final Group cGroup_4 = (Group)cGroup.eContents().get(4);
 		private final Keyword cAmpersandKeyword_4_0 = (Keyword)cGroup_4.eContents().get(0);
-		private final Assignment cL_tranAssignment_4_1 = (Assignment)cGroup_4.eContents().get(1);
-		private final RuleCall cL_tranLoc_tranParserRuleCall_4_1_0 = (RuleCall)cL_tranAssignment_4_1.eContents().get(0);
+		private final Assignment cLTranAssignment_4_1 = (Assignment)cGroup_4.eContents().get(1);
+		private final RuleCall cLTranLoc_tranParserRuleCall_4_1_0 = (RuleCall)cLTranAssignment_4_1.eContents().get(0);
 		private final Keyword cEqualsSignGreaterThanSignKeyword_5 = (Keyword)cGroup.eContents().get(5);
 		private final Assignment cRateAssignment_6 = (Assignment)cGroup.eContents().get(6);
-		private final RuleCall cRateFLOATTerminalRuleCall_6_0 = (RuleCall)cRateAssignment_6.eContents().get(0);
+		private final RuleCall cRateExpressionParserRuleCall_6_0 = (RuleCall)cRateAssignment_6.eContents().get(0);
 		private final Keyword cRightCurlyBracketKeyword_7 = (Keyword)cGroup.eContents().get(7);
 		
 		//gl_tran:
-		//	"transition" name=ID "{" l_tran+=loc_tran ("&" l_tran+=loc_tran)* "=>" rate=FLOAT "}";
+		//	"transition" name=ID "{" lTran+=loc_tran ("&" lTran+=loc_tran)* "=>" rate=Expression "}";
 		public ParserRule getRule() { return rule; }
 
-		//"transition" name=ID "{" l_tran+=loc_tran ("&" l_tran+=loc_tran)* "=>" rate=FLOAT "}"
+		//"transition" name=ID "{" lTran+=loc_tran ("&" lTran+=loc_tran)* "=>" rate=Expression "}"
 		public Group getGroup() { return cGroup; }
 
 		//"transition"
@@ -244,32 +240,32 @@ public class MarkovPopulationModelsGrammarAccess extends AbstractGrammarElementF
 		//"{"
 		public Keyword getLeftCurlyBracketKeyword_2() { return cLeftCurlyBracketKeyword_2; }
 
-		//l_tran+=loc_tran
-		public Assignment getL_tranAssignment_3() { return cL_tranAssignment_3; }
+		//lTran+=loc_tran
+		public Assignment getLTranAssignment_3() { return cLTranAssignment_3; }
 
 		//loc_tran
-		public RuleCall getL_tranLoc_tranParserRuleCall_3_0() { return cL_tranLoc_tranParserRuleCall_3_0; }
+		public RuleCall getLTranLoc_tranParserRuleCall_3_0() { return cLTranLoc_tranParserRuleCall_3_0; }
 
-		//("&" l_tran+=loc_tran)*
+		//("&" lTran+=loc_tran)*
 		public Group getGroup_4() { return cGroup_4; }
 
 		//"&"
 		public Keyword getAmpersandKeyword_4_0() { return cAmpersandKeyword_4_0; }
 
-		//l_tran+=loc_tran
-		public Assignment getL_tranAssignment_4_1() { return cL_tranAssignment_4_1; }
+		//lTran+=loc_tran
+		public Assignment getLTranAssignment_4_1() { return cLTranAssignment_4_1; }
 
 		//loc_tran
-		public RuleCall getL_tranLoc_tranParserRuleCall_4_1_0() { return cL_tranLoc_tranParserRuleCall_4_1_0; }
+		public RuleCall getLTranLoc_tranParserRuleCall_4_1_0() { return cLTranLoc_tranParserRuleCall_4_1_0; }
 
 		//"=>"
 		public Keyword getEqualsSignGreaterThanSignKeyword_5() { return cEqualsSignGreaterThanSignKeyword_5; }
 
-		//rate=FLOAT
+		//rate=Expression
 		public Assignment getRateAssignment_6() { return cRateAssignment_6; }
 
-		//FLOAT
-		public RuleCall getRateFLOATTerminalRuleCall_6_0() { return cRateFLOATTerminalRuleCall_6_0; }
+		//Expression
+		public RuleCall getRateExpressionParserRuleCall_6_0() { return cRateExpressionParserRuleCall_6_0; }
 
 		//"}"
 		public Keyword getRightCurlyBracketKeyword_7() { return cRightCurlyBracketKeyword_7; }
@@ -289,17 +285,17 @@ public class MarkovPopulationModelsGrammarAccess extends AbstractGrammarElementF
 		private final CrossReference cStateRefStateCrossReference_1_1_0 = (CrossReference)cStateRefAssignment_1_1.eContents().get(0);
 		private final RuleCall cStateRefStateIDTerminalRuleCall_1_1_0_1 = (RuleCall)cStateRefStateCrossReference_1_1_0.eContents().get(1);
 		private final Group cGroup_2 = (Group)cAlternatives.eContents().get(2);
-		private final Assignment cS_condAssignment_2_0 = (Assignment)cGroup_2.eContents().get(0);
-		private final RuleCall cS_condState_condParserRuleCall_2_0_0 = (RuleCall)cS_condAssignment_2_0.eContents().get(0);
+		private final Assignment cSCondAssignment_2_0 = (Assignment)cGroup_2.eContents().get(0);
+		private final RuleCall cSCondState_condParserRuleCall_2_0_0 = (RuleCall)cSCondAssignment_2_0.eContents().get(0);
 		private final Keyword cColonKeyword_2_1 = (Keyword)cGroup_2.eContents().get(1);
-		private final Assignment cA_condAssignment_2_2 = (Assignment)cGroup_2.eContents().get(2);
-		private final RuleCall cA_condAction_condParserRuleCall_2_2_0 = (RuleCall)cA_condAssignment_2_2.eContents().get(0);
+		private final Assignment cACondAssignment_2_2 = (Assignment)cGroup_2.eContents().get(2);
+		private final RuleCall cACondAction_condParserRuleCall_2_2_0 = (RuleCall)cACondAssignment_2_2.eContents().get(0);
 		
 		//loc_tran:
-		//	"new" stateRef=[state] | "kill" stateRef=[state] | s_cond=state_cond ":" a_cond=action_cond;
+		//	"new" stateRef=[state] | "kill" stateRef=[state] | sCond=state_cond ":" aCond=action_cond;
 		public ParserRule getRule() { return rule; }
 
-		//"new" stateRef=[state] | "kill" stateRef=[state] | s_cond=state_cond ":" a_cond=action_cond
+		//"new" stateRef=[state] | "kill" stateRef=[state] | sCond=state_cond ":" aCond=action_cond
 		public Alternatives getAlternatives() { return cAlternatives; }
 
 		//"new" stateRef=[state]
@@ -332,23 +328,23 @@ public class MarkovPopulationModelsGrammarAccess extends AbstractGrammarElementF
 		//ID
 		public RuleCall getStateRefStateIDTerminalRuleCall_1_1_0_1() { return cStateRefStateIDTerminalRuleCall_1_1_0_1; }
 
-		//s_cond=state_cond ":" a_cond=action_cond
+		//sCond=state_cond ":" aCond=action_cond
 		public Group getGroup_2() { return cGroup_2; }
 
-		//s_cond=state_cond
-		public Assignment getS_condAssignment_2_0() { return cS_condAssignment_2_0; }
+		//sCond=state_cond
+		public Assignment getSCondAssignment_2_0() { return cSCondAssignment_2_0; }
 
 		//state_cond
-		public RuleCall getS_condState_condParserRuleCall_2_0_0() { return cS_condState_condParserRuleCall_2_0_0; }
+		public RuleCall getSCondState_condParserRuleCall_2_0_0() { return cSCondState_condParserRuleCall_2_0_0; }
 
 		//":"
 		public Keyword getColonKeyword_2_1() { return cColonKeyword_2_1; }
 
-		//a_cond=action_cond
-		public Assignment getA_condAssignment_2_2() { return cA_condAssignment_2_2; }
+		//aCond=action_cond
+		public Assignment getACondAssignment_2_2() { return cACondAssignment_2_2; }
 
 		//action_cond
-		public RuleCall getA_condAction_condParserRuleCall_2_2_0() { return cA_condAction_condParserRuleCall_2_2_0; }
+		public RuleCall getACondAction_condParserRuleCall_2_2_0() { return cACondAction_condParserRuleCall_2_2_0; }
 	}
 
 	public class State_condElements extends AbstractParserRuleElementFinder {
@@ -357,14 +353,14 @@ public class MarkovPopulationModelsGrammarAccess extends AbstractGrammarElementF
 		private final Group cGroup_0 = (Group)cAlternatives.eContents().get(0);
 		private final Action cAnystateAction_0_0 = (Action)cGroup_0.eContents().get(0);
 		private final Keyword cAnyKeyword_0_1 = (Keyword)cGroup_0.eContents().get(1);
-		private final Assignment cS_refAssignment_1 = (Assignment)cAlternatives.eContents().get(1);
-		private final RuleCall cS_refState_refParserRuleCall_1_0 = (RuleCall)cS_refAssignment_1.eContents().get(0);
+		private final Assignment cStateRefAssignment_1 = (Assignment)cAlternatives.eContents().get(1);
+		private final RuleCall cStateRefState_refParserRuleCall_1_0 = (RuleCall)cStateRefAssignment_1.eContents().get(0);
 		
 		//state_cond:
-		//	{anystate} "any" | s_ref=state_ref;
+		//	{anystate} "any" | stateRef=state_ref;
 		public ParserRule getRule() { return rule; }
 
-		//{anystate} "any" | s_ref=state_ref
+		//{anystate} "any" | stateRef=state_ref
 		public Alternatives getAlternatives() { return cAlternatives; }
 
 		//{anystate} "any"
@@ -376,27 +372,31 @@ public class MarkovPopulationModelsGrammarAccess extends AbstractGrammarElementF
 		//"any"
 		public Keyword getAnyKeyword_0_1() { return cAnyKeyword_0_1; }
 
-		//s_ref=state_ref
-		public Assignment getS_refAssignment_1() { return cS_refAssignment_1; }
+		//stateRef=state_ref
+		public Assignment getStateRefAssignment_1() { return cStateRefAssignment_1; }
 
 		//state_ref
-		public RuleCall getS_refState_refParserRuleCall_1_0() { return cS_refState_refParserRuleCall_1_0; }
+		public RuleCall getStateRefState_refParserRuleCall_1_0() { return cStateRefState_refParserRuleCall_1_0; }
 	}
 
 	public class State_refElements extends AbstractParserRuleElementFinder {
 		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "state_ref");
-		private final Assignment cNameAssignment = (Assignment)rule.eContents().get(1);
-		private final RuleCall cNameIDTerminalRuleCall_0 = (RuleCall)cNameAssignment.eContents().get(0);
+		private final Assignment cStateRefAssignment = (Assignment)rule.eContents().get(1);
+		private final CrossReference cStateRefStateCrossReference_0 = (CrossReference)cStateRefAssignment.eContents().get(0);
+		private final RuleCall cStateRefStateIDTerminalRuleCall_0_1 = (RuleCall)cStateRefStateCrossReference_0.eContents().get(1);
 		
 		//state_ref:
-		//	name=ID;
+		//	stateRef=[state];
 		public ParserRule getRule() { return rule; }
 
-		//name=ID
-		public Assignment getNameAssignment() { return cNameAssignment; }
+		//stateRef=[state]
+		public Assignment getStateRefAssignment() { return cStateRefAssignment; }
+
+		//[state]
+		public CrossReference getStateRefStateCrossReference_0() { return cStateRefStateCrossReference_0; }
 
 		//ID
-		public RuleCall getNameIDTerminalRuleCall_0() { return cNameIDTerminalRuleCall_0; }
+		public RuleCall getStateRefStateIDTerminalRuleCall_0_1() { return cStateRefStateIDTerminalRuleCall_0_1; }
 	}
 
 	public class Action_condElements extends AbstractParserRuleElementFinder {
@@ -405,14 +405,15 @@ public class MarkovPopulationModelsGrammarAccess extends AbstractGrammarElementF
 		private final Group cGroup_0 = (Group)cAlternatives.eContents().get(0);
 		private final Action cAnystateAction_0_0 = (Action)cGroup_0.eContents().get(0);
 		private final Keyword cAnyKeyword_0_1 = (Keyword)cGroup_0.eContents().get(1);
-		private final Assignment cNameAssignment_1 = (Assignment)cAlternatives.eContents().get(1);
-		private final RuleCall cNameIDTerminalRuleCall_1_0 = (RuleCall)cNameAssignment_1.eContents().get(0);
+		private final Assignment cActionRefAssignment_1 = (Assignment)cAlternatives.eContents().get(1);
+		private final CrossReference cActionRefLabelCrossReference_1_0 = (CrossReference)cActionRefAssignment_1.eContents().get(0);
+		private final RuleCall cActionRefLabelIDTerminalRuleCall_1_0_1 = (RuleCall)cActionRefLabelCrossReference_1_0.eContents().get(1);
 		
 		//action_cond:
-		//	{anystate} "any" | name=ID;
+		//	{anystate} "any" | actionRef=[label];
 		public ParserRule getRule() { return rule; }
 
-		//{anystate} "any" | name=ID
+		//{anystate} "any" | actionRef=[label]
 		public Alternatives getAlternatives() { return cAlternatives; }
 
 		//{anystate} "any"
@@ -424,11 +425,14 @@ public class MarkovPopulationModelsGrammarAccess extends AbstractGrammarElementF
 		//"any"
 		public Keyword getAnyKeyword_0_1() { return cAnyKeyword_0_1; }
 
-		//name=ID
-		public Assignment getNameAssignment_1() { return cNameAssignment_1; }
+		//actionRef=[label]
+		public Assignment getActionRefAssignment_1() { return cActionRefAssignment_1; }
+
+		//[label]
+		public CrossReference getActionRefLabelCrossReference_1_0() { return cActionRefLabelCrossReference_1_0; }
 
 		//ID
-		public RuleCall getNameIDTerminalRuleCall_1_0() { return cNameIDTerminalRuleCall_1_0; }
+		public RuleCall getActionRefLabelIDTerminalRuleCall_1_0_1() { return cActionRefLabelIDTerminalRuleCall_1_0_1; }
 	}
 
 	public class AgentElements extends AbstractParserRuleElementFinder {
@@ -506,15 +510,15 @@ public class MarkovPopulationModelsGrammarAccess extends AbstractGrammarElementF
 		private final Assignment cNameAssignment_1 = (Assignment)cGroup.eContents().get(1);
 		private final RuleCall cNameIDTerminalRuleCall_1_0 = (RuleCall)cNameAssignment_1.eContents().get(0);
 		private final Keyword cLeftCurlyBracketKeyword_2 = (Keyword)cGroup.eContents().get(2);
-		private final Assignment cSpontaneous_actAssignment_3 = (Assignment)cGroup.eContents().get(3);
-		private final RuleCall cSpontaneous_actActionParserRuleCall_3_0 = (RuleCall)cSpontaneous_actAssignment_3.eContents().get(0);
+		private final Assignment cSpontaneousActAssignment_3 = (Assignment)cGroup.eContents().get(3);
+		private final RuleCall cSpontaneousActActionParserRuleCall_3_0 = (RuleCall)cSpontaneousActAssignment_3.eContents().get(0);
 		private final Keyword cRightCurlyBracketKeyword_4 = (Keyword)cGroup.eContents().get(4);
 		
 		//state:
-		//	"state" name=ID "{" spontaneous_act+=action+ "}";
+		//	"state" name=ID "{" spontaneousAct+=action+ "}";
 		public ParserRule getRule() { return rule; }
 
-		//"state" name=ID "{" spontaneous_act+=action+ "}"
+		//"state" name=ID "{" spontaneousAct+=action+ "}"
 		public Group getGroup() { return cGroup; }
 
 		//"state"
@@ -529,14 +533,193 @@ public class MarkovPopulationModelsGrammarAccess extends AbstractGrammarElementF
 		//"{"
 		public Keyword getLeftCurlyBracketKeyword_2() { return cLeftCurlyBracketKeyword_2; }
 
-		//spontaneous_act+=action+
-		public Assignment getSpontaneous_actAssignment_3() { return cSpontaneous_actAssignment_3; }
+		//spontaneousAct+=action+
+		public Assignment getSpontaneousActAssignment_3() { return cSpontaneousActAssignment_3; }
 
 		//action
-		public RuleCall getSpontaneous_actActionParserRuleCall_3_0() { return cSpontaneous_actActionParserRuleCall_3_0; }
+		public RuleCall getSpontaneousActActionParserRuleCall_3_0() { return cSpontaneousActActionParserRuleCall_3_0; }
 
 		//"}"
 		public Keyword getRightCurlyBracketKeyword_4() { return cRightCurlyBracketKeyword_4; }
+	}
+
+	public class ExpressionElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "Expression");
+		private final RuleCall cSummationSubtractionParserRuleCall = (RuleCall)rule.eContents().get(1);
+		
+		//// ===================
+		//// === EXPRESSIONS ===
+		//// ===================
+		//Expression:
+		//	SummationSubtraction;
+		public ParserRule getRule() { return rule; }
+
+		//SummationSubtraction
+		public RuleCall getSummationSubtractionParserRuleCall() { return cSummationSubtractionParserRuleCall; }
+	}
+
+	public class SummationSubtractionElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "SummationSubtraction");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final RuleCall cMultiplicationDivisionParserRuleCall_0 = (RuleCall)cGroup.eContents().get(0);
+		private final Group cGroup_1 = (Group)cGroup.eContents().get(1);
+		private final Action cSummationSubtractionLeftAction_1_0 = (Action)cGroup_1.eContents().get(0);
+		private final Assignment cOpAssignment_1_1 = (Assignment)cGroup_1.eContents().get(1);
+		private final Alternatives cOpAlternatives_1_1_0 = (Alternatives)cOpAssignment_1_1.eContents().get(0);
+		private final Keyword cOpPlusSignKeyword_1_1_0_0 = (Keyword)cOpAlternatives_1_1_0.eContents().get(0);
+		private final Keyword cOpHyphenMinusKeyword_1_1_0_1 = (Keyword)cOpAlternatives_1_1_0.eContents().get(1);
+		private final Assignment cRightAssignment_1_2 = (Assignment)cGroup_1.eContents().get(2);
+		private final RuleCall cRightSummationSubtractionParserRuleCall_1_2_0 = (RuleCall)cRightAssignment_1_2.eContents().get(0);
+		
+		//SummationSubtraction returns Expression:
+		//	MultiplicationDivision ({SummationSubtraction.left=current} op=("+" | "-") right=SummationSubtraction)?;
+		public ParserRule getRule() { return rule; }
+
+		//MultiplicationDivision ({SummationSubtraction.left=current} op=("+" | "-") right=SummationSubtraction)?
+		public Group getGroup() { return cGroup; }
+
+		//MultiplicationDivision
+		public RuleCall getMultiplicationDivisionParserRuleCall_0() { return cMultiplicationDivisionParserRuleCall_0; }
+
+		//({SummationSubtraction.left=current} op=("+" | "-") right=SummationSubtraction)?
+		public Group getGroup_1() { return cGroup_1; }
+
+		//{SummationSubtraction.left=current}
+		public Action getSummationSubtractionLeftAction_1_0() { return cSummationSubtractionLeftAction_1_0; }
+
+		//op=("+" | "-")
+		public Assignment getOpAssignment_1_1() { return cOpAssignment_1_1; }
+
+		//"+" | "-"
+		public Alternatives getOpAlternatives_1_1_0() { return cOpAlternatives_1_1_0; }
+
+		//"+"
+		public Keyword getOpPlusSignKeyword_1_1_0_0() { return cOpPlusSignKeyword_1_1_0_0; }
+
+		//"-"
+		public Keyword getOpHyphenMinusKeyword_1_1_0_1() { return cOpHyphenMinusKeyword_1_1_0_1; }
+
+		//right=SummationSubtraction
+		public Assignment getRightAssignment_1_2() { return cRightAssignment_1_2; }
+
+		//SummationSubtraction
+		public RuleCall getRightSummationSubtractionParserRuleCall_1_2_0() { return cRightSummationSubtractionParserRuleCall_1_2_0; }
+	}
+
+	public class MultiplicationDivisionElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "MultiplicationDivision");
+		private final Group cGroup = (Group)rule.eContents().get(1);
+		private final RuleCall cBaseExpressionParserRuleCall_0 = (RuleCall)cGroup.eContents().get(0);
+		private final Group cGroup_1 = (Group)cGroup.eContents().get(1);
+		private final Action cMultiplicationDivisionLeftAction_1_0 = (Action)cGroup_1.eContents().get(0);
+		private final Assignment cOpAssignment_1_1 = (Assignment)cGroup_1.eContents().get(1);
+		private final Alternatives cOpAlternatives_1_1_0 = (Alternatives)cOpAssignment_1_1.eContents().get(0);
+		private final Keyword cOpAsteriskKeyword_1_1_0_0 = (Keyword)cOpAlternatives_1_1_0.eContents().get(0);
+		private final Keyword cOpSolidusKeyword_1_1_0_1 = (Keyword)cOpAlternatives_1_1_0.eContents().get(1);
+		private final Assignment cRightAssignment_1_2 = (Assignment)cGroup_1.eContents().get(2);
+		private final RuleCall cRightMultiplicationDivisionParserRuleCall_1_2_0 = (RuleCall)cRightAssignment_1_2.eContents().get(0);
+		
+		//MultiplicationDivision returns Expression:
+		//	BaseExpression ({MultiplicationDivision.left=current} op=("*" | "/") right=MultiplicationDivision)?;
+		public ParserRule getRule() { return rule; }
+
+		//BaseExpression ({MultiplicationDivision.left=current} op=("*" | "/") right=MultiplicationDivision)?
+		public Group getGroup() { return cGroup; }
+
+		//BaseExpression
+		public RuleCall getBaseExpressionParserRuleCall_0() { return cBaseExpressionParserRuleCall_0; }
+
+		//({MultiplicationDivision.left=current} op=("*" | "/") right=MultiplicationDivision)?
+		public Group getGroup_1() { return cGroup_1; }
+
+		//{MultiplicationDivision.left=current}
+		public Action getMultiplicationDivisionLeftAction_1_0() { return cMultiplicationDivisionLeftAction_1_0; }
+
+		//op=("*" | "/")
+		public Assignment getOpAssignment_1_1() { return cOpAssignment_1_1; }
+
+		//"*" | "/"
+		public Alternatives getOpAlternatives_1_1_0() { return cOpAlternatives_1_1_0; }
+
+		//"*"
+		public Keyword getOpAsteriskKeyword_1_1_0_0() { return cOpAsteriskKeyword_1_1_0_0; }
+
+		//"/"
+		public Keyword getOpSolidusKeyword_1_1_0_1() { return cOpSolidusKeyword_1_1_0_1; }
+
+		//right=MultiplicationDivision
+		public Assignment getRightAssignment_1_2() { return cRightAssignment_1_2; }
+
+		//MultiplicationDivision
+		public RuleCall getRightMultiplicationDivisionParserRuleCall_1_2_0() { return cRightMultiplicationDivisionParserRuleCall_1_2_0; }
+	}
+
+	public class BaseExpressionElements extends AbstractParserRuleElementFinder {
+		private final ParserRule rule = (ParserRule) GrammarUtil.findRuleForName(getGrammar(), "BaseExpression");
+		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
+		private final Group cGroup_0 = (Group)cAlternatives.eContents().get(0);
+		private final Action cIntExpressionAction_0_0 = (Action)cGroup_0.eContents().get(0);
+		private final RuleCall cINTTerminalRuleCall_0_1 = (RuleCall)cGroup_0.eContents().get(1);
+		private final Group cGroup_1 = (Group)cAlternatives.eContents().get(1);
+		private final Action cFloatExpressionAction_1_0 = (Action)cGroup_1.eContents().get(0);
+		private final RuleCall cFLOATTerminalRuleCall_1_1 = (RuleCall)cGroup_1.eContents().get(1);
+		private final Group cGroup_2 = (Group)cAlternatives.eContents().get(2);
+		private final Action cReferenceAction_2_0 = (Action)cGroup_2.eContents().get(0);
+		private final Assignment cStateRefAssignment_2_1 = (Assignment)cGroup_2.eContents().get(1);
+		private final RuleCall cStateRefState_refParserRuleCall_2_1_0 = (RuleCall)cStateRefAssignment_2_1.eContents().get(0);
+		private final Group cGroup_3 = (Group)cAlternatives.eContents().get(3);
+		private final Keyword cLeftParenthesisKeyword_3_0 = (Keyword)cGroup_3.eContents().get(0);
+		private final RuleCall cExpressionParserRuleCall_3_1 = (RuleCall)cGroup_3.eContents().get(1);
+		private final Keyword cRightParenthesisKeyword_3_2 = (Keyword)cGroup_3.eContents().get(2);
+		
+		//BaseExpression returns Expression:
+		//	{IntExpression} INT | {FloatExpression} FLOAT | {Reference} stateRef=state_ref | "(" Expression ")";
+		public ParserRule getRule() { return rule; }
+
+		//{IntExpression} INT | {FloatExpression} FLOAT | {Reference} stateRef=state_ref | "(" Expression ")"
+		public Alternatives getAlternatives() { return cAlternatives; }
+
+		//{IntExpression} INT
+		public Group getGroup_0() { return cGroup_0; }
+
+		//{IntExpression}
+		public Action getIntExpressionAction_0_0() { return cIntExpressionAction_0_0; }
+
+		//INT
+		public RuleCall getINTTerminalRuleCall_0_1() { return cINTTerminalRuleCall_0_1; }
+
+		//{FloatExpression} FLOAT
+		public Group getGroup_1() { return cGroup_1; }
+
+		//{FloatExpression}
+		public Action getFloatExpressionAction_1_0() { return cFloatExpressionAction_1_0; }
+
+		//FLOAT
+		public RuleCall getFLOATTerminalRuleCall_1_1() { return cFLOATTerminalRuleCall_1_1; }
+
+		//{Reference} stateRef=state_ref
+		public Group getGroup_2() { return cGroup_2; }
+
+		//{Reference}
+		public Action getReferenceAction_2_0() { return cReferenceAction_2_0; }
+
+		//stateRef=state_ref
+		public Assignment getStateRefAssignment_2_1() { return cStateRefAssignment_2_1; }
+
+		//state_ref
+		public RuleCall getStateRefState_refParserRuleCall_2_1_0() { return cStateRefState_refParserRuleCall_2_1_0; }
+
+		//"(" Expression ")"
+		public Group getGroup_3() { return cGroup_3; }
+
+		//"("
+		public Keyword getLeftParenthesisKeyword_3_0() { return cLeftParenthesisKeyword_3_0; }
+
+		//Expression
+		public RuleCall getExpressionParserRuleCall_3_1() { return cExpressionParserRuleCall_3_1; }
+
+		//")"
+		public Keyword getRightParenthesisKeyword_3_2() { return cRightParenthesisKeyword_3_2; }
 	}
 
 	public class ActionElements extends AbstractParserRuleElementFinder {
@@ -551,14 +734,14 @@ public class MarkovPopulationModelsGrammarAccess extends AbstractGrammarElementF
 		private final RuleCall cStateRefStateIDTerminalRuleCall_2_0_1 = (RuleCall)cStateRefStateCrossReference_2_0.eContents().get(1);
 		private final Keyword cColonKeyword_3 = (Keyword)cGroup.eContents().get(3);
 		private final Assignment cLocalRateAssignment_4 = (Assignment)cGroup.eContents().get(4);
-		private final RuleCall cLocalRateFLOATTerminalRuleCall_4_0 = (RuleCall)cLocalRateAssignment_4.eContents().get(0);
+		private final RuleCall cLocalRateExpressionParserRuleCall_4_0 = (RuleCall)cLocalRateAssignment_4.eContents().get(0);
 		
 		//// TODO guards
 		//action:
-		//	actRef=[label] "-->" stateRef=[state] ":" localRate=FLOAT;
+		//	actRef=[label] "-->" stateRef=[state] ":" localRate=Expression;
 		public ParserRule getRule() { return rule; }
 
-		//actRef=[label] "-->" stateRef=[state] ":" localRate=FLOAT
+		//actRef=[label] "-->" stateRef=[state] ":" localRate=Expression
 		public Group getGroup() { return cGroup; }
 
 		//actRef=[label]
@@ -585,11 +768,11 @@ public class MarkovPopulationModelsGrammarAccess extends AbstractGrammarElementF
 		//":"
 		public Keyword getColonKeyword_3() { return cColonKeyword_3; }
 
-		//localRate=FLOAT
+		//localRate=Expression
 		public Assignment getLocalRateAssignment_4() { return cLocalRateAssignment_4; }
 
-		//FLOAT
-		public RuleCall getLocalRateFLOATTerminalRuleCall_4_0() { return cLocalRateFLOATTerminalRuleCall_4_0; }
+		//Expression
+		public RuleCall getLocalRateExpressionParserRuleCall_4_0() { return cLocalRateExpressionParserRuleCall_4_0; }
 	}
 	
 	
@@ -605,6 +788,10 @@ public class MarkovPopulationModelsGrammarAccess extends AbstractGrammarElementF
 	private final AgentElements pAgent;
 	private final LabelElements pLabel;
 	private final StateElements pState;
+	private final ExpressionElements pExpression;
+	private final SummationSubtractionElements pSummationSubtraction;
+	private final MultiplicationDivisionElements pMultiplicationDivision;
+	private final BaseExpressionElements pBaseExpression;
 	private final ActionElements pAction;
 	private final TerminalRule tINT;
 	private final TerminalRule tFLOAT;
@@ -630,6 +817,10 @@ public class MarkovPopulationModelsGrammarAccess extends AbstractGrammarElementF
 		this.pAgent = new AgentElements();
 		this.pLabel = new LabelElements();
 		this.pState = new StateElements();
+		this.pExpression = new ExpressionElements();
+		this.pSummationSubtraction = new SummationSubtractionElements();
+		this.pMultiplicationDivision = new MultiplicationDivisionElements();
+		this.pBaseExpression = new BaseExpressionElements();
 		this.pAction = new ActionElements();
 		this.tINT = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "INT");
 		this.tFLOAT = (TerminalRule) GrammarUtil.findRuleForName(getGrammar(), "FLOAT");
@@ -662,7 +853,7 @@ public class MarkovPopulationModelsGrammarAccess extends AbstractGrammarElementF
 	}
 
 	
-	//// new notation
+	////extension
 	//main:
 	//	populationDef=population & agentDef=agent;
 	public MainElements getMainAccess() {
@@ -694,7 +885,7 @@ public class MarkovPopulationModelsGrammarAccess extends AbstractGrammarElementF
 	}
 
 	//stateInit:
-	//	stateRef=[state] "=" card=INT;
+	//	stateRef=state_ref "=" card=Expression;
 	public StateInitElements getStateInitAccess() {
 		return pStateInit;
 	}
@@ -704,7 +895,7 @@ public class MarkovPopulationModelsGrammarAccess extends AbstractGrammarElementF
 	}
 
 	//gl_tran:
-	//	"transition" name=ID "{" l_tran+=loc_tran ("&" l_tran+=loc_tran)* "=>" rate=FLOAT "}";
+	//	"transition" name=ID "{" lTran+=loc_tran ("&" lTran+=loc_tran)* "=>" rate=Expression "}";
 	public Gl_tranElements getGl_tranAccess() {
 		return pGl_tran;
 	}
@@ -714,7 +905,7 @@ public class MarkovPopulationModelsGrammarAccess extends AbstractGrammarElementF
 	}
 
 	//loc_tran:
-	//	"new" stateRef=[state] | "kill" stateRef=[state] | s_cond=state_cond ":" a_cond=action_cond;
+	//	"new" stateRef=[state] | "kill" stateRef=[state] | sCond=state_cond ":" aCond=action_cond;
 	public Loc_tranElements getLoc_tranAccess() {
 		return pLoc_tran;
 	}
@@ -724,7 +915,7 @@ public class MarkovPopulationModelsGrammarAccess extends AbstractGrammarElementF
 	}
 
 	//state_cond:
-	//	{anystate} "any" | s_ref=state_ref;
+	//	{anystate} "any" | stateRef=state_ref;
 	public State_condElements getState_condAccess() {
 		return pState_cond;
 	}
@@ -734,7 +925,7 @@ public class MarkovPopulationModelsGrammarAccess extends AbstractGrammarElementF
 	}
 
 	//state_ref:
-	//	name=ID;
+	//	stateRef=[state];
 	public State_refElements getState_refAccess() {
 		return pState_ref;
 	}
@@ -744,7 +935,7 @@ public class MarkovPopulationModelsGrammarAccess extends AbstractGrammarElementF
 	}
 
 	//action_cond:
-	//	{anystate} "any" | name=ID;
+	//	{anystate} "any" | actionRef=[label];
 	public Action_condElements getAction_condAccess() {
 		return pAction_cond;
 	}
@@ -774,7 +965,7 @@ public class MarkovPopulationModelsGrammarAccess extends AbstractGrammarElementF
 	}
 
 	//state:
-	//	"state" name=ID "{" spontaneous_act+=action+ "}";
+	//	"state" name=ID "{" spontaneousAct+=action+ "}";
 	public StateElements getStateAccess() {
 		return pState;
 	}
@@ -783,9 +974,52 @@ public class MarkovPopulationModelsGrammarAccess extends AbstractGrammarElementF
 		return getStateAccess().getRule();
 	}
 
+	//// ===================
+	//// === EXPRESSIONS ===
+	//// ===================
+	//Expression:
+	//	SummationSubtraction;
+	public ExpressionElements getExpressionAccess() {
+		return pExpression;
+	}
+	
+	public ParserRule getExpressionRule() {
+		return getExpressionAccess().getRule();
+	}
+
+	//SummationSubtraction returns Expression:
+	//	MultiplicationDivision ({SummationSubtraction.left=current} op=("+" | "-") right=SummationSubtraction)?;
+	public SummationSubtractionElements getSummationSubtractionAccess() {
+		return pSummationSubtraction;
+	}
+	
+	public ParserRule getSummationSubtractionRule() {
+		return getSummationSubtractionAccess().getRule();
+	}
+
+	//MultiplicationDivision returns Expression:
+	//	BaseExpression ({MultiplicationDivision.left=current} op=("*" | "/") right=MultiplicationDivision)?;
+	public MultiplicationDivisionElements getMultiplicationDivisionAccess() {
+		return pMultiplicationDivision;
+	}
+	
+	public ParserRule getMultiplicationDivisionRule() {
+		return getMultiplicationDivisionAccess().getRule();
+	}
+
+	//BaseExpression returns Expression:
+	//	{IntExpression} INT | {FloatExpression} FLOAT | {Reference} stateRef=state_ref | "(" Expression ")";
+	public BaseExpressionElements getBaseExpressionAccess() {
+		return pBaseExpression;
+	}
+	
+	public ParserRule getBaseExpressionRule() {
+		return getBaseExpressionAccess().getRule();
+	}
+
 	//// TODO guards
 	//action:
-	//	actRef=[label] "-->" stateRef=[state] ":" localRate=FLOAT;
+	//	actRef=[label] "-->" stateRef=[state] ":" localRate=Expression;
 	public ActionElements getActionAccess() {
 		return pAction;
 	}

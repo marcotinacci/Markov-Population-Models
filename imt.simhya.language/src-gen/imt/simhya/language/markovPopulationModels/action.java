@@ -77,29 +77,29 @@ public interface action extends EObject
   void setStateRef(state value);
 
   /**
-   * Returns the value of the '<em><b>Local Rate</b></em>' attribute.
+   * Returns the value of the '<em><b>Local Rate</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Local Rate</em>' attribute isn't clear,
+   * If the meaning of the '<em>Local Rate</em>' containment reference isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Local Rate</em>' attribute.
-   * @see #setLocalRate(double)
+   * @return the value of the '<em>Local Rate</em>' containment reference.
+   * @see #setLocalRate(Expression)
    * @see imt.simhya.language.markovPopulationModels.MarkovPopulationModelsPackage#getaction_LocalRate()
-   * @model
+   * @model containment="true"
    * @generated
    */
-  double getLocalRate();
+  Expression getLocalRate();
 
   /**
-   * Sets the value of the '{@link imt.simhya.language.markovPopulationModels.action#getLocalRate <em>Local Rate</em>}' attribute.
+   * Sets the value of the '{@link imt.simhya.language.markovPopulationModels.action#getLocalRate <em>Local Rate</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Local Rate</em>' attribute.
+   * @param value the new value of the '<em>Local Rate</em>' containment reference.
    * @see #getLocalRate()
    * @generated
    */
-  void setLocalRate(double value);
+  void setLocalRate(Expression value);
 
 } // action

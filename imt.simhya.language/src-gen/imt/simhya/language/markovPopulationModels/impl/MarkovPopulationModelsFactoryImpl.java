@@ -76,8 +76,14 @@ public class MarkovPopulationModelsFactoryImpl extends EFactoryImpl implements M
       case MarkovPopulationModelsPackage.AGENT: return createagent();
       case MarkovPopulationModelsPackage.LABEL: return createlabel();
       case MarkovPopulationModelsPackage.STATE: return createstate();
+      case MarkovPopulationModelsPackage.EXPRESSION: return createExpression();
       case MarkovPopulationModelsPackage.ACTION: return createaction();
       case MarkovPopulationModelsPackage.ANYSTATE: return createanystate();
+      case MarkovPopulationModelsPackage.SUMMATION_SUBTRACTION: return createSummationSubtraction();
+      case MarkovPopulationModelsPackage.MULTIPLICATION_DIVISION: return createMultiplicationDivision();
+      case MarkovPopulationModelsPackage.INT_EXPRESSION: return createIntExpression();
+      case MarkovPopulationModelsPackage.FLOAT_EXPRESSION: return createFloatExpression();
+      case MarkovPopulationModelsPackage.REFERENCE: return createReference();
       default:
         throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
     }
@@ -220,6 +226,17 @@ public class MarkovPopulationModelsFactoryImpl extends EFactoryImpl implements M
    * <!-- end-user-doc -->
    * @generated
    */
+  public Expression createExpression()
+  {
+    ExpressionImpl expression = new ExpressionImpl();
+    return expression;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public action createaction()
   {
     actionImpl action = new actionImpl();
@@ -235,6 +252,61 @@ public class MarkovPopulationModelsFactoryImpl extends EFactoryImpl implements M
   {
     anystateImpl anystate = new anystateImpl();
     return anystate;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public SummationSubtraction createSummationSubtraction()
+  {
+    SummationSubtractionImpl summationSubtraction = new SummationSubtractionImpl();
+    return summationSubtraction;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public MultiplicationDivision createMultiplicationDivision()
+  {
+    MultiplicationDivisionImpl multiplicationDivision = new MultiplicationDivisionImpl();
+    return multiplicationDivision;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public IntExpression createIntExpression()
+  {
+    IntExpressionImpl intExpression = new IntExpressionImpl();
+    return intExpression;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public FloatExpression createFloatExpression()
+  {
+    FloatExpressionImpl floatExpression = new FloatExpressionImpl();
+    return floatExpression;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Reference createReference()
+  {
+    ReferenceImpl reference = new ReferenceImpl();
+    return reference;
   }
 
   /**

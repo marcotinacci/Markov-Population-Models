@@ -23,13 +23,13 @@ init:
 ;
 
 stateInit:
-	stateRef=[state] '=' card=INT	
+	stateRef=state_ref '=' card=Expression	
 ;
 
 gl_tran:
 	'transition'
 	name=ID '{'
-		lTran+=loc_tran ('&' lTran+=loc_tran)* '=>' rate=FLOAT
+		lTran+=loc_tran ('&' lTran+=loc_tran)* '=>' rate=Expression
 	'}'
 ;
 
@@ -70,9 +70,32 @@ state:
 	'}'
 ;
 
+// ===================
+// === EXPRESSIONS ===
+// ===================
+
+Expression:
+	SummationSubtraction
+;
+
+SummationSubtraction returns Expression:
+	MultiplicationDivision ({SummationSubtraction.left=current} op=('+'|'-') right=SummationSubtraction )?
+;
+
+MultiplicationDivision returns Expression:
+	BaseExpression ({MultiplicationDivision.left=current} op=('*'|'/') right=MultiplicationDivision )?
+;
+
+BaseExpression returns Expression:
+	{IntExpression} INT
+	| {FloatExpression} FLOAT
+	| {Reference} stateRef=state_ref
+	| '(' Expression ')'
+;
+
 // TODO guards
 action:
-	actRef=[label] '-->' stateRef=[state] ':' localRate=FLOAT
+	actRef=[label] '-->' stateRef=[state] ':' localRate=Expression
 ;
 
 terminal INT returns ecore::EInt: ('0'..'9')+;

@@ -156,6 +156,13 @@ public class MarkovPopulationModelsSwitch<T> extends Switch<T>
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
+      case MarkovPopulationModelsPackage.EXPRESSION:
+      {
+        Expression expression = (Expression)theEObject;
+        T result = caseExpression(expression);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
       case MarkovPopulationModelsPackage.ACTION:
       {
         action action = (action)theEObject;
@@ -169,6 +176,46 @@ public class MarkovPopulationModelsSwitch<T> extends Switch<T>
         T result = caseanystate(anystate);
         if (result == null) result = casestate_cond(anystate);
         if (result == null) result = caseaction_cond(anystate);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case MarkovPopulationModelsPackage.SUMMATION_SUBTRACTION:
+      {
+        SummationSubtraction summationSubtraction = (SummationSubtraction)theEObject;
+        T result = caseSummationSubtraction(summationSubtraction);
+        if (result == null) result = caseExpression(summationSubtraction);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case MarkovPopulationModelsPackage.MULTIPLICATION_DIVISION:
+      {
+        MultiplicationDivision multiplicationDivision = (MultiplicationDivision)theEObject;
+        T result = caseMultiplicationDivision(multiplicationDivision);
+        if (result == null) result = caseExpression(multiplicationDivision);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case MarkovPopulationModelsPackage.INT_EXPRESSION:
+      {
+        IntExpression intExpression = (IntExpression)theEObject;
+        T result = caseIntExpression(intExpression);
+        if (result == null) result = caseExpression(intExpression);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case MarkovPopulationModelsPackage.FLOAT_EXPRESSION:
+      {
+        FloatExpression floatExpression = (FloatExpression)theEObject;
+        T result = caseFloatExpression(floatExpression);
+        if (result == null) result = caseExpression(floatExpression);
+        if (result == null) result = defaultCase(theEObject);
+        return result;
+      }
+      case MarkovPopulationModelsPackage.REFERENCE:
+      {
+        Reference reference = (Reference)theEObject;
+        T result = caseReference(reference);
+        if (result == null) result = caseExpression(reference);
         if (result == null) result = defaultCase(theEObject);
         return result;
       }
@@ -369,6 +416,22 @@ public class MarkovPopulationModelsSwitch<T> extends Switch<T>
   }
 
   /**
+   * Returns the result of interpreting the object as an instance of '<em>Expression</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Expression</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseExpression(Expression object)
+  {
+    return null;
+  }
+
+  /**
    * Returns the result of interpreting the object as an instance of '<em>action</em>'.
    * <!-- begin-user-doc -->
    * This implementation returns null;
@@ -396,6 +459,86 @@ public class MarkovPopulationModelsSwitch<T> extends Switch<T>
    * @generated
    */
   public T caseanystate(anystate object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Summation Subtraction</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Summation Subtraction</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseSummationSubtraction(SummationSubtraction object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Multiplication Division</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Multiplication Division</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseMultiplicationDivision(MultiplicationDivision object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Int Expression</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Int Expression</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseIntExpression(IntExpression object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Float Expression</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Float Expression</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseFloatExpression(FloatExpression object)
+  {
+    return null;
+  }
+
+  /**
+   * Returns the result of interpreting the object as an instance of '<em>Reference</em>'.
+   * <!-- begin-user-doc -->
+   * This implementation returns null;
+   * returning a non-null result will terminate the switch.
+   * <!-- end-user-doc -->
+   * @param object the target of the switch.
+   * @return the result of interpreting the object as an instance of '<em>Reference</em>'.
+   * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+   * @generated
+   */
+  public T caseReference(Reference object)
   {
     return null;
   }

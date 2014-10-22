@@ -131,6 +131,15 @@ public interface MarkovPopulationModelsFactory extends EFactory
   state createstate();
 
   /**
+   * Returns a new object of class '<em>Expression</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Expression</em>'.
+   * @generated
+   */
+  Expression createExpression();
+
+  /**
    * Returns a new object of class '<em>action</em>'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -147,6 +156,51 @@ public interface MarkovPopulationModelsFactory extends EFactory
    * @generated
    */
   anystate createanystate();
+
+  /**
+   * Returns a new object of class '<em>Summation Subtraction</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Summation Subtraction</em>'.
+   * @generated
+   */
+  SummationSubtraction createSummationSubtraction();
+
+  /**
+   * Returns a new object of class '<em>Multiplication Division</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Multiplication Division</em>'.
+   * @generated
+   */
+  MultiplicationDivision createMultiplicationDivision();
+
+  /**
+   * Returns a new object of class '<em>Int Expression</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Int Expression</em>'.
+   * @generated
+   */
+  IntExpression createIntExpression();
+
+  /**
+   * Returns a new object of class '<em>Float Expression</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Float Expression</em>'.
+   * @generated
+   */
+  FloatExpression createFloatExpression();
+
+  /**
+   * Returns a new object of class '<em>Reference</em>'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return a new object of class '<em>Reference</em>'.
+   * @generated
+   */
+  Reference createReference();
 
   /**
    * Returns the package supported by this factory.

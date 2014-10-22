@@ -2,11 +2,13 @@
  */
 package imt.simhya.language.markovPopulationModels.impl;
 
+import imt.simhya.language.markovPopulationModels.Expression;
 import imt.simhya.language.markovPopulationModels.MarkovPopulationModelsPackage;
-import imt.simhya.language.markovPopulationModels.state;
 import imt.simhya.language.markovPopulationModels.stateInit;
+import imt.simhya.language.markovPopulationModels.state_ref;
 
 import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
@@ -31,34 +33,24 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 public class stateInitImpl extends MinimalEObjectImpl.Container implements stateInit
 {
   /**
-   * The cached value of the '{@link #getStateRef() <em>State Ref</em>}' reference.
+   * The cached value of the '{@link #getStateRef() <em>State Ref</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @see #getStateRef()
    * @generated
    * @ordered
    */
-  protected state stateRef;
+  protected state_ref stateRef;
 
   /**
-   * The default value of the '{@link #getCard() <em>Card</em>}' attribute.
+   * The cached value of the '{@link #getCard() <em>Card</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @see #getCard()
    * @generated
    * @ordered
    */
-  protected static final int CARD_EDEFAULT = 0;
-
-  /**
-   * The cached value of the '{@link #getCard() <em>Card</em>}' attribute.
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @see #getCard()
-   * @generated
-   * @ordered
-   */
-  protected int card = CARD_EDEFAULT;
+  protected Expression card;
 
   /**
    * <!-- begin-user-doc -->
@@ -86,27 +78,7 @@ public class stateInitImpl extends MinimalEObjectImpl.Container implements state
    * <!-- end-user-doc -->
    * @generated
    */
-  public state getStateRef()
-  {
-    if (stateRef != null && stateRef.eIsProxy())
-    {
-      InternalEObject oldStateRef = (InternalEObject)stateRef;
-      stateRef = (state)eResolveProxy(oldStateRef);
-      if (stateRef != oldStateRef)
-      {
-        if (eNotificationRequired())
-          eNotify(new ENotificationImpl(this, Notification.RESOLVE, MarkovPopulationModelsPackage.STATE_INIT__STATE_REF, oldStateRef, stateRef));
-      }
-    }
-    return stateRef;
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  public state basicGetStateRef()
+  public state_ref getStateRef()
   {
     return stateRef;
   }
@@ -116,12 +88,16 @@ public class stateInitImpl extends MinimalEObjectImpl.Container implements state
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setStateRef(state newStateRef)
+  public NotificationChain basicSetStateRef(state_ref newStateRef, NotificationChain msgs)
   {
-    state oldStateRef = stateRef;
+    state_ref oldStateRef = stateRef;
     stateRef = newStateRef;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, MarkovPopulationModelsPackage.STATE_INIT__STATE_REF, oldStateRef, stateRef));
+    {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, MarkovPopulationModelsPackage.STATE_INIT__STATE_REF, oldStateRef, newStateRef);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
+    }
+    return msgs;
   }
 
   /**
@@ -129,7 +105,28 @@ public class stateInitImpl extends MinimalEObjectImpl.Container implements state
    * <!-- end-user-doc -->
    * @generated
    */
-  public int getCard()
+  public void setStateRef(state_ref newStateRef)
+  {
+    if (newStateRef != stateRef)
+    {
+      NotificationChain msgs = null;
+      if (stateRef != null)
+        msgs = ((InternalEObject)stateRef).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - MarkovPopulationModelsPackage.STATE_INIT__STATE_REF, null, msgs);
+      if (newStateRef != null)
+        msgs = ((InternalEObject)newStateRef).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - MarkovPopulationModelsPackage.STATE_INIT__STATE_REF, null, msgs);
+      msgs = basicSetStateRef(newStateRef, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, MarkovPopulationModelsPackage.STATE_INIT__STATE_REF, newStateRef, newStateRef));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public Expression getCard()
   {
     return card;
   }
@@ -139,12 +136,55 @@ public class stateInitImpl extends MinimalEObjectImpl.Container implements state
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setCard(int newCard)
+  public NotificationChain basicSetCard(Expression newCard, NotificationChain msgs)
   {
-    int oldCard = card;
+    Expression oldCard = card;
     card = newCard;
     if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, MarkovPopulationModelsPackage.STATE_INIT__CARD, oldCard, card));
+    {
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, MarkovPopulationModelsPackage.STATE_INIT__CARD, oldCard, newCard);
+      if (msgs == null) msgs = notification; else msgs.add(notification);
+    }
+    return msgs;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public void setCard(Expression newCard)
+  {
+    if (newCard != card)
+    {
+      NotificationChain msgs = null;
+      if (card != null)
+        msgs = ((InternalEObject)card).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - MarkovPopulationModelsPackage.STATE_INIT__CARD, null, msgs);
+      if (newCard != null)
+        msgs = ((InternalEObject)newCard).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - MarkovPopulationModelsPackage.STATE_INIT__CARD, null, msgs);
+      msgs = basicSetCard(newCard, msgs);
+      if (msgs != null) msgs.dispatch();
+    }
+    else if (eNotificationRequired())
+      eNotify(new ENotificationImpl(this, Notification.SET, MarkovPopulationModelsPackage.STATE_INIT__CARD, newCard, newCard));
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  @Override
+  public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs)
+  {
+    switch (featureID)
+    {
+      case MarkovPopulationModelsPackage.STATE_INIT__STATE_REF:
+        return basicSetStateRef(null, msgs);
+      case MarkovPopulationModelsPackage.STATE_INIT__CARD:
+        return basicSetCard(null, msgs);
+    }
+    return super.eInverseRemove(otherEnd, featureID, msgs);
   }
 
   /**
@@ -158,8 +198,7 @@ public class stateInitImpl extends MinimalEObjectImpl.Container implements state
     switch (featureID)
     {
       case MarkovPopulationModelsPackage.STATE_INIT__STATE_REF:
-        if (resolve) return getStateRef();
-        return basicGetStateRef();
+        return getStateRef();
       case MarkovPopulationModelsPackage.STATE_INIT__CARD:
         return getCard();
     }
@@ -177,10 +216,10 @@ public class stateInitImpl extends MinimalEObjectImpl.Container implements state
     switch (featureID)
     {
       case MarkovPopulationModelsPackage.STATE_INIT__STATE_REF:
-        setStateRef((state)newValue);
+        setStateRef((state_ref)newValue);
         return;
       case MarkovPopulationModelsPackage.STATE_INIT__CARD:
-        setCard((Integer)newValue);
+        setCard((Expression)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -197,10 +236,10 @@ public class stateInitImpl extends MinimalEObjectImpl.Container implements state
     switch (featureID)
     {
       case MarkovPopulationModelsPackage.STATE_INIT__STATE_REF:
-        setStateRef((state)null);
+        setStateRef((state_ref)null);
         return;
       case MarkovPopulationModelsPackage.STATE_INIT__CARD:
-        setCard(CARD_EDEFAULT);
+        setCard((Expression)null);
         return;
     }
     super.eUnset(featureID);
@@ -219,26 +258,9 @@ public class stateInitImpl extends MinimalEObjectImpl.Container implements state
       case MarkovPopulationModelsPackage.STATE_INIT__STATE_REF:
         return stateRef != null;
       case MarkovPopulationModelsPackage.STATE_INIT__CARD:
-        return card != CARD_EDEFAULT;
+        return card != null;
     }
     return super.eIsSet(featureID);
-  }
-
-  /**
-   * <!-- begin-user-doc -->
-   * <!-- end-user-doc -->
-   * @generated
-   */
-  @Override
-  public String toString()
-  {
-    if (eIsProxy()) return super.toString();
-
-    StringBuffer result = new StringBuffer(super.toString());
-    result.append(" (card: ");
-    result.append(card);
-    result.append(')');
-    return result.toString();
   }
 
 } //stateInitImpl

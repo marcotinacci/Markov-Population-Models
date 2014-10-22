@@ -30,7 +30,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  * The following features are implemented:
  * <ul>
  *   <li>{@link imt.simhya.language.markovPopulationModels.impl.stateImpl#getName <em>Name</em>}</li>
- *   <li>{@link imt.simhya.language.markovPopulationModels.impl.stateImpl#getSpontaneous_act <em>Spontaneous act</em>}</li>
+ *   <li>{@link imt.simhya.language.markovPopulationModels.impl.stateImpl#getSpontaneousAct <em>Spontaneous Act</em>}</li>
  * </ul>
  * </p>
  *
@@ -59,14 +59,14 @@ public class stateImpl extends MinimalEObjectImpl.Container implements state
   protected String name = NAME_EDEFAULT;
 
   /**
-   * The cached value of the '{@link #getSpontaneous_act() <em>Spontaneous act</em>}' containment reference list.
+   * The cached value of the '{@link #getSpontaneousAct() <em>Spontaneous Act</em>}' containment reference list.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getSpontaneous_act()
+   * @see #getSpontaneousAct()
    * @generated
    * @ordered
    */
-  protected EList<action> spontaneous_act;
+  protected EList<action> spontaneousAct;
 
   /**
    * <!-- begin-user-doc -->
@@ -117,13 +117,13 @@ public class stateImpl extends MinimalEObjectImpl.Container implements state
    * <!-- end-user-doc -->
    * @generated
    */
-  public EList<action> getSpontaneous_act()
+  public EList<action> getSpontaneousAct()
   {
-    if (spontaneous_act == null)
+    if (spontaneousAct == null)
     {
-      spontaneous_act = new EObjectContainmentEList<action>(action.class, this, MarkovPopulationModelsPackage.STATE__SPONTANEOUS_ACT);
+      spontaneousAct = new EObjectContainmentEList<action>(action.class, this, MarkovPopulationModelsPackage.STATE__SPONTANEOUS_ACT);
     }
-    return spontaneous_act;
+    return spontaneousAct;
   }
 
   /**
@@ -137,7 +137,7 @@ public class stateImpl extends MinimalEObjectImpl.Container implements state
     switch (featureID)
     {
       case MarkovPopulationModelsPackage.STATE__SPONTANEOUS_ACT:
-        return ((InternalEList<?>)getSpontaneous_act()).basicRemove(otherEnd, msgs);
+        return ((InternalEList<?>)getSpontaneousAct()).basicRemove(otherEnd, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
   }
@@ -155,7 +155,7 @@ public class stateImpl extends MinimalEObjectImpl.Container implements state
       case MarkovPopulationModelsPackage.STATE__NAME:
         return getName();
       case MarkovPopulationModelsPackage.STATE__SPONTANEOUS_ACT:
-        return getSpontaneous_act();
+        return getSpontaneousAct();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -175,8 +175,8 @@ public class stateImpl extends MinimalEObjectImpl.Container implements state
         setName((String)newValue);
         return;
       case MarkovPopulationModelsPackage.STATE__SPONTANEOUS_ACT:
-        getSpontaneous_act().clear();
-        getSpontaneous_act().addAll((Collection<? extends action>)newValue);
+        getSpontaneousAct().clear();
+        getSpontaneousAct().addAll((Collection<? extends action>)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -196,7 +196,7 @@ public class stateImpl extends MinimalEObjectImpl.Container implements state
         setName(NAME_EDEFAULT);
         return;
       case MarkovPopulationModelsPackage.STATE__SPONTANEOUS_ACT:
-        getSpontaneous_act().clear();
+        getSpontaneousAct().clear();
         return;
     }
     super.eUnset(featureID);
@@ -215,7 +215,7 @@ public class stateImpl extends MinimalEObjectImpl.Container implements state
       case MarkovPopulationModelsPackage.STATE__NAME:
         return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
       case MarkovPopulationModelsPackage.STATE__SPONTANEOUS_ACT:
-        return spontaneous_act != null && !spontaneous_act.isEmpty();
+        return spontaneousAct != null && !spontaneousAct.isEmpty();
     }
     return super.eIsSet(featureID);
   }

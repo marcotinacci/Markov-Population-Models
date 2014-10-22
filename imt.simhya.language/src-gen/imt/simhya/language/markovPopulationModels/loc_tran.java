@@ -13,8 +13,8 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * <ul>
  *   <li>{@link imt.simhya.language.markovPopulationModels.loc_tran#getStateRef <em>State Ref</em>}</li>
- *   <li>{@link imt.simhya.language.markovPopulationModels.loc_tran#getS_cond <em>Scond</em>}</li>
- *   <li>{@link imt.simhya.language.markovPopulationModels.loc_tran#getA_cond <em>Acond</em>}</li>
+ *   <li>{@link imt.simhya.language.markovPopulationModels.loc_tran#getSCond <em>SCond</em>}</li>
+ *   <li>{@link imt.simhya.language.markovPopulationModels.loc_tran#getACond <em>ACond</em>}</li>
  * </ul>
  * </p>
  *
@@ -51,55 +51,55 @@ public interface loc_tran extends EObject
   void setStateRef(state value);
 
   /**
-   * Returns the value of the '<em><b>Scond</b></em>' containment reference.
+   * Returns the value of the '<em><b>SCond</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Scond</em>' containment reference isn't clear,
+   * If the meaning of the '<em>SCond</em>' containment reference isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Scond</em>' containment reference.
-   * @see #setS_cond(state_cond)
-   * @see imt.simhya.language.markovPopulationModels.MarkovPopulationModelsPackage#getloc_tran_S_cond()
+   * @return the value of the '<em>SCond</em>' containment reference.
+   * @see #setSCond(state_cond)
+   * @see imt.simhya.language.markovPopulationModels.MarkovPopulationModelsPackage#getloc_tran_SCond()
    * @model containment="true"
    * @generated
    */
-  state_cond getS_cond();
+  state_cond getSCond();
 
   /**
-   * Sets the value of the '{@link imt.simhya.language.markovPopulationModels.loc_tran#getS_cond <em>Scond</em>}' containment reference.
+   * Sets the value of the '{@link imt.simhya.language.markovPopulationModels.loc_tran#getSCond <em>SCond</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Scond</em>' containment reference.
-   * @see #getS_cond()
+   * @param value the new value of the '<em>SCond</em>' containment reference.
+   * @see #getSCond()
    * @generated
    */
-  void setS_cond(state_cond value);
+  void setSCond(state_cond value);
 
   /**
-   * Returns the value of the '<em><b>Acond</b></em>' containment reference.
+   * Returns the value of the '<em><b>ACond</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Acond</em>' containment reference isn't clear,
+   * If the meaning of the '<em>ACond</em>' containment reference isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Acond</em>' containment reference.
-   * @see #setA_cond(action_cond)
-   * @see imt.simhya.language.markovPopulationModels.MarkovPopulationModelsPackage#getloc_tran_A_cond()
+   * @return the value of the '<em>ACond</em>' containment reference.
+   * @see #setACond(action_cond)
+   * @see imt.simhya.language.markovPopulationModels.MarkovPopulationModelsPackage#getloc_tran_ACond()
    * @model containment="true"
    * @generated
    */
-  action_cond getA_cond();
+  action_cond getACond();
 
   /**
-   * Sets the value of the '{@link imt.simhya.language.markovPopulationModels.loc_tran#getA_cond <em>Acond</em>}' containment reference.
+   * Sets the value of the '{@link imt.simhya.language.markovPopulationModels.loc_tran#getACond <em>ACond</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Acond</em>' containment reference.
-   * @see #getA_cond()
+   * @param value the new value of the '<em>ACond</em>' containment reference.
+   * @see #getACond()
    * @generated
    */
-  void setA_cond(action_cond value);
+  void setACond(action_cond value);
 
 } // loc_tran

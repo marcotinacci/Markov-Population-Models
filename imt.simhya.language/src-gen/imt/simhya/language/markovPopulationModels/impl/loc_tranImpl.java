@@ -25,8 +25,8 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  * The following features are implemented:
  * <ul>
  *   <li>{@link imt.simhya.language.markovPopulationModels.impl.loc_tranImpl#getStateRef <em>State Ref</em>}</li>
- *   <li>{@link imt.simhya.language.markovPopulationModels.impl.loc_tranImpl#getS_cond <em>Scond</em>}</li>
- *   <li>{@link imt.simhya.language.markovPopulationModels.impl.loc_tranImpl#getA_cond <em>Acond</em>}</li>
+ *   <li>{@link imt.simhya.language.markovPopulationModels.impl.loc_tranImpl#getSCond <em>SCond</em>}</li>
+ *   <li>{@link imt.simhya.language.markovPopulationModels.impl.loc_tranImpl#getACond <em>ACond</em>}</li>
  * </ul>
  * </p>
  *
@@ -45,24 +45,24 @@ public class loc_tranImpl extends MinimalEObjectImpl.Container implements loc_tr
   protected state stateRef;
 
   /**
-   * The cached value of the '{@link #getS_cond() <em>Scond</em>}' containment reference.
+   * The cached value of the '{@link #getSCond() <em>SCond</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getS_cond()
+   * @see #getSCond()
    * @generated
    * @ordered
    */
-  protected state_cond s_cond;
+  protected state_cond sCond;
 
   /**
-   * The cached value of the '{@link #getA_cond() <em>Acond</em>}' containment reference.
+   * The cached value of the '{@link #getACond() <em>ACond</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @see #getA_cond()
+   * @see #getACond()
    * @generated
    * @ordered
    */
-  protected action_cond a_cond;
+  protected action_cond aCond;
 
   /**
    * <!-- begin-user-doc -->
@@ -133,9 +133,9 @@ public class loc_tranImpl extends MinimalEObjectImpl.Container implements loc_tr
    * <!-- end-user-doc -->
    * @generated
    */
-  public state_cond getS_cond()
+  public state_cond getSCond()
   {
-    return s_cond;
+    return sCond;
   }
 
   /**
@@ -143,13 +143,13 @@ public class loc_tranImpl extends MinimalEObjectImpl.Container implements loc_tr
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetS_cond(state_cond newS_cond, NotificationChain msgs)
+  public NotificationChain basicSetSCond(state_cond newSCond, NotificationChain msgs)
   {
-    state_cond oldS_cond = s_cond;
-    s_cond = newS_cond;
+    state_cond oldSCond = sCond;
+    sCond = newSCond;
     if (eNotificationRequired())
     {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, MarkovPopulationModelsPackage.LOC_TRAN__SCOND, oldS_cond, newS_cond);
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, MarkovPopulationModelsPackage.LOC_TRAN__SCOND, oldSCond, newSCond);
       if (msgs == null) msgs = notification; else msgs.add(notification);
     }
     return msgs;
@@ -160,20 +160,20 @@ public class loc_tranImpl extends MinimalEObjectImpl.Container implements loc_tr
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setS_cond(state_cond newS_cond)
+  public void setSCond(state_cond newSCond)
   {
-    if (newS_cond != s_cond)
+    if (newSCond != sCond)
     {
       NotificationChain msgs = null;
-      if (s_cond != null)
-        msgs = ((InternalEObject)s_cond).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - MarkovPopulationModelsPackage.LOC_TRAN__SCOND, null, msgs);
-      if (newS_cond != null)
-        msgs = ((InternalEObject)newS_cond).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - MarkovPopulationModelsPackage.LOC_TRAN__SCOND, null, msgs);
-      msgs = basicSetS_cond(newS_cond, msgs);
+      if (sCond != null)
+        msgs = ((InternalEObject)sCond).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - MarkovPopulationModelsPackage.LOC_TRAN__SCOND, null, msgs);
+      if (newSCond != null)
+        msgs = ((InternalEObject)newSCond).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - MarkovPopulationModelsPackage.LOC_TRAN__SCOND, null, msgs);
+      msgs = basicSetSCond(newSCond, msgs);
       if (msgs != null) msgs.dispatch();
     }
     else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, MarkovPopulationModelsPackage.LOC_TRAN__SCOND, newS_cond, newS_cond));
+      eNotify(new ENotificationImpl(this, Notification.SET, MarkovPopulationModelsPackage.LOC_TRAN__SCOND, newSCond, newSCond));
   }
 
   /**
@@ -181,9 +181,9 @@ public class loc_tranImpl extends MinimalEObjectImpl.Container implements loc_tr
    * <!-- end-user-doc -->
    * @generated
    */
-  public action_cond getA_cond()
+  public action_cond getACond()
   {
-    return a_cond;
+    return aCond;
   }
 
   /**
@@ -191,13 +191,13 @@ public class loc_tranImpl extends MinimalEObjectImpl.Container implements loc_tr
    * <!-- end-user-doc -->
    * @generated
    */
-  public NotificationChain basicSetA_cond(action_cond newA_cond, NotificationChain msgs)
+  public NotificationChain basicSetACond(action_cond newACond, NotificationChain msgs)
   {
-    action_cond oldA_cond = a_cond;
-    a_cond = newA_cond;
+    action_cond oldACond = aCond;
+    aCond = newACond;
     if (eNotificationRequired())
     {
-      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, MarkovPopulationModelsPackage.LOC_TRAN__ACOND, oldA_cond, newA_cond);
+      ENotificationImpl notification = new ENotificationImpl(this, Notification.SET, MarkovPopulationModelsPackage.LOC_TRAN__ACOND, oldACond, newACond);
       if (msgs == null) msgs = notification; else msgs.add(notification);
     }
     return msgs;
@@ -208,20 +208,20 @@ public class loc_tranImpl extends MinimalEObjectImpl.Container implements loc_tr
    * <!-- end-user-doc -->
    * @generated
    */
-  public void setA_cond(action_cond newA_cond)
+  public void setACond(action_cond newACond)
   {
-    if (newA_cond != a_cond)
+    if (newACond != aCond)
     {
       NotificationChain msgs = null;
-      if (a_cond != null)
-        msgs = ((InternalEObject)a_cond).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - MarkovPopulationModelsPackage.LOC_TRAN__ACOND, null, msgs);
-      if (newA_cond != null)
-        msgs = ((InternalEObject)newA_cond).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - MarkovPopulationModelsPackage.LOC_TRAN__ACOND, null, msgs);
-      msgs = basicSetA_cond(newA_cond, msgs);
+      if (aCond != null)
+        msgs = ((InternalEObject)aCond).eInverseRemove(this, EOPPOSITE_FEATURE_BASE - MarkovPopulationModelsPackage.LOC_TRAN__ACOND, null, msgs);
+      if (newACond != null)
+        msgs = ((InternalEObject)newACond).eInverseAdd(this, EOPPOSITE_FEATURE_BASE - MarkovPopulationModelsPackage.LOC_TRAN__ACOND, null, msgs);
+      msgs = basicSetACond(newACond, msgs);
       if (msgs != null) msgs.dispatch();
     }
     else if (eNotificationRequired())
-      eNotify(new ENotificationImpl(this, Notification.SET, MarkovPopulationModelsPackage.LOC_TRAN__ACOND, newA_cond, newA_cond));
+      eNotify(new ENotificationImpl(this, Notification.SET, MarkovPopulationModelsPackage.LOC_TRAN__ACOND, newACond, newACond));
   }
 
   /**
@@ -235,9 +235,9 @@ public class loc_tranImpl extends MinimalEObjectImpl.Container implements loc_tr
     switch (featureID)
     {
       case MarkovPopulationModelsPackage.LOC_TRAN__SCOND:
-        return basicSetS_cond(null, msgs);
+        return basicSetSCond(null, msgs);
       case MarkovPopulationModelsPackage.LOC_TRAN__ACOND:
-        return basicSetA_cond(null, msgs);
+        return basicSetACond(null, msgs);
     }
     return super.eInverseRemove(otherEnd, featureID, msgs);
   }
@@ -256,9 +256,9 @@ public class loc_tranImpl extends MinimalEObjectImpl.Container implements loc_tr
         if (resolve) return getStateRef();
         return basicGetStateRef();
       case MarkovPopulationModelsPackage.LOC_TRAN__SCOND:
-        return getS_cond();
+        return getSCond();
       case MarkovPopulationModelsPackage.LOC_TRAN__ACOND:
-        return getA_cond();
+        return getACond();
     }
     return super.eGet(featureID, resolve, coreType);
   }
@@ -277,10 +277,10 @@ public class loc_tranImpl extends MinimalEObjectImpl.Container implements loc_tr
         setStateRef((state)newValue);
         return;
       case MarkovPopulationModelsPackage.LOC_TRAN__SCOND:
-        setS_cond((state_cond)newValue);
+        setSCond((state_cond)newValue);
         return;
       case MarkovPopulationModelsPackage.LOC_TRAN__ACOND:
-        setA_cond((action_cond)newValue);
+        setACond((action_cond)newValue);
         return;
     }
     super.eSet(featureID, newValue);
@@ -300,10 +300,10 @@ public class loc_tranImpl extends MinimalEObjectImpl.Container implements loc_tr
         setStateRef((state)null);
         return;
       case MarkovPopulationModelsPackage.LOC_TRAN__SCOND:
-        setS_cond((state_cond)null);
+        setSCond((state_cond)null);
         return;
       case MarkovPopulationModelsPackage.LOC_TRAN__ACOND:
-        setA_cond((action_cond)null);
+        setACond((action_cond)null);
         return;
     }
     super.eUnset(featureID);
@@ -322,9 +322,9 @@ public class loc_tranImpl extends MinimalEObjectImpl.Container implements loc_tr
       case MarkovPopulationModelsPackage.LOC_TRAN__STATE_REF:
         return stateRef != null;
       case MarkovPopulationModelsPackage.LOC_TRAN__SCOND:
-        return s_cond != null;
+        return sCond != null;
       case MarkovPopulationModelsPackage.LOC_TRAN__ACOND:
-        return a_cond != null;
+        return aCond != null;
     }
     return super.eIsSet(featureID);
   }

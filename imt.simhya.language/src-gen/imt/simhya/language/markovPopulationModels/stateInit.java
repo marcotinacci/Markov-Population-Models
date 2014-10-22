@@ -24,55 +24,55 @@ import org.eclipse.emf.ecore.EObject;
 public interface stateInit extends EObject
 {
   /**
-   * Returns the value of the '<em><b>State Ref</b></em>' reference.
+   * Returns the value of the '<em><b>State Ref</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>State Ref</em>' reference isn't clear,
+   * If the meaning of the '<em>State Ref</em>' containment reference isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>State Ref</em>' reference.
-   * @see #setStateRef(state)
+   * @return the value of the '<em>State Ref</em>' containment reference.
+   * @see #setStateRef(state_ref)
    * @see imt.simhya.language.markovPopulationModels.MarkovPopulationModelsPackage#getstateInit_StateRef()
-   * @model
+   * @model containment="true"
    * @generated
    */
-  state getStateRef();
+  state_ref getStateRef();
 
   /**
-   * Sets the value of the '{@link imt.simhya.language.markovPopulationModels.stateInit#getStateRef <em>State Ref</em>}' reference.
+   * Sets the value of the '{@link imt.simhya.language.markovPopulationModels.stateInit#getStateRef <em>State Ref</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>State Ref</em>' reference.
+   * @param value the new value of the '<em>State Ref</em>' containment reference.
    * @see #getStateRef()
    * @generated
    */
-  void setStateRef(state value);
+  void setStateRef(state_ref value);
 
   /**
-   * Returns the value of the '<em><b>Card</b></em>' attribute.
+   * Returns the value of the '<em><b>Card</b></em>' containment reference.
    * <!-- begin-user-doc -->
    * <p>
-   * If the meaning of the '<em>Card</em>' attribute isn't clear,
+   * If the meaning of the '<em>Card</em>' containment reference isn't clear,
    * there really should be more of a description here...
    * </p>
    * <!-- end-user-doc -->
-   * @return the value of the '<em>Card</em>' attribute.
-   * @see #setCard(int)
+   * @return the value of the '<em>Card</em>' containment reference.
+   * @see #setCard(Expression)
    * @see imt.simhya.language.markovPopulationModels.MarkovPopulationModelsPackage#getstateInit_Card()
-   * @model
+   * @model containment="true"
    * @generated
    */
-  int getCard();
+  Expression getCard();
 
   /**
-   * Sets the value of the '{@link imt.simhya.language.markovPopulationModels.stateInit#getCard <em>Card</em>}' attribute.
+   * Sets the value of the '{@link imt.simhya.language.markovPopulationModels.stateInit#getCard <em>Card</em>}' containment reference.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
-   * @param value the new value of the '<em>Card</em>' attribute.
+   * @param value the new value of the '<em>Card</em>' containment reference.
    * @see #getCard()
    * @generated
    */
-  void setCard(int value);
+  void setCard(Expression value);
 
 } // stateInit

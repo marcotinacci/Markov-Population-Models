@@ -3,6 +3,14 @@
  */
 package imt.simhya.language.scoping;
 
+import imt.simhya.language.markovPopulationModels.agent;
+import imt.simhya.language.markovPopulationModels.label;
+import imt.simhya.language.markovPopulationModels.main;
+import imt.simhya.language.markovPopulationModels.state;
+import org.eclipse.emf.common.util.EList;
+import org.eclipse.emf.ecore.EReference;
+import org.eclipse.xtext.scoping.IScope;
+import org.eclipse.xtext.scoping.Scopes;
 import org.eclipse.xtext.scoping.impl.AbstractDeclarativeScopeProvider;
 
 /**
@@ -13,4 +21,15 @@ import org.eclipse.xtext.scoping.impl.AbstractDeclarativeScopeProvider;
  */
 @SuppressWarnings("all")
 public class MarkovPopulationModelsScopeProvider extends AbstractDeclarativeScopeProvider {
+  public IScope scope_state_ref_stateRef(final main m, final EReference eReference) {
+    agent _agentDef = m.getAgentDef();
+    EList<state> _s = _agentDef.getS();
+    return Scopes.scopeFor(_s);
+  }
+  
+  public IScope scope_action_cond_actionRef(final main m, final EReference eReference) {
+    agent _agentDef = m.getAgentDef();
+    EList<label> _act = _agentDef.getAct();
+    return Scopes.scopeFor(_act);
+  }
 }

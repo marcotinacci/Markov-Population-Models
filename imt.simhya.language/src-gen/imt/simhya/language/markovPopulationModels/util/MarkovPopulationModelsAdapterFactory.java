@@ -135,6 +135,11 @@ public class MarkovPopulationModelsAdapterFactory extends AdapterFactoryImpl
         return createstateAdapter();
       }
       @Override
+      public Adapter caseExpression(Expression object)
+      {
+        return createExpressionAdapter();
+      }
+      @Override
       public Adapter caseaction(action object)
       {
         return createactionAdapter();
@@ -143,6 +148,31 @@ public class MarkovPopulationModelsAdapterFactory extends AdapterFactoryImpl
       public Adapter caseanystate(anystate object)
       {
         return createanystateAdapter();
+      }
+      @Override
+      public Adapter caseSummationSubtraction(SummationSubtraction object)
+      {
+        return createSummationSubtractionAdapter();
+      }
+      @Override
+      public Adapter caseMultiplicationDivision(MultiplicationDivision object)
+      {
+        return createMultiplicationDivisionAdapter();
+      }
+      @Override
+      public Adapter caseIntExpression(IntExpression object)
+      {
+        return createIntExpressionAdapter();
+      }
+      @Override
+      public Adapter caseFloatExpression(FloatExpression object)
+      {
+        return createFloatExpressionAdapter();
+      }
+      @Override
+      public Adapter caseReference(Reference object)
+      {
+        return createReferenceAdapter();
       }
       @Override
       public Adapter defaultCase(EObject object)
@@ -347,6 +377,21 @@ public class MarkovPopulationModelsAdapterFactory extends AdapterFactoryImpl
   }
 
   /**
+   * Creates a new adapter for an object of class '{@link imt.simhya.language.markovPopulationModels.Expression <em>Expression</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see imt.simhya.language.markovPopulationModels.Expression
+   * @generated
+   */
+  public Adapter createExpressionAdapter()
+  {
+    return null;
+  }
+
+  /**
    * Creates a new adapter for an object of class '{@link imt.simhya.language.markovPopulationModels.action <em>action</em>}'.
    * <!-- begin-user-doc -->
    * This default implementation returns null so that we can easily ignore cases;
@@ -372,6 +417,81 @@ public class MarkovPopulationModelsAdapterFactory extends AdapterFactoryImpl
    * @generated
    */
   public Adapter createanystateAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link imt.simhya.language.markovPopulationModels.SummationSubtraction <em>Summation Subtraction</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see imt.simhya.language.markovPopulationModels.SummationSubtraction
+   * @generated
+   */
+  public Adapter createSummationSubtractionAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link imt.simhya.language.markovPopulationModels.MultiplicationDivision <em>Multiplication Division</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see imt.simhya.language.markovPopulationModels.MultiplicationDivision
+   * @generated
+   */
+  public Adapter createMultiplicationDivisionAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link imt.simhya.language.markovPopulationModels.IntExpression <em>Int Expression</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see imt.simhya.language.markovPopulationModels.IntExpression
+   * @generated
+   */
+  public Adapter createIntExpressionAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link imt.simhya.language.markovPopulationModels.FloatExpression <em>Float Expression</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see imt.simhya.language.markovPopulationModels.FloatExpression
+   * @generated
+   */
+  public Adapter createFloatExpressionAdapter()
+  {
+    return null;
+  }
+
+  /**
+   * Creates a new adapter for an object of class '{@link imt.simhya.language.markovPopulationModels.Reference <em>Reference</em>}'.
+   * <!-- begin-user-doc -->
+   * This default implementation returns null so that we can easily ignore cases;
+   * it's useful to ignore a case when inheritance will catch all the cases anyway.
+   * <!-- end-user-doc -->
+   * @return the new adapter.
+   * @see imt.simhya.language.markovPopulationModels.Reference
+   * @generated
+   */
+  public Adapter createReferenceAdapter()
   {
     return null;
   }

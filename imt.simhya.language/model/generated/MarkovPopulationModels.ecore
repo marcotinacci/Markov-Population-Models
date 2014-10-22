@@ -21,31 +21,34 @@
         eType="#//stateInit" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="stateInit">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="stateRef" eType="#//state"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="card" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="stateRef" eType="#//state_ref"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="card" eType="#//Expression"
+        containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="gl_tran">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="l_tran" upperBound="-1"
+    <eStructuralFeatures xsi:type="ecore:EReference" name="lTran" upperBound="-1"
         eType="#//loc_tran" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="rate" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="rate" eType="#//Expression"
+        containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="loc_tran">
     <eStructuralFeatures xsi:type="ecore:EReference" name="stateRef" eType="#//state"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="s_cond" eType="#//state_cond"
+    <eStructuralFeatures xsi:type="ecore:EReference" name="sCond" eType="#//state_cond"
         containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="a_cond" eType="#//action_cond"
+    <eStructuralFeatures xsi:type="ecore:EReference" name="aCond" eType="#//action_cond"
         containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="state_cond">
-    <eStructuralFeatures xsi:type="ecore:EReference" name="s_ref" eType="#//state_ref"
+    <eStructuralFeatures xsi:type="ecore:EReference" name="stateRef" eType="#//state_ref"
         containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="state_ref">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="stateRef" eType="#//state"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="action_cond">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="actionRef" eType="#//label"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="agent">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -59,13 +62,35 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="state">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="spontaneous_act" upperBound="-1"
+    <eStructuralFeatures xsi:type="ecore:EReference" name="spontaneousAct" upperBound="-1"
         eType="#//action" containment="true"/>
   </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="Expression"/>
   <eClassifiers xsi:type="ecore:EClass" name="action">
     <eStructuralFeatures xsi:type="ecore:EReference" name="actRef" eType="#//label"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="stateRef" eType="#//state"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="localRate" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EDouble"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="localRate" eType="#//Expression"
+        containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="anystate" eSuperTypes="#//state_cond #//action_cond"/>
+  <eClassifiers xsi:type="ecore:EClass" name="SummationSubtraction" eSuperTypes="#//Expression">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="left" eType="#//Expression"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="op" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="right" eType="#//Expression"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="MultiplicationDivision" eSuperTypes="#//Expression">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="left" eType="#//Expression"
+        containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="op" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="right" eType="#//Expression"
+        containment="true"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EClass" name="IntExpression" eSuperTypes="#//Expression"/>
+  <eClassifiers xsi:type="ecore:EClass" name="FloatExpression" eSuperTypes="#//Expression"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Reference" eSuperTypes="#//Expression">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="stateRef" eType="#//state_ref"
+        containment="true"/>
+  </eClassifiers>
 </ecore:EPackage>

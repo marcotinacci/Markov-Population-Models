@@ -22,27 +22,27 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MarkovPopulationModels.ecore#//init/states"/>
     </genClasses>
     <genClasses ecoreClass="MarkovPopulationModels.ecore#//stateInit">
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference MarkovPopulationModels.ecore#//stateInit/stateRef"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MarkovPopulationModels.ecore#//stateInit/card"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MarkovPopulationModels.ecore#//stateInit/stateRef"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MarkovPopulationModels.ecore#//stateInit/card"/>
     </genClasses>
     <genClasses ecoreClass="MarkovPopulationModels.ecore#//gl_tran">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MarkovPopulationModels.ecore#//gl_tran/name"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MarkovPopulationModels.ecore#//gl_tran/l_tran"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MarkovPopulationModels.ecore#//gl_tran/rate"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MarkovPopulationModels.ecore#//gl_tran/lTran"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MarkovPopulationModels.ecore#//gl_tran/rate"/>
     </genClasses>
     <genClasses ecoreClass="MarkovPopulationModels.ecore#//loc_tran">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference MarkovPopulationModels.ecore#//loc_tran/stateRef"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MarkovPopulationModels.ecore#//loc_tran/s_cond"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MarkovPopulationModels.ecore#//loc_tran/a_cond"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MarkovPopulationModels.ecore#//loc_tran/sCond"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MarkovPopulationModels.ecore#//loc_tran/aCond"/>
     </genClasses>
     <genClasses ecoreClass="MarkovPopulationModels.ecore#//state_cond">
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MarkovPopulationModels.ecore#//state_cond/s_ref"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MarkovPopulationModels.ecore#//state_cond/stateRef"/>
     </genClasses>
     <genClasses ecoreClass="MarkovPopulationModels.ecore#//state_ref">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MarkovPopulationModels.ecore#//state_ref/name"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference MarkovPopulationModels.ecore#//state_ref/stateRef"/>
     </genClasses>
     <genClasses ecoreClass="MarkovPopulationModels.ecore#//action_cond">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MarkovPopulationModels.ecore#//action_cond/name"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference MarkovPopulationModels.ecore#//action_cond/actionRef"/>
     </genClasses>
     <genClasses ecoreClass="MarkovPopulationModels.ecore#//agent">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MarkovPopulationModels.ecore#//agent/name"/>
@@ -54,13 +54,29 @@
     </genClasses>
     <genClasses ecoreClass="MarkovPopulationModels.ecore#//state">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MarkovPopulationModels.ecore#//state/name"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MarkovPopulationModels.ecore#//state/spontaneous_act"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MarkovPopulationModels.ecore#//state/spontaneousAct"/>
     </genClasses>
+    <genClasses ecoreClass="MarkovPopulationModels.ecore#//Expression"/>
     <genClasses ecoreClass="MarkovPopulationModels.ecore#//action">
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference MarkovPopulationModels.ecore#//action/actRef"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference MarkovPopulationModels.ecore#//action/stateRef"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MarkovPopulationModels.ecore#//action/localRate"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MarkovPopulationModels.ecore#//action/localRate"/>
     </genClasses>
     <genClasses ecoreClass="MarkovPopulationModels.ecore#//anystate"/>
+    <genClasses ecoreClass="MarkovPopulationModels.ecore#//SummationSubtraction">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MarkovPopulationModels.ecore#//SummationSubtraction/left"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MarkovPopulationModels.ecore#//SummationSubtraction/op"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MarkovPopulationModels.ecore#//SummationSubtraction/right"/>
+    </genClasses>
+    <genClasses ecoreClass="MarkovPopulationModels.ecore#//MultiplicationDivision">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MarkovPopulationModels.ecore#//MultiplicationDivision/left"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MarkovPopulationModels.ecore#//MultiplicationDivision/op"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MarkovPopulationModels.ecore#//MultiplicationDivision/right"/>
+    </genClasses>
+    <genClasses ecoreClass="MarkovPopulationModels.ecore#//IntExpression"/>
+    <genClasses ecoreClass="MarkovPopulationModels.ecore#//FloatExpression"/>
+    <genClasses ecoreClass="MarkovPopulationModels.ecore#//Reference">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MarkovPopulationModels.ecore#//Reference/stateRef"/>
+    </genClasses>
   </genPackages>
 </genmodel:GenModel>

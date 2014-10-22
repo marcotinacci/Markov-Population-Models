@@ -2,8 +2,14 @@
  */
 package imt.simhya.language.markovPopulationModels.impl;
 
+import imt.simhya.language.markovPopulationModels.Expression;
+import imt.simhya.language.markovPopulationModels.FloatExpression;
+import imt.simhya.language.markovPopulationModels.IntExpression;
 import imt.simhya.language.markovPopulationModels.MarkovPopulationModelsFactory;
 import imt.simhya.language.markovPopulationModels.MarkovPopulationModelsPackage;
+import imt.simhya.language.markovPopulationModels.MultiplicationDivision;
+import imt.simhya.language.markovPopulationModels.Reference;
+import imt.simhya.language.markovPopulationModels.SummationSubtraction;
 import imt.simhya.language.markovPopulationModels.action;
 import imt.simhya.language.markovPopulationModels.action_cond;
 import imt.simhya.language.markovPopulationModels.agent;
@@ -123,6 +129,13 @@ public class MarkovPopulationModelsPackageImpl extends EPackageImpl implements M
    * <!-- end-user-doc -->
    * @generated
    */
+  private EClass expressionEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   private EClass actionEClass = null;
 
   /**
@@ -131,6 +144,41 @@ public class MarkovPopulationModelsPackageImpl extends EPackageImpl implements M
    * @generated
    */
   private EClass anystateEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass summationSubtractionEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass multiplicationDivisionEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass intExpressionEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass floatExpressionEClass = null;
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  private EClass referenceEClass = null;
 
   /**
    * Creates an instance of the model <b>Package</b>, registered with
@@ -320,9 +368,9 @@ public class MarkovPopulationModelsPackageImpl extends EPackageImpl implements M
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getstateInit_Card()
+  public EReference getstateInit_Card()
   {
-    return (EAttribute)stateInitEClass.getEStructuralFeatures().get(1);
+    return (EReference)stateInitEClass.getEStructuralFeatures().get(1);
   }
 
   /**
@@ -350,7 +398,7 @@ public class MarkovPopulationModelsPackageImpl extends EPackageImpl implements M
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getgl_tran_L_tran()
+  public EReference getgl_tran_LTran()
   {
     return (EReference)gl_tranEClass.getEStructuralFeatures().get(1);
   }
@@ -360,9 +408,9 @@ public class MarkovPopulationModelsPackageImpl extends EPackageImpl implements M
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getgl_tran_Rate()
+  public EReference getgl_tran_Rate()
   {
-    return (EAttribute)gl_tranEClass.getEStructuralFeatures().get(2);
+    return (EReference)gl_tranEClass.getEStructuralFeatures().get(2);
   }
 
   /**
@@ -390,7 +438,7 @@ public class MarkovPopulationModelsPackageImpl extends EPackageImpl implements M
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getloc_tran_S_cond()
+  public EReference getloc_tran_SCond()
   {
     return (EReference)loc_tranEClass.getEStructuralFeatures().get(1);
   }
@@ -400,7 +448,7 @@ public class MarkovPopulationModelsPackageImpl extends EPackageImpl implements M
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getloc_tran_A_cond()
+  public EReference getloc_tran_ACond()
   {
     return (EReference)loc_tranEClass.getEStructuralFeatures().get(2);
   }
@@ -420,7 +468,7 @@ public class MarkovPopulationModelsPackageImpl extends EPackageImpl implements M
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getstate_cond_S_ref()
+  public EReference getstate_cond_StateRef()
   {
     return (EReference)state_condEClass.getEStructuralFeatures().get(0);
   }
@@ -440,9 +488,9 @@ public class MarkovPopulationModelsPackageImpl extends EPackageImpl implements M
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getstate_ref_Name()
+  public EReference getstate_ref_StateRef()
   {
-    return (EAttribute)state_refEClass.getEStructuralFeatures().get(0);
+    return (EReference)state_refEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -460,9 +508,9 @@ public class MarkovPopulationModelsPackageImpl extends EPackageImpl implements M
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getaction_cond_Name()
+  public EReference getaction_cond_ActionRef()
   {
-    return (EAttribute)action_condEClass.getEStructuralFeatures().get(0);
+    return (EReference)action_condEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -550,9 +598,19 @@ public class MarkovPopulationModelsPackageImpl extends EPackageImpl implements M
    * <!-- end-user-doc -->
    * @generated
    */
-  public EReference getstate_Spontaneous_act()
+  public EReference getstate_SpontaneousAct()
   {
     return (EReference)stateEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getExpression()
+  {
+    return expressionEClass;
   }
 
   /**
@@ -590,9 +648,9 @@ public class MarkovPopulationModelsPackageImpl extends EPackageImpl implements M
    * <!-- end-user-doc -->
    * @generated
    */
-  public EAttribute getaction_LocalRate()
+  public EReference getaction_LocalRate()
   {
-    return (EAttribute)actionEClass.getEStructuralFeatures().get(2);
+    return (EReference)actionEClass.getEStructuralFeatures().get(2);
   }
 
   /**
@@ -603,6 +661,126 @@ public class MarkovPopulationModelsPackageImpl extends EPackageImpl implements M
   public EClass getanystate()
   {
     return anystateEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getSummationSubtraction()
+  {
+    return summationSubtractionEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getSummationSubtraction_Left()
+  {
+    return (EReference)summationSubtractionEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getSummationSubtraction_Op()
+  {
+    return (EAttribute)summationSubtractionEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getSummationSubtraction_Right()
+  {
+    return (EReference)summationSubtractionEClass.getEStructuralFeatures().get(2);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getMultiplicationDivision()
+  {
+    return multiplicationDivisionEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getMultiplicationDivision_Left()
+  {
+    return (EReference)multiplicationDivisionEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getMultiplicationDivision_Op()
+  {
+    return (EAttribute)multiplicationDivisionEClass.getEStructuralFeatures().get(1);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getMultiplicationDivision_Right()
+  {
+    return (EReference)multiplicationDivisionEClass.getEStructuralFeatures().get(2);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getIntExpression()
+  {
+    return intExpressionEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getFloatExpression()
+  {
+    return floatExpressionEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EClass getReference()
+  {
+    return referenceEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EReference getReference_StateRef()
+  {
+    return (EReference)referenceEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -650,12 +828,12 @@ public class MarkovPopulationModelsPackageImpl extends EPackageImpl implements M
 
     stateInitEClass = createEClass(STATE_INIT);
     createEReference(stateInitEClass, STATE_INIT__STATE_REF);
-    createEAttribute(stateInitEClass, STATE_INIT__CARD);
+    createEReference(stateInitEClass, STATE_INIT__CARD);
 
     gl_tranEClass = createEClass(GL_TRAN);
     createEAttribute(gl_tranEClass, GL_TRAN__NAME);
     createEReference(gl_tranEClass, GL_TRAN__LTRAN);
-    createEAttribute(gl_tranEClass, GL_TRAN__RATE);
+    createEReference(gl_tranEClass, GL_TRAN__RATE);
 
     loc_tranEClass = createEClass(LOC_TRAN);
     createEReference(loc_tranEClass, LOC_TRAN__STATE_REF);
@@ -663,13 +841,13 @@ public class MarkovPopulationModelsPackageImpl extends EPackageImpl implements M
     createEReference(loc_tranEClass, LOC_TRAN__ACOND);
 
     state_condEClass = createEClass(STATE_COND);
-    createEReference(state_condEClass, STATE_COND__SREF);
+    createEReference(state_condEClass, STATE_COND__STATE_REF);
 
     state_refEClass = createEClass(STATE_REF);
-    createEAttribute(state_refEClass, STATE_REF__NAME);
+    createEReference(state_refEClass, STATE_REF__STATE_REF);
 
     action_condEClass = createEClass(ACTION_COND);
-    createEAttribute(action_condEClass, ACTION_COND__NAME);
+    createEReference(action_condEClass, ACTION_COND__ACTION_REF);
 
     agentEClass = createEClass(AGENT);
     createEAttribute(agentEClass, AGENT__NAME);
@@ -683,12 +861,31 @@ public class MarkovPopulationModelsPackageImpl extends EPackageImpl implements M
     createEAttribute(stateEClass, STATE__NAME);
     createEReference(stateEClass, STATE__SPONTANEOUS_ACT);
 
+    expressionEClass = createEClass(EXPRESSION);
+
     actionEClass = createEClass(ACTION);
     createEReference(actionEClass, ACTION__ACT_REF);
     createEReference(actionEClass, ACTION__STATE_REF);
-    createEAttribute(actionEClass, ACTION__LOCAL_RATE);
+    createEReference(actionEClass, ACTION__LOCAL_RATE);
 
     anystateEClass = createEClass(ANYSTATE);
+
+    summationSubtractionEClass = createEClass(SUMMATION_SUBTRACTION);
+    createEReference(summationSubtractionEClass, SUMMATION_SUBTRACTION__LEFT);
+    createEAttribute(summationSubtractionEClass, SUMMATION_SUBTRACTION__OP);
+    createEReference(summationSubtractionEClass, SUMMATION_SUBTRACTION__RIGHT);
+
+    multiplicationDivisionEClass = createEClass(MULTIPLICATION_DIVISION);
+    createEReference(multiplicationDivisionEClass, MULTIPLICATION_DIVISION__LEFT);
+    createEAttribute(multiplicationDivisionEClass, MULTIPLICATION_DIVISION__OP);
+    createEReference(multiplicationDivisionEClass, MULTIPLICATION_DIVISION__RIGHT);
+
+    intExpressionEClass = createEClass(INT_EXPRESSION);
+
+    floatExpressionEClass = createEClass(FLOAT_EXPRESSION);
+
+    referenceEClass = createEClass(REFERENCE);
+    createEReference(referenceEClass, REFERENCE__STATE_REF);
   }
 
   /**
@@ -722,6 +919,11 @@ public class MarkovPopulationModelsPackageImpl extends EPackageImpl implements M
     // Add supertypes to classes
     anystateEClass.getESuperTypes().add(this.getstate_cond());
     anystateEClass.getESuperTypes().add(this.getaction_cond());
+    summationSubtractionEClass.getESuperTypes().add(this.getExpression());
+    multiplicationDivisionEClass.getESuperTypes().add(this.getExpression());
+    intExpressionEClass.getESuperTypes().add(this.getExpression());
+    floatExpressionEClass.getESuperTypes().add(this.getExpression());
+    referenceEClass.getESuperTypes().add(this.getExpression());
 
     // Initialize classes and features; add operations and parameters
     initEClass(mainEClass, main.class, "main", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -738,27 +940,27 @@ public class MarkovPopulationModelsPackageImpl extends EPackageImpl implements M
     initEReference(getinit_States(), this.getstateInit(), null, "states", null, 0, -1, init.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(stateInitEClass, stateInit.class, "stateInit", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getstateInit_StateRef(), this.getstate(), null, "stateRef", null, 0, 1, stateInit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getstateInit_Card(), ecorePackage.getEInt(), "card", null, 0, 1, stateInit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getstateInit_StateRef(), this.getstate_ref(), null, "stateRef", null, 0, 1, stateInit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getstateInit_Card(), this.getExpression(), null, "card", null, 0, 1, stateInit.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(gl_tranEClass, gl_tran.class, "gl_tran", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getgl_tran_Name(), ecorePackage.getEString(), "name", null, 0, 1, gl_tran.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getgl_tran_L_tran(), this.getloc_tran(), null, "l_tran", null, 0, -1, gl_tran.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getgl_tran_Rate(), ecorePackage.getEDouble(), "rate", null, 0, 1, gl_tran.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getgl_tran_LTran(), this.getloc_tran(), null, "lTran", null, 0, -1, gl_tran.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getgl_tran_Rate(), this.getExpression(), null, "rate", null, 0, 1, gl_tran.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(loc_tranEClass, loc_tran.class, "loc_tran", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getloc_tran_StateRef(), this.getstate(), null, "stateRef", null, 0, 1, loc_tran.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getloc_tran_S_cond(), this.getstate_cond(), null, "s_cond", null, 0, 1, loc_tran.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getloc_tran_A_cond(), this.getaction_cond(), null, "a_cond", null, 0, 1, loc_tran.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getloc_tran_SCond(), this.getstate_cond(), null, "sCond", null, 0, 1, loc_tran.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getloc_tran_ACond(), this.getaction_cond(), null, "aCond", null, 0, 1, loc_tran.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(state_condEClass, state_cond.class, "state_cond", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEReference(getstate_cond_S_ref(), this.getstate_ref(), null, "s_ref", null, 0, 1, state_cond.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getstate_cond_StateRef(), this.getstate_ref(), null, "stateRef", null, 0, 1, state_cond.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(state_refEClass, state_ref.class, "state_ref", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getstate_ref_Name(), ecorePackage.getEString(), "name", null, 0, 1, state_ref.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getstate_ref_StateRef(), this.getstate(), null, "stateRef", null, 0, 1, state_ref.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(action_condEClass, action_cond.class, "action_cond", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
-    initEAttribute(getaction_cond_Name(), ecorePackage.getEString(), "name", null, 0, 1, action_cond.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getaction_cond_ActionRef(), this.getlabel(), null, "actionRef", null, 0, 1, action_cond.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(agentEClass, agent.class, "agent", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getagent_Name(), ecorePackage.getEString(), "name", null, 0, 1, agent.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -770,14 +972,33 @@ public class MarkovPopulationModelsPackageImpl extends EPackageImpl implements M
 
     initEClass(stateEClass, state.class, "state", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEAttribute(getstate_Name(), ecorePackage.getEString(), "name", null, 0, 1, state.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEReference(getstate_Spontaneous_act(), this.getaction(), null, "spontaneous_act", null, 0, -1, state.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getstate_SpontaneousAct(), this.getaction(), null, "spontaneousAct", null, 0, -1, state.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(expressionEClass, Expression.class, "Expression", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
     initEClass(actionEClass, action.class, "action", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getaction_ActRef(), this.getlabel(), null, "actRef", null, 0, 1, action.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
     initEReference(getaction_StateRef(), this.getstate(), null, "stateRef", null, 0, 1, action.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
-    initEAttribute(getaction_LocalRate(), ecorePackage.getEDouble(), "localRate", null, 0, 1, action.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getaction_LocalRate(), this.getExpression(), null, "localRate", null, 0, 1, action.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(anystateEClass, anystate.class, "anystate", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+    initEClass(summationSubtractionEClass, SummationSubtraction.class, "SummationSubtraction", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getSummationSubtraction_Left(), this.getExpression(), null, "left", null, 0, 1, SummationSubtraction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getSummationSubtraction_Op(), ecorePackage.getEString(), "op", null, 0, 1, SummationSubtraction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getSummationSubtraction_Right(), this.getExpression(), null, "right", null, 0, 1, SummationSubtraction.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(multiplicationDivisionEClass, MultiplicationDivision.class, "MultiplicationDivision", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getMultiplicationDivision_Left(), this.getExpression(), null, "left", null, 0, 1, MultiplicationDivision.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEAttribute(getMultiplicationDivision_Op(), ecorePackage.getEString(), "op", null, 0, 1, MultiplicationDivision.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+    initEReference(getMultiplicationDivision_Right(), this.getExpression(), null, "right", null, 0, 1, MultiplicationDivision.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+    initEClass(intExpressionEClass, IntExpression.class, "IntExpression", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+    initEClass(floatExpressionEClass, FloatExpression.class, "FloatExpression", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+    initEClass(referenceEClass, Reference.class, "Reference", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEReference(getReference_StateRef(), this.getstate_ref(), null, "stateRef", null, 0, 1, Reference.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     // Create resource
     createResource(eNS_URI);
