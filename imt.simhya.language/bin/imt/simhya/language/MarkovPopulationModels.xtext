@@ -23,7 +23,7 @@ init:
 ;
 
 stateInit:
-	stateRef=state_ref '=' card=Expression	
+	stateRef=state_ref '=' card=Expression
 ;
 
 gl_tran:
@@ -87,8 +87,8 @@ MultiplicationDivision returns Expression:
 ;
 
 BaseExpression returns Expression:
-	{IntExpression} INT
-	| {FloatExpression} FLOAT
+	{IntExpression} value=INT
+	| {FloatExpression} value=FLOAT
 	| {Reference} stateRef=state_ref
 	| '(' Expression ')'
 ;

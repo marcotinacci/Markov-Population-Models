@@ -3,7 +3,18 @@
  */
 package imt.simhya.language.generator;
 
+import imt.simhya.language.markovPopulationModels.Expression;
+import imt.simhya.language.markovPopulationModels.IntExpression;
+import imt.simhya.language.markovPopulationModels.init;
+import imt.simhya.language.markovPopulationModels.main;
+import imt.simhya.language.markovPopulationModels.population;
+import imt.simhya.language.markovPopulationModels.state;
+import imt.simhya.language.markovPopulationModels.stateInit;
+import imt.simhya.language.markovPopulationModels.state_ref;
+import org.eclipse.emf.common.util.EList;
+import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.resource.Resource;
+import org.eclipse.xtend2.lib.StringConcatenation;
 import org.eclipse.xtext.generator.IFileSystemAccess;
 import org.eclipse.xtext.generator.IGenerator;
 
@@ -15,5 +26,45 @@ import org.eclipse.xtext.generator.IGenerator;
 @SuppressWarnings("all")
 public class MarkovPopulationModelsGenerator implements IGenerator {
   public void doGenerate(final Resource resource, final IFileSystemAccess fsa) {
+    EList<EObject> _contents = resource.getContents();
+    EObject _get = _contents.get(0);
+    main prog = ((main) _get);
+    CharSequence _simhya = this.toSimhya(prog);
+    fsa.generateFile("paperino.txt", _simhya);
+  }
+  
+  public CharSequence toSimhya(final main m) {
+    StringConcatenation _builder = new StringConcatenation();
+    _builder.append("model ");
+    population _populationDef = m.getPopulationDef();
+    String _name = _populationDef.getName();
+    _builder.append(_name, "");
+    _builder.append(" {");
+    _builder.newLineIfNotEmpty();
+    {
+      population _populationDef_1 = m.getPopulationDef();
+      EList<init> _agents = _populationDef_1.getAgents();
+      init _get = _agents.get(0);
+      EList<stateInit> _states = _get.getStates();
+      for(final stateInit s : _states) {
+        _builder.append("\t");
+        state_ref _stateRef = s.getStateRef();
+        state _stateRef_1 = _stateRef.getStateRef();
+        String _name_1 = _stateRef_1.getName();
+        _builder.append(_name_1, "\t");
+        _builder.append(" = ");
+        Expression _card = s.getCard();
+        int _value = ((IntExpression) _card).getValue();
+        _builder.append(_value, "\t");
+        _builder.append(";");
+        _builder.newLineIfNotEmpty();
+      }
+    }
+    _builder.append("\t");
+    _builder.append("reg:[  :-> ]@{0.0001};");
+    _builder.newLine();
+    _builder.append("}");
+    _builder.newLine();
+    return _builder;
   }
 }

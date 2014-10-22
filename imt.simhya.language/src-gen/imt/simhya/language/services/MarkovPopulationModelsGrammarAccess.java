@@ -659,10 +659,12 @@ public class MarkovPopulationModelsGrammarAccess extends AbstractGrammarElementF
 		private final Alternatives cAlternatives = (Alternatives)rule.eContents().get(1);
 		private final Group cGroup_0 = (Group)cAlternatives.eContents().get(0);
 		private final Action cIntExpressionAction_0_0 = (Action)cGroup_0.eContents().get(0);
-		private final RuleCall cINTTerminalRuleCall_0_1 = (RuleCall)cGroup_0.eContents().get(1);
+		private final Assignment cValueAssignment_0_1 = (Assignment)cGroup_0.eContents().get(1);
+		private final RuleCall cValueINTTerminalRuleCall_0_1_0 = (RuleCall)cValueAssignment_0_1.eContents().get(0);
 		private final Group cGroup_1 = (Group)cAlternatives.eContents().get(1);
 		private final Action cFloatExpressionAction_1_0 = (Action)cGroup_1.eContents().get(0);
-		private final RuleCall cFLOATTerminalRuleCall_1_1 = (RuleCall)cGroup_1.eContents().get(1);
+		private final Assignment cValueAssignment_1_1 = (Assignment)cGroup_1.eContents().get(1);
+		private final RuleCall cValueFLOATTerminalRuleCall_1_1_0 = (RuleCall)cValueAssignment_1_1.eContents().get(0);
 		private final Group cGroup_2 = (Group)cAlternatives.eContents().get(2);
 		private final Action cReferenceAction_2_0 = (Action)cGroup_2.eContents().get(0);
 		private final Assignment cStateRefAssignment_2_1 = (Assignment)cGroup_2.eContents().get(1);
@@ -673,29 +675,35 @@ public class MarkovPopulationModelsGrammarAccess extends AbstractGrammarElementF
 		private final Keyword cRightParenthesisKeyword_3_2 = (Keyword)cGroup_3.eContents().get(2);
 		
 		//BaseExpression returns Expression:
-		//	{IntExpression} INT | {FloatExpression} FLOAT | {Reference} stateRef=state_ref | "(" Expression ")";
+		//	{IntExpression} value=INT | {FloatExpression} value=FLOAT | {Reference} stateRef=state_ref | "(" Expression ")";
 		public ParserRule getRule() { return rule; }
 
-		//{IntExpression} INT | {FloatExpression} FLOAT | {Reference} stateRef=state_ref | "(" Expression ")"
+		//{IntExpression} value=INT | {FloatExpression} value=FLOAT | {Reference} stateRef=state_ref | "(" Expression ")"
 		public Alternatives getAlternatives() { return cAlternatives; }
 
-		//{IntExpression} INT
+		//{IntExpression} value=INT
 		public Group getGroup_0() { return cGroup_0; }
 
 		//{IntExpression}
 		public Action getIntExpressionAction_0_0() { return cIntExpressionAction_0_0; }
 
-		//INT
-		public RuleCall getINTTerminalRuleCall_0_1() { return cINTTerminalRuleCall_0_1; }
+		//value=INT
+		public Assignment getValueAssignment_0_1() { return cValueAssignment_0_1; }
 
-		//{FloatExpression} FLOAT
+		//INT
+		public RuleCall getValueINTTerminalRuleCall_0_1_0() { return cValueINTTerminalRuleCall_0_1_0; }
+
+		//{FloatExpression} value=FLOAT
 		public Group getGroup_1() { return cGroup_1; }
 
 		//{FloatExpression}
 		public Action getFloatExpressionAction_1_0() { return cFloatExpressionAction_1_0; }
 
+		//value=FLOAT
+		public Assignment getValueAssignment_1_1() { return cValueAssignment_1_1; }
+
 		//FLOAT
-		public RuleCall getFLOATTerminalRuleCall_1_1() { return cFLOATTerminalRuleCall_1_1; }
+		public RuleCall getValueFLOATTerminalRuleCall_1_1_0() { return cValueFLOATTerminalRuleCall_1_1_0; }
 
 		//{Reference} stateRef=state_ref
 		public Group getGroup_2() { return cGroup_2; }
@@ -1008,7 +1016,7 @@ public class MarkovPopulationModelsGrammarAccess extends AbstractGrammarElementF
 	}
 
 	//BaseExpression returns Expression:
-	//	{IntExpression} INT | {FloatExpression} FLOAT | {Reference} stateRef=state_ref | "(" Expression ")";
+	//	{IntExpression} value=INT | {FloatExpression} value=FLOAT | {Reference} stateRef=state_ref | "(" Expression ")";
 	public BaseExpressionElements getBaseExpressionAccess() {
 		return pBaseExpression;
 	}

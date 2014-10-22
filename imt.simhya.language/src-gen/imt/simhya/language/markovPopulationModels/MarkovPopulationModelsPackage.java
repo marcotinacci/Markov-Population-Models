@@ -705,13 +705,22 @@ public interface MarkovPopulationModelsPackage extends EPackage
   int INT_EXPRESSION = 17;
 
   /**
+   * The feature id for the '<em><b>Value</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int INT_EXPRESSION__VALUE = EXPRESSION_FEATURE_COUNT + 0;
+
+  /**
    * The number of structural features of the '<em>Int Expression</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int INT_EXPRESSION_FEATURE_COUNT = EXPRESSION_FEATURE_COUNT + 0;
+  int INT_EXPRESSION_FEATURE_COUNT = EXPRESSION_FEATURE_COUNT + 1;
 
   /**
    * The meta object id for the '{@link imt.simhya.language.markovPopulationModels.impl.FloatExpressionImpl <em>Float Expression</em>}' class.
@@ -724,13 +733,22 @@ public interface MarkovPopulationModelsPackage extends EPackage
   int FLOAT_EXPRESSION = 18;
 
   /**
+   * The feature id for the '<em><b>Value</b></em>' attribute.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   * @ordered
+   */
+  int FLOAT_EXPRESSION__VALUE = EXPRESSION_FEATURE_COUNT + 0;
+
+  /**
    * The number of structural features of the '<em>Float Expression</em>' class.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
    * @generated
    * @ordered
    */
-  int FLOAT_EXPRESSION_FEATURE_COUNT = EXPRESSION_FEATURE_COUNT + 0;
+  int FLOAT_EXPRESSION_FEATURE_COUNT = EXPRESSION_FEATURE_COUNT + 1;
 
   /**
    * The meta object id for the '{@link imt.simhya.language.markovPopulationModels.impl.ReferenceImpl <em>Reference</em>}' class.
@@ -1305,6 +1323,17 @@ public interface MarkovPopulationModelsPackage extends EPackage
   EClass getIntExpression();
 
   /**
+   * Returns the meta object for the attribute '{@link imt.simhya.language.markovPopulationModels.IntExpression#getValue <em>Value</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Value</em>'.
+   * @see imt.simhya.language.markovPopulationModels.IntExpression#getValue()
+   * @see #getIntExpression()
+   * @generated
+   */
+  EAttribute getIntExpression_Value();
+
+  /**
    * Returns the meta object for class '{@link imt.simhya.language.markovPopulationModels.FloatExpression <em>Float Expression</em>}'.
    * <!-- begin-user-doc -->
    * <!-- end-user-doc -->
@@ -1313,6 +1342,17 @@ public interface MarkovPopulationModelsPackage extends EPackage
    * @generated
    */
   EClass getFloatExpression();
+
+  /**
+   * Returns the meta object for the attribute '{@link imt.simhya.language.markovPopulationModels.FloatExpression#getValue <em>Value</em>}'.
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @return the meta object for the attribute '<em>Value</em>'.
+   * @see imt.simhya.language.markovPopulationModels.FloatExpression#getValue()
+   * @see #getFloatExpression()
+   * @generated
+   */
+  EAttribute getFloatExpression_Value();
 
   /**
    * Returns the meta object for class '{@link imt.simhya.language.markovPopulationModels.Reference <em>Reference</em>}'.
@@ -1803,6 +1843,14 @@ public interface MarkovPopulationModelsPackage extends EPackage
     EClass INT_EXPRESSION = eINSTANCE.getIntExpression();
 
     /**
+     * The meta object literal for the '<em><b>Value</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute INT_EXPRESSION__VALUE = eINSTANCE.getIntExpression_Value();
+
+    /**
      * The meta object literal for the '{@link imt.simhya.language.markovPopulationModels.impl.FloatExpressionImpl <em>Float Expression</em>}' class.
      * <!-- begin-user-doc -->
      * <!-- end-user-doc -->
@@ -1811,6 +1859,14 @@ public interface MarkovPopulationModelsPackage extends EPackage
      * @generated
      */
     EClass FLOAT_EXPRESSION = eINSTANCE.getFloatExpression();
+
+    /**
+     * The meta object literal for the '<em><b>Value</b></em>' attribute feature.
+     * <!-- begin-user-doc -->
+     * <!-- end-user-doc -->
+     * @generated
+     */
+    EAttribute FLOAT_EXPRESSION__VALUE = eINSTANCE.getFloatExpression_Value();
 
     /**
      * The meta object literal for the '{@link imt.simhya.language.markovPopulationModels.impl.ReferenceImpl <em>Reference</em>}' class.

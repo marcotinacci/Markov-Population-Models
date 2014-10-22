@@ -1173,22 +1173,50 @@ ruleBaseExpression returns [EObject current=null]
             grammarAccess.getBaseExpressionAccess().getIntExpressionAction_0_0(),
             $current);
     }
-)this_INT_1=RULE_INT
-    { 
-    newLeafNode(this_INT_1, grammarAccess.getBaseExpressionAccess().getINTTerminalRuleCall_0_1()); 
-    }
+)(
+(
+		lv_value_1_0=RULE_INT
+		{
+			newLeafNode(lv_value_1_0, grammarAccess.getBaseExpressionAccess().getValueINTTerminalRuleCall_0_1_0()); 
+		}
+		{
+	        if ($current==null) {
+	            $current = createModelElement(grammarAccess.getBaseExpressionRule());
+	        }
+       		setWithLastConsumed(
+       			$current, 
+       			"value",
+        		lv_value_1_0, 
+        		"INT");
+	    }
+
 )
+))
     |((
     {
         $current = forceCreateModelElement(
             grammarAccess.getBaseExpressionAccess().getFloatExpressionAction_1_0(),
             $current);
     }
-)this_FLOAT_3=RULE_FLOAT
-    { 
-    newLeafNode(this_FLOAT_3, grammarAccess.getBaseExpressionAccess().getFLOATTerminalRuleCall_1_1()); 
-    }
+)(
+(
+		lv_value_3_0=RULE_FLOAT
+		{
+			newLeafNode(lv_value_3_0, grammarAccess.getBaseExpressionAccess().getValueFLOATTerminalRuleCall_1_1_0()); 
+		}
+		{
+	        if ($current==null) {
+	            $current = createModelElement(grammarAccess.getBaseExpressionRule());
+	        }
+       		setWithLastConsumed(
+       			$current, 
+       			"value",
+        		lv_value_3_0, 
+        		"FLOAT");
+	    }
+
 )
+))
     |((
     {
         $current = forceCreateModelElement(

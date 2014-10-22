@@ -6,6 +6,8 @@ package imt.simhya.language.generator
 import org.eclipse.emf.ecore.resource.Resource
 import org.eclipse.xtext.generator.IGenerator
 import org.eclipse.xtext.generator.IFileSystemAccess
+import imt.simhya.language.markovPopulationModels.main
+import imt.simhya.language.markovPopulationModels.IntExpression
 
 /**
  * Generates code from your model files on save.
@@ -15,10 +17,18 @@ import org.eclipse.xtext.generator.IFileSystemAccess
 class MarkovPopulationModelsGenerator implements IGenerator {
 	
 	override void doGenerate(Resource resource, IFileSystemAccess fsa) {
-//		fsa.generateFile('greetings.txt', 'People to greet: ' + 
-//			resource.allContents
-//				.filter(typeof(Greeting))
-//				.map[name]
-//				.join(', '))
+		var prog = resource.contents.get(0) as main
+		fsa.generateFile('paperino.txt', prog.toSimhya)
 	}
+	
+	def CharSequence toSimhya(main m)
+		'''
+		model «m.populationDef.name» {
+			«FOR s : m.populationDef.agents.get(0).states»
+				«s.stateRef.stateRef.name» = «(s.card as IntExpression).value»;
+			«ENDFOR»
+			reg:[  :-> ]@{0.0001};
+		}
+		'''
+
 }

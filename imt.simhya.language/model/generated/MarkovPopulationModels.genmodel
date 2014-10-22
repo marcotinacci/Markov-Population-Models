@@ -73,8 +73,12 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MarkovPopulationModels.ecore#//MultiplicationDivision/op"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MarkovPopulationModels.ecore#//MultiplicationDivision/right"/>
     </genClasses>
-    <genClasses ecoreClass="MarkovPopulationModels.ecore#//IntExpression"/>
-    <genClasses ecoreClass="MarkovPopulationModels.ecore#//FloatExpression"/>
+    <genClasses ecoreClass="MarkovPopulationModels.ecore#//IntExpression">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MarkovPopulationModels.ecore#//IntExpression/value"/>
+    </genClasses>
+    <genClasses ecoreClass="MarkovPopulationModels.ecore#//FloatExpression">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute MarkovPopulationModels.ecore#//FloatExpression/value"/>
+    </genClasses>
     <genClasses ecoreClass="MarkovPopulationModels.ecore#//Reference">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference MarkovPopulationModels.ecore#//Reference/stateRef"/>
     </genClasses>

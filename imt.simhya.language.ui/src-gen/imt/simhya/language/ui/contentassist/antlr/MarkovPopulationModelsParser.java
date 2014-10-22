@@ -98,6 +98,8 @@ public class MarkovPopulationModelsParser extends AbstractContentAssistParser {
 					put(grammarAccess.getSummationSubtractionAccess().getRightAssignment_1_2(), "rule__SummationSubtraction__RightAssignment_1_2");
 					put(grammarAccess.getMultiplicationDivisionAccess().getOpAssignment_1_1(), "rule__MultiplicationDivision__OpAssignment_1_1");
 					put(grammarAccess.getMultiplicationDivisionAccess().getRightAssignment_1_2(), "rule__MultiplicationDivision__RightAssignment_1_2");
+					put(grammarAccess.getBaseExpressionAccess().getValueAssignment_0_1(), "rule__BaseExpression__ValueAssignment_0_1");
+					put(grammarAccess.getBaseExpressionAccess().getValueAssignment_1_1(), "rule__BaseExpression__ValueAssignment_1_1");
 					put(grammarAccess.getBaseExpressionAccess().getStateRefAssignment_2_1(), "rule__BaseExpression__StateRefAssignment_2_1");
 					put(grammarAccess.getActionAccess().getActRefAssignment_0(), "rule__Action__ActRefAssignment_0");
 					put(grammarAccess.getActionAccess().getStateRefAssignment_2(), "rule__Action__StateRefAssignment_2");

@@ -758,9 +758,29 @@ public class MarkovPopulationModelsPackageImpl extends EPackageImpl implements M
    * <!-- end-user-doc -->
    * @generated
    */
+  public EAttribute getIntExpression_Value()
+  {
+    return (EAttribute)intExpressionEClass.getEStructuralFeatures().get(0);
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
   public EClass getFloatExpression()
   {
     return floatExpressionEClass;
+  }
+
+  /**
+   * <!-- begin-user-doc -->
+   * <!-- end-user-doc -->
+   * @generated
+   */
+  public EAttribute getFloatExpression_Value()
+  {
+    return (EAttribute)floatExpressionEClass.getEStructuralFeatures().get(0);
   }
 
   /**
@@ -881,8 +901,10 @@ public class MarkovPopulationModelsPackageImpl extends EPackageImpl implements M
     createEReference(multiplicationDivisionEClass, MULTIPLICATION_DIVISION__RIGHT);
 
     intExpressionEClass = createEClass(INT_EXPRESSION);
+    createEAttribute(intExpressionEClass, INT_EXPRESSION__VALUE);
 
     floatExpressionEClass = createEClass(FLOAT_EXPRESSION);
+    createEAttribute(floatExpressionEClass, FLOAT_EXPRESSION__VALUE);
 
     referenceEClass = createEClass(REFERENCE);
     createEReference(referenceEClass, REFERENCE__STATE_REF);
@@ -994,8 +1016,10 @@ public class MarkovPopulationModelsPackageImpl extends EPackageImpl implements M
     initEReference(getMultiplicationDivision_Right(), this.getExpression(), null, "right", null, 0, 1, MultiplicationDivision.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(intExpressionEClass, IntExpression.class, "IntExpression", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getIntExpression_Value(), ecorePackage.getEInt(), "value", null, 0, 1, IntExpression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(floatExpressionEClass, FloatExpression.class, "FloatExpression", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+    initEAttribute(getFloatExpression_Value(), ecorePackage.getEDouble(), "value", null, 0, 1, FloatExpression.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
     initEClass(referenceEClass, Reference.class, "Reference", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
     initEReference(getReference_StateRef(), this.getstate_ref(), null, "stateRef", null, 0, 1, Reference.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);

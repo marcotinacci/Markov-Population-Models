@@ -189,19 +189,33 @@ public class MarkovPopulationModelsSemanticSequencer extends AbstractDelegatingS
 	
 	/**
 	 * Constraint:
-	 *     {FloatExpression}
+	 *     value=FLOAT
 	 */
 	protected void sequence_BaseExpression(EObject context, FloatExpression semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
+		if(errorAcceptor != null) {
+			if(transientValues.isValueTransient(semanticObject, MarkovPopulationModelsPackage.Literals.FLOAT_EXPRESSION__VALUE) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, MarkovPopulationModelsPackage.Literals.FLOAT_EXPRESSION__VALUE));
+		}
+		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
+		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
+		feeder.accept(grammarAccess.getBaseExpressionAccess().getValueFLOATTerminalRuleCall_1_1_0(), semanticObject.getValue());
+		feeder.finish();
 	}
 	
 	
 	/**
 	 * Constraint:
-	 *     {IntExpression}
+	 *     value=INT
 	 */
 	protected void sequence_BaseExpression(EObject context, IntExpression semanticObject) {
-		genericSequencer.createSequence(context, semanticObject);
+		if(errorAcceptor != null) {
+			if(transientValues.isValueTransient(semanticObject, MarkovPopulationModelsPackage.Literals.INT_EXPRESSION__VALUE) == ValueTransient.YES)
+				errorAcceptor.accept(diagnosticProvider.createFeatureValueMissing(semanticObject, MarkovPopulationModelsPackage.Literals.INT_EXPRESSION__VALUE));
+		}
+		INodesForEObjectProvider nodes = createNodeProvider(semanticObject);
+		SequenceFeeder feeder = createSequencerFeeder(semanticObject, nodes);
+		feeder.accept(grammarAccess.getBaseExpressionAccess().getValueINTTerminalRuleCall_0_1_0(), semanticObject.getValue());
+		feeder.finish();
 	}
 	
 	
